@@ -1,0 +1,100 @@
+@import "variables.less";
+@import "mixins.less";
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="phone"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime"],
+input[type="date"],
+input[type="month"],
+input[type="color"],
+input[type="time"],
+input[type="search"],
+input[type="datetime-local"],
+textarea,
+select {
+	font-family: @control-font-family;
+	font-size: 1em;
+	box-shadow: none;
+	outline: none;
+	position: relative;
+	z-index: 2;
+	-webkit-appearance: none;
+
+	background: @control-bg;
+	border: @control-border;
+	border-radius: @control-border-radius;
+	padding: @control-padding;
+	vertical-align: middle;
+	.transition(@control-transition);
+
+	&[disabled] {
+		resize: none;
+		color: @control-disabled-color;
+		background: @control-disabled-bg;
+		cursor: @control-disabled-cursor;
+	}
+
+	&:active, &:focus {
+		border-color: @control-active-border-color;
+	}
+
+	&:-ms-input-placeholder {
+		color: @color-gray;
+	}
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="phone"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime"],
+input[type="date"],
+input[type="month"],
+input[type="color"],
+input[type="time"],
+input[type="search"],
+input[type="datetime-local"] {
+	line-height: @line-height;
+}
+
+textarea,
+select[multiple],
+select[multiple="multiple"] {
+	line-height: 1.35em;
+	width: 100%;
+}
+
+select,
+input[type="checkbox"],
+input[type="radio"] {
+	&[disabled] {
+		cursor: default;
+	}
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+button:active, button:focus {
+	outline: none;
+}
+
+input[type="range"] {
+	position: relative;
+	top: 3px;
+}
+
+select {
+	margin-bottom: 0 !important;
+}
