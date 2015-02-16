@@ -1,0 +1,184 @@
+// Reset styles
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+html {
+	-ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-ms-content-zooming: none; // Disables zooming
+	touch-action: pan-x pan-y; // Disable any special actions on tap/touch
+}
+
+a:active,
+a:focus,
+a:hover {
+    outline: 0;
+}
+
+// Default displays
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+embed,
+object,
+iframe,
+audio,
+video,
+canvas,
+progress,
+meter,
+output,
+textarea {
+	display: block;
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+// Prevent modern browsers from displaying `audio` without controls.
+// Remove excess height in iOS 5 devices.
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+// To prevent some browsers from inserting quotes on q and p
+blockquote, q {
+	quotes: none;
+}
+
+blockquote p:before,
+blockquote p:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+// Table reset
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption, th, td {
+	text-align: left;
+	vertical-align: top;
+}
+
+thead th,
+thead td {
+	font-weight: bold;
+	vertical-align: bottom;
+}
+
+// Image inside
+a img,
+th img,
+td img {
+	vertical-align: top;
+}
+
+button,
+input,
+select,
+textarea {
+	margin: 0;
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;
+}
+
+// Buttons
+button {
+	width: auto;
+	overflow: visible;
+}
+
+input[type="reset"],
+input[type="submit"],
+input[type="file"],
+input[type="radio"],
+input[type="checkbox"],
+select,
+button {
+	cursor: pointer;
+}
+
+// TODO: validate
+// Trick with vertical align for radio and checkbox
+//input[type="radio"],
+//input[type="checkbox"] {
+//	font-size: 110%;
+//	position: relative;
+//	top: -1px;
+//	margin-right: 3px;
+//}
+
+// Normalize search fields
+input[type="search"] {
+	-webkit-appearance: textfield;
+	
+	&::-webkit-search-decoration,
+	&::-webkit-search-cancel-button {
+		-webkit-appearance: none;
+	}
+}
+
+// Normalize horizontal line
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+}
+
+// Responsive media
+img,
+video,
+audio,
+embed,
+object {
+	max-width: 100%;
+}
+
+img,
+video,
+embed,
+object {
+	height: auto;
+}
+
+embed,
+object {
+    height: 100%;
+}
+
+img {
+	vertical-align: middle;
+	-ms-interpolation-mode: bicubic;
+}

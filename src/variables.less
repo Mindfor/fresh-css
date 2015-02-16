@@ -1,0 +1,123 @@
+// main
+@body-bg:					#fff;
+@transition-duration:		0.2s;
+@transition-default:		color @transition-duration, background-color @transition-duration, border-color @transition-duration, transform @transition-duration;
+
+// Typography
+@font-family-base:			"Helvetica Neue", Helvetica, Tahoma, sans-serif;
+@font-family-headings:		@font-family-base;
+
+@font-size-base:			16px;
+@font-size-big:				1.2em;
+@font-size-small:			.85em;
+@font-size-tiny:			.75em;
+@line-height:				1.65em;
+
+// Colors
+@color-text:				#222;
+@color-headings:			black;
+@color-primary:				#105c9a;
+@color-secondary:			#56b9d9;
+@color-gray:				#565d64;
+@color-gray-light:			#bdbdbd;
+@color-success:				rgb(28, 184, 65);
+@color-warning:				rgb(223, 117, 20);
+@color-error:				rgb(202, 60, 60);
+
+// Widths
+@width-sm:					35.5em;
+@width-md:					48em;
+@width-lg:					64em;
+@width-xl:					80em;
+
+@width-phone:				@width-sm;
+@width-tablet:				@width-md;
+@width-desktop:				@width-lg;
+
+// Links
+@link-color:				@color-primary;
+@link-hover-color:			darken(@link-color, 15%);
+@link-transition:			@transition-default;
+
+// Code
+@code-font-family:			Menlo, Monaco, Consolas, "Courier New", monospace;
+@code-bg-color:      		#f4f4f4;
+@code-border-color:			@color-gray-light;
+
+// Controls
+@control-font-family:			@font-family-base;
+@control-padding:				.3em .35em;
+@control-bg:					white;
+@control-border:				1px solid #ccc;
+@control-border-radius:			4px;
+@control-disabled-color:		#cad2d3;
+@control-disabled-bg:           #eaeded;
+@control-disabled-cursor:		not-allowed;
+@control-active-border-color:	@color-primary;
+@control-transition:			@transition-default;
+
+// Buttons
+// @btn-font-weight:			normal;
+// @btn-hover-darken:			15%;
+// @btn-border:				0 solid;
+// @btn-padding:				@control-padding;
+// @btn-transition:			@link-transition;
+//
+// @btn-primary-color:			#fff;
+// @btn-primary-bg:			@color-primary;
+// @btn-primary-bg-hover:		darken(@btn-primary-bg, @btn-hover-darken);
+// @btn-primary-border:		@btn-border darken(@btn-primary-bg, 5%);
+// @btn-primary-border-hover:	@btn-border darken(@btn-primary-bg, @btn-hover-darken);
+//
+// @btn-secondary-color:		#fff;
+// @btn-secondary-bg:			@color-secondary;
+// @btn-secondary-bg-hover:	darken(@btn-secondary-bg, @btn-hover-darken);
+// @btn-secondary-border:		@btn-border darken(@btn-secondary-bg, 5%);
+// @btn-secondary-border-hover:@btn-border darken(@btn-secondary-bg, @btn-hover-darken);
+//
+// @btn-success-color:			#fff;
+// @btn-success-bg:			@color-success;
+// @btn-success-bg-hover:		darken(@btn-success-bg, @btn-hover-darken);
+// @btn-success-border:		@btn-border darken(@btn-success-bg, 5%);
+// @btn-success-border-hover:	@btn-border darken(@btn-success-bg, @btn-hover-darken);
+//
+// @btn-warning-color:			#fff;
+// @btn-warning-bg:			@color-warning;
+// @btn-warning-bg-hover:		darken(@btn-warning-bg, @btn-hover-darken);
+// @btn-warning-border:		@btn-border darken(@btn-warning-bg, 5%);
+// @btn-warning-border-hover:	@btn-border darken(@btn-warning-bg, @btn-hover-darken);
+//
+// @btn-error-color:			#fff;
+// @btn-error-bg:				@color-error;
+// @btn-error-bg-hover:		darken(@btn-error-bg, @btn-hover-darken);
+// @btn-error-border:			@btn-border darken(@btn-error-bg, 5%);
+// @btn-error-border-hover:	@btn-border darken(@btn-error-bg, @btn-hover-darken);
+//
+// @btn-link-hover-bg:			@color-gray-light;
+//
+// // Menu
+// @menu-header-color:			@color-gray;
+// @menu-item-color:			inherit;
+// @menu-selected-color:		white;
+// @menu-selected-bg:			@color-secondary;
+
+// Table
+@table-border:				1px solid @color-gray-light;
+@table-header-bg:			transparent;
+@table-row-bg:				transparent;
+@table-footer-bg:			transparent;
+@table-odd-bg:				#f2f2f2;
+@table-hover-bg:			@color-secondary;
+@table-transition:			background @transition-duration;
+
+// // Form
+// @form-row-outline:			solid 1px @color-gray-light;
+//
+// // Drag
+// @drag-bg:					lighten(@color-secondary, 20%);
+// @drag-border:				1px dashed @color-gray;
+// @over-bg:					rgba(255, 255, 255, 0.7);
+//
+// // Admin
+// @admin-bg:					rgba(255, 255, 255, 0.9);
+// @admin-border:				solid 1px @color-gray-light;
