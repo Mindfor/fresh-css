@@ -179,10 +179,6 @@ img {
 .nowrap td {
   white-space: nowrap;
 }
-.list-flat {
-  padding-left: 0;
-  list-style: none;
-}
 .group:after {
   content: "";
   display: table;
@@ -526,16 +522,21 @@ ul,
 ol {
   padding-left: 2em;
 }
+ul > li,
+ol > li {
+  text-align: left;
+}
+ul.flat,
+ol.flat {
+  padding-left: 0;
+  list-style: none;
+}
 ul ul,
 ol ol,
 ul ol,
 ol ul,
 nav ul {
   margin-bottom: 0;
-}
-ul > li,
-ol > li {
-  text-align: left;
 }
 ol ol li {
   list-style-type: lower-alpha;
@@ -823,7 +824,6 @@ input[type="reset"] {
   display: inline-block;
   vertical-align: baseline;
   font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
-  font-size: 1em;
   font-weight: normal;
   line-height: 1.65em;
   text-align: center;
@@ -1455,87 +1455,116 @@ table tbody > td[data-href]:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
 .nav:after,
-nav:after {
+nav:not(.flat):after {
   content: "";
   display: table;
   clear: both;
 }
-.nav > ul > li,
-nav > ul > li {
+.nav ul,
+nav:not(.flat) ul {
   display: inline-block;
 }
-.nav > ul > li a,
-.nav > ul > li span,
-nav > ul > li a,
-nav > ul > li span {
+.nav > a,
+.nav > span,
+nav:not(.flat) > a,
+nav:not(.flat) > span {
+  display: inline-block;
+  padding: 0.25em 1em;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+.nav ul > li,
+nav:not(.flat) ul > li {
+  display: inline-block;
+}
+.nav ul > li > a,
+.nav ul > li > span,
+nav:not(.flat) ul > li > a,
+nav:not(.flat) ul > li > span {
   display: block;
   padding: 0.25em 1em;
   text-decoration: none;
   border-radius: 4px;
   border: 1px solid transparent;
 }
-.nav > ul > li a:hover,
-nav > ul > li a:hover {
+.nav ul > li a:hover,
+nav:not(.flat) ul > li a:hover {
   background: #f4f4f4;
 }
-.nav > ul > li.active a,
-.nav > ul > li.active span,
-nav > ul > li.active a,
-nav > ul > li.active span {
+.nav ul > li.active > a,
+.nav ul > li.active > span,
+nav:not(.flat) ul > li.active > a,
+nav:not(.flat) ul > li.active > span {
   border-color: #105c9a;
 }
-.nav > ul > li[disabled] a,
-.nav > ul > li.disabled a,
-.nav > ul > li[disabled] span,
-.nav > ul > li.disabled span,
-nav > ul > li[disabled] a,
-nav > ul > li.disabled a,
-nav > ul > li[disabled] span,
-nav > ul > li.disabled span {
+.nav ul > li[disabled] > a,
+.nav ul > li.disabled > a,
+.nav ul > li[disabled] > span,
+.nav ul > li.disabled > span,
+nav:not(.flat) ul > li[disabled] > a,
+nav:not(.flat) ul > li.disabled > a,
+nav:not(.flat) ul > li[disabled] > span,
+nav:not(.flat) ul > li.disabled > span {
   color: #b4b4b4;
   background: none;
   cursor: not-allowed;
 }
-.nav.vertical ul > li,
-nav.vertical ul > li {
+.nav.vertical > a,
+.nav.vertical > span,
+nav:not(.flat).vertical > a,
+nav:not(.flat).vertical > span {
+  display: block;
+  border-bottom: 1px solid #bdbdbd;
+  margin-top: 0.5em;
+}
+.nav.vertical ul,
+nav:not(.flat).vertical ul {
   display: block;
 }
-.nav.lined ul > li,
-nav.lined ul > li {
-  padding: 0 0 3px;
+.nav.vertical ul > li,
+nav:not(.flat).vertical ul > li {
+  display: block;
 }
-.nav.lined ul > li a,
-.nav.lined ul > li span,
-nav.lined ul > li a,
-nav.lined ul > li span {
+.nav.vertical ul > li > ul,
+nav:not(.flat).vertical ul > li > ul {
+  margin-left: 2em;
+}
+.nav.lined ul > li > a,
+.nav.lined ul > li > span,
+nav:not(.flat).lined ul > li > a,
+nav:not(.flat).lined ul > li > span {
   border: none;
+  margin-bottom: 3px;
 }
-.nav.lined ul > li.active,
-nav.lined ul > li.active {
-  padding-bottom: 0;
+.nav.lined ul > li.active > a,
+.nav.lined ul > li.active > span,
+nav:not(.flat).lined ul > li.active > a,
+nav:not(.flat).lined ul > li.active > span {
+  margin-bottom: 0;
   border-bottom: 3px solid #105c9a;
-}
-.nav.lined ul > li.active a,
-.nav.lined ul > li.active span,
-nav.lined ul > li.active a,
-nav.lined ul > li.active span {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.nav.lined.vertical ul > li,
-nav.lined.vertical ul > li {
-  padding: 0 0 0 3px;
+.nav.lined.vertical > a,
+.nav.lined.vertical > span,
+nav:not(.flat).lined.vertical > a,
+nav:not(.flat).lined.vertical > span {
+  margin-left: 3px;
 }
-.nav.lined.vertical ul > li.active,
-nav.lined.vertical ul > li.active {
-  padding-left: 0;
-  border-bottom: none;
+.nav.lined.vertical ul > li > a,
+.nav.lined.vertical ul > li > span,
+nav:not(.flat).lined.vertical ul > li > a,
+nav:not(.flat).lined.vertical ul > li > span {
+  margin-bottom: 0;
+  margin-left: 3px;
+}
+.nav.lined.vertical ul > li.active > a,
+.nav.lined.vertical ul > li.active > span,
+nav:not(.flat).lined.vertical ul > li.active > a,
+nav:not(.flat).lined.vertical ul > li.active > span {
+  border-bottom: 0;
+  margin-left: 0;
   border-left: 3px solid #105c9a;
-}
-.nav.lined.vertical ul > li.active a,
-.nav.lined.vertical ul > li.active span,
-nav.lined.vertical ul > li.active a,
-nav.lined.vertical ul > li.active span {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }

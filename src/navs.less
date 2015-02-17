@@ -2,11 +2,22 @@
 
 .nav {
 	.clearfix;
-
-	> ul > li {
+	
+	ul {
+		display: inline-block;
+	}
+	
+	> a, > span {
+		display: inline-block;
+		padding: @nav-padding;
+		font-size: 0.9em;
+		text-transform: uppercase;
+	}
+	
+	ul > li {
 		display: inline-block;
 		
-		a, span {
+		>a , > span {
 			display: block;
 			padding: @nav-padding;
 			text-decoration: none;
@@ -19,14 +30,14 @@
 		}
 		
 		&.active {
-			a, span {
+			> a, > span {
 				border-color: @nav-active-color;
 			}
 		}
 		
 		&[disabled],
 		&.disabled {
-			a, span {
+			> a, > span {
 				color: @control-disabled-color;
 				background: none;
 				cursor: @control-disabled-cursor;
@@ -35,25 +46,37 @@
 	}
 	
 	&.vertical {
+		> a, > span {
+			display: block;
+			border-bottom: 1px solid @color-border;
+			margin-top: @nav-heading-margin-top;
+		}
+		
+		ul {
+			display: block;
+		}
+		
 		ul > li {
 			display: block;
+			
+			> ul {
+				margin-left: 2em;
+			}
 		}
 	}
 }
 
 .nav.lined {
 	ul > li {
-		padding: 0 0 3px;
-		
-		a, span {
+		> a, > span {
 			border: none;
+			margin-bottom: 3px;
 		}
 		
 		&.active {
-			padding-bottom: 0;
-			border-bottom: 3px solid @nav-active-color;
-			
-			a, span {
+			> a, > span {
+				margin-bottom: 0;
+				border-bottom: 3px solid @nav-active-color;
 				border-bottom-left-radius: 0;
 				border-bottom-right-radius: 0;
 			}
@@ -61,15 +84,21 @@
 	}
 	
 	&.vertical {
+		> a, > span {
+			margin-left: 3px;
+		}
+		
 		ul > li {
-			padding: 0 0 0 3px;
+			> a, > span {
+				margin-bottom: 0;
+				margin-left: 3px;		
+			}
 			
 			&.active {
-				padding-left: 0;
-				border-bottom: none;
-				border-left: 3px solid @nav-active-color;
-
-				a, span {
+				> a, > span {
+					border-bottom: 0;					
+					margin-left: 0;
+					border-left: 3px solid @nav-active-color;
 					border-top-left-radius: 0;
 					border-bottom-left-radius: 0;
 				}
@@ -78,6 +107,6 @@
 	}
 }
 
-nav {
+nav:not(.flat) {
 	&:extend(.nav all);
 }

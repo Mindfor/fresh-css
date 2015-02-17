@@ -73,6 +73,15 @@ table, form, fieldset, figure, address {
 
 ul, ol {
 	padding-left: 2em;
+	
+	> li {
+		text-align: left;
+	}
+	
+	&.flat {
+		padding-left: 0;
+		list-style: none;
+	}
 }
 
 ul ul,
@@ -83,11 +92,6 @@ nav ul {
 	margin-bottom: 0;
 }
 
-ul > li,
-ol > li {
-	text-align: left;
-}
-
 ol ol li {
 	list-style-type: lower-alpha;
 }
@@ -95,7 +99,6 @@ ol ol li {
 ol ol ol li {
 	list-style-type: lower-roman;
 }
-
 
 // Blockquote and definitions
 blockquote {
