@@ -1,4 +1,20 @@
-.linear-gradient (@bgcolor: #fff, @from: #fff, @to: #000) {
+.clearfix() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.vertical-align() {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.gradient(@bgcolor: #fff, @from: #fff, @to: #000) {
 	background-color: @bgcolor;
 	filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{from}', endColorstr='@{to}',GradientType=0)";
 	background-image: linear-gradient(top, @from 0%, @to 100%);

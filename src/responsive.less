@@ -1,21 +1,42 @@
 @import "variables.less";
 
 .container-sm {
-	.center;
+	.pull-center;
 	max-width: @width-sm;
 }
 
 .container-md {
-	.center;
+	.pull-center;
 	max-width: @width-md;
 }
 
 .container-lg {
-	.center;
+	.pull-center;
 	max-width: @width-lg;
 }
 
 .container-xl {
-	.center;
+	.pull-center;
 	max-width: @width-xl;
+}
+
+.container {
+	.pull-center;
+	max-width: 100%;
+
+	@media screen and (min-width: @width-sm) {
+		max-width: @width-sm;
+	}
+
+	@media screen and (min-width: @width-md) {
+		max-width: @width-md;
+	}
+
+	@media screen and (min-width: @width-lg) {
+		max-width: @width-lg;
+	}
+
+	@media screen and (min-width: @width-xl) {
+		max-width: @width-xl;
+	}
 }

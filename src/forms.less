@@ -1,0 +1,79 @@
+@import "variables.less";
+@import "mixins.less";
+
+fieldset {
+	padding: 0;
+	margin-bottom: @line-height;
+	border: none;
+
+	& *:last-child {
+		margin-bottom: 0 !important;
+	}
+}
+
+legend {
+	font-weight: bold;
+	padding: 0 1em;
+	margin-left: -1em;
+}
+
+.input-group {
+	display: inline-table !important;
+	border-collapse: separate;
+	vertical-align: middle;
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="url"],
+    input[type="phone"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="datetime"],
+    input[type="date"],
+    input[type="month"],
+    input[type="color"],
+    input[type="time"],
+    input[type="search"],
+    input[type="datetime-local"] {
+		display: table-cell;
+		width: 100%;
+        
+        &:not(:first-child) {
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+        }
+        
+        &:not(:last-child) {
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+        }
+	}
+
+	span,
+    button,
+    input[type="button"],
+    input[type="submit"], 
+    input[type="reset"] {
+        display: table-cell;
+		vertical-align: middle;
+		padding: @control-padding;
+		border: @control-border;
+		border-radius: @control-border-radius;
+		background-color: @color-gray-light;
+		width: 0;
+		white-space: nowrap;
+        
+        &:first-child {
+            border-right: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        
+        &:last-child {
+            border-left: none;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+	}
+}
