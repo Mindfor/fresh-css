@@ -1,0 +1,177 @@
+@import "variables.less";
+@import "mixins.less";
+
+.btn-color(@bg) {
+	color: @btn-color;
+	background-color: @bg;
+	border-color: darken(@bg, 5%);
+	
+	&:hover:not(:active):not(.active) {
+		background-color: darken(@bg, @btn-hovering);
+		border-color: darken(@bg, @btn-hovering);
+	}
+	
+	&[disabled],
+	&.disabled {
+		color: @control-disabled-color;
+		background: @control-disabled-bg;
+	}
+}
+
+.btn-outline-color(@color) {
+	color: @color;
+	border-color: @color;
+	
+	&:hover {
+		color: @btn-color;
+		background-color: @color;
+	}
+	
+	&[disabled],
+	&.disabled {
+		color: @control-disabled-color;
+		background: none;
+	}
+}
+
+.btn {
+	display: inline-block;
+	vertical-align: baseline;
+
+	font-family: @control-font-family;
+	font-size: 1em;
+	font-weight: @btn-font-weight;
+	line-height: @line-height;
+    text-align: center;
+	text-decoration: none;
+	
+	-webkit-appearance: none;
+	outline: none;
+	box-shadow: none;
+	cursor: pointer;
+	
+	border: @btn-border;
+	border-radius: @btn-border-radius;
+	padding: @btn-padding;
+	.transition(@btn-transition);
+	.btn-color(@btn-bg);
+
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+	
+	&[disabled],
+	&.disabled {
+		cursor: @control-disabled-cursor;
+		box-shadow: none;
+	}
+	
+	&:active,
+	&.active {
+		box-shadow: 0 1px 3px rgba(0, 0, 0, .4) inset;
+	}
+	
+	// Sizes
+	&.xl {
+		font-size: @font-size-xl;
+	}
+	
+	&.lg {
+		font-size: @font-size-lg;
+	}
+	
+	&.sm {
+		font-size: @font-size-sm;
+	}
+	
+	&.xs {
+		font-size: @font-size-xs;
+		vertical-align: baseline;
+	}
+	
+	// Colors
+	&.primary {
+		.btn-color(@color-primary);
+	}
+	
+	&.secondary {
+		.btn-color(@color-secondary);
+	}
+	
+	&.success {
+		.btn-color(@color-success);
+	}
+	
+	&.warning {
+		.btn-color(@color-warning);
+	}
+	
+	&.error {
+		.btn-color(@color-error);
+	}
+	
+	&.link {
+		color: @link-color;
+		background: none;
+		border-color: transparent;
+		text-decoration: underline;
+		
+		&:hover {
+			color: @link-hover-color;
+			text-decoration: none;
+		}
+	}
+}
+
+// Outline button
+.btn.outline {
+	color: @color-text;
+	border-color: @color-text;
+	background: none;
+
+	&:hover {
+		color: @color-invert;
+		background-color: @color-text;
+	}
+
+	&[disabled],
+	&.disabled {
+		background: none;
+		box-shadow: none;
+	}
+
+	// Colors
+	&.primary {
+		.btn-outline-color(@color-primary);
+	}
+	
+	&.secondary {
+		.btn-outline-color(@color-secondary);
+	}
+	
+	&.success {
+		.btn-outline-color(@color-success);
+	}
+	
+	&.warning {
+		.btn-outline-color(@color-warning);
+	}
+	
+	&.error {
+		.btn-outline-color(@color-error);
+	}
+}
+
+button[type="submit"],
+input[type="submit"] {
+	&:extend(.btn all);
+	&:extend(.btn.primary all);
+}
+
+button[type="button"],
+button:not([type]),
+input[type="button"],
+input[type="reset"] {
+	&:extend(.btn all);
+}

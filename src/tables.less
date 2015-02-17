@@ -17,14 +17,24 @@ table {
 		text-transform: uppercase;
 		padding: 0 1em;
 		color: @color-gray;
-		font-size: @font-size-small;
+		font-size: @font-size-sm;
 	}
 	
 	th, td {
 		text-align: left;
-		padding: 1em 1em;
+		padding: 0.75em 1em;
 		border-bottom: @table-border;
 		background: @table-row-bg;
+		
+		&.min {
+			width: 1px;
+		}
+		
+		&.control {
+			width: 1px;
+			white-space: nowrap;
+			text-align: center;
+		}
 	}
 	
 	thead > tr {
@@ -71,6 +81,18 @@ table.hover {
 	   background: @table-hover-bg !important;
     }
 }
+
+table.click	> tr,
+table.click tbody > tr,
+table > tr[data-href],
+table tbody > td[data-href] {
+	cursor: pointer;
+	
+	&:hover {
+		background: @table-hover-bg !important;
+    }
+}
+
 
 .table-container {
 	width: 100%;

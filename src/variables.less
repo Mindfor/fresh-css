@@ -8,14 +8,16 @@
 @font-family-headings:		@font-family-base;
 
 @font-size-base:			16px;
-@font-size-big:				1.2em;
-@font-size-small:			.85em;
-@font-size-tiny:			.75em;
+@font-size-xl:				1.5em;
+@font-size-lg:				1.2em;
+@font-size-sm:				.85em;
+@font-size-xs:				.75em;
 @line-height:				1.65em;
 
 // Colors
 @color-text:				#222;
 @color-headings:			black;
+@color-invert:				white;
 @color-primary:				#105c9a;
 @color-secondary:			#56b9d9;
 @color-gray:				#565d64;
@@ -46,7 +48,7 @@
 
 // Controls
 @control-font-family:			@font-family-base;
-@control-padding:				.3em .4em;
+@control-padding:				.25em .4em;
 @control-bg:					white;
 @control-border:				1px solid @color-gray-light;
 @control-border-radius:			4px;
@@ -57,49 +59,14 @@
 @control-transition:			@transition-default;
 
 // Buttons
-// @btn-font-weight:			normal;
-// @btn-hover-darken:			15%;
-// @btn-border:				0 solid;
-// @btn-padding:				@control-padding;
-// @btn-transition:			@link-transition;
-//
-// @btn-primary-color:			#fff;
-// @btn-primary-bg:			@color-primary;
-// @btn-primary-bg-hover:		darken(@btn-primary-bg, @btn-hover-darken);
-// @btn-primary-border:		@btn-border darken(@btn-primary-bg, 5%);
-// @btn-primary-border-hover:	@btn-border darken(@btn-primary-bg, @btn-hover-darken);
-//
-// @btn-secondary-color:		#fff;
-// @btn-secondary-bg:			@color-secondary;
-// @btn-secondary-bg-hover:	darken(@btn-secondary-bg, @btn-hover-darken);
-// @btn-secondary-border:		@btn-border darken(@btn-secondary-bg, 5%);
-// @btn-secondary-border-hover:@btn-border darken(@btn-secondary-bg, @btn-hover-darken);
-//
-// @btn-success-color:			#fff;
-// @btn-success-bg:			@color-success;
-// @btn-success-bg-hover:		darken(@btn-success-bg, @btn-hover-darken);
-// @btn-success-border:		@btn-border darken(@btn-success-bg, 5%);
-// @btn-success-border-hover:	@btn-border darken(@btn-success-bg, @btn-hover-darken);
-//
-// @btn-warning-color:			#fff;
-// @btn-warning-bg:			@color-warning;
-// @btn-warning-bg-hover:		darken(@btn-warning-bg, @btn-hover-darken);
-// @btn-warning-border:		@btn-border darken(@btn-warning-bg, 5%);
-// @btn-warning-border-hover:	@btn-border darken(@btn-warning-bg, @btn-hover-darken);
-//
-// @btn-error-color:			#fff;
-// @btn-error-bg:				@color-error;
-// @btn-error-bg-hover:		darken(@btn-error-bg, @btn-hover-darken);
-// @btn-error-border:			@btn-border darken(@btn-error-bg, 5%);
-// @btn-error-border-hover:	@btn-border darken(@btn-error-bg, @btn-hover-darken);
-//
-// @btn-link-hover-bg:			@color-gray-light;
-//
-// // Menu
-// @menu-header-color:			@color-gray;
-// @menu-item-color:			inherit;
-// @menu-selected-color:		white;
-// @menu-selected-bg:			@color-secondary;
+@btn-color:					@color-invert;
+@btn-bg:					#aaa;
+@btn-font-weight:			normal;
+@btn-hovering:				15%;
+@btn-border:				1px solid;
+@btn-border-radius:			@control-border-radius;
+@btn-padding:				.25em 1em;
+@btn-transition:			@link-transition;
 
 // Table
 @table-border:				1px solid @color-gray-light;
@@ -109,6 +76,12 @@
 @table-odd-bg:				#f2f2f2;
 @table-hover-bg:			@color-secondary;
 @table-transition:			background @transition-duration;
+
+// // Menu
+// @menu-header-color:			@color-gray;
+// @menu-item-color:			inherit;
+// @menu-selected-color:		white;
+// @menu-selected-bg:			@color-secondary;
 
 // // Form
 // @form-row-outline:			solid 1px @color-gray-light;
