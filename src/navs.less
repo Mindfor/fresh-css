@@ -33,20 +33,46 @@
 			}
 		}
 	}
+	
+	&.vertical {
+		ul > li {
+			display: block;
+		}
+	}
 }
 
 .nav.lined {
 	ul > li {
+		padding: 0 0 3px;
+		
 		a, span {
 			border: none;
-			margin-bottom: 3px;
 		}
 		
 		&.active {
+			padding-bottom: 0;
+			border-bottom: 3px solid @nav-active-color;
+			
 			a, span {
-				border-bottom: 3px solid @nav-active-color;
 				border-bottom-left-radius: 0;
 				border-bottom-right-radius: 0;
+			}
+		}
+	}
+	
+	&.vertical {
+		ul > li {
+			padding: 0 0 0 3px;
+			
+			&.active {
+				padding-left: 0;
+				border-bottom: none;
+				border-left: 3px solid @nav-active-color;
+
+				a, span {
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+				}
 			}
 		}
 	}

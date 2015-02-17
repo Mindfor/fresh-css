@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link rel="stylesheet" href="fresh.css" />
+</head>
+<body class="container-lg">
+    <h1>Primary header</h1>
+	<p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Another paragraph.</p>
+	<hr/>
+	<p>One more...</p>
+	
+	<blockquote>Some blockquote<br/>With multiline</blockquote>
+    
+    <h2>Secondary header</h2>
+	<ul>
+		<li>One</li>
+		<li>Two</li>
+		<li>Three
+            <ul>
+                <li>This is first</li>
+                <li>This is second</li>
+            </ul>
+        </li>
+        <li>
+            Four
+            <ol>
+                <li>This is first</li>
+                <li>This is second</li>
+            </ol>
+        </li>
+	</ul>
+    
+    <h3>Grid</h3>
+    <div class="row p">
+        <div class="col-1-3">Column 1/3<br/>With multiline</div>
+        <div class="col-2-3" style="background-color:gray">Column 2/3</div>
+    </div>
+    
+    <h3>Tables</h3>
+    <table>
+        <caption>Normal table</caption>
+        <thead>
+            <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>Col 1</td>
+            <td>Col 2</td>
+            <td>Col 3</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <table class="simple">
+        <caption>Simple table</caption>
+        <thead>
+            <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>Col 1</td>
+            <td>Col 2</td>
+            <td>Col 3</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <table class="flat">
+        <caption>Flat table</caption>
+        <thead>
+            <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>Col 1</td>
+            <td>Col 2</td>
+            <td>Col 3</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <table class="stripped hover">
+        <caption>Stripped hover table</caption>
+        <thead>
+            <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>Col 1</td>
+            <td>Col 2</td>
+            <td>Col 3</td>
+        </tr>
+		 <tr>
+            <td>Col 1</td>
+            <td>Col 2</td>
+            <td>Col 3</td>
+        </tr>
+		 <tr>
+            <td>Col 1</td>
+            <td>Col 2</td>
+            <td>Col 3</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+            </tr>
+        </tfoot>
+    </table>
+	
+	<h4>Buttons</h4>
+	<button type="button">Just button</button>
+	<button type="submit">Primary</button>
+	<button type="button" class="secondary">Secondary</button>
+	<a href="#" class="btn success">Success</a>
+	<button type="button" class="warning">Warning</button>
+	<button type="button" class="error">Error</button>
+	<button type="button" class="link">Link</button>
+	<button type="button" class="disabled">Disabled</button>
+	<button class="primary disabled">Primary disabled</button>
+	<button class="primary active">Primary active</button>
+	<br/>
+	<button type="button" class="outline">Outline</button>
+	<button type="button" class="outline primary">Primary</button>
+	<button type="button" class="outline secondary">Secondary</button>
+	<button type="button" class="outline success">Success</button>
+	<button type="button" class="outline warning">Warning</button>
+	<button type="button" class="outline error">Error</button>
+	<button type="button" class="outline error disabled">Error disabled</button>
+	<button type="button" class="outline error active">Error active</button>
+	<br/>
+	<button>Normal</button>
+	<button class="xs">Tiny</button>
+	<button class="sm">Small</button>
+	<button class="lg">Large</button>
+	<button class="xl">Extra large</button>
+	
+	<h4>Navigations</h4>
+	<nav>
+		<ul>
+			<li><a href="#">One</a></li>
+			<li><a href="#">Two</a></li>
+			<li class="active"><a href="#">Active</a></li>
+			<li><a href="#">Three</a></li>
+			<li><span>Just span</span></li>
+			<li class="active"><span>Active span</span></li>
+			<li disabled><a href="#">Disabled</a></li>
+			<li disabled><span>Disabled span</span></li>
+		</ul>
+	</nav>
+	
+	<nav class="lined">
+		<ul>
+			<li><a href="#">One</a></li>
+			<li><a href="#">Two</a></li>
+			<li class="active"><a href="#">Active</a></li>
+			<li><a href="#">Three</a></li>
+			<li><span>Just span</span></li>
+			<li class="active"><span>Active span</span></li>
+			<li disabled><a href="#">Disabled</a></li>
+		</ul>
+	</nav>
+	
+	<nav class="vertical" style="max-width:200px">
+		<ul>
+			<li><a href="#">One</a></li>
+			<li><a href="#">Two</a></li>
+			<li class="active"><a href="#">Active</a></li>
+			<li><a href="#">Three</a></li>
+			<li><span>Just span</span></li>
+			<li class="active"><span>Active span</span></li>
+			<li disabled><a href="#">Disabled</a></li>
+		</ul>
+	</nav>
+	
+	<nav class="vertical lined" style="max-width:200px">
+		<ul>
+			<li><a href="#">One</a></li>
+			<li><a href="#">Two</a></li>
+			<li class="active"><a href="#">Active</a></li>
+			<li><a href="#">Three</a></li>
+			<li><span>Just span</span></li>
+			<li class="active"><span>Active span</span></li>
+			<li disabled><a href="#">Disabled</a></li>
+		</ul>
+	</nav>
+    
+    <h4>Forms</h4>
+    <form>
+    </form>
+</body>
+</html>
