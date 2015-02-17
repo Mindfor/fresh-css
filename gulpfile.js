@@ -1,10 +1,12 @@
 var gulp = require("gulp");
 var less = require("gulp-less");
+var minify = require('gulp-minify-css');
 
 gulp.task("less", function () {
 	gulp.src("fresh.less")
 		.pipe(less())
-		.pipe(gulp.dest("docs"));
+		.pipe(minify())
+		.pipe(gulp.dest("./"));
 });
 
 gulp.task("watch", function() {
