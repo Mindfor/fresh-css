@@ -32,13 +32,6 @@ h1, h2, h3, h4, h5, h6,
 	margin: 0 0 .5em;
 }
 
-@font-size-h1-lg: 2.25em; // 36px
-@font-size-h2-lg: 1.5em; // 24px
-@font-size-h3-lg: 1.3125em; // 21px
-@font-size-h4-lg: 1.125em; // 18px
-@font-size-h5-lg: 1em; // 16px
-@font-size-h6-lg: .75em; // 12px
-
 h1, .h1, {
 	font-size: 2em;
 	line-height: 1.1;
@@ -73,7 +66,7 @@ p, ul, ol, dl, dd, dt, blockquote, td, th {
 	line-height: @line-height;
 }
 
-p, .p, ul, ol, dl, blockquote, hr, pre,
+p, .p, ul, ol, dl, blockquote, hr, pre, nav,
 table, form, fieldset, figure, address {
     margin: 0 0 1em;
 }
@@ -82,7 +75,11 @@ ul, ol {
 	padding-left: 2em;
 }
 
-ul ul, ol ol, ul ol, ol ul {
+ul ul,
+ol ol,
+ul ol,
+ol ul,
+nav ul {
 	margin-bottom: 0;
 }
 
@@ -106,7 +103,7 @@ blockquote {
 	font-style: italic;
 	margin-left: 2.5em;
 	padding-left: 1.5em;
-	border-left: 2px solid @color-gray-light;
+	border-left: 2px solid @color-border;
 
 	& p {
 		margin-bottom: .5em;
@@ -115,7 +112,7 @@ blockquote {
 
 blockquote small,
 cite {
-	color: @color-gray-light;
+	color: @color-border;
 	font-style: italic;
 }
 
@@ -137,7 +134,7 @@ dl {
 
 // elements
 hr {
-	background-color: @color-gray-light;
+	background-color: @color-border;
 }
 
 address {

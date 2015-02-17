@@ -1,0 +1,57 @@
+@import "variables.less";
+
+.nav {
+	.clearfix;
+
+	> ul > li {
+		display: inline-block;
+		
+		a, span {
+			display: block;
+			padding: @nav-padding;
+			text-decoration: none;
+			border-radius: @nav-border-radius;
+			border: 1px solid transparent;
+		}
+
+		a:hover {
+			background: @nav-hover-bg;
+		}
+		
+		&.active {
+			a, span {
+				border-color: @nav-active-color;
+			}
+		}
+		
+		&[disabled],
+		&.disabled {
+			a, span {
+				color: @control-disabled-color;
+				background: none;
+				cursor: @control-disabled-cursor;
+			}
+		}
+	}
+}
+
+.nav.lined {
+	ul > li {
+		a, span {
+			border: none;
+			margin-bottom: 3px;
+		}
+		
+		&.active {
+			a, span {
+				border-bottom: 3px solid @nav-active-color;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+	}
+}
+
+nav {
+	&:extend(.nav all);
+}

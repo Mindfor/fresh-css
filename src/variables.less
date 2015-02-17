@@ -22,7 +22,8 @@
 @color-primary:				#105c9a;
 @color-secondary:			#56b9d9;
 @color-gray:				#565d64;
-@color-gray-light:			#bdbdbd;
+@color-border:				#bdbdbd;
+@color-light:				#f4f4f4;
 @color-success:				rgb(28, 184, 65);
 @color-warning:				rgb(223, 117, 20);
 @color-error:				rgb(202, 60, 60);
@@ -44,17 +45,17 @@
 
 // Code
 @code-font-family:			Menlo, Monaco, Consolas, "Courier New", monospace;
-@code-bg-color:      		#f4f4f4;
-@code-border-color:			@color-gray-light;
+@code-bg-color:      		@color-light;
+@code-border-color:			@color-border;
 
 // Controls
 @control-font-family:			@font-family-base;
 @control-padding:				.25em .4em;
 @control-bg:					white;
-@control-border:				1px solid @color-gray-light;
+@control-border:				1px solid @color-border;
 @control-border-radius:			4px;
-@control-disabled-color:		#cad2d3;
-@control-disabled-bg:           #eaeded;
+@control-disabled-color:		darken(@color-light, 25%);
+@control-disabled-bg:           @color-light;
 @control-disabled-cursor:		not-allowed;
 @control-active-border-color:	@color-primary;
 @control-transition:			@transition-default;
@@ -70,15 +71,19 @@
 @btn-transition:			@link-transition;
 
 // Table
-@table-border:				1px solid @color-gray-light;
+@table-border:				1px solid @color-border;
 @table-header-bg:			transparent;
 @table-row-bg:				transparent;
 @table-footer-bg:			transparent;
-@table-odd-bg:				#f2f2f2;
+@table-odd-bg:				@color-light;
 @table-hover-bg:			@color-secondary;
 @table-transition:			background @transition-duration;
 
-// // Menu
+// Navigation
+@nav-padding:				@btn-padding;
+@nav-border-radius:			@control-border-radius;
+@nav-hover-bg:				@color-light;
+@nav-active-color:			@color-primary;
 // @menu-header-color:			@color-gray;
 // @menu-item-color:			inherit;
 // @menu-selected-color:		white;
