@@ -32,7 +32,7 @@ legend {
 			margin-left: -@control-border-radius;
 		}
 		
-		> label {
+		> label { // checkboxes
 			display: block;
 			margin-top: .25em;
 		}
@@ -81,6 +81,38 @@ form:not(.flat) {
 	}
 }
 
+// Aligned form
+.form.aligned {
+	// aligned row
+	> div:not(.flat):not(.controls) {
+		&:extend(.row-flat all);
+		margin-bottom: 1em;
+		
+		> label {
+			&:extend(.col-1-4);
+			padding: @control-padding;
+			padding-left: 0;
+		}
+		
+		> input,
+		> textarea,
+		> select
+		> div {
+			&:extend(.col-3-4);
+		}
+		
+		> div > label { // checkboxes
+			display: block;
+			margin-top: .25em;
+		}
+	}
+	
+	// controls
+	> div.controls {
+		&:extend(.col-offset-1-4);
+	}
+}
+
 // Label
 label.req {
 	> span:first-child:after {
@@ -89,7 +121,7 @@ label.req {
 	}
 }
 
-// Lists
+// Checkbox / radio list
 ul.radio,
 ul.checkbox,
 ul.radio-inline,

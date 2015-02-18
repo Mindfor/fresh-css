@@ -1,28 +1,29 @@
 @import "variables.less";
 
-.container-sm {
+.container-base(@width) {
 	.pull-center;
-	max-width: @width-sm;
+	padding: 0 1em;
+	max-width: @width;
+}
+
+.container-sm {
+	.container-base(@width-sm);
 }
 
 .container-md {
-	.pull-center;
-	max-width: @width-md;
+	.container-base(@width-md);
 }
 
 .container-lg {
-	.pull-center;
-	max-width: @width-lg;
+	.container-base(@width-lg);
 }
 
 .container-xl {
-	.pull-center;
-	max-width: @width-xl;
+	.container-base(@width-xl);
 }
 
 .container {
-	.pull-center;
-	max-width: 100%;
+	.container-base(100%);
 
 	@media screen and (min-width: @width-sm) {
 		max-width: @width-sm;

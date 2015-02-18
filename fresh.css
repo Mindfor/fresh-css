@@ -283,7 +283,9 @@ abbr[title].text-help,
   background-color: #565d64;
 }
 .row,
-.row-flat {
+.row-flat,
+.form.aligned > div:not(.flat):not(.controls),
+form:not(.flat).aligned > div:not(.flat):not(.controls) {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -293,19 +295,24 @@ abbr[title].text-help,
   justify-content: flext-start;
 }
 .row:after,
-.row-flat:after {
+.row-flat:after,
+.form.aligned > div:not(.flat):not(.controls):after,
+form:not(.flat).aligned > div:not(.flat):not(.controls):after {
   content: "";
   display: table;
   clear: both;
 }
+.row > *,
+.row-flat > *,
+.form.aligned > div:not(.flat):not(.controls) > *,
+form:not(.flat).aligned > div:not(.flat):not(.controls) > * {
+  display: block;
+}
 .row {
   margin: 0 -1em 1em;
 }
-.row > [class^="col-"] {
+.row > * {
   padding: 0 1em;
-}
-[class^="col-"] {
-  display: block;
 }
 .col-1 {
   width: 8.3333%;
@@ -315,7 +322,9 @@ abbr[title].text-help,
   width: 16.6667%;
 }
 .col-3,
-.col-1-4 {
+.col-1-4,
+.form.aligned > div:not(.flat):not(.controls) > label,
+form:not(.flat).aligned > div:not(.flat):not(.controls) > label {
   width: 25%;
 }
 .col-4,
@@ -337,7 +346,13 @@ abbr[title].text-help,
   width: 66.6667%;
 }
 .col-9,
-.col-3-4 {
+.col-3-4,
+.form.aligned > div:not(.flat):not(.controls) > input,
+.form.aligned > div:not(.flat):not(.controls) > textarea,
+.form.aligned > div:not(.flat):not(.controls) > select > div,
+form:not(.flat).aligned > div:not(.flat):not(.controls) > input,
+form:not(.flat).aligned > div:not(.flat):not(.controls) > textarea,
+form:not(.flat).aligned > div:not(.flat):not(.controls) > select > div {
   width: 75%;
 }
 .col-10,
@@ -364,29 +379,87 @@ abbr[title].text-help,
 .col-4-5 {
   width: 80%;
 }
+.col-offset-1 {
+  margin-left: 8.3333%;
+}
+.col-offset-2 .col-offset-1-6 {
+  margin-left: 16.6667%;
+}
+.col-offset-3,
+.col-offset-1-4,
+.form.aligned > div.controls,
+form:not(.flat).aligned > div.controls {
+  margin-left: 25%;
+}
+.col-offset-4,
+.col-offset-1-3 {
+  margin-left: 33.3333%;
+}
+.col-offset-5 {
+  margin-left: 41.6667%;
+}
+.col-offset-6,
+.col-offset-1-2 {
+  margin-left: 50%;
+}
+.col-offset-7 {
+  margin-left: 58.3333%;
+}
+.col-offset-8,
+.col-offset-2-3 {
+  margin-left: 66.6667%;
+}
+.col-offset-9,
+.col-offset-3-4 {
+  margin-left: 75%;
+}
+.col-offset-10,
+.col-offset-5-6 {
+  margin-left: 83.3333%;
+}
+.col-offset-11 {
+  margin-left: 91.6667%;
+}
+.col-offset-1-5 {
+  margin-left: 20%;
+}
+.col-offset-2-5 {
+  margin-left: 40%;
+}
+.col-offset-3-5 {
+  margin-left: 60%;
+}
+.col-offset-4-5 {
+  margin-left: 80%;
+}
 .container-sm {
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1em;
   max-width: 35.5em;
 }
 .container-md {
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1em;
   max-width: 48em;
 }
 .container-lg {
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1em;
   max-width: 64em;
 }
 .container-xl {
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1em;
   max-width: 80em;
 }
 .container {
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1em;
   max-width: 100%;
 }
 @media screen and (min-width: 35.5em) {
@@ -674,7 +747,7 @@ select {
   background: white;
   border: 1px solid #bdbdbd;
   border-radius: 2px;
-  padding: 0.25em 0.5em;
+  padding: 0.3em 0.5em;
   vertical-align: middle;
   -webkit-transition: color 0.2s, background-color 0.2s, border-color 0.2s, transform 0.2s;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s, transform 0.2s;
@@ -1689,6 +1762,20 @@ form:not(.flat).inline select {
   vertical-align: middle;
   width: auto;
 }
+.form.aligned > div:not(.flat):not(.controls),
+form:not(.flat).aligned > div:not(.flat):not(.controls) {
+  margin-bottom: 1em;
+}
+.form.aligned > div:not(.flat):not(.controls) > label,
+form:not(.flat).aligned > div:not(.flat):not(.controls) > label {
+  padding: 0.3em 0.5em;
+  padding-left: 0;
+}
+.form.aligned > div:not(.flat):not(.controls) > div > label,
+form:not(.flat).aligned > div:not(.flat):not(.controls) > div > label {
+  display: block;
+  margin-top: .25em;
+}
 label.req > span:first-child:after {
   content: " *";
   color: red;
@@ -1785,7 +1872,7 @@ ul.checkbox-inline > li {
   border-bottom-left-radius: 0;
 }
 .input-group span {
-  padding: 0.25em 0.5em;
+  padding: 0.3em 0.5em;
   border: 1px solid #bdbdbd;
   border-radius: 2px;
   background-color: #f4f4f4;
