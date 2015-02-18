@@ -1,0 +1,17 @@
+{
+	"name": "fresh-css",
+	"version": "0.1.0",
+	"authors": [ "Mindfor Ltd." ],
+	"description": "",
+	"homepage": "https://github.com/Mindfor/fresh-css",
+
+	"main": [
+		"fresh.less",
+		"fresh.css",
+		"src/*"
+	],
+
+	"dependencies": {
+		"fontawesome": "^4.3.0"
+	}
+}
