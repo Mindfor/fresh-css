@@ -7,6 +7,7 @@
 
 	"main": [
 		"fresh.less",
+		"fresh.css",
 		"src/*"
 	],
 
