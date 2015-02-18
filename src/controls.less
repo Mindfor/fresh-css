@@ -18,13 +18,12 @@ input[type="datetime-local"],
 textarea,
 select {
 	font-family: @control-font-family;
-	font-size: 1em;
 	box-shadow: none;
 	outline: none;
 	position: relative;
 	z-index: 2;
 	-webkit-appearance: none;
-
+	
 	background: @control-bg;
 	border: @control-border;
 	border-radius: @control-border-radius;
@@ -97,4 +96,32 @@ input[type="range"] {
 
 select {
 	margin-bottom: 0 !important;
+}
+
+input,
+button,
+textarea,
+select,
+label,
+form,
+fieldset {
+	&.width-xs {
+		max-width: @control-width-xs;
+	}
+	
+	&.width-sm {
+		max-width: @control-width-sm;
+	}
+	
+	&.width-md {
+		max-width: @control-width-md;
+	}
+	
+	&.width-lg {
+		max-width: @control-width-lg;
+	}
+	
+	&.width-xl {
+		max-width: @control-width-xl;
+	}
 }

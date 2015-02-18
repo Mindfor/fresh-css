@@ -253,8 +253,49 @@
 		</ul>
 	</nav>
     
-    <h4>Forms</h4>
-    <form>
-    </form>
+	<h4>Forms</h4>
+	<h5>Default form</h5>
+	<form class="width-sm">
+		<label class="req">
+			<span>Email</span>
+			<input type="email" />
+			<span class="text-for-field">just name</span>
+		</label>
+		<label>
+			Password <span class="text-help">Some description</span>
+			<input type="password" />
+			<span class="text-help">Description after field</span>
+		</label>
+		<p>
+			<button type="submit">Log in</button>
+			<button type="button">Cancel</button>
+		</p>
+	</form>
+	
+	<fieldset class="width-sm">
+		<legend>Simple form</legend>
+		<form>
+			<label>
+				<div class="input-group">
+					<input type="email" placeholder="Email" />
+					<label><button type="submit">@mindfor.ru</button></label>
+				</div>
+			</label>
+			<label>
+				<div class="input-group">
+					<span>prefix</span>
+					<input type="password" placeholder="Password" />
+					<span>suffix</span>
+				</div>
+			</label>
+			<p><button type="submit" class="width-100">Log in</button></p>
+		</form>
+	</fieldset>
+	
+	<h5>Inline big form</h5>
+	<form class="inline">
+    	<input type="text" class="lg" placeholder="Title">
+    	<button class="secondary lg">Big</button>
+	</form>
 </body>
 </html>

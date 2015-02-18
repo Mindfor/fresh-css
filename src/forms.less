@@ -1,22 +1,89 @@
 @import "variables.less";
 @import "mixins.less";
 
+// Fieldset
 fieldset {
 	padding: 0;
-	margin-bottom: @line-height;
-	border: none;
+	border: none;	
 
-	& *:last-child {
+	> *:last-child {
 		margin-bottom: 0 !important;
 	}
 }
 
 legend {
-	font-weight: bold;
-	padding: 0 1em;
-	margin-left: -1em;
+	width: 100%;
+	margin: 0 0 1em;
+	padding: .3em 0;
+	border-bottom: 1px solid @color-border;
 }
 
+// Default form
+.form {
+	> label {
+		display: block;
+		margin: 0 -@control-border-radius 1em @control-border-radius;
+		
+		> input,
+		> textarea,
+		> select,
+		> div {
+			margin-left: -@control-border-radius;
+		}
+	}
+	
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="url"],
+	input[type="phone"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="datetime"],
+	input[type="date"],
+	input[type="month"],
+	input[type="color"],
+	input[type="time"],
+	input[type="search"],
+	input[type="range"],
+	input[type="file"],
+	input[type="datetime-local"],
+	textarea,
+	select {
+		display: block;
+		width: 100%;
+	}
+	
+	.input-group {
+		width: 100%;
+	}
+}
+
+form:not(.flat) {
+	&:extend(.form all);
+}
+
+// Inline form
+.form.inline {
+	input,
+	button,
+	textarea,
+	select {
+		display: inline-block;
+		vertical-align: middle;
+		width: auto;
+	}
+}
+
+// Label
+label.req {
+	> span:first-child:after {
+		content: " *";
+		color: red;
+	}
+}
+
+// Input group
 .input-group {
 	display: inline-table !important;
 	border-collapse: separate;
@@ -36,7 +103,7 @@ legend {
     input[type="time"],
     input[type="search"],
     input[type="datetime-local"] {
-		display: table-cell;
+		display: table-cell !important;
 		width: 100%;
         
         &:not(:first-child) {
@@ -51,29 +118,33 @@ legend {
 	}
 
 	span,
-    button,
-    input[type="button"],
-    input[type="submit"], 
-    input[type="reset"] {
-        display: table-cell;
+    label {
+        display: table-cell !important;
 		vertical-align: middle;
+		white-space: nowrap;
+		width: 1px;
+        
+        &:first-child {
+			&, > * {
+				border-right: none;
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+        }
+        
+        &:last-child {
+			&, > * {
+				border-left: none;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+        }
+	}
+	
+	span {
 		padding: @control-padding;
 		border: @control-border;
 		border-radius: @control-border-radius;
 		background-color: @color-light;
-		width: 0;
-		white-space: nowrap;
-        
-        &:first-child {
-            border-right: none;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-        
-        &:last-child {
-            border-left: none;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-        }
 	}
 }
