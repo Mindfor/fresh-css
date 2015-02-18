@@ -284,8 +284,8 @@ abbr[title].text-help,
 }
 .row,
 .row-flat,
-.form.aligned > div:not(.flat):not(.controls),
-form:not(.flat).aligned > div:not(.flat):not(.controls) {
+.form > section:not(.controls),
+form:not(.flat) > section:not(.controls) {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -296,16 +296,16 @@ form:not(.flat).aligned > div:not(.flat):not(.controls) {
 }
 .row:after,
 .row-flat:after,
-.form.aligned > div:not(.flat):not(.controls):after,
-form:not(.flat).aligned > div:not(.flat):not(.controls):after {
+.form > section:not(.controls):after,
+form:not(.flat) > section:not(.controls):after {
   content: "";
   display: table;
   clear: both;
 }
 .row > *,
 .row-flat > *,
-.form.aligned > div:not(.flat):not(.controls) > *,
-form:not(.flat).aligned > div:not(.flat):not(.controls) > * {
+.form > section:not(.controls) > *,
+form:not(.flat) > section:not(.controls) > * {
   display: block;
 }
 .row {
@@ -323,8 +323,8 @@ form:not(.flat).aligned > div:not(.flat):not(.controls) > * {
 }
 .col-3,
 .col-1-4,
-.form.aligned > div:not(.flat):not(.controls) > label,
-form:not(.flat).aligned > div:not(.flat):not(.controls) > label {
+.form > section:not(.controls) > label,
+form:not(.flat) > section:not(.controls) > label {
   width: 25%;
 }
 .col-4,
@@ -347,12 +347,16 @@ form:not(.flat).aligned > div:not(.flat):not(.controls) > label {
 }
 .col-9,
 .col-3-4,
-.form.aligned > div:not(.flat):not(.controls) > input,
-.form.aligned > div:not(.flat):not(.controls) > textarea,
-.form.aligned > div:not(.flat):not(.controls) > select > div,
-form:not(.flat).aligned > div:not(.flat):not(.controls) > input,
-form:not(.flat).aligned > div:not(.flat):not(.controls) > textarea,
-form:not(.flat).aligned > div:not(.flat):not(.controls) > select > div {
+.form > section:not(.controls) > output,
+.form > section:not(.controls) > input,
+.form > section:not(.controls) > textarea,
+.form > section:not(.controls) > select,
+.form > section:not(.controls) > div,
+form:not(.flat) > section:not(.controls) > output,
+form:not(.flat) > section:not(.controls) > input,
+form:not(.flat) > section:not(.controls) > textarea,
+form:not(.flat) > section:not(.controls) > select,
+form:not(.flat) > section:not(.controls) > div {
   width: 75%;
 }
 .col-10,
@@ -387,8 +391,8 @@ form:not(.flat).aligned > div:not(.flat):not(.controls) > select > div {
 }
 .col-offset-3,
 .col-offset-1-4,
-.form.aligned > div.controls,
-form:not(.flat).aligned > div.controls {
+.form > section.controls,
+form:not(.flat) > section.controls {
   margin-left: 25%;
 }
 .col-offset-4,
@@ -1723,6 +1727,7 @@ form:not(.flat) > label > label {
 .form input[type="range"],
 .form input[type="file"],
 .form input[type="datetime-local"],
+.form .input-group,
 .form textarea,
 .form select,
 form:not(.flat) input[type="text"],
@@ -1741,38 +1746,46 @@ form:not(.flat) input[type="search"],
 form:not(.flat) input[type="range"],
 form:not(.flat) input[type="file"],
 form:not(.flat) input[type="datetime-local"],
+form:not(.flat) .input-group,
 form:not(.flat) textarea,
 form:not(.flat) select {
   display: block;
   width: 100%;
 }
-.form .input-group,
-form:not(.flat) .input-group {
-  width: 100%;
-}
 .form.inline input,
+.form > .inline input,
 .form.inline button,
+.form > .inline button,
 .form.inline textarea,
+.form > .inline textarea,
 .form.inline select,
+.form > .inline select,
 form:not(.flat).inline input,
+form:not(.flat) > .inline input,
 form:not(.flat).inline button,
+form:not(.flat) > .inline button,
 form:not(.flat).inline textarea,
-form:not(.flat).inline select {
+form:not(.flat) > .inline textarea,
+form:not(.flat).inline select,
+form:not(.flat) > .inline select {
   display: inline-block;
   vertical-align: middle;
   width: auto;
 }
-.form.aligned > div:not(.flat):not(.controls),
-form:not(.flat).aligned > div:not(.flat):not(.controls) {
+.form > section:not(.controls),
+form:not(.flat) > section:not(.controls) {
   margin-bottom: 1em;
 }
-.form.aligned > div:not(.flat):not(.controls) > label,
-form:not(.flat).aligned > div:not(.flat):not(.controls) > label {
-  padding: 0.3em 0.5em;
-  padding-left: 0;
+.form > section:not(.controls) > label,
+form:not(.flat) > section:not(.controls) > label {
+  padding: 0.3em 0;
 }
-.form.aligned > div:not(.flat):not(.controls) > div > label,
-form:not(.flat).aligned > div:not(.flat):not(.controls) > div > label {
+.form > section:not(.controls) > output,
+form:not(.flat) > section:not(.controls) > output {
+  padding: 0.3em 0;
+}
+.form > section:not(.controls) > div > label,
+form:not(.flat) > section:not(.controls) > div > label {
   display: block;
   margin-top: .25em;
 }
