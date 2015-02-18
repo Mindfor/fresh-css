@@ -1,29 +1,34 @@
 @import "variables.less";
 
-.container-base(@width) {
-	.pull-center;
+.container {
 	padding: 0 1em;
+}
+
+.container(@width) {
+	.container;
+	.pull-center;
 	max-width: @width;
 }
 
 .container-sm {
-	.container-base(@width-sm);
+	.container(@width-sm);
 }
 
 .container-md {
-	.container-base(@width-md);
+	.container(@width-md);
 }
 
 .container-lg {
-	.container-base(@width-lg);
+	.container(@width-lg);
 }
 
 .container-xl {
-	.container-base(@width-xl);
+	.container(@width-xl);
 }
 
-.container {
-	.container-base(100%);
+.container-responsive {
+	.pull-center;
+	.container;
 
 	@media screen and (min-width: @width-sm) {
 		max-width: @width-sm;

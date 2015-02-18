@@ -436,53 +436,55 @@ form:not(.flat) > section.controls {
 .col-offset-4-5 {
   margin-left: 80%;
 }
+.container {
+  padding: 0 1em;
+}
 .container-sm {
+  padding: 0 1em;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 1em;
   max-width: 35.5em;
 }
 .container-md {
+  padding: 0 1em;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 1em;
   max-width: 48em;
 }
 .container-lg {
+  padding: 0 1em;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 1em;
   max-width: 64em;
 }
 .container-xl {
+  padding: 0 1em;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 1em;
   max-width: 80em;
 }
-.container {
+.container-responsive {
   margin-left: auto;
   margin-right: auto;
   padding: 0 1em;
-  max-width: 100%;
 }
 @media screen and (min-width: 35.5em) {
-  .container {
+  .container-responsive {
     max-width: 35.5em;
   }
 }
 @media screen and (min-width: 48em) {
-  .container {
+  .container-responsive {
     max-width: 48em;
   }
 }
 @media screen and (min-width: 64em) {
-  .container {
+  .container-responsive {
     max-width: 64em;
   }
 }
 @media screen and (min-width: 80em) {
-  .container {
+  .container-responsive {
     max-width: 80em;
   }
 }
@@ -1598,12 +1600,7 @@ nav:not(.flat) ul > li a:hover {
 .nav ul > li.active > span,
 nav:not(.flat) ul > li.active > a,
 nav:not(.flat) ul > li.active > span {
-  color: white;
-  background: #105c9a;
-}
-.nav ul > li.active > a:hover,
-nav:not(.flat) ul > li.active > a:hover {
-  background: #093355;
+  border-color: #105c9a;
 }
 .nav ul > li[disabled] > a,
 .nav ul > li.disabled > a,
@@ -1617,24 +1614,22 @@ nav:not(.flat) ul > li.disabled > span {
   background: none;
   cursor: not-allowed;
 }
-.nav.vertical > a,
-.nav.vertical > span,
-nav:not(.flat).vertical > a,
-nav:not(.flat).vertical > span {
+nav.vertical > a,
+nav.vertical > span {
   display: block;
   border-bottom: 1px solid #bdbdbd;
   margin-top: 0.5em;
 }
-.nav.vertical ul,
-nav:not(.flat).vertical ul {
+nav.vertical ul {
   display: block;
 }
-.nav.vertical ul > li,
-nav:not(.flat).vertical ul > li {
+nav.vertical ul > li {
   display: block;
 }
-.nav.vertical ul > li > ul,
-nav:not(.flat).vertical ul > li > ul {
+nav.vertical ul > li:not(:first-child) {
+  margin-top: .1em;
+}
+nav.vertical ul > li > ul {
   margin-left: 2em;
 }
 .nav.lined ul > li > a,
@@ -1642,39 +1637,59 @@ nav:not(.flat).vertical ul > li > ul {
 nav:not(.flat).lined ul > li > a,
 nav:not(.flat).lined ul > li > span {
   border: none;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
+}
+.nav.lined ul > li > a:hover,
+nav:not(.flat).lined ul > li > a:hover {
+  margin-bottom: 1px;
+  border-bottom: 1px solid #105c9a;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .nav.lined ul > li.active > a,
 .nav.lined ul > li.active > span,
 nav:not(.flat).lined ul > li.active > a,
 nav:not(.flat).lined ul > li.active > span {
   margin-bottom: 0;
-  border-bottom: 3px solid #105c9a;
+  border-bottom: 2px solid #105c9a;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.nav.lined.vertical > a,
-.nav.lined.vertical > span,
-nav:not(.flat).lined.vertical > a,
-nav:not(.flat).lined.vertical > span {
-  margin-left: 3px;
+.nav.lined ul > li[disabled] > a:hover,
+.nav.lined ul > li.disabled > a:hover,
+nav:not(.flat).lined ul > li[disabled] > a:hover,
+nav:not(.flat).lined ul > li.disabled > a:hover {
+  border: none;
+  margin-bottom: 2px;
 }
-.nav.lined.vertical ul > li > a,
-.nav.lined.vertical ul > li > span,
-nav:not(.flat).lined.vertical ul > li > a,
-nav:not(.flat).lined.vertical ul > li > span {
+nav.lined.vertical > a,
+nav.lined.vertical > span {
+  margin-left: 2px;
+}
+nav.lined.vertical ul > li > a,
+nav.lined.vertical ul > li > span {
   margin-bottom: 0;
-  margin-left: 3px;
+  margin-left: 2px;
 }
-.nav.lined.vertical ul > li.active > a,
-.nav.lined.vertical ul > li.active > span,
-nav:not(.flat).lined.vertical ul > li.active > a,
-nav:not(.flat).lined.vertical ul > li.active > span {
-  border-bottom: 0;
-  margin-left: 0;
-  border-left: 3px solid #105c9a;
+nav.lined.vertical ul > li > a:hover {
+  border-bottom: none;
+  margin-left: 1px;
+  border-left: 1px solid #105c9a;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+nav.lined.vertical ul > li.active > a,
+nav.lined.vertical ul > li.active > span {
+  border-bottom: 0;
+  margin-left: 0;
+  border-left: 2px solid #105c9a;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+nav.lined.vertical ul > li[disabled] > a:hover,
+nav.lined.vertical ul > li.disabled > a:hover {
+  border: none;
+  margin-left: 2px;
 }
 fieldset {
   padding: 0;
@@ -1938,7 +1953,7 @@ ul.pagination > li[disabled] > span {
   background: none;
   cursor: not-allowed;
 }
-[class^="fa-"] {
+[class|="fa"] {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;

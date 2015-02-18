@@ -17,7 +17,7 @@
 	ul > li {
 		display: inline-block;
 		
-		>a , > span {
+		> a, > span {
 			display: block;
 			padding: @nav-padding;
 			text-decoration: none;
@@ -31,13 +31,13 @@
 		
 		&.active {
 			> a, > span {
-				//border-color: @nav-active-bg;
-				color: @nav-active-color;
-				background: @nav-active-bg;
+				border-color: @nav-active-bg;
+				//color: @nav-active-color;
+				//background: @nav-active-bg;
 			}
 			
 			> a:hover {
-				background: darken(@nav-active-bg, @btn-hovering);
+				//background: darken(@nav-active-bg, @btn-hovering);
 			}
 		}
 		
@@ -50,24 +50,28 @@
 			}
 		}
 	}
-	
-	&.vertical {
-		> a, > span {
-			display: block;
-			border-bottom: 1px solid @color-border;
-			margin-top: @nav-heading-margin-top;
+}
+
+nav.vertical {
+	> a, > span {
+		display: block;
+		border-bottom: 1px solid @color-border;
+		margin-top: @nav-heading-margin-top;
+	}
+
+	ul {
+		display: block;
+	}
+
+	ul > li {
+		display: block;
+
+		&:not(:first-child) {
+			margin-top: .1em;
 		}
-		
-		ul {
-			display: block;
-		}
-		
-		ul > li {
-			display: block;
-			
-			> ul {
-				margin-left: 2em;
-			}
+
+		> ul {
+			margin-left: 2em;
 		}
 	}
 }
@@ -76,38 +80,69 @@
 	ul > li {
 		> a, > span {
 			border: none;
-			margin-bottom: 3px;
+			margin-bottom: 2px;
+		}
+		
+		> a:hover {
+			margin-bottom: 1px;
+			border-bottom: 1px solid @nav-active-bg;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
 		}
 		
 		&.active {
 			> a, > span {
 				margin-bottom: 0;
-				border-bottom: 3px solid @nav-active-bg;
+				border-bottom: 2px solid @nav-active-bg;
 				border-bottom-left-radius: 0;
 				border-bottom-right-radius: 0;
 			}
 		}
-	}
-	
-	&.vertical {
-		> a, > span {
-			margin-left: 3px;
-		}
 		
-		ul > li {
-			> a, > span {
-				margin-bottom: 0;
-				margin-left: 3px;		
+		&[disabled],
+		&.disabled {
+			> a:hover {
+				border: none;
+				margin-bottom: 2px;
 			}
-			
-			&.active {
-				> a, > span {
-					border-bottom: 0;					
-					margin-left: 0;
-					border-left: 3px solid @nav-active-bg;
-					border-top-left-radius: 0;
-					border-bottom-left-radius: 0;
-				}
+		}
+	}
+}
+
+nav.lined.vertical {
+	> a, > span {
+		margin-left: 2px;
+	}
+
+	ul > li {
+		> a, > span {
+			margin-bottom: 0;
+			margin-left: 2px;		
+		}
+
+		> a:hover {
+			border-bottom: none;
+			margin-left: 1px;
+			border-left: 1px solid @nav-active-bg;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
+		&.active {
+			> a, > span {
+				border-bottom: 0;					
+				margin-left: 0;
+				border-left: 2px solid @nav-active-bg;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
+
+		&[disabled],
+		&.disabled {
+			> a:hover {
+				border: none;
+				margin-left: 2px;
 			}
 		}
 	}
