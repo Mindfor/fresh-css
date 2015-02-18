@@ -1,0 +1,41 @@
+header {
+  height: 300px;
+  background-color: #11c589;
+  margin-bottom: 1em;
+}
+header .logo {
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding-top: 3.5em;
+}
+header .logo .text {
+  font-size: 10em;
+}
+header .logo .download-btn {
+  margin-top: 1em;
+}
+header .logo .download-btn button {
+  color: white;
+  font-size: 2em;
+  border-color: white;
+}
+header .logo .download-btn button:hover {
+  color: #11c589;
+  border-color: white !important;
+  background-color: white !important;
+}
+.row {
+  margin: 0 -1em;
+}
+.col-1-6,
+.col-5-6 {
+  padding: 0 1em;
+}
+.left-menu li > a {
+  border-color: #11c589 !important;
+  color: #053827 !important;
+}
+.left-menu li > a:hover {
+  color: #0b7f58 !important;
+}

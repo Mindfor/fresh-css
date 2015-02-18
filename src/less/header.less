@@ -1,0 +1,28 @@
+@import "variables.less";
+header {
+    height: 300px;
+    background-color: @header-main-color;
+    margin-bottom: 1em;
+    .logo {
+        width: 100%;
+        text-align: center;
+        color: white;
+        padding-top: 3.5em;
+        .text {
+            font-size: 10em;
+        }
+        .download-btn {
+            margin-top: 1em;
+            button {
+                color: white;
+                font-size: 2em;
+                border-color: white;
+                &:hover {
+                    color: @header-main-color;
+                    border-color: white !important;
+                    background-color: white !important;
+                }
+            }
+        } 
+    }
+}   

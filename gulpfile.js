@@ -1,34 +1,77 @@
 var gulp = require("gulp");
 var $ = require('gulp-load-plugins')();
+var path = require('path');
+var each = require('foreach');
 
 gulp.task("less", function () {
-    gulp.src("fresh.less")
+    return gulp.src("src/less/main.less")
         .pipe($.less())
         .pipe(gulp.dest("./"));
 
-    gulp.src("fresh.less")
-        .pipe($.less())
-        .pipe($.minify())
-        .pipe($.rename({
-            suffix: ".min"
-        }))
-        .pipe(gulp.dest("./"));
+    // gulp.src("src/less/main.less")
+    //    .pipe($.less())
+    //  .pipe($.minify())
+    //.pipe($.rename({
+    //  suffix: ".min"
+    //        }))
+    //      .pipe(gulp.dest("./"));
 });
+
+var processHtmlsOpts = {
+    process: true,
+    templateSettings: {
+        interpolate: /{{([\s\S]+?)}}/g // mustache
+    },
+    data: {
+        headerTemplate: '',
+        contentTemplate: '',
+        getstarted: '',
+        forms: '',
+    }
+}
+
 gulp.task("compile-htmls", function () {
-   return gulp.src('./src/*.html')
-        .pipe($.htmlTagInclude())
-        .pipe(gulp.dest('./dist')) 
-});
-gulp.task("copy-index", function () {
-  return gulp.src('./dist/index.html')
+    return gulp.src('./src/*.cnt.html')
+        .pipe($.foreach(function (stream, file) {
+            var contentTemplateName = path.basename(file.path);
+
+            var nameWithoutExtensionAndSuffix = contentTemplateName.slice(0, -9);
+
+            //assign active class to property that represent left menu item 
+            each(processHtmlsOpts.data, function (value, key) {
+                if (key == nameWithoutExtensionAndSuffix) {
+                    processHtmlsOpts.data[key] = 'active';
+                } else {
+                    processHtmlsOpts.data[key] = '';
+                }
+            });
+      
+            if (nameWithoutExtensionAndSuffix == 'getstarted') {
+                processHtmlsOpts.data.headerTemplate = 'header.html';
+            } else {
+                processHtmlsOpts.data.headerTemplate = 'littleheader.html';
+            }
+            processHtmlsOpts.data.contentTemplate = contentTemplateName;
+            return gulp.src('./src/layout.html')
+                .pipe($.processhtml(processHtmlsOpts))
+                .pipe($.rename(nameWithoutExtensionAndSuffix + '.html'))
+                .pipe($.processhtml())
+                .pipe(gulp.dest('./dist/'));
+
+        }))
+})
+
+gulp.task("create-index", function () {
+    return gulp.src('./dist/getstarted.html')
+        .pipe($.rename('index.html'))
         .pipe(gulp.dest('./'));
 })
 gulp.task("compile", ["compile-htmls"], function () {
-    gulp.start("copy-index");
+    gulp.start("create-index");
 });
 
 gulp.task("watch", function () {
-    gulp.watch(["fresh.less", "src/*"], [ "compile"]);
+    gulp.watch(["src/**/*"], ["less", "compile"]);
 });
 
 gulp.task("default", function () {
