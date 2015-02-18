@@ -27,8 +27,14 @@ legend {
 		> input,
 		> textarea,
 		> select,
-		> div {
+		> div,
+		> label {
 			margin-left: -@control-border-radius;
+		}
+		
+		> label {
+			display: block;
+			margin-top: .25em;
 		}
 	}
 	
@@ -80,6 +86,23 @@ label.req {
 	> span:first-child:after {
 		content: " *";
 		color: red;
+	}
+}
+
+// Lists
+ul.radio,
+ul.checkbox,
+ul.radio-inline,
+ul.checkbox-inline {
+	list-style: none;
+	padding: 0;
+}
+
+ul.radio-inline,
+ul.checkbox-inline {
+	> li {
+		display: inline-block;
+		margin-right: 1em;
 	}
 }
 

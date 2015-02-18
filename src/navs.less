@@ -31,7 +31,13 @@
 		
 		&.active {
 			> a, > span {
-				border-color: @nav-active-color;
+				//border-color: @nav-active-bg;
+				color: @nav-active-color;
+				background: @nav-active-bg;
+			}
+			
+			> a:hover {
+				background: darken(@nav-active-bg, @btn-hovering);
 			}
 		}
 		
@@ -76,7 +82,7 @@
 		&.active {
 			> a, > span {
 				margin-bottom: 0;
-				border-bottom: 3px solid @nav-active-color;
+				border-bottom: 3px solid @nav-active-bg;
 				border-bottom-left-radius: 0;
 				border-bottom-right-radius: 0;
 			}
@@ -98,7 +104,7 @@
 				> a, > span {
 					border-bottom: 0;					
 					margin-left: 0;
-					border-left: 3px solid @nav-active-color;
+					border-left: 3px solid @nav-active-bg;
 					border-top-left-radius: 0;
 					border-bottom-left-radius: 0;
 				}

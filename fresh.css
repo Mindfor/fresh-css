@@ -301,7 +301,7 @@ abbr[title].text-help,
 .row {
   margin: 0 -1em 1em;
 }
-.row [class^="col-"] {
+.row > [class^="col-"] {
   padding: 0 1em;
 }
 [class^="col-"] {
@@ -1521,7 +1521,12 @@ nav:not(.flat) ul > li a:hover {
 .nav ul > li.active > span,
 nav:not(.flat) ul > li.active > a,
 nav:not(.flat) ul > li.active > span {
-  border-color: #105c9a;
+  color: white;
+  background: #105c9a;
+}
+.nav ul > li.active > a:hover,
+nav:not(.flat) ul > li.active > a:hover {
+  background: #093355;
 }
 .nav ul > li[disabled] > a,
 .nav ul > li.disabled > a,
@@ -1616,11 +1621,18 @@ form:not(.flat) > label {
 .form > label > textarea,
 .form > label > select,
 .form > label > div,
+.form > label > label,
 form:not(.flat) > label > input,
 form:not(.flat) > label > textarea,
 form:not(.flat) > label > select,
-form:not(.flat) > label > div {
+form:not(.flat) > label > div,
+form:not(.flat) > label > label {
   margin-left: -2px;
+}
+.form > label > label,
+form:not(.flat) > label > label {
+  display: block;
+  margin-top: .25em;
 }
 .form input[type="text"],
 .form input[type="password"],
@@ -1680,6 +1692,18 @@ form:not(.flat).inline select {
 label.req > span:first-child:after {
   content: " *";
   color: red;
+}
+ul.radio,
+ul.checkbox,
+ul.radio-inline,
+ul.checkbox-inline {
+  list-style: none;
+  padding: 0;
+}
+ul.radio-inline > li,
+ul.checkbox-inline > li {
+  display: inline-block;
+  margin-right: 1em;
 }
 .input-group {
   display: inline-table !important;
@@ -1765,6 +1789,54 @@ label.req > span:first-child:after {
   border: 1px solid #bdbdbd;
   border-radius: 2px;
   background-color: #f4f4f4;
+}
+ul.pagination {
+  display: inline-block;
+  overflow: auto;
+  list-style: none;
+  margin: 0 0 1em;
+  padding: 0;
+}
+ul.pagination > li {
+  float: left;
+  display: block;
+  overflow: auto;
+  margin: 0;
+  border: 1px solid #bdbdbd;
+}
+ul.pagination > li:first-child {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+ul.pagination > li:last-child {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+ul.pagination > li:not(:first-child) {
+  border-left: 0;
+}
+ul.pagination > li > a,
+ul.pagination > li > span {
+  display: block;
+  padding: 0.35em 0.85em;
+  text-decoration: none;
+}
+ul.pagination > li > a:hover,
+ul.pagination > li > span:hover {
+  background-color: #f4f4f4;
+}
+ul.pagination > li.active > a,
+ul.pagination > li.active > span {
+  color: white;
+  background: #105c9a;
+}
+ul.pagination > li.disabled > a,
+ul.pagination > li[disabled] > a,
+ul.pagination > li.disabled > span,
+ul.pagination > li[disabled] > span {
+  color: #b4b4b4;
+  background: none;
+  cursor: not-allowed;
 }
 [class^="fa-"] {
   display: inline-block;
