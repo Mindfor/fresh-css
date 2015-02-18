@@ -20,10 +20,13 @@
 }
 
 .row {
-	margin: 0 -1em 1em;
+	margin: 0 -@grid-margin;
 	
 	> * {
-		padding: 0 1em;
+		border-left: @grid-margin solid transparent;
+		border-right: @grid-margin solid transparent;
+		margin-bottom: @grid-margin;
+		background-clip: content-box;
 	}
 }
 

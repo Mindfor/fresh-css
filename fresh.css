@@ -282,212 +282,6 @@ abbr[title].text-help,
 .bg-gray {
   background-color: #565d64;
 }
-.row,
-.row-flat,
-.form > section:not(.controls),
-form:not(.flat) > section:not(.controls) {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  justify-content: flext-start;
-}
-.row:after,
-.row-flat:after,
-.form > section:not(.controls):after,
-form:not(.flat) > section:not(.controls):after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.row > *,
-.row-flat > *,
-.form > section:not(.controls) > *,
-form:not(.flat) > section:not(.controls) > * {
-  display: block;
-}
-.row {
-  margin: 0 -1em 1em;
-}
-.row > * {
-  padding: 0 1em;
-}
-.col-1 {
-  width: 8.3333%;
-}
-.col-2,
-.col-1-6 {
-  width: 16.6667%;
-}
-.col-3,
-.col-1-4,
-.form > section:not(.controls) > label,
-form:not(.flat) > section:not(.controls) > label {
-  width: 25%;
-}
-.col-4,
-.col-1-3 {
-  width: 33.3333%;
-}
-.col-5 {
-  width: 41.6667%;
-}
-.col-6,
-.col-1-2 {
-  width: 50%;
-}
-.col-7 {
-  width: 58.3333%;
-}
-.col-8,
-.col-2-3 {
-  width: 66.6667%;
-}
-.col-9,
-.col-3-4,
-.form > section:not(.controls) > output,
-.form > section:not(.controls) > input,
-.form > section:not(.controls) > textarea,
-.form > section:not(.controls) > select,
-.form > section:not(.controls) > div,
-form:not(.flat) > section:not(.controls) > output,
-form:not(.flat) > section:not(.controls) > input,
-form:not(.flat) > section:not(.controls) > textarea,
-form:not(.flat) > section:not(.controls) > select,
-form:not(.flat) > section:not(.controls) > div {
-  width: 75%;
-}
-.col-10,
-.col-5-6 {
-  width: 83.3333%;
-}
-.col-11 {
-  width: 91.6667%;
-}
-.col-12,
-.col-1-1,
-.col-5-5 {
-  width: 100%;
-}
-.col-1-5 {
-  width: 20%;
-}
-.col-2-5 {
-  width: 40%;
-}
-.col-3-5 {
-  width: 60%;
-}
-.col-4-5 {
-  width: 80%;
-}
-.col-offset-1 {
-  margin-left: 8.3333%;
-}
-.col-offset-2 .col-offset-1-6 {
-  margin-left: 16.6667%;
-}
-.col-offset-3,
-.col-offset-1-4,
-.form > section.controls,
-form:not(.flat) > section.controls {
-  margin-left: 25%;
-}
-.col-offset-4,
-.col-offset-1-3 {
-  margin-left: 33.3333%;
-}
-.col-offset-5 {
-  margin-left: 41.6667%;
-}
-.col-offset-6,
-.col-offset-1-2 {
-  margin-left: 50%;
-}
-.col-offset-7 {
-  margin-left: 58.3333%;
-}
-.col-offset-8,
-.col-offset-2-3 {
-  margin-left: 66.6667%;
-}
-.col-offset-9,
-.col-offset-3-4 {
-  margin-left: 75%;
-}
-.col-offset-10,
-.col-offset-5-6 {
-  margin-left: 83.3333%;
-}
-.col-offset-11 {
-  margin-left: 91.6667%;
-}
-.col-offset-1-5 {
-  margin-left: 20%;
-}
-.col-offset-2-5 {
-  margin-left: 40%;
-}
-.col-offset-3-5 {
-  margin-left: 60%;
-}
-.col-offset-4-5 {
-  margin-left: 80%;
-}
-.container {
-  padding: 0 1em;
-}
-.container-sm {
-  padding: 0 1em;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 35.5em;
-}
-.container-md {
-  padding: 0 1em;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 48em;
-}
-.container-lg {
-  padding: 0 1em;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 64em;
-}
-.container-xl {
-  padding: 0 1em;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 80em;
-}
-.container-responsive {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1em;
-}
-@media screen and (min-width: 35.5em) {
-  .container-responsive {
-    max-width: 35.5em;
-  }
-}
-@media screen and (min-width: 48em) {
-  .container-responsive {
-    max-width: 48em;
-  }
-}
-@media screen and (min-width: 64em) {
-  .container-responsive {
-    max-width: 64em;
-  }
-}
-@media screen and (min-width: 80em) {
-  .container-responsive {
-    max-width: 80em;
-  }
-}
 body {
   font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
   font-size: 15px;
@@ -522,7 +316,21 @@ h6,
   font-weight: normal;
   color: black;
   text-rendering: optimizeLegibility;
-  margin: 0 0 .5em;
+  margin: 1.65em 0 0.5em;
+}
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child,
+.h1:first-child,
+.h2:first-child,
+.h3:first-child,
+.h4:first-child,
+.h5:first-child,
+.h6:first-child {
+  margin-top: 0;
 }
 h1,
 .h1 {
@@ -727,6 +535,261 @@ kbd {
   background: black;
   color: rgba(255, 255, 255, 0.85);
   white-space: nowrap;
+}
+.container {
+  padding: 0 1em;
+}
+.container-sm {
+  padding: 0 1em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 35.5em;
+}
+.container-md {
+  padding: 0 1em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 48em;
+}
+.container-lg {
+  padding: 0 1em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 64em;
+}
+.container-xl {
+  padding: 0 1em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80em;
+}
+.container-responsive {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em;
+}
+@media screen and (min-width: 35.5em) {
+  .container-responsive {
+    max-width: 35.5em;
+  }
+}
+@media screen and (min-width: 48em) {
+  .container-responsive {
+    max-width: 48em;
+  }
+}
+@media screen and (min-width: 64em) {
+  .container-responsive {
+    max-width: 64em;
+  }
+}
+@media screen and (min-width: 80em) {
+  .container-responsive {
+    max-width: 80em;
+  }
+}
+.row,
+.row-flat,
+[class|="blocks"],
+.form > section:not(.controls),
+form:not(.flat) > section:not(.controls) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: flext-start;
+}
+.row:after,
+.row-flat:after,
+[class|="blocks"]:after,
+.form > section:not(.controls):after,
+form:not(.flat) > section:not(.controls):after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row > *,
+.row-flat > *,
+[class|="blocks"] > *,
+.form > section:not(.controls) > *,
+form:not(.flat) > section:not(.controls) > * {
+  display: block;
+}
+.row,
+[class|="blocks"] {
+  margin: 0 -1em;
+}
+.row > *,
+[class|="blocks"] > * {
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  margin-bottom: 1em;
+  background-clip: content-box;
+}
+.col-1 {
+  width: 8.3333%;
+}
+.col-2,
+.col-1-6 {
+  width: 16.6667%;
+}
+.col-3,
+.col-1-4,
+.form > section:not(.controls) > label,
+form:not(.flat) > section:not(.controls) > label {
+  width: 25%;
+}
+.col-4,
+.col-1-3 {
+  width: 33.3333%;
+}
+.col-5 {
+  width: 41.6667%;
+}
+.col-6,
+.col-1-2 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.3333%;
+}
+.col-8,
+.col-2-3 {
+  width: 66.6667%;
+}
+.col-9,
+.col-3-4,
+.form > section:not(.controls) > output,
+.form > section:not(.controls) > input,
+.form > section:not(.controls) > textarea,
+.form > section:not(.controls) > select,
+.form > section:not(.controls) > div,
+form:not(.flat) > section:not(.controls) > output,
+form:not(.flat) > section:not(.controls) > input,
+form:not(.flat) > section:not(.controls) > textarea,
+form:not(.flat) > section:not(.controls) > select,
+form:not(.flat) > section:not(.controls) > div {
+  width: 75%;
+}
+.col-10,
+.col-5-6 {
+  width: 83.3333%;
+}
+.col-11 {
+  width: 91.6667%;
+}
+.col-12,
+.col-1-1,
+.col-5-5 {
+  width: 100%;
+}
+.col-1-5 {
+  width: 20%;
+}
+.col-2-5 {
+  width: 40%;
+}
+.col-3-5 {
+  width: 60%;
+}
+.col-4-5 {
+  width: 80%;
+}
+.col-offset-1 {
+  margin-left: 8.3333%;
+}
+.col-offset-2 .col-offset-1-6 {
+  margin-left: 16.6667%;
+}
+.col-offset-3,
+.col-offset-1-4,
+.form > section.controls,
+form:not(.flat) > section.controls {
+  margin-left: 25%;
+}
+.col-offset-4,
+.col-offset-1-3 {
+  margin-left: 33.3333%;
+}
+.col-offset-5 {
+  margin-left: 41.6667%;
+}
+.col-offset-6,
+.col-offset-1-2 {
+  margin-left: 50%;
+}
+.col-offset-7 {
+  margin-left: 58.3333%;
+}
+.col-offset-8,
+.col-offset-2-3 {
+  margin-left: 66.6667%;
+}
+.col-offset-9,
+.col-offset-3-4 {
+  margin-left: 75%;
+}
+.col-offset-10,
+.col-offset-5-6 {
+  margin-left: 83.3333%;
+}
+.col-offset-11 {
+  margin-left: 91.6667%;
+}
+.col-offset-1-5 {
+  margin-left: 20%;
+}
+.col-offset-2-5 {
+  margin-left: 40%;
+}
+.col-offset-3-5 {
+  margin-left: 60%;
+}
+.col-offset-4-5 {
+  margin-left: 80%;
+}
+@media only screen and (max-width: 35.5em) {
+  .row > *,
+  .row-flat > *,
+  [class|="blocks"] > *,
+  .form > section:not(.controls) > *,
+  form:not(.flat) > section:not(.controls) > * {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+[class|="blocks"] {
+  list-style: none;
+  padding: 0;
+}
+[class|="blocks"] > * {
+  text-align: center;
+}
+.blocks-1 > * {
+  width: 100%;
+}
+.blocks-2 > * {
+  width: 50%;
+}
+.blocks-3 > * {
+  width: 33.3333%;
+}
+.blocks-4 > * {
+  width: 25%;
+}
+.blocks-5 > * {
+  width: 20%;
+}
+.blocks-6 > * {
+  width: 16.6667%%;
+}
+@media only screen and (max-width: 35.5em) {
+  [class|="blocks"] {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 input[type="text"],
 input[type="password"],
@@ -939,7 +1002,7 @@ input[type="reset"] {
   cursor: pointer;
   border: 1px solid;
   border-radius: 4px;
-  padding: 0.25em 1em;
+  padding: 0.3em 1em;
   -webkit-transition: color 0.2s, background-color 0.2s, border-color 0.2s, transform 0.2s;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s, transform 0.2s;
   color: white;
@@ -1574,7 +1637,7 @@ nav:not(.flat) ul {
 nav:not(.flat) > a,
 nav:not(.flat) > span {
   display: inline-block;
-  padding: 0.25em 1em;
+  padding: 0.3em 1em;
   font-size: 0.9em;
   text-transform: uppercase;
 }
@@ -1587,7 +1650,7 @@ nav:not(.flat) ul > li {
 nav:not(.flat) ul > li > a,
 nav:not(.flat) ul > li > span {
   display: block;
-  padding: 0.25em 1em;
+  padding: 0.3em 1em;
   text-decoration: none;
   border-radius: 2px;
   border: 1px solid transparent;
@@ -1933,7 +1996,7 @@ ul.pagination > li:not(:first-child) {
 ul.pagination > li > a,
 ul.pagination > li > span {
   display: block;
-  padding: 0.35em 0.85em;
+  padding: 0.3em 0.85em;
   text-decoration: none;
 }
 ul.pagination > li > a:hover,

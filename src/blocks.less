@@ -1,0 +1,43 @@
+@import "variables.less";
+@import "grid.less";
+
+[class|="blocks"] {
+	&:extend(.row all);
+	list-style: none;
+	padding: 0;
+	
+	> * {
+		text-align: center;
+	}
+}
+
+.blocks-1 > * {
+	width: 100%;
+}
+
+.blocks-2 > * {
+	width: 50%;
+}
+
+.blocks-3 > * {
+	width: 33.3333%;
+}
+
+.blocks-4 > * {
+	width: 25%;
+}
+
+.blocks-5 > * {
+	width: 20%;
+}
+
+.blocks-6 > * {
+	width: 16.6667%%;
+}
+
+@media only screen and (max-width: @width-phone) {
+	[class|="blocks"] {
+		width: 100%;
+		margin-left: 0;
+	}
+}
