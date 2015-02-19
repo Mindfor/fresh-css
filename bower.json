@@ -7,11 +7,11 @@
 	
 	"keywords": [
 		"css",
-		"less"
+		"less",
 		"framework",
-		"modile"
+		"modile",
 		"responsive",
-		"front-end"
+		"front-end",
 		"web"
 	],
 
@@ -23,7 +23,7 @@
 	
 	"ignore": [
 		".*",
-		"docs"
+		"docs",
 		"package.json",
 		"gulpfile.js"
 	]
