@@ -1,6 +1,6 @@
 header {
   height: 300px;
-  background-color: #11c589;
+  background-color: #00aeef;
   margin-bottom: 1em;
 }
 header .logo {
@@ -21,9 +21,20 @@ header .logo .download-btn button {
   border-color: white;
 }
 header .logo .download-btn button:hover {
-  color: #11c589;
+  color: #00aeef;
   border-color: white !important;
   background-color: white !important;
+}
+header.little {
+  height: 4em;
+  padding: 1em;
+}
+header.little .logo {
+  text-align: left;
+  padding-top: 0.2em;
+}
+header.little .logo .text {
+  font-size: 2.5em;
 }
 .row {
   margin: 0 -1em;
@@ -33,9 +44,9 @@ header .logo .download-btn button:hover {
   padding: 0 1em;
 }
 .left-menu li > a {
-  border-color: #11c589 !important;
-  color: #053827 !important;
+  border-color: #00aeef !important;
+  color: #003f56 !important;
 }
 .left-menu li > a:hover {
-  color: #0b7f58 !important;
+  color: #0076a3 !important;
 }

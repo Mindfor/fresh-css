@@ -63,15 +63,19 @@ gulp.task("compile-htmls", function () {
             return gulp.src('./src/layout.html')
                 .pipe($.processhtml(processHtmlsOpts))
                 .pipe($.rename(nameWithoutExtensionAndSuffix + '.html'))
-                .pipe($.processhtml({includeBase:'./src/'}))
-                .pipe($.processhtml({includeBase:'./src/contents/'}))
-                .pipe(gulp.dest('./dist/'));
+                .pipe($.processhtml({
+                    includeBase: './src/'
+                }))
+                .pipe($.processhtml({
+                    includeBase: './src/contents/'
+                }))
+                .pipe(gulp.dest('./'));
 
         }))
-}) 
+})
 
 gulp.task("create-index", function () {
-    return gulp.src('./dist/getstarted.html')
+    return gulp.src('./getstarted.html')
         .pipe($.rename('index.html'))
         .pipe(gulp.dest('./'));
 })
