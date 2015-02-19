@@ -27,11 +27,19 @@ var processHtmlsOpts = {
         contentTemplate: '',
         getstarted: '',
         forms: '',
+        grid: '',
+        buttons: '',
+        helpers: '',
+        labels: '',
+        navigation: '',
+        tables: '',
+        typography: '',
+        pagination: ''
     }
 }
 
 gulp.task("compile-htmls", function () {
-    return gulp.src('./src/*.cnt.html')
+    return gulp.src('./src/contents/*.cnt.html')
         .pipe($.foreach(function (stream, file) {
             var contentTemplateName = path.basename(file.path);
 
@@ -45,7 +53,7 @@ gulp.task("compile-htmls", function () {
                     processHtmlsOpts.data[key] = '';
                 }
             });
-      
+            //chose right header depending on whether it start page or others pages
             if (nameWithoutExtensionAndSuffix == 'getstarted') {
                 processHtmlsOpts.data.headerTemplate = 'header.html';
             } else {
@@ -55,11 +63,12 @@ gulp.task("compile-htmls", function () {
             return gulp.src('./src/layout.html')
                 .pipe($.processhtml(processHtmlsOpts))
                 .pipe($.rename(nameWithoutExtensionAndSuffix + '.html'))
-                .pipe($.processhtml())
+                .pipe($.processhtml({includeBase:'./src/'}))
+                .pipe($.processhtml({includeBase:'./src/contents/'}))
                 .pipe(gulp.dest('./dist/'));
 
         }))
-})
+}) 
 
 gulp.task("create-index", function () {
     return gulp.src('./dist/getstarted.html')
