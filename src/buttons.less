@@ -3,18 +3,12 @@
 
 .btn-color(@bg) {
 	color: @btn-color;
-	background-color: @bg;
+	background: @bg;
 	border-color: darken(@bg, 5%);
 	
 	&:hover:not(:active):not(.active) {
-		background-color: darken(@bg, @btn-hovering);
+		background: darken(@bg, @btn-hovering);
 		border-color: darken(@bg, @btn-hovering);
-	}
-	
-	&[disabled],
-	&.disabled {
-		color: @control-disabled-color;
-		background: @control-disabled-bg;
 	}
 }
 
@@ -24,13 +18,7 @@
 	
 	&:hover {
 		color: @btn-color;
-		background-color: @color;
-	}
-	
-	&[disabled],
-	&.disabled {
-		color: @control-disabled-color;
-		background: none;
+		background: @color;
 	}
 }
 
@@ -53,7 +41,6 @@
 	border-radius: @btn-border-radius;
 	padding: @btn-padding;
 	.transition(@btn-transition);
-	.btn-color(@btn-bg);
 
 	&::-moz-focus-inner {
 		border: 0;
@@ -64,14 +51,20 @@
 	&.disabled {
 		cursor: @control-disabled-cursor;
 		box-shadow: none;
+		color: @control-disabled-color !important;
+		background: @control-disabled-bg !important;
 	}
 	
 	&:active,
 	&.active {
 		box-shadow: 0 1px 3px rgba(0, 0, 0, .4) inset;
 	}
-	
-	// Colors
+}
+
+// Normal btn
+.btn:not(.outline) {
+	.btn-color(@btn-bg);
+		
 	&.primary {
 		.btn-color(@color-primary);
 	}
@@ -94,8 +87,8 @@
 	
 	&.link {
 		color: @link-color;
-		background: none;
-		border-color: transparent;
+		background: none !important;
+		border-color: transparent !important;
 		text-decoration: underline;
 		
 		&:hover {
@@ -107,18 +100,12 @@
 
 // Outline button
 .btn.outline {
-	color: @color-text;
-	border-color: @color-text;
 	background: none;
-
-	&:hover {
-		color: @color-invert;
-		background-color: @color-text;
-	}
+	.btn-outline-color(@color-text);
 
 	&[disabled],
 	&.disabled {
-		background: none;
+		background: none !important;
 		box-shadow: none;
 	}
 
