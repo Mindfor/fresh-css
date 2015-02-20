@@ -3,13 +3,18 @@
 
 .btn-color(@bg) {
 	color: @btn-color;
-	background: @bg;
-	border-color: darken(@bg, 5%);
 	
-	&:hover:not(:active):not(.active) {
+	&:hover {
 		background: darken(@bg, @btn-hovering);
 		border-color: darken(@bg, @btn-hovering);
 	}
+	
+	&,
+	&:active,
+	&.active {
+		background: @bg;
+		border-color: darken(@bg, 5%);
+	}	
 }
 
 .btn-outline-color(@color) {
@@ -62,7 +67,7 @@
 }
 
 // Normal btn
-.btn:not(.outline) {
+.btn {
 	.btn-color(@btn-bg);
 		
 	&.primary {
@@ -100,8 +105,11 @@
 
 // Outline button
 .btn.outline {
-	background: none;
-	.btn-outline-color(@color-text);
+	&,
+	&:active,
+	&.active {
+		background: none;
+	}
 
 	&[disabled],
 	&.disabled {
@@ -110,6 +118,8 @@
 	}
 
 	// Colors
+	.btn-outline-color(@color-text);
+	
 	&.primary {
 		.btn-outline-color(@color-primary);
 	}

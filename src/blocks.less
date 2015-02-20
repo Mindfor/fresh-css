@@ -11,48 +11,75 @@
 	}
 }
 
-.blocks-1 > * {
-	width: 100%;
-}
-
-.blocks-2 > * {
-	width: 50%;
-}
-
-.blocks-3 > * {
-	width: 33.3333%;
-}
-
-.blocks-4 > * {
-	width: 25%;
-}
-
-.blocks-5 > * {
-	width: 20%;
-}
-
-.blocks-6 > * {
-	width: 16.6667%;
-}
-
-.blocks-7 > * {
-	width: 14.2857%;
-}
-
-.blocks-8 > * {
-	width: 12.5%;
-}
-
-.blocks-9 > * {
-	width: 11.1111%;
-}
-
-.blocks-10 > * {
-	width: 10%;
-}
-
-@media only screen and (max-width: @width-phone) {
-	[class|="blocks"] > * {
+// Function to create classes with suffixes
+.blocks(@suffix) {
+	.blocks@{suffix}-1 > * {
 		width: 100%;
 	}
+
+	.blocks@{suffix}-2 > * {
+		width: 50%;
+	}
+
+	.blocks@{suffix}-3 > * {
+		width: 33.3333%;
+	}
+
+	.blocks@{suffix}-4 > * {
+		width: 25%;
+	}
+
+	.blocks@{suffix}-5 > * {
+		width: 20%;
+	}
+
+	.blocks@{suffix}-6 > * {
+		width: 16.6667%;
+	}
+
+	.blocks@{suffix}-7 > * {
+		width: 14.2857%;
+	}
+
+	.blocks@{suffix}-8 > * {
+		width: 12.5%;
+	}
+
+	.blocks@{suffix}-9 > * {
+		width: 11.1111%;
+	}
+
+	.blocks@{suffix}-10 > * {
+		width: 10%;
+	}
+}
+
+// Default blocks
+.blocks(~"");
+
+// Responsive blocks
+@media only screen and (max-width: @width-sm) {
+	[class|="blocks"]:not([class^="blocks-xs-"]) > * {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: @width-sm) {
+	.blocks(-xs);
+}
+
+@media only screen and (min-width: @width-sm) {
+	.blocks(-sm);
+}
+
+@media only screen and (min-width: @width-md) {
+	.blocks(-md);
+}
+
+@media only screen and (min-width: @width-lg) {
+	.blocks(-lg);
+}
+
+@media only screen and (min-width: @width-xl) {
+	.blocks(-xl);
 }
