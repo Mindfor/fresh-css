@@ -1,17 +1,11 @@
 {
-	"name": "fresh-css",
-	"version": "0.1.0",
-	"authors": [ "Mindfor Ltd." ],
-	"description": "",
-	"homepage": "https://github.com/Mindfor/fresh-css",
-
-	"main": [
-		"fresh.less",
-		"fresh.css",
-		"src/*"
-	],
-
-	"dependencies": {
-		"fontawesome": "^4.3.0"
-	}
+    "name": "fresh-css",
+    "version": "0.1.0",
+    "authors": ["Mindfor Ltd."],
+    "description": "Lightweight and simple CSS-framework for responsive web projects",
+    "homepage": "https://github.com/Mindfor/fresh-css",
+    "dependencies": {
+        "fresh-css": "^0.1.1",
+        "font-awesome": "^4.3.0"
+    }
 }

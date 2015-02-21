@@ -1,0 +1,38 @@
+{
+  "name": "fresh-css",
+  "version": "0.1.1",
+  "authors": [
+    "Mindfor Ltd."
+  ],
+  "description": "Lightweight and simple CSS-framework for responsive web projects.",
+  "homepage": "https://github.com/mindfor/fresh-css",
+  "keywords": [
+    "css",
+    "less",
+    "framework",
+    "modile",
+    "responsive",
+    "front-end",
+    "web"
+  ],
+  "main": [
+    "fresh.less",
+    "fresh.css",
+    "src/*"
+  ],
+  "ignore": [
+    ".*",
+    "docs",
+    "package.json",
+    "gulpfile.js"
+  ],
+  "_release": "0.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.1",
+    "commit": "e0aaa9535ccd06a555083f3cdf8b757754ffdf34"
+  },
+  "_source": "git://github.com/Mindfor/fresh-css.git",
+  "_target": "^0.1.1",
+  "_originalSource": "fresh-css"
+}

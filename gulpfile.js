@@ -1,12 +1,38 @@
 var gulp = require("gulp");
 var $ = require('gulp-load-plugins')();
+var del = require('del');
 var path = require('path');
 var each = require('foreach');
+var mainBowerFiles = require("main-bower-files");
 
+var paths = {
+    src: './src/',
+    css: './css/',
+    vendor: './vendor/',
+    fonts: './fonts/'
+};
+
+gulp.task('bower:clean', function () {
+    return del(paths.vendor);
+});
+
+gulp.task('bower:install', $.bower);
+
+gulp.task('bower', ['bower:clean', 'bower:install'], function () {
+    return gulp.src(mainBowerFiles(), {
+            base: 'bower_components'
+        })
+        .pipe(gulp.dest(paths.vendor));
+});
+gulp.task('fonts', function () {
+    return gulp
+        .src(paths.vendor + "/font-awesome/fonts/*")
+        .pipe(gulp.dest(paths.fonts));
+});
 gulp.task("less", function () {
-    return gulp.src("src/less/main.less")
+    return gulp.src(paths.src + "less/main.less")
         .pipe($.less())
-        .pipe(gulp.dest("./"));
+        .pipe(gulp.dest(paths.css));
 
     // gulp.src("src/less/main.less")
     //    .pipe($.less())
@@ -39,7 +65,7 @@ var processHtmlsOpts = {
 }
 
 gulp.task("compile-htmls", function () {
-    return gulp.src('./src/contents/*.cnt.html')
+    return gulp.src(paths.src + 'contents/*.cnt.html')
         .pipe($.foreach(function (stream, file) {
             var contentTemplateName = path.basename(file.path);
 
@@ -60,14 +86,14 @@ gulp.task("compile-htmls", function () {
                 processHtmlsOpts.data.headerTemplate = 'littleheader.html';
             }
             processHtmlsOpts.data.contentTemplate = contentTemplateName;
-            return gulp.src('./src/layout.html')
+            return gulp.src(paths.src + 'layout.html')
                 .pipe($.processhtml(processHtmlsOpts))
                 .pipe($.rename(nameWithoutExtensionAndSuffix + '.html'))
                 .pipe($.processhtml({
-                    includeBase: './src/'
+                    includeBase: paths.src
                 }))
                 .pipe($.processhtml({
-                    includeBase: './src/contents/'
+                    includeBase: paths.src + 'contents/'
                 }))
                 .pipe(gulp.dest('./'));
 
@@ -87,6 +113,6 @@ gulp.task("watch", function () {
     gulp.watch(["src/**/*"], ["less", "compile"]);
 });
 
-gulp.task("default", function () {
-    gulp.start("watch");
+gulp.task("default", ['bower'], function () {
+    gulp.start(["watch", "fonts"]);
 });

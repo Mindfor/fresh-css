@@ -1,0 +1,48 @@
+@import "variables.less";
+
+.container {
+	padding: 0 1em;
+}
+
+.container(@width) {
+	.container;
+	.pull-center;
+	max-width: @width;
+}
+
+.container-sm {
+	.container(@width-sm);
+}
+
+.container-md {
+	.container(@width-md);
+}
+
+.container-lg {
+	.container(@width-lg);
+}
+
+.container-xl {
+	.container(@width-xl);
+}
+
+.container-responsive {
+	.pull-center;
+	.container;
+
+	@media screen and (min-width: @width-sm) {
+		max-width: @width-sm;
+	}
+
+	@media screen and (min-width: @width-md) {
+		max-width: @width-md;
+	}
+
+	@media screen and (min-width: @width-lg) {
+		max-width: @width-lg;
+	}
+
+	@media screen and (min-width: @width-xl) {
+		max-width: @width-xl;
+	}
+}
