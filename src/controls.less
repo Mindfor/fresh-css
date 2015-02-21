@@ -37,6 +37,10 @@ select {
 		background: @control-disabled-bg;
 		cursor: @control-disabled-cursor;
 	}
+	
+	&[readonly] {
+		background: @control-disabled-bg;
+	}
 
 	&:active, &:focus {
 		border-color: @control-active-border-color;

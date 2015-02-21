@@ -34,17 +34,21 @@
     
     <h2>Grid</h2>
 	<div class="row">
-        <div class="col-1-3">Column 1/3<br/>With multiline</div>
-        <div class="col-2-3" style="background-color:gray">Column 2/3</div>
+        <div class="col-sm-4">Column 1/3<br/>With multiline</div>
+        <div class="col-sm-8" style="background-color:gray">Column 2/3</div>
 	</div>
 	
 	<div class="row-flat">
-        <div class="col-1-3" style="background-color:#aaa">Column 1/3<br/>With multiline</div>
-        <div class="col-2-3" style="background-color:#bbb">Column 2/3</div>
+        <div class="col-1 col-sm-5 col-md-4 col-lg-3 col-xl-2" style="background-color:#aaa">Column 1</div>
+        <div class="col-1 col-sm-5 col-md-4 col-lg-3 col-xl-2" style="background-color:#bbb">Column 2</div>
+		<div class="col-1 col-sm-5 col-md-4 col-lg-3 col-xl-2" style="background-color:#ccc">Column 3</div>
+		<div class="col-1 col-sm-5 col-md-4 col-lg-3 col-xl-2" style="background-color:#ddd">Column 4</div>
+		<div class="col-1 col-sm-5 col-md-4 col-lg-3 col-xl-2" style="background-color:#eee">Column 5</div>
+		<div class="col-1 col-sm-5 col-md-4 col-lg-3 col-xl-2" style="background-color:#fff">Column 6</div>
 	</div>
 	
 	<h2>Blocks</h2>
-	<ul class="blocks-xs-2 blocks-sm-3 blocks-md-4 blocks-lg-5 blocks-xl-6">
+	<ul class="blocks-2 blocks-sm-3 blocks-md-4 blocks-lg-5 blocks-xl-6">
 		<li>1</li>
 		<li>2</li>
 		<li>3</li>
@@ -317,6 +321,12 @@
 					<span>suffix</span>
 				</div>
 				<label><input type="checkbox" /> Check inside</label>
+			</label>
+			<label>
+				<input type="text" value="Readonly field" readonly />
+			</label>
+			<label>
+				<input type="text" value="Disabled field" disabled />
 			</label>
 			<label><input type="checkbox" /> Checkbox</label>
 			<ul class="checkbox">

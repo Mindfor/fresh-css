@@ -1,8 +1,9 @@
 @import "variables.less";
 @import "grid.less";
 
-[class|="blocks"] {
-	&:extend(.row all);
+// Mixins
+.blocks {
+	.row;
 	list-style: none;
 	padding: 0;
 	
@@ -11,75 +12,55 @@
 	}
 }
 
-// Function to create classes with suffixes
-.blocks(@suffix) {
-	.blocks@{suffix}-1 > * {
-		width: 100%;
-	}
-
-	.blocks@{suffix}-2 > * {
-		width: 50%;
-	}
-
-	.blocks@{suffix}-3 > * {
-		width: 33.3333%;
-	}
-
-	.blocks@{suffix}-4 > * {
-		width: 25%;
-	}
-
-	.blocks@{suffix}-5 > * {
-		width: 20%;
-	}
-
-	.blocks@{suffix}-6 > * {
-		width: 16.6667%;
-	}
-
-	.blocks@{suffix}-7 > * {
-		width: 14.2857%;
-	}
-
-	.blocks@{suffix}-8 > * {
-		width: 12.5%;
-	}
-
-	.blocks@{suffix}-9 > * {
-		width: 11.1111%;
-	}
-
-	.blocks@{suffix}-10 > * {
-		width: 10%;
+.blocks(@num) {
+	&:extend(.blocks all);	
+	> * {
+		width: percentage(1 / @num);
 	}
 }
 
-// Default blocks
-.blocks(~"");
-
-// Responsive blocks
-@media only screen and (max-width: @width-sm) {
-	[class|="blocks"]:not([class^="blocks-xs-"]) > * {
-		width: 100%;
+.blocks(@num, @min-width) {
+	&:extend(.blocks all);	
+	@media (min-width: @min-width) {
+		> * {
+			width: percentage(1 / @num);
+		}
 	}
 }
 
-@media only screen and (max-width: @width-sm) {
-	.blocks(-xs);
+.blocks-sm(@num) {
+	.blocks(@min, @width-sm);
 }
 
-@media only screen and (min-width: @width-sm) {
-	.blocks(-sm);
+.blocks-md(@num) {
+	.blocks(@min, @width-md);
 }
 
-@media only screen and (min-width: @width-md) {
-	.blocks(-md);
+.blocks-lg(@num) {
+	.blocks(@min, @width-lg);
 }
 
-@media only screen and (min-width: @width-lg) {
-	.blocks(-lg);
+.blocks-xl(@num) {
+	.blocks(@min, @width-xl);
 }
 
-@media only screen and (min-width: @width-xl) {
-	.blocks(-xl);
+// Create default blocks in loop
+.blocks-loop(@num) when (@num <= @blocks-count) {
+	.blocks-@{num} {
+		.blocks(@num);
+	}
+	.blocks-loop(@num + 1);
 }
+
+.blocks-loop(@num, @suffix, @min-width) when (@num <= @blocks-count) {
+	.blocks-@{suffix}-@{num} {
+		.blocks(@num, @min-width);
+	}
+	.blocks-loop(@num + 1, @suffix, @min-width);
+}
+
+.blocks-loop(1);
+.blocks-loop(1, sm, @width-sm);
+.blocks-loop(1, md, @width-md);
+.blocks-loop(1, lg, @width-lg);
+.blocks-loop(1, xl, @width-xl);

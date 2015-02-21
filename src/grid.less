@@ -1,4 +1,4 @@
-@import "mixins.less";
+@import "variables.less";
 
 // Rows
 .row,
@@ -16,6 +16,7 @@
 	
 	> * {
 		display: block;
+		width: 100%;
 	}
 }
 
@@ -30,178 +31,87 @@
 	}
 }
 
-// Function to create classes with suffixes
-.columns(@suffix) {
-	// Columns
-	.col@{suffix}-1 {
-		width: 8.3333%;
-	}
+// Column mixins
+.col(@num, @total: @grid-columns) {
+	width: percentage(@num / @total);
+}
 
-	.col@{suffix}-2,
-	.col@{suffix}-1-6 {
-		width: 16.6667%;
+.col(@num, @total, @min-width) {
+	@media (min-width: @min-width) {
+		width: percentage(@num / @total);
 	}
+}
 
-	.col@{suffix}-3,
-	.col@{suffix}-1-4 {
-		width: 25%;
+.col-sm(@num, @total: @grid-columns) {
+	.col(@num, @total, @width-sm);
+}
+
+.col-md(@num, @total: @grid-columns) {
+	.col(@num, @total, @width-md);
+}
+
+.col-lg(@num, @total: @grid-columns) {
+	.col(@num, @total, @width-lg);
+}
+
+.col-xl(@num, @total: @grid-columns) {
+	.col(@num, @total, @width-xl);
+}
+
+// Offset mixins
+.col-offset(@num, @total: @grid-columns) {
+	margin-left: percentage(@num / @total);
+}
+
+.col-offset(@num, @total, @min-width) {
+	@media (min-width: @min-width) {
+		margin-left: percentage(@num / @total);
 	}
+}
 
-	.col@{suffix}-4,
-	.col@{suffix}-1-3 {
-		width: 33.3333%;
-	}
+.col-offset-sm(@num, @total: @grid-columns) {
+	.col-offset(@num, @grid-columns, @width-sm);
+}
 
-	.col@{suffix}-5 {
-		width: 41.6667%;
-	}
+.col-offset-md(@num, @total: @grid-columns) {
+	.col-offset(@num, @grid-columns, @width-md);
+}
 
-	.col@{suffix}-6,
-	.col@{suffix}-1-2 {
-		width: 50%;
-	}
+.col-offset-lg(@num, @total: @grid-columns) {
+	.col-offset(@num, @grid-columns, @width-lg);
+}
 
-	.col@{suffix}-7 {
-		width: 58.3333%;
-	}
+.col-offset-xl(@num, @total: @grid-columns) {
+	.col-offset(@num, @grid-columns, @width-xl);
+}
 
-	.col@{suffix}-8,
-	.col@{suffix}-2-3 {
-		width: 66.6667%;
-	}
-
-	.col@{suffix}-9,
-	.col@{suffix}-3-4{
-		width: 75%;
-	}
-
-	.col@{suffix}-10,
-	.col@{suffix}-5-6 {
-		width: 83.3333%;
-	}
-
-	.col@{suffix}-11 {
-		width: 91.6667%;
-	}
-
-	.col@{suffix}-12,
-	.col@{suffix}-1-1,
-	.col@{suffix}-5-5 {
-		width: 100%;
-	}
-
-	.col@{suffix}-1-5 {
-		width: 20%;
-	}
-
-	.col@{suffix}-2-5 {
-		width: 40%;
-	}
-
-	.col@{suffix}-3-5 {
-		width: 60%;
-	}
-
-	.col@{suffix}-4-5 {
-		width: 80%;
+// Create default columns in loop
+.col-loop(@num) when (@num <= @grid-columns) {
+	.col-@{num} {
+		.col(@num);
 	}
 	
-	// Offsets
-	.col@{suffix}-offset-1 {
-		margin-left: 8.3333%;
+	.col-offset-@{num} {
+		.col-offset(@num);
 	}
-
-	.col@{suffix}-offset-2
-	.col@{suffix}-offset-1-6 {
-		margin-left: 16.6667%;
-	}
-
-	.col@{suffix}-offset-3,
-	.col@{suffix}-offset-1-4 {
-		margin-left: 25%;
-	}
-
-	.col@{suffix}-offset-4,
-	.col@{suffix}-offset-1-3 {
-		margin-left: 33.3333%;
-	}
-
-	.col@{suffix}-offset-5 {
-		margin-left: 41.6667%;
-	}
-
-	.col@{suffix}-offset-6,
-	.col@{suffix}-offset-1-2 {
-		margin-left: 50%;
-	}
-
-	.col@{suffix}-offset-7 {
-		margin-left: 58.3333%;
-	}
-
-	.col@{suffix}-offset-8,
-	.col@{suffix}-offset-2-3 {
-		margin-left: 66.6667%;
-	}
-
-	.col@{suffix}-offset-9,
-	.col@{suffix}-offset-3-4 {
-		margin-left: 75%;
-	}
-
-	.col@{suffix}-offset-10,
-	.col@{suffix}-offset-5-6 {
-		margin-left: 83.3333%;
-	}
-
-	.col@{suffix}-offset-11 {
-		margin-left: 91.6667%;
-	}
-
-	.col@{suffix}-offset-1-5 {
-		margin-left: 20%;
-	}
-
-	.col@{suffix}-offset-2-5 {
-		margin-left: 40%;
-	}
-
-	.col@{suffix}-offset-3-5 {
-		margin-left: 60%;
-	}
-
-	.col@{suffix}-offset-4-5 {
-		margin-left: 80%;
-	}
+	
+	.col-loop(@num + 1);
 }
 
-// Default columns
-.columns(~"");
-
-// Responsive columns
-@media only screen and (max-width: @width-sm) {
-	[class|="col"]:not([class^="col-xs-"]) {
-		width: 100%;
-		margin-left: 0;
+.col-loop(@num, @suffix, @min-width) when (@num <= @grid-columns) {
+	.col-@{suffix}-@{num} {
+		.col(@num, @grid-columns, @min-width);
 	}
+
+	.col-offset-@{suffix}-@{num} {
+		.col-offset(@num, @grid-columns, @min-width);
+	}
+
+	.col-loop(@num + 1, @suffix, @min-width);
 }
 
-@media only screen and (max-width: @width-sm) {
-	.blocks(-xs);
-}
-
-@media only screen and (min-width: @width-sm) {
-	.columns(-sm);
-}
-
-@media only screen and (min-width: @width-md) {
-	.columns(-md);
-}
-
-@media only screen and (min-width: @width-lg) {
-	.columns(-lg);
-}
-
-@media only screen and (min-width: @width-xl) {
-	.columns(-xl);
-}
+.col-loop(1);
+.col-loop(1, sm, @width-sm);
+.col-loop(1, md, @width-md);
+.col-loop(1, lg, @width-lg);
+.col-loop(1, xl, @width-xl);
