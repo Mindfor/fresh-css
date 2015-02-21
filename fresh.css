@@ -2755,7 +2755,6 @@ form:not(.flat) > section:not(.controls) > * {
 .form > section:not(.controls) > label,
 form:not(.flat) > section:not(.controls) > label {
   width: 100%;
-  padding: 0.3em 0;
 }
 @media (min-width: 48em) {
   .form > section:not(.controls) > label,
@@ -2763,25 +2762,16 @@ form:not(.flat) > section:not(.controls) > label {
     width: 25%;
   }
 }
-.form > section:not(.controls) > output,
-form:not(.flat) > section:not(.controls) > output {
-  width: 100%;
-  padding: 0.3em 0;
-}
-@media (min-width: 48em) {
-  .form > section:not(.controls) > output,
-  form:not(.flat) > section:not(.controls) > output {
-    width: 75%;
-  }
-}
 .form > section:not(.controls) > input,
 .form > section:not(.controls) > textarea,
 .form > section:not(.controls) > select,
 .form > section:not(.controls) > div,
+.form > section:not(.controls) > output,
 form:not(.flat) > section:not(.controls) > input,
 form:not(.flat) > section:not(.controls) > textarea,
 form:not(.flat) > section:not(.controls) > select,
-form:not(.flat) > section:not(.controls) > div {
+form:not(.flat) > section:not(.controls) > div,
+form:not(.flat) > section:not(.controls) > output {
   width: 100%;
 }
 @media (min-width: 48em) {
@@ -2789,11 +2779,22 @@ form:not(.flat) > section:not(.controls) > div {
   .form > section:not(.controls) > textarea,
   .form > section:not(.controls) > select,
   .form > section:not(.controls) > div,
+  .form > section:not(.controls) > output,
   form:not(.flat) > section:not(.controls) > input,
   form:not(.flat) > section:not(.controls) > textarea,
   form:not(.flat) > section:not(.controls) > select,
-  form:not(.flat) > section:not(.controls) > div {
+  form:not(.flat) > section:not(.controls) > div,
+  form:not(.flat) > section:not(.controls) > output {
     width: 75%;
+  }
+}
+@media (min-width: 48em) {
+  .form > section:not(.controls) > label,
+  .form > section:not(.controls) > output,
+  form:not(.flat) > section:not(.controls) > label,
+  form:not(.flat) > section:not(.controls) > output {
+    padding-top: 0.3em;
+    border-top: 1px solid transparent;
   }
 }
 .form > section:not(.controls) > div > label,
@@ -2801,14 +2802,10 @@ form:not(.flat) > section:not(.controls) > div > label {
   display: block;
   margin-top: .25em;
 }
-.form > section.controls,
-form:not(.flat) > section.controls {
-  margin-left: 100%;
-}
 @media (min-width: 48em) {
   .form > section.controls,
   form:not(.flat) > section.controls {
-    margin-left: 8.33333333%;
+    margin-left: 25%;
   }
 }
 label.req > span:first-child:after {
