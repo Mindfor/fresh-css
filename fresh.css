@@ -268,7 +268,7 @@ abbr[title].text-help,
 table tr.primary,
 table td.primary,
 table th.primary {
-  background: #6db5f0;
+  background: #84c1f2;
 }
 .bg-secondary,
 table tr.secondary,
@@ -280,19 +280,19 @@ table th.secondary {
 table tr.success,
 table td.success,
 table th.success {
-  background: #97efac;
+  background: #adf3be;
 }
 .bg-warning,
 table tr.warning,
 table td.warning,
 table th.warning {
-  background: #f8d1ae;
+  background: #fadec5;
 }
 .bg-error,
 table tr.error,
 table td.error,
 table th.error {
-  background: #f0c8c8;
+  background: #f6dcdc;
 }
 .bg-gray {
   background: #f4f4f4;
@@ -1797,6 +1797,7 @@ input[type="datetime-local"]:focus,
 textarea:focus,
 select:focus {
   border-color: #105c9a;
+  box-shadow: 0 0 5px 0 rgba(16, 92, 154, 0.5);
 }
 input[type="text"]:-ms-input-placeholder,
 input[type="password"]:-ms-input-placeholder,
@@ -2851,60 +2852,108 @@ form:not(.flat) > .success {
   color: #1cb841;
 }
 .form > .success input,
-.form > .success .input-group > span,
-.form > .success .input-group > label,
 .form > .success textarea,
 .form > .success select,
 form:not(.flat) > .success input,
-form:not(.flat) > .success .input-group > span,
-form:not(.flat) > .success .input-group > label,
 form:not(.flat) > .success textarea,
 form:not(.flat) > .success select {
   border-color: #1cb841;
 }
+.form > .success input:focus,
+.form > .success textarea:focus,
+.form > .success select:focus,
+.form > .success input:active,
+.form > .success textarea:active,
+.form > .success select:active,
+form:not(.flat) > .success input:focus,
+form:not(.flat) > .success textarea:focus,
+form:not(.flat) > .success select:focus,
+form:not(.flat) > .success input:active,
+form:not(.flat) > .success textarea:active,
+form:not(.flat) > .success select:active {
+  box-shadow: 0 0 5px 0 rgba(28, 184, 65, 0.5);
+}
+.form > .success .input-group > span,
+.form > .success .input-group > label,
+form:not(.flat) > .success .input-group > span,
+form:not(.flat) > .success .input-group > label {
+  border-color: #1cb841;
+}
 .form > .success .input-group > span,
 form:not(.flat) > .success .input-group > span {
-  background: #97efac;
+  background: #adf3be;
 }
 .form > .warning,
 form:not(.flat) > .warning {
   color: #df7514;
 }
 .form > .warning input,
-.form > .warning .input-group > span,
-.form > .warning .input-group > label,
 .form > .warning textarea,
 .form > .warning select,
 form:not(.flat) > .warning input,
-form:not(.flat) > .warning .input-group > span,
-form:not(.flat) > .warning .input-group > label,
 form:not(.flat) > .warning textarea,
 form:not(.flat) > .warning select {
   border-color: #df7514;
 }
+.form > .warning input:focus,
+.form > .warning textarea:focus,
+.form > .warning select:focus,
+.form > .warning input:active,
+.form > .warning textarea:active,
+.form > .warning select:active,
+form:not(.flat) > .warning input:focus,
+form:not(.flat) > .warning textarea:focus,
+form:not(.flat) > .warning select:focus,
+form:not(.flat) > .warning input:active,
+form:not(.flat) > .warning textarea:active,
+form:not(.flat) > .warning select:active {
+  box-shadow: 0 0 5px 0 rgba(223, 117, 20, 0.5);
+}
+.form > .warning .input-group > span,
+.form > .warning .input-group > label,
+form:not(.flat) > .warning .input-group > span,
+form:not(.flat) > .warning .input-group > label {
+  border-color: #df7514;
+}
 .form > .warning .input-group > span,
 form:not(.flat) > .warning .input-group > span {
-  background: #f8d1ae;
+  background: #fadec5;
 }
 .form > .error,
 form:not(.flat) > .error {
   color: #ca3c3c;
 }
 .form > .error input,
-.form > .error .input-group > span,
-.form > .error .input-group > label,
 .form > .error textarea,
 .form > .error select,
 form:not(.flat) > .error input,
-form:not(.flat) > .error .input-group > span,
-form:not(.flat) > .error .input-group > label,
 form:not(.flat) > .error textarea,
 form:not(.flat) > .error select {
   border-color: #ca3c3c;
 }
+.form > .error input:focus,
+.form > .error textarea:focus,
+.form > .error select:focus,
+.form > .error input:active,
+.form > .error textarea:active,
+.form > .error select:active,
+form:not(.flat) > .error input:focus,
+form:not(.flat) > .error textarea:focus,
+form:not(.flat) > .error select:focus,
+form:not(.flat) > .error input:active,
+form:not(.flat) > .error textarea:active,
+form:not(.flat) > .error select:active {
+  box-shadow: 0 0 5px 0 rgba(202, 60, 60, 0.5);
+}
+.form > .error .input-group > span,
+.form > .error .input-group > label,
+form:not(.flat) > .error .input-group > span,
+form:not(.flat) > .error .input-group > label {
+  border-color: #ca3c3c;
+}
 .form > .error .input-group > span,
 form:not(.flat) > .error .input-group > span {
-  background: #f0c8c8;
+  background: #f6dcdc;
 }
 label.req > span:first-child:after {
   content: " *";

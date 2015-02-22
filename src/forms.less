@@ -128,13 +128,21 @@ legend {
 		color: @color;
 
 		input,
-		.input-group > span,
-		.input-group > label,
 		textarea,
 		select {
 			border-color: @color;
+			
+			&:focus,
+			&:active {
+				.control-shadow(@color);
+			}
 		}
 
+		.input-group > span,
+		.input-group > label {
+			border-color: @color;
+		}
+		
 		.input-group > span {
 			background: @bg;
 		}
