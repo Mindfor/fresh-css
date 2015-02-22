@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixins.less";
+@import "helpers.less";
 
 table {
 	max-width: 100%;
@@ -10,6 +11,28 @@ table {
 	
 	&, tr, td, th {
 		.transition(@table-transition);
+	}
+	
+	tr, td, th {
+		&.primary {
+			&:extend(.bg-primary);
+		}
+
+		&.secondary {
+			&:extend(.bg-secondary);
+		}
+
+		&.success {
+			&:extend(.bg-success);
+		}
+
+		&.warning {
+			&:extend(.bg-warning);
+		}
+
+		&.error {
+			&:extend(.bg-error);
+		}
 	}
 
 	caption {

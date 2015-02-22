@@ -75,6 +75,31 @@
             <td>Col 2</td>
             <td>Col 3</td>
         </tr>
+		<tr class="primary">
+            <td>Col 1</td>
+            <td>Col 2</td>
+            <td>Col 3</td>
+        </tr>
+		<tr class="secondary">
+            <td>Col 1</td>
+            <td>Col 2</td>
+            <td>Col 3</td>
+        </tr>
+		<tr class="success">
+            <td>Col 1</td>
+            <td>Col 2</td>
+            <td>Col 3</td>
+        </tr>
+		<tr class="warning">
+            <td>Col 1</td>
+            <td>Col 2</td>
+            <td>Col 3</td>
+        </tr>
+		<tr class="error">
+            <td>Col 1</td>
+            <td>Col 2</td>
+            <td>Col 3</td>
+        </tr>
         <tfoot>
             <tr>
                 <th>Col 1</th>
@@ -320,7 +345,8 @@
 					<input type="password" placeholder="Password" />
 					<span>suffix</span>
 				</div>
-				<label><input type="checkbox" /> Check inside</label>
+				<label class="checkbox"><input type="checkbox" /> Check inside</label>
+				<label class="checkbox"><input type="checkbox" /> Check inside</label>
 			</label>
 			<label>
 				<input type="text" value="Readonly field" readonly />
@@ -328,7 +354,7 @@
 			<label>
 				<input type="text" value="Disabled field" disabled />
 			</label>
-			<label><input type="checkbox" /> Checkbox</label>
+			<label class="checkbox"><input type="checkbox" /> Checkbox</label>
 			<ul class="checkbox">
 				<li><label><input type="checkbox" /> Check 1</label></li>
 				<li><label><input type="checkbox" /> Check 2</label></li>
@@ -368,12 +394,52 @@
 					<input type="password" placeholder="Password" />
 					<span>suffix</span>
 				</div>
-				<label><input type="checkbox" /> Check inside</label>
+				<label class="checkbox"><input type="checkbox" /> Check inside</label>
 			</div>
 		</section>
 		
 		<section class="controls">
 			<button type="submit">Go</button>
+		</section>
+	</form>
+	
+	<h3>Color form</h3>
+	<form class="width-sm">
+		<label class="req success">
+			<span>Label</span>
+			<input type="text" />
+			<span class="text-help">Description after field</span>
+		</label>
+		<label class="warning">
+			Label
+			<input type="text" />
+			<span class="text-help">Description after field</span>
+		</label>
+		<label class="error">
+			<span>Label</span>
+			<input type="text" />
+			<span class="text-help">Description after field</span>
+		</label>
+		<label class="checkbox success">
+			<input type="radio" /> Radio button
+		</label>
+		<section class="success">
+			<label>Label</label>
+			<input type="text" />
+		</section>
+		<section class="warning">
+			<label>Label</label>
+			<div><input type="text" /></div>
+		</section>
+		<section class="error">
+			<label>Label</label>
+			<div>
+				<div class="input-group">
+					<span>prefix</span>
+					<input type="text" />
+					<span>suffix</span>
+				</div>
+			</div>
 		</section>
 	</form>
 </body>

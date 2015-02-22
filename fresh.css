@@ -264,23 +264,38 @@ abbr[title].text-help,
 .text-invert {
   color: white;
 }
-.bg-primary {
-  background-color: #105c9a;
+.bg-primary,
+table tr.primary,
+table td.primary,
+table th.primary {
+  background: #6db5f0;
 }
-.bg-secondary {
-  background-color: #56b9d9;
+.bg-secondary,
+table tr.secondary,
+table td.secondary,
+table th.secondary {
+  background: #d3edf5;
 }
-.bg-success {
-  background-color: #1cb841;
+.bg-success,
+table tr.success,
+table td.success,
+table th.success {
+  background: #97efac;
 }
-.bg-warning {
-  background-color: #df7514;
+.bg-warning,
+table tr.warning,
+table td.warning,
+table th.warning {
+  background: #f8d1ae;
 }
-.bg-error {
-  background-color: #ca3c3c;
+.bg-error,
+table tr.error,
+table td.error,
+table th.error {
+  background: #f0c8c8;
 }
 .bg-gray {
-  background-color: #565d64;
+  background: #f4f4f4;
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
@@ -2652,6 +2667,12 @@ form:not(.flat) > label {
   display: block;
   margin: 0 -2px 1em 2px;
 }
+.form > label:after,
+form:not(.flat) > label:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .form > label > input,
 .form > label > textarea,
 .form > label > select,
@@ -2664,9 +2685,22 @@ form:not(.flat) > label > div,
 form:not(.flat) > label > label {
   margin-left: -2px;
 }
-.form > label > label,
-form:not(.flat) > label > label {
-  display: block;
+.form > label > input + label.radio,
+.form > label > textarea + label.radio,
+.form > label > select + label.radio,
+.form > label > div + label.radio,
+.form > label > input + label.checkbox,
+.form > label > textarea + label.checkbox,
+.form > label > select + label.checkbox,
+.form > label > div + label.checkbox,
+form:not(.flat) > label > input + label.radio,
+form:not(.flat) > label > textarea + label.radio,
+form:not(.flat) > label > select + label.radio,
+form:not(.flat) > label > div + label.radio,
+form:not(.flat) > label > input + label.checkbox,
+form:not(.flat) > label > textarea + label.checkbox,
+form:not(.flat) > label > select + label.checkbox,
+form:not(.flat) > label > div + label.checkbox {
   margin-top: .25em;
 }
 .form input[type="text"],
@@ -2709,6 +2743,10 @@ form:not(.flat) textarea,
 form:not(.flat) select {
   display: block;
   width: 100%;
+}
+.form > *,
+form:not(.flat) > * {
+  clear: both;
 }
 .form.inline input,
 .form > .inline input,
@@ -2808,9 +2846,75 @@ form:not(.flat) > section:not(.controls) > div > label {
     margin-left: 25%;
   }
 }
+.form > .success,
+form:not(.flat) > .success {
+  color: #1cb841;
+}
+.form > .success input,
+.form > .success .input-group > span,
+.form > .success .input-group > label,
+.form > .success textarea,
+.form > .success select,
+form:not(.flat) > .success input,
+form:not(.flat) > .success .input-group > span,
+form:not(.flat) > .success .input-group > label,
+form:not(.flat) > .success textarea,
+form:not(.flat) > .success select {
+  border-color: #1cb841;
+}
+.form > .success .input-group > span,
+form:not(.flat) > .success .input-group > span {
+  background: #97efac;
+}
+.form > .warning,
+form:not(.flat) > .warning {
+  color: #df7514;
+}
+.form > .warning input,
+.form > .warning .input-group > span,
+.form > .warning .input-group > label,
+.form > .warning textarea,
+.form > .warning select,
+form:not(.flat) > .warning input,
+form:not(.flat) > .warning .input-group > span,
+form:not(.flat) > .warning .input-group > label,
+form:not(.flat) > .warning textarea,
+form:not(.flat) > .warning select {
+  border-color: #df7514;
+}
+.form > .warning .input-group > span,
+form:not(.flat) > .warning .input-group > span {
+  background: #f8d1ae;
+}
+.form > .error,
+form:not(.flat) > .error {
+  color: #ca3c3c;
+}
+.form > .error input,
+.form > .error .input-group > span,
+.form > .error .input-group > label,
+.form > .error textarea,
+.form > .error select,
+form:not(.flat) > .error input,
+form:not(.flat) > .error .input-group > span,
+form:not(.flat) > .error .input-group > label,
+form:not(.flat) > .error textarea,
+form:not(.flat) > .error select {
+  border-color: #ca3c3c;
+}
+.form > .error .input-group > span,
+form:not(.flat) > .error .input-group > span {
+  background: #f0c8c8;
+}
 label.req > span:first-child:after {
   content: " *";
   color: red;
+}
+label.radio,
+label.checkbox {
+  display: block;
+  float: left;
+  clear: both;
 }
 ul.radio,
 ul.checkbox,
@@ -2829,81 +2933,42 @@ ul.checkbox-inline > li {
   border-collapse: separate;
   vertical-align: middle;
 }
-.input-group input[type="text"],
-.input-group input[type="password"],
-.input-group input[type="email"],
-.input-group input[type="url"],
-.input-group input[type="phone"],
-.input-group input[type="tel"],
-.input-group input[type="number"],
-.input-group input[type="datetime"],
-.input-group input[type="date"],
-.input-group input[type="month"],
-.input-group input[type="color"],
-.input-group input[type="time"],
-.input-group input[type="search"],
-.input-group input[type="datetime-local"] {
+.input-group input {
   display: table-cell !important;
   width: 100%;
 }
-.input-group input[type="text"]:not(:first-child),
-.input-group input[type="password"]:not(:first-child),
-.input-group input[type="email"]:not(:first-child),
-.input-group input[type="url"]:not(:first-child),
-.input-group input[type="phone"]:not(:first-child),
-.input-group input[type="tel"]:not(:first-child),
-.input-group input[type="number"]:not(:first-child),
-.input-group input[type="datetime"]:not(:first-child),
-.input-group input[type="date"]:not(:first-child),
-.input-group input[type="month"]:not(:first-child),
-.input-group input[type="color"]:not(:first-child),
-.input-group input[type="time"]:not(:first-child),
-.input-group input[type="search"]:not(:first-child),
-.input-group input[type="datetime-local"]:not(:first-child) {
+.input-group input:not(:first-child) {
   border-bottom-left-radius: 0 !important;
   border-top-left-radius: 0 !important;
 }
-.input-group input[type="text"]:not(:last-child),
-.input-group input[type="password"]:not(:last-child),
-.input-group input[type="email"]:not(:last-child),
-.input-group input[type="url"]:not(:last-child),
-.input-group input[type="phone"]:not(:last-child),
-.input-group input[type="tel"]:not(:last-child),
-.input-group input[type="number"]:not(:last-child),
-.input-group input[type="datetime"]:not(:last-child),
-.input-group input[type="date"]:not(:last-child),
-.input-group input[type="month"]:not(:last-child),
-.input-group input[type="color"]:not(:last-child),
-.input-group input[type="time"]:not(:last-child),
-.input-group input[type="search"]:not(:last-child),
-.input-group input[type="datetime-local"]:not(:last-child) {
+.input-group input:not(:last-child) {
   border-bottom-right-radius: 0 !important;
   border-top-right-radius: 0 !important;
 }
-.input-group span,
-.input-group label {
+.input-group > span,
+.input-group > label {
   display: table-cell !important;
   vertical-align: middle;
   white-space: nowrap;
   width: 1px;
 }
-.input-group span:first-child,
-.input-group label:first-child,
-.input-group span:first-child > *,
-.input-group label:first-child > * {
+.input-group > span:first-child,
+.input-group > label:first-child,
+.input-group > span:first-child > *,
+.input-group > label:first-child > * {
   border-right: none;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.input-group span:last-child,
-.input-group label:last-child,
-.input-group span:last-child > *,
-.input-group label:last-child > * {
+.input-group > span:last-child,
+.input-group > label:last-child,
+.input-group > span:last-child > *,
+.input-group > label:last-child > * {
   border-left: none;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
-.input-group span {
+.input-group > span {
   padding: 0.3em 0.5em;
   border: 1px solid #bdbdbd;
   border-radius: 2px;
