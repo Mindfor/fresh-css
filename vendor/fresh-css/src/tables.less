@@ -5,15 +5,15 @@ table {
 	max-width: 100%;
 	width: 100%;
 	empty-cells: show;
-    border-collapse: collapse;
-    border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 	
 	&, tr, td, th {
 		.transition(@table-transition);
 	}
 
 	caption {
-        text-align: left;
+		text-align: left;
 		text-transform: uppercase;
 		padding: 0 1em;
 		color: @color-gray;
@@ -43,43 +43,43 @@ table {
 
 	tfoot > tr {
 		color: @color-gray;
-        font-style: normal;
+		font-style: normal;
 		background: @table-footer-bg;
 	}
 }
 
 table.bordered {
-    th, td {
+	th, td {
 	   border: @table-border;
-    }
+	}
 }
 
 table.simple {
-    th, td, caption {
-        border: none;
-        padding-left: 0;
-    }
+	th, td, caption {
+		border: none;
+		padding-left: 0;
+	}
 }
 
 table.flat {
-    th, td, caption {
-        border: none;
-        padding: 0;
-    }
+	th, td, caption {
+		border: none;
+		padding: 0;
+	}
 }
 
 table.stripped {
 	> tr:nth-child(odd),
-    > tbody tr:nth-child(odd) {
-        background: @table-odd-bg;
-    }
+	> tbody tr:nth-child(odd) {
+		background: @table-odd-bg;
+	}
 }
 
 table.hover {
 	> tr:hover,
-    tbody > tr:hover {
+	tbody > tr:hover {
 	   background: @table-hover-bg !important;
-    }
+	}
 }
 
 table.click	> tr,
@@ -90,7 +90,7 @@ table tbody > td[data-href] {
 	
 	&:hover {
 		background: @table-hover-bg !important;
-    }
+	}
 }
 
 .table-container {
