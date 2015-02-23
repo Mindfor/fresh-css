@@ -42,9 +42,9 @@ select {
 		background: @control-disabled-bg;
 	}
 
-	&:active, &:focus {
+	&:focus {
 		border-color: @control-active-border-color;
-		.control-shadow(@control-active-border-color);
+		box-shadow: 0 0 5px 0 fade(@control-active-border-color, 50%);
 	}
 
 	&:-ms-input-placeholder {
@@ -81,6 +81,15 @@ input[type="checkbox"],
 input[type="radio"] {
 	&[disabled] {
 		cursor: default;
+	}
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	border-radius: 3px;
+	
+	&:focus {
+		box-shadow: 0 0 5px 0 @control-active-border-color;
 	}
 }
 

@@ -14,7 +14,11 @@
 	&.active {
 		background: @bg;
 		border-color: darken(@bg, 5%);
-	}	
+	}
+
+	&:focus {
+		box-shadow: 0 0 5px 0 @bg;
+	}
 }
 
 .btn-outline-color(@color) {
