@@ -611,6 +611,7 @@ kbd {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
   justify-content: flext-start;
 }
 .row:after,
@@ -1242,6 +1243,7 @@ kbd {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
   justify-content: flext-start;
   margin: 0 -1em;
   list-style: none;
@@ -2825,6 +2827,7 @@ form:not(.flat) > section:not(.controls) {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
   justify-content: flext-start;
   margin-bottom: 1em;
 }
