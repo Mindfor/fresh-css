@@ -1,1 +1,703 @@
-<h1>THIS IS GRID</h1>
+<h1>Grid system</h1>
+<h3><strong>Responsive flexible grid</strong></h3>
+<p><strong>Fresh-css includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts.</strong>
+</p>
+<h3><strong>Introduction</strong></h3>
+<p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. It's very similiar to bootstrap grid system:</p>
+<p>
+	<ul>
+		<li>Rows must be placed within a <span class="css-class">.container</span>(full-width) or <span class="css-class">.container-{sm/md/lg/lx}</span>(fixed-width) or <span class="css-class">.container-responsive</span>(changes responsive fixed-width based ob the width of the screen) for proper alignment and padding.</li>
+		<li>Use rows to create horizontal groups of columns.</li>
+		<li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+		<li>Predefined grid classes like <span class="css-class">.row</span> and <span class="css-class">.col-sm-4</span> are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li>
+		<li>Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and last column via negative margin on <span class="css-class">.row</span>s.</li>
+		<li>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined up with non-grid content.</li>
+		<li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <span class="css-class">.col-sm-4</span>.</li>
+		<li>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, e.g. applying any <span class="css-class">.col-md-*</span> class to an element will not only affect its styling on medium devices but also on large devices if a <span class="css-class">.col-lg-*</span> class is not present.</li>
+	</ul>
+</p>
+
+<h3>Example: Non-responsive grid</h3>
+<p>Fresh-css have not responsive predefined grid class like <span class="css-class">.col-2</span> it's also scales up to 12 columns by default. Columns doesn't stacked on mobile and tablet devices. Place grid colums in any <span class="css-class">.row</span> or <span class="css-class">.row-flat</span>
+</p>
+
+<div class="fresh-docs-grid">
+	<div class="row show-grid">
+		<div class="col-1">.col-1</div>
+		<div class="col-1">.col-1</div>
+		<div class="col-1">.col-1</div>
+		<div class="col-1">.col-1</div>
+		<div class="col-1">.col-1</div>
+		<div class="col-1">.col-1</div>
+		<div class="col-1">.col-1</div>
+		<div class="col-1">.col-1</div>
+		<div class="col-1">.col-1</div>
+		<div class="col-1">.col-1</div>
+		<div class="col-1">.col-1</div>
+		<div class="col-1">.col-1</div>
+	</div>
+	<div class="row show-grid">
+		<div class="col-8">.col-8</div>
+		<div class="col-4">.col-4</div>
+	</div>
+	<div class="row show-grid">
+		<div class="col-6">.col-6</div>
+		<div class="col-6">.col-6</div>
+	</div>
+	<div class="row show-grid">
+		<div class="col-4">.col-4</div>
+		<div class="col-4">.col-4</div>
+		<div class="col-4">.col-4</div>
+	</div>
+</div>
+
+<div class="code-block linenums">
+	<ol class="linenums">
+		<li><span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"row"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-1"</span>&gt;</span>
+			<span class="pln">.col-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-1"</span>&gt;</span>
+			<span class="pln">.col-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-1"</span>&gt;</span>
+			<span class="pln">.col-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-1"</span>&gt;</span>
+			<span class="pln">.col-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-1"</span>&gt;</span>
+			<span class="pln">.col-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-1"</span>&gt;</span>
+			<span class="pln">.col-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-1"</span>&gt;</span>
+			<span class="pln">.col-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-1"</span>&gt;</span>
+			<span class="pln">.col-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-1"</span>&gt;</span>
+			<span class="pln">.col-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-1"</span>&gt;</span>
+			<span class="pln">.col-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-1"</span>&gt;</span>
+			<span class="pln">.col-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-1"</span>&gt;</span>
+			<span class="pln">.col-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+
+		<li> <span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li><span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"row"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-8"</span>&gt;</span>
+			<span class="pln">.col-8</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-4"</span>&gt;</span>
+			<span class="pln">.col-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li> <span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li><span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"row"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-6"</span>&gt;</span>
+			<span class="pln">.col-6</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-6"</span>&gt;</span>
+			<span class="pln">.col-6</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li> <span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li><span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"row"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-4"</span>&gt;</span>
+			<span class="pln">.col-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-4"</span>&gt;</span>
+			<span class="pln">.col-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-4"</span>&gt;</span>
+			<span class="pln">.col-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li> <span class="tag">&lt;/div&gt;</span>
+		</li>
+	</ol>
+</div>
+
+<h3>Example: Row-flat version</h3>
+<p>Also fresh-css have other version of <span class="css-class">.row</span> is <span class="css-class">.row-flat</span> it's do same things just without the negative margin. </p>
+<div class="fresh-docs-grid">
+	<div class="row-flat show-grid">
+		<div class="col-4">.col-4</div>
+		<div class="col-4">.col-4</div>
+		<div class="col-4">.col-4</div>
+	</div>
+</div>
+<div class="code-block linenums">
+	<ol class="linenums">
+		<li><span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"row-flat"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-4"</span>&gt;</span>
+			<span class="pln">.col-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-4"</span>&gt;</span>
+			<span class="pln">.col-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-4"</span>&gt;</span>
+			<span class="pln">.col-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li> <span class="tag">&lt;/div&gt;</span>
+		</li>
+	</ol>
+</div>
+<h3>Example: Stacked-to-horizontal</h3>
+<p>Using a single set of <span class="css-class">.col-md-*</span> grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the small to medium range) before becoming horizontal on desktop (large) devices. Place grid columns in any <span class="css-class">.row</span> or <span class="css-class">.row-flat</span>.</p>
+
+<div class="fresh-docs-grid">
+	<div class="row show-grid">
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+	</div>
+	<div class="row show-grid">
+		<div class="col-md-4">.col-md-4</div>
+		<div class="col-md-8">.col-md-8</div>
+	</div>
+	<div class="row show-grid">
+		<div class="col-md-6">.col-md-6</div>
+		<div class="col-md-6">.col-md-6</div>
+	</div>
+	<div class="row show-grid">
+		<div class="col-md-2">.col-md-2</div>
+		<div class="col-md-2">.col-md-2</div>
+		<div class="col-md-2">.col-md-2</div>
+		<div class="col-md-6">.col-md-6</div>
+	</div>
+	<div class="row show-grid">
+		<div class="col-md-4">.col-md-4</div>
+		<div class="col-md-4">.col-md-4</div>
+		<div class="col-md-4">.col-md-4</div>
+	</div>
+</div>
+<div class="code-block linenums">
+	<ol class="linenums">
+		<li><span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"row"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-1"</span>&gt;</span>
+			<span class="pln">.col-md-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-1"</span>&gt;</span>
+			<span class="pln">.col-md-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-1"</span>&gt;</span>
+			<span class="pln">.col-md-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-1"</span>&gt;</span>
+			<span class="pln">.col-md-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-1"</span>&gt;</span>
+			<span class="pln">.col-md-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-1"</span>&gt;</span>
+			<span class="pln">.col-md-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-1"</span>&gt;</span>
+			<span class="pln">.col-md-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-1"</span>&gt;</span>
+			<span class="pln">.col-md-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-1"</span>&gt;</span>
+			<span class="pln">.col-md-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-1"</span>&gt;</span>
+			<span class="pln">.col-md-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-1"</span>&gt;</span>
+			<span class="pln">.col-md-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-1"</span>&gt;</span>
+			<span class="pln">.col-md-1</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+
+		<li> <span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li><span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"row"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-4"</span>&gt;</span>
+			<span class="pln">.col-md-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-8"</span>&gt;</span>
+			<span class="pln">.col-md-8</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li> <span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li><span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"row"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-6"</span>&gt;</span>
+			<span class="pln">.col-md-6</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-6"</span>&gt;</span>
+			<span class="pln">.col-md-6</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li> <span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li><span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"row"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-2"</span>&gt;</span>
+			<span class="pln">.col-md-2</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-2"</span>&gt;</span>
+			<span class="pln">.col-md-2</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-2"</span>&gt;</span>
+			<span class="pln">.col-md-2</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-6"</span>&gt;</span>
+			<span class="pln">.col-md-6</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li> <span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li><span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"row"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-6"</span>&gt;</span>
+			<span class="pln">.col-md-6</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-6"</span>&gt;</span>
+			<span class="pln">.col-md-6</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li> <span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li><span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"row"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-4"</span>&gt;</span>
+			<span class="pln">.col-md-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-4"</span>&gt;</span>
+			<span class="pln">.col-md-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-4"</span>&gt;</span>
+			<span class="pln">.col-md-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li> <span class="tag">&lt;/div&gt;</span>
+		</li>
+	</ol>
+</div>
+<h3>Example: Fluid container</h3>
+<p>Turn any fixed-width grid layout into a full-width layout by changing your outermost <span class="css-class">.container-responsive</span> or <span class="css-class">.container-{sm/md/lg/lx}</span> to just <span class="css-class">.container</span>.</p>
+<div class="code-block linenums">
+	<ol class="linenums">
+		<li>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"container"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"row"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="pln">...</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+	</ol>
+</div>
+<h3>Example: Mobile and desktop</h3>
+<p>If you want your columns to be horizontal in smaller devices. Use the small and medium device grid classes by adding <span class="css-class">.col-sm-*</span> <span class="css-class">.col-lg-*</span> to your columns. See the example below for a better idea of how it all works.</p>
+<div class="fresh-docs-grid">
+	<div class="row show-grid">
+		<div class="col-sm-12 col-lg-8">.col-sm-12 .col-lg-8</div>
+		<div class="col-sm-6 col-lg-4">.col-sm-6 .col-lg-4</div>
+	</div>
+	<div class="row show-grid">
+		<div class="col-sm-6 col-lg-4">.col-sm-6 .col-lg-4</div>
+		<div class="col-sm-6 col-lg-4">.col-sm-6 .col-lg-4</div>
+		<div class="col-sm-6 col-lg-4">.col-sm-6 .col-lg-4</div>
+	</div>
+	<div class="row show-grid">
+		<div class="col-sm-6">.col-sm-6</div>
+		<div class="col-sm-6">.col-sm-6</div>
+	</div>
+</div>
+<div class="code-block linenums">
+	<ol class="linenums">
+		<li><span class="comment">&lt;!-- Stack the columns on mobile by making one full-width and the other half-width --&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"row"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-sm-12 col-lg-8"</span>&gt;</span>
+			<span class="pln">.col-sm-12 .col-lg-8</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-sm-6 col-lg-4"</span>&gt;</span>
+			<span class="pln">.col-sm-6 .col-lg-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li><span class="comment">&lt;!--  Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;div 
+			<span class="tag-class-attr">class=</span>
+			<span class="tag-class">"row"</span>&gt;
+			</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-sm-6 col-lg-4"</span>&gt;</span>
+			<span class="pln">.col-sm-6 .col-lg-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-sm-6 col-lg-4"</span>&gt;</span>
+			<span class="pln">.col-sm-6 .col-lg-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-sm-6 col-lg-4"</span>&gt;</span>
+			<span class="pln">.col-sm-6 .col-lg-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+
+		<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li><span class="comment">&lt;!-- Columns are always 50% wide, on mobile and desktop --&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;div 
+			<span class="tag-class-attr">class=</span>
+			<span class="tag-class">"row"</span>&gt;
+			</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-sm-6 "</span>&gt;</span>
+			<span class="pln">.col-sm-6 </span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-sm-6 "</span>&gt;</span>
+			<span class="pln">.col-sm-6 </span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+	</ol>
+</div>
+<h3>Example: Mobile, tablet, desktop</h3>
+<p>Build on the previous example creating even more dynamic and powerful layouts with tablet <span class="css-class">.col-md-*</span> classes.</p>
+<div class="fresh-docs-grid">
+	<div class="row show-grid">
+		<div class="col-sm-12 col-md-6 col-lg-8">.col-sm-12 .col-md-6 .col-lg-8</div>
+		<div class="col-sm-6 col-lg-4">.col-sm-6 .col-lg-4</div>
+	</div>
+	<div class="row show-grid">
+		<div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4</div>
+		<div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4</div>
+		<div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4</div>
+	</div>
+</div>
+<div class="code-block linenums">
+	<ol class="linenums">
+
+		<li>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"row"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-sm-12 col-md-6 col-lg-8"</span>&gt;</span>
+			<span class="pln">.col-sm-12 .col-md-6 .col-lg-8</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-sm-6 col-lg-4"</span>&gt;</span>
+			<span class="pln">.col-sm-6 .col-lg-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+
+		<li>
+			<span class="tag">&lt;div 
+			<span class="tag-class-attr">class=</span>
+			<span class="tag-class">"row"</span>&gt;
+			</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-sm-6 col-md-4"</span>&gt;</span>
+			<span class="pln">.col-sm-6 .col-md-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-sm-6 col-md-4"</span>&gt;</span>
+			<span class="pln">.col-sm-6 .col-md-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-sm-6 col-md-4"</span>&gt;</span>
+			<span class="pln">.col-sm-6 .col-md-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+
+	</ol>
+</div>
+<h3>Offsettig columns</h3>
+<p>Move columns to the right using <span class="css-class">.col-offset-md-*</span> classes. These classes increase the left margin of a column by <span class="css-class">*</span> columns. For example, <span class="css-class">.col-offset-md-4</span> moves <span class="css-class">.col-md-4</span> over four columns. Same behavior works also for non-responsive columns <span class="css-class">.col-*</span> by <span class="css-class">.col-offset-*</span>
+</p>
+<div class="fresh-docs-grid">
+	<div class="row show-grid">
+		<div class="col-md-4">.col-md-4</div>
+		<div class="col-md-4 col-offset-md-4">.col-md-4 .col-offset-md-4</div>
+	</div>
+	<div class="row show-grid">
+		<div class="col-md-3 col-offset-md-3">.col-md-3 .col-offset-md-3</div>
+		<div class="col-md-3 col-offset-md-3">.col-md-3 .col-offset-md-3</div>
+	</div>
+	<div class="row show-grid">
+		<div class="col-md-6 col-offset-md-3">.col-md-6 .col-offset-md-3</div>
+	</div>
+</div>
+<div class="code-block linenums">
+	<ol class="linenums">
+
+		<li>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"row"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">col-md-4"</span>&gt;</span>
+			<span class="pln">.col-md-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-4 col-offset-md-4"</span>&gt;</span>
+			<span class="pln">.col-md-4 .col-offset-md-4</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+
+		<li>
+			<span class="tag">&lt;div 
+			<span class="tag-class-attr">class=</span>
+			<span class="tag-class">"row"</span>&gt;
+			</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-3 col-offset-md-3"</span>&gt;</span>
+			<span class="pln">.col-md-3 .col-offset-md-3</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-3 col-offset-md-3"</span>&gt;</span>
+			<span class="pln">.col-md-3 .col-offset-md-3</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+
+		<li>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;div 
+			<span class="tag-class-attr">class=</span>
+			<span class="tag-class">"row"</span>&gt;
+			</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"col-md-6 col-offset-md-3"</span>&gt;</span>
+			<span class="pln">.col-md-6 .col-offset-md-3</span>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+
+
+		<li>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+	</ol>
+</div>

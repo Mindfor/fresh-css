@@ -1,11 +1,17 @@
-ul,
-ol {
-	padding-left: 0;
-}
-
+@code-color: #c7254e;
+@code-bg-color: lighten(@code-color,
+50%);
+@code-font-family: Menlo,
+Monaco,
+Consolas,
+"Courier New",
+monospace;
 .code-block {
-	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+	font-family: @code-font-family;
 	margin: 1.65em 0;
+	ul, ol {
+		padding-left: 0;
+	}
 	ol {
 		margin: 0 0 0 3.3em;
 	}
@@ -33,6 +39,26 @@ ol {
 	font-size: 12px;
 }
 
+@tag-color: #367ac3;
 .tag {
-	color: #367ac3;
+	color: @tag-color;
+}
+
+.tag-class-attr {
+	color: lighten(@tag-color, 20%);
+}
+
+.tag-class {
+	color: @code-color;
+}
+
+.comment {
+	color: #939393;
+}
+
+.css-class {
+	font-family: @code-font-family;
+	font-size: @font-size-md;
+	background-color: @code-bg-color;
+	color: @code-color;
 }

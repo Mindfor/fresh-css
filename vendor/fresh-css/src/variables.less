@@ -35,10 +35,6 @@
 @width-lg:					64em;
 @width-xl:					80em;
 
-@width-phone:				@width-sm;
-@width-tablet:				@width-md;
-@width-desktop:				@width-lg;
-
 // Links
 @link-color:				@color-primary;
 @link-hover-color:			darken(@link-color, 15%);
@@ -51,6 +47,8 @@
 
 // Grid
 @grid-margin:				1em;
+@grid-columns:				12;
+@blocks-count:				10;
 
 // Controls
 @control-font-family:			@font-family-base;
@@ -58,7 +56,8 @@
 @control-padding-h:				.5em;
 @control-padding:				@control-padding-v @control-padding-h;
 @control-bg:					white;
-@control-border:				1px solid @color-border;
+@control-border-width:			1px;
+@control-border:				@control-border-width solid @color-border;
 @control-border-radius:			2px;
 @control-disabled-color:		darken(@color-light, 25%);
 @control-disabled-bg:           @color-light;
@@ -98,3 +97,8 @@
 @nav-hover-bg:				@color-light;
 @nav-active-color:			@color-invert;
 @nav-active-bg:				@color-primary;
+
+// Form
+@form-aligned-left:			1;
+@form-aligned-right:		3;
+@form-aligned-columns:		@form-aligned-left + @form-aligned-right;

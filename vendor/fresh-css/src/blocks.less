@@ -1,8 +1,9 @@
 @import "variables.less";
 @import "grid.less";
 
-[class|="blocks"] {
-	&:extend(.row all);
+// Mixins
+.blocks {
+	.row;
 	list-style: none;
 	padding: 0;
 	
@@ -11,48 +12,55 @@
 	}
 }
 
-.blocks-1 > * {
-	width: 100%;
-}
-
-.blocks-2 > * {
-	width: 50%;
-}
-
-.blocks-3 > * {
-	width: 33.3333%;
-}
-
-.blocks-4 > * {
-	width: 25%;
-}
-
-.blocks-5 > * {
-	width: 20%;
-}
-
-.blocks-6 > * {
-	width: 16.6667%;
-}
-
-.blocks-7 > * {
-	width: 14.2857%;
-}
-
-.blocks-8 > * {
-	width: 12.5%;
-}
-
-.blocks-9 > * {
-	width: 11.1111%;
-}
-
-.blocks-10 > * {
-	width: 10%;
-}
-
-@media only screen and (max-width: @width-phone) {
-	[class|="blocks"] > * {
-		width: 100%;
+.blocks(@num) {
+	&:extend(.blocks all);	
+	> * {
+		width: percentage(1 / @num);
 	}
 }
+
+.blocks(@num, @min-width) {
+	&:extend(.blocks all);	
+	@media (min-width: @min-width) {
+		> * {
+			width: percentage(1 / @num);
+		}
+	}
+}
+
+.blocks-sm(@num) {
+	.blocks(@min, @width-sm);
+}
+
+.blocks-md(@num) {
+	.blocks(@min, @width-md);
+}
+
+.blocks-lg(@num) {
+	.blocks(@min, @width-lg);
+}
+
+.blocks-xl(@num) {
+	.blocks(@min, @width-xl);
+}
+
+// Create default blocks in loop
+.blocks-loop(@num) when (@num <= @blocks-count) {
+	.blocks-@{num} {
+		.blocks(@num);
+	}
+	.blocks-loop(@num + 1);
+}
+
+.blocks-loop(@num, @suffix, @min-width) when (@num <= @blocks-count) {
+	.blocks-@{suffix}-@{num} {
+		.blocks(@num, @min-width);
+	}
+	.blocks-loop(@num + 1, @suffix, @min-width);
+}
+
+.blocks-loop(1);
+.blocks-loop(1, sm, @width-sm);
+.blocks-loop(1, md, @width-md);
+.blocks-loop(1, lg, @width-lg);
+.blocks-loop(1, xl, @width-xl);
