@@ -60,7 +60,7 @@ var processHtmlsOpts = {
 		navigation: "",
 		tables: "",
 		typography: "",
-		pagination: ""
+		blocks: ""
 	}
 }
 
