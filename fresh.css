@@ -629,10 +629,8 @@ kbd {
   margin: 0 -1em;
 }
 .row > * {
-  border-left: 1em solid transparent;
-  border-right: 1em solid transparent;
+  padding: 0 1em;
   margin-bottom: 1em;
-  background-clip: content-box;
 }
 .col-1 {
   width: 8.33333333%;
@@ -1409,10 +1407,8 @@ kbd {
 .blocks-xl-8 > *,
 .blocks-xl-9 > *,
 .blocks-xl-10 > * {
-  border-left: 1em solid transparent;
-  border-right: 1em solid transparent;
+  padding: 0 1em;
   margin-bottom: 1em;
-  background-clip: content-box;
 }
 .blocks > *,
 .blocks-1 > *,
