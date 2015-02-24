@@ -3246,3 +3246,12 @@ header.little .logo .text {
 .fresh-docs-head.fresh-docs-head-first {
   margin-top: 1.65em;
 }
+ul.forms-list,
+ul.forms-list-inline {
+  list-style: none;
+  padding: 0;
+}
+ul.forms-list-inline > li {
+  display: inline-block;
+  margin-right: 1em;
+}
