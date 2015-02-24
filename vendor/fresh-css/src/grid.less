@@ -1,17 +1,17 @@
 @import "variables.less";
 
 // Rows
-.row,
-.row-flat {
+.row-base() {
 	.clearfix();
 	
-    display: -webkit-box;
+	display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-
-    -webkit-flex-flow: row wrap;
+	
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
     justify-content: flext-start;
 	
 	> * {
@@ -20,15 +20,29 @@
 	}
 }
 
-.row {
-	margin: 0 -@grid-margin;
+.row-gutter(@gutter: @grid-margin) {
+	margin: 0 -@gutter;
 	
 	> * {
-		border-left: @grid-margin solid transparent;
-		border-right: @grid-margin solid transparent;
-		margin-bottom: @grid-margin;
+		border-left: @gutter solid transparent;
+		border-right: @gutter solid transparent;
+		margin-bottom: @line-margin;
 		background-clip: content-box;
 	}
+}
+
+.row(@gutter) {
+	.row-base();
+	.row-gutter(@gutter);
+}
+
+.row,
+.row-flat {
+	.row-base();
+}
+
+.row {
+	.row-gutter();
 }
 
 // Column mixins

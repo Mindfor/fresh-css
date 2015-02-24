@@ -1,1 +1,633 @@
-<h1>THIS IS TABLES</h1>
+<h1>Tables</h1>
+<h3><strong>All sorts of tables</strong></h3>
+<p>Tables may or may not look like tables, it is totally up to you. Borders, margins, captions, fully responsive and completely customizable.</p>
+<h3 class="fresh-docs-head fresh-docs-head-first">Default Table</h3>
+<table>
+	<thead>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Points</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Nicol</td>
+			<td>Smith</td>
+			<td>199</td>
+		</tr>
+		<tr>
+			<td>Lucifer</td>
+			<td>Jacson</td>
+			<td>666</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="2">Total Poins</td>
+			<td>865</td>
+		</tr>
+	</tfoot>
+</table>
+
+<div class="code-block linenums">
+	<ol class="linenums">
+		<li>
+			<span class="tag">&lt;table&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;thead&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;th&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/th&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/thead&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tbody&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;td&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/td&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tbody&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tfoot&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;td&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/td&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tfoot&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;/table&gt;</span>
+		</li>
+	</ol>
+</div>
+
+<h3 class="fresh-docs-head">Table Caption</h3>
+<table>
+	<caption>Caption</caption>
+	<tbody>
+		<tr>
+			<td>Column 1</td>
+			<td>Column 2</td>
+		</tr>
+	</tbody>
+</table>
+<div class="code-block linenums">
+	<ol class="linenums">
+		<li>
+			<span class="tag">&lt;table&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;caption&gt;</span>
+			<span class="pln">Caption</span>
+			<span class="tag">&lt;/caption&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tbody&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;td&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/td&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tbody&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;/table&gt;</span>
+		</li>
+	</ol>
+</div>
+<h3 class="fresh-docs-head">Bordered Table</h3>
+<table class="bordered">
+	<thead>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Points</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Nicol</td>
+			<td>Smith</td>
+			<td>199</td>
+		</tr>
+		<tr>
+			<td>Lucifer</td>
+			<td>Jacson</td>
+			<td>666</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="2">Total Poins</td>
+			<td>865</td>
+		</tr>
+	</tfoot>
+</table>
+<div class="code-block linenums">
+	<ol class="linenums">
+		<li>
+			<span class="tag">&lt;table <span class="tag-class-attr">class=</span><span class="tag-class">"bordered"</span>&gt;</span>
+			</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;td&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/td&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;/table&gt;</span>
+		</li>
+	</ol>
+</div>
+<h3 class="fresh-docs-head">Simple Table</h3>
+<table class="simple">
+	<thead>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Points</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Nicol</td>
+			<td>Smith</td>
+			<td>199</td>
+		</tr>
+		<tr>
+			<td>Lucifer</td>
+			<td>Jacson</td>
+			<td>666</td>
+		</tr>
+	</tbody>
+</table>
+<div class="code-block linenums">
+	<ol class="linenums">
+		<li>
+			<span class="tag">&lt;table <span class="tag-class-attr">class=</span><span class="tag-class">"simple"</span>&gt;</span>
+			</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;td&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/td&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;/table&gt;</span>
+		</li>
+	</ol>
+</div>
+<h3 class="fresh-docs-head">Flat Table</h3>
+<table class="flat">
+	<tbody>
+		<tr>
+			<td>Nicol</td>
+			<td>Smith</td>
+			<td>199</td>
+		</tr>
+		<tr>
+			<td>Lucifer</td>
+			<td>Jacson</td>
+			<td>666</td>
+		</tr>
+	</tbody>
+</table>
+<div class="code-block linenums">
+	<ol class="linenums">
+		<li>
+			<span class="tag">&lt;table <span class="tag-class-attr">class=</span><span class="tag-class">"flat"</span>&gt;</span>
+			</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;td&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/td&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;/table&gt;</span>
+		</li>
+	</ol>
+</div>
+<h3 class="fresh-docs-head">Stripped Table</h3>
+<table class="stripped">
+	<thead>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Points</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Nicol</td>
+			<td>Smith</td>
+			<td>199</td>
+		</tr>
+		<tr>
+			<td>Lucifer</td>
+			<td>Jacson</td>
+			<td>666</td>
+		</tr>
+	</tbody>
+</table>
+<div class="code-block linenums">
+	<ol class="linenums">
+		<li>
+			<span class="tag">&lt;table <span class="tag-class-attr">class=</span><span class="tag-class">"stripped"</span>&gt;</span>
+			</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;td&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/td&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;/table&gt;</span>
+		</li>
+	</ol>
+</div>
+<h3 class="fresh-docs-head">Hovered Table</h3>
+<table class="hover">
+	<thead>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Points</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Nicol</td>
+			<td>Smith</td>
+			<td>199</td>
+		</tr>
+		<tr>
+			<td>Lucifer</td>
+			<td>Jacson</td>
+			<td>666</td>
+		</tr>
+	</tbody>
+</table>
+<div class="code-block linenums">
+	<ol class="linenums">
+		<li>
+			<span class="tag">&lt;table <span class="tag-class-attr">class=</span><span class="tag-class">"hover"</span>&gt;</span>
+			</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;td&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/td&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;/table&gt;</span>
+		</li>
+	</ol>
+</div>
+<h3 class="fresh-docs-head">Responsive Table</h3>
+<div class="table-container">
+	<table>
+		<thead>
+			<tr>
+				<th>Head 1</th>
+				<th>Head 2</th>
+				<th>Head 3</th>
+				<th>Head 4</th>
+				<th>Head 5</th>
+				<th>Head 6</th>
+				<th>Head 7</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="nowrap">
+				<td>Lorem ipsum dolor sit amet.</td>
+				<td>Lorem ipsum dolor sit amet, consectetur adipisicing.</td>
+				<td>Lorem ipsum dolor.</td>
+				<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero.</td>
+				<td>Lorem ipsum dolor sit.</td>
+				<td>Lorem ipsum.</td>
+				<td>Lorem ipsum dolor sit amet, consectetur.</td>
+			</tr>
+			<tr class="nowrap">
+				<td>Lorem ipsum dolor sit amet.</td>
+				<td>Lorem ipsum dolor sit amet, consectetur adipisicing.</td>
+				<td>Lorem ipsum dolor.</td>
+				<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero.</td>
+				<td>Lorem ipsum dolor sit.</td>
+				<td>Lorem ipsum.</td>
+				<td>Lorem ipsum dolor sit amet, consectetur.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="code-block linenums">
+	<ol class="linenums">
+		<li><span class="tag">&lt;div <span class="tag-class-attr">class=</span><span class="tag-class">"table-container"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;table&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;thead&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;th&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/th&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/thead&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tbody&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;td&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/td&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tbody&gt;</span>
+		</li>
+
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/table&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;/div&gt;</span>
+		</li>
+	</ol>
+</div>
+<h3 class="fresh-docs-head">Table with colored rows</h3>
+<table>
+	<thead>
+		<tr>
+			<th>Column 1</th>
+			<th>Column 2</th>
+			<th>Column 3</th>
+		</tr>
+	</thead>
+	<tr>
+		<td>Column 1</td>
+		<td>Column 2</td>
+		<td>Column 3</td>
+	</tr>
+	<tr class="primary">
+		<td>Column 1</td>
+		<td>Column 2</td>
+		<td>Column 3</td>
+	</tr>
+	<tr class="secondary">
+		<td>Column 1</td>
+		<td>Column 2</td>
+		<td>Column 3</td>
+	</tr>
+	<tr class="success">
+		<td>Column 1</td>
+		<td>Column 2</td>
+		<td>Column 3</td>
+	</tr>
+	<tr class="warning">
+		<td>Column 1</td>
+		<td>Column 2</td>
+		<td>Column 3</td>
+	</tr>
+	<tr class="error">
+		<td>Column 1</td>
+		<td>Column 2</td>
+		<td>Column 3</td>
+	</tr>
+
+</table>
+<div class="code-block linenums">
+	<ol class="linenums">
+		<li>
+			<span class="tag">&lt;table&gt;</span>
+			</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;thead&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;th&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/th&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/thead&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr <span class="tag-class-attr">class=</span><span class="tag-class">"primary"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;td&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/td&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr <span class="tag-class-attr">class=</span><span class="tag-class">"secondary"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;td&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/td&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr <span class="tag-class-attr">class=</span><span class="tag-class">"success"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;td&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/td&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr <span class="tag-class-attr">class=</span><span class="tag-class">"warning"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;td&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/td&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;tr <span class="tag-class-attr">class=</span><span class="tag-class">"error"</span>&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;&#32;&#32;&#32;&#32;</span>
+			<span class="tag">&lt;td&gt;</span>
+			<span class="pln">...</span>
+			<span class="tag">&lt;/td&gt;</span>
+		</li>
+		<li>
+			<span class="pln">&#32;&#32;&#32;</span>
+			<span class="tag">&lt;/tr&gt;</span>
+		</li>
+		<li>
+			<span class="tag">&lt;/table&gt;</span>
+		</li>
+	</ol>
+</div>

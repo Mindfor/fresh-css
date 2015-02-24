@@ -23,6 +23,7 @@ legend {
 .form {
 	// One-by-one labels with controls
 	> label {
+		.clearfix();
 		display: block;
 		margin: 0 -@control-border-radius 1em @control-border-radius;
 		
@@ -34,9 +35,14 @@ legend {
 			margin-left: -@control-border-radius;
 		}
 		
-		> label { // checkboxes
-			display: block;
-			margin-top: .25em;
+		> input,
+		> textarea,
+		> select,
+		> div {
+			& + label.radio,
+			& + label.checkbox {
+				margin-top: .25em;
+			}
 		}
 	}
 	
@@ -61,6 +67,10 @@ legend {
 	select {
 		display: block;
 		width: 100%;
+	}
+	
+	> * {
+		clear: both;
 	}
 	
 	// Inline container
@@ -112,13 +122,49 @@ legend {
 	> section.controls {
 		.col-offset-md(@form-aligned-left, @form-aligned-columns);
 	}
+	
+	// colors
+	.form-color(@color, @bg) {
+		color: @color;
+
+		input,
+		textarea,
+		select {
+			border-color: @color;
+			
+			&:focus {
+				box-shadow: 0 0 5px 0 fade(@color, 50%);
+			}
+		}
+
+		.input-group > span,
+		.input-group > label {
+			border-color: @color;
+		}
+		
+		.input-group > span {
+			background: @bg;
+		}
+	}
+	
+	> .success {
+		.form-color(@color-success, @color-bg-success);
+	}
+	
+	> .warning {
+		.form-color(@color-warning, @color-bg-warning);
+	}
+	
+	> .error {
+		.form-color(@color-error, @color-bg-error);
+	}
 }
 
 form:not(.flat) {
 	&:extend(.form all);
 }
 
-// Label
+// Required
 label.req {
 	> span:first-child:after {
 		content: " *";
@@ -127,6 +173,13 @@ label.req {
 }
 
 // Checkbox / radio list
+label.radio,
+label.checkbox {
+	display: block;
+	float: left;
+	clear: both;
+}
+
 ul.radio,
 ul.checkbox,
 ul.radio-inline,
@@ -149,20 +202,7 @@ ul.checkbox-inline {
 	border-collapse: separate;
 	vertical-align: middle;
 
-    input[type="text"],
-    input[type="password"],
-    input[type="email"],
-    input[type="url"],
-    input[type="phone"],
-    input[type="tel"],
-    input[type="number"],
-    input[type="datetime"],
-    input[type="date"],
-    input[type="month"],
-    input[type="color"],
-    input[type="time"],
-    input[type="search"],
-    input[type="datetime-local"] {
+    input {
 		display: table-cell !important;
 		width: 100%;
         
@@ -175,8 +215,8 @@ ul.checkbox-inline {
         }
 	}
 
-	span,
-    label {
+	> span,
+    > label {
         display: table-cell !important;
 		vertical-align: middle;
 		white-space: nowrap;
@@ -198,7 +238,7 @@ ul.checkbox-inline {
         }
 	}
 	
-	span {
+	> span {
 		padding: @control-padding;
 		border: @control-border;
 		border-radius: @control-border-radius;
