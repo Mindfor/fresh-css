@@ -1,15 +1,10 @@
-@dark-theme-color: darken(@theme-color,
-10%);
-@little-transparent-code-color: fadeout(@dark-theme-color,
-80%);
-@little-transparent-code-bd-color: fadeout(@dark-theme-color,
-85%);
+
 .show-grid {
 	margin-bottom: 1em;
 	[class^=col-] {
 		padding: 1em;
 		background-color: @little-transparent-code-bd-color;
-		border: 1px solid @little-transparent-code-color;
+border: 1px solid @little-transparent-code-color;
 		background-clip: border-box;
 	}
 }

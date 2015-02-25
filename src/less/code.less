@@ -1,5 +1,5 @@
-@code-color: #c7254e;
-@code-bg-color: lighten(@code-color,
+@custom-code-color: #c7254e;
+@custom-code-bg-color: lighten(@custom-code-color,
 50%);
 @code-font-family: Menlo,
 Monaco,
@@ -49,7 +49,7 @@ monospace;
 }
 
 .tag-class {
-	color: @code-color;
+	color: @custom-code-color;
 }
 
 .comment {
@@ -59,6 +59,7 @@ monospace;
 .css-class {
 	font-family: @code-font-family;
 	font-size: @font-size-md;
-	background-color: @code-bg-color;
-	color: @code-color;
+	background-color: @custom-code-bg-color;
+	border-radius: 3px;
+	color: @custom-code-color;
 }
