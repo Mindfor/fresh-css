@@ -2162,6 +2162,81 @@ form.width-xl,
 fieldset.width-xl {
   max-width: 64em;
 }
+input.success,
+textarea.success,
+select.success,
+.form > .success input,
+.form > .success textarea,
+.form > .success select,
+form:not(.flat) > .success input,
+form:not(.flat) > .success textarea,
+form:not(.flat) > .success select {
+  border-color: #1cb841;
+}
+input.success:focus,
+textarea.success:focus,
+select.success:focus,
+.form > .success input:focus,
+.form > .success textarea:focus,
+.form > .success select:focus,
+form:not(.flat) > .success input:focus,
+form:not(.flat) > .success textarea:focus,
+form:not(.flat) > .success select:focus {
+  box-shadow: 0 0 5px 0 rgba(28, 184, 65, 0.5);
+}
+input.warning,
+textarea.warning,
+select.warning,
+.form > .warning input,
+.form > .warning textarea,
+.form > .warning select,
+form:not(.flat) > .warning input,
+form:not(.flat) > .warning textarea,
+form:not(.flat) > .warning select {
+  border-color: #df7514;
+}
+input.warning:focus,
+textarea.warning:focus,
+select.warning:focus,
+.form > .warning input:focus,
+.form > .warning textarea:focus,
+.form > .warning select:focus,
+form:not(.flat) > .warning input:focus,
+form:not(.flat) > .warning textarea:focus,
+form:not(.flat) > .warning select:focus {
+  box-shadow: 0 0 5px 0 rgba(223, 117, 20, 0.5);
+}
+input.error,
+textarea.error,
+select.error,
+.form > .error input,
+.form > .error textarea,
+.form > .error select,
+form:not(.flat) > .error input,
+form:not(.flat) > .error textarea,
+form:not(.flat) > .error select {
+  border-color: #ca3c3c;
+}
+input.error:focus,
+textarea.error:focus,
+select.error:focus,
+.form > .error input:focus,
+.form > .error textarea:focus,
+.form > .error select:focus,
+form:not(.flat) > .error input:focus,
+form:not(.flat) > .error textarea:focus,
+form:not(.flat) > .error select:focus {
+  box-shadow: 0 0 5px 0 rgba(202, 60, 60, 0.5);
+}
+label.success {
+  color: #1cb841;
+}
+label.warning {
+  color: #df7514;
+}
+label.error {
+  color: #ca3c3c;
+}
 .btn,
 button[type="submit"],
 input[type="submit"],
@@ -3177,96 +3252,6 @@ form:not(.flat) > section:not(.controls) > div > label {
     margin-left: 25%;
   }
 }
-.form > .success,
-form:not(.flat) > .success {
-  color: #1cb841;
-}
-.form > .success input,
-.form > .success textarea,
-.form > .success select,
-form:not(.flat) > .success input,
-form:not(.flat) > .success textarea,
-form:not(.flat) > .success select {
-  border-color: #1cb841;
-}
-.form > .success input:focus,
-.form > .success textarea:focus,
-.form > .success select:focus,
-form:not(.flat) > .success input:focus,
-form:not(.flat) > .success textarea:focus,
-form:not(.flat) > .success select:focus {
-  box-shadow: 0 0 5px 0 rgba(28, 184, 65, 0.5);
-}
-.form > .success .input-group > span,
-.form > .success .input-group > label,
-form:not(.flat) > .success .input-group > span,
-form:not(.flat) > .success .input-group > label {
-  border-color: #1cb841;
-}
-.form > .success .input-group > span,
-form:not(.flat) > .success .input-group > span {
-  background: #adf3be;
-}
-.form > .warning,
-form:not(.flat) > .warning {
-  color: #df7514;
-}
-.form > .warning input,
-.form > .warning textarea,
-.form > .warning select,
-form:not(.flat) > .warning input,
-form:not(.flat) > .warning textarea,
-form:not(.flat) > .warning select {
-  border-color: #df7514;
-}
-.form > .warning input:focus,
-.form > .warning textarea:focus,
-.form > .warning select:focus,
-form:not(.flat) > .warning input:focus,
-form:not(.flat) > .warning textarea:focus,
-form:not(.flat) > .warning select:focus {
-  box-shadow: 0 0 5px 0 rgba(223, 117, 20, 0.5);
-}
-.form > .warning .input-group > span,
-.form > .warning .input-group > label,
-form:not(.flat) > .warning .input-group > span,
-form:not(.flat) > .warning .input-group > label {
-  border-color: #df7514;
-}
-.form > .warning .input-group > span,
-form:not(.flat) > .warning .input-group > span {
-  background: #fadec5;
-}
-.form > .error,
-form:not(.flat) > .error {
-  color: #ca3c3c;
-}
-.form > .error input,
-.form > .error textarea,
-.form > .error select,
-form:not(.flat) > .error input,
-form:not(.flat) > .error textarea,
-form:not(.flat) > .error select {
-  border-color: #ca3c3c;
-}
-.form > .error input:focus,
-.form > .error textarea:focus,
-.form > .error select:focus,
-form:not(.flat) > .error input:focus,
-form:not(.flat) > .error textarea:focus,
-form:not(.flat) > .error select:focus {
-  box-shadow: 0 0 5px 0 rgba(202, 60, 60, 0.5);
-}
-.form > .error .input-group > span,
-.form > .error .input-group > label,
-form:not(.flat) > .error .input-group > span,
-form:not(.flat) > .error .input-group > label {
-  border-color: #ca3c3c;
-}
-.form > .error .input-group > span,
-form:not(.flat) > .error .input-group > span {
-  background: #f6dcdc;
-}
 label.req > span:first-child:after {
   content: " *";
   color: red;
@@ -3334,6 +3319,114 @@ ul.checkbox-inline > li {
   border: 1px solid #bdbdbd;
   border-radius: 2px;
   background-color: #f4f4f4;
+}
+.input-group.success input,
+.input-group.success textarea,
+.input-group.success select,
+.form > .success .input-group input,
+.form > .success .input-group textarea,
+.form > .success .input-group select,
+form:not(.flat) > .success .input-group input,
+form:not(.flat) > .success .input-group textarea,
+form:not(.flat) > .success .input-group select {
+  border-color: #1cb841;
+}
+.input-group.success input:focus,
+.input-group.success textarea:focus,
+.input-group.success select:focus,
+.form > .success .input-group input:focus,
+.form > .success .input-group textarea:focus,
+.form > .success .input-group select:focus,
+form:not(.flat) > .success .input-group input:focus,
+form:not(.flat) > .success .input-group textarea:focus,
+form:not(.flat) > .success .input-group select:focus {
+  box-shadow: 0 0 5px 0 rgba(28, 184, 65, 0.5);
+}
+.input-group.success > span,
+.input-group.success > label,
+.form > .success .input-group > span,
+.form > .success .input-group > label,
+form:not(.flat) > .success .input-group > span,
+form:not(.flat) > .success .input-group > label {
+  border-color: #1cb841;
+}
+.input-group.success > span,
+.form > .success .input-group > span,
+form:not(.flat) > .success .input-group > span {
+  color: #1cb841;
+  background: #adf3be;
+}
+.input-group.warning input,
+.input-group.warning textarea,
+.input-group.warning select,
+.form > .warning .input-group input,
+.form > .warning .input-group textarea,
+.form > .warning .input-group select,
+form:not(.flat) > .warning .input-group input,
+form:not(.flat) > .warning .input-group textarea,
+form:not(.flat) > .warning .input-group select {
+  border-color: #df7514;
+}
+.input-group.warning input:focus,
+.input-group.warning textarea:focus,
+.input-group.warning select:focus,
+.form > .warning .input-group input:focus,
+.form > .warning .input-group textarea:focus,
+.form > .warning .input-group select:focus,
+form:not(.flat) > .warning .input-group input:focus,
+form:not(.flat) > .warning .input-group textarea:focus,
+form:not(.flat) > .warning .input-group select:focus {
+  box-shadow: 0 0 5px 0 rgba(223, 117, 20, 0.5);
+}
+.input-group.warning > span,
+.input-group.warning > label,
+.form > .warning .input-group > span,
+.form > .warning .input-group > label,
+form:not(.flat) > .warning .input-group > span,
+form:not(.flat) > .warning .input-group > label {
+  border-color: #df7514;
+}
+.input-group.warning > span,
+.form > .warning .input-group > span,
+form:not(.flat) > .warning .input-group > span {
+  color: #df7514;
+  background: #fadec5;
+}
+.input-group.error input,
+.input-group.error textarea,
+.input-group.error select,
+.form > .error .input-group input,
+.form > .error .input-group textarea,
+.form > .error .input-group select,
+form:not(.flat) > .error .input-group input,
+form:not(.flat) > .error .input-group textarea,
+form:not(.flat) > .error .input-group select {
+  border-color: #ca3c3c;
+}
+.input-group.error input:focus,
+.input-group.error textarea:focus,
+.input-group.error select:focus,
+.form > .error .input-group input:focus,
+.form > .error .input-group textarea:focus,
+.form > .error .input-group select:focus,
+form:not(.flat) > .error .input-group input:focus,
+form:not(.flat) > .error .input-group textarea:focus,
+form:not(.flat) > .error .input-group select:focus {
+  box-shadow: 0 0 5px 0 rgba(202, 60, 60, 0.5);
+}
+.input-group.error > span,
+.input-group.error > label,
+.form > .error .input-group > span,
+.form > .error .input-group > label,
+form:not(.flat) > .error .input-group > span,
+form:not(.flat) > .error .input-group > label {
+  border-color: #ca3c3c;
+}
+.input-group.error > span,
+.form > .error .input-group > span,
+form:not(.flat) > .error .input-group > span {
+  color: #ca3c3c;
+  background: #f6dcdc;
 }
 ul.pagination {
   display: inline-block;

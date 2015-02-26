@@ -124,39 +124,40 @@ legend {
 	}
 	
 	// colors
-	.form-color(@color, @bg) {
-		color: @color;
-
+	> .success {
 		input,
 		textarea,
 		select {
-			border-color: @color;
-			
-			&:focus {
-				box-shadow: 0 0 5px 0 fade(@color, 50%);
-			}
-		}
-
-		.input-group > span,
-		.input-group > label {
-			border-color: @color;
+			&:extend(input.success all);
 		}
 		
-		.input-group > span {
-			background: @bg;
+		.input-group {
+			&:extend(.input-group.success all);
 		}
-	}
-	
-	> .success {
-		.form-color(@color-success, @color-bg-success);
 	}
 	
 	> .warning {
-		.form-color(@color-warning, @color-bg-warning);
+		input,
+		textarea,
+		select {
+			&:extend(input.warning all);
+		}
+		
+		.input-group {
+			&:extend(.input-group.warning all);
+		}
 	}
 	
 	> .error {
-		.form-color(@color-error, @color-bg-error);
+		input,
+		textarea,
+		select {
+			&:extend(input.error all);
+		}
+		
+		.input-group {
+			&:extend(.input-group.error all);
+		}
 	}
 }
 
@@ -243,5 +244,40 @@ ul.checkbox-inline {
 		border: @control-border;
 		border-radius: @control-border-radius;
 		background-color: @color-light;
+	}
+	
+	// Colors
+	.input-group-color(@color, @bg) {
+		input,
+		textarea,
+		select {
+			border-color: @color;
+			
+			&:focus {
+				box-shadow: 0 0 5px 0 fade(@color, 50%);
+			}
+		}
+		
+		> span,
+		> label {
+			border-color: @color;
+		}
+		
+		> span {
+			color: @color;
+			background: @bg;
+		}
+	}
+	
+	&.success {
+		.input-group-color(@color-success, @color-bg-success);
+	}
+	
+	&.warning {
+		.input-group-color(@color-warning, @color-bg-warning);
+	}
+	
+	&.error {
+		.input-group-color(@color-error, @color-bg-error);
 	}
 }

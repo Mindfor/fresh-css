@@ -139,3 +139,42 @@ fieldset {
 		max-width: @control-width-xl;
 	}
 }
+
+// Colors
+input,
+textarea,
+select {
+	.control-color(@color) {
+		border-color: @color;
+		
+		&:focus {
+			box-shadow: 0 0 5px 0 fade(@color, 50%);
+		}
+	}
+	
+	&.success {
+		.control-color(@color-success);
+	}
+	
+	&.warning {
+		.control-color(@color-warning);
+	}
+	
+	&.error {
+		.control-color(@color-error);
+	}
+}
+
+label {
+	&.success {
+		color: @color-success;
+	}
+	
+	&.warning {
+		color: @color-warning;
+	}
+	
+	&.error {
+		color: @color-error;
+	}
+}
