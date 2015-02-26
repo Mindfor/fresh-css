@@ -43,6 +43,9 @@
 .blocks-xl(@num) {
 	.blocks(@min, @width-xl);
 }
+.blocks-2xl(@num) {
+	.blocks(@min, @width-2xl);
+}
 
 // Create default blocks in loop
 .blocks-loop(@num) when (@num <= @blocks-count) {
@@ -64,3 +67,4 @@
 .blocks-loop(1, md, @width-md);
 .blocks-loop(1, lg, @width-lg);
 .blocks-loop(1, xl, @width-xl);
+.blocks-loop(1, 2xl, @width-2xl);
