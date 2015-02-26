@@ -1,7 +1,7 @@
 @import "variables.less";
 
 // Rows
-.row-base() {
+.row {
 	.clearfix();
 	
 	display: -webkit-box;
@@ -17,30 +17,17 @@
 	> * {
 		display: block;
 		width: 100%;
-	}
-}
-
-.row-gutter(@gutter: @grid-margin) {
-	margin: 0 -@gutter;
-	
-	> * {
-		padding: 0 @gutter;
 		margin-bottom: @line-margin;
 	}
 }
 
-.row(@gutter) {
-	.row-base();
-	.row-gutter(@gutter);
-}
-
-.row,
-.row-flat {
-	.row-base();
-}
-
-.row {
-	.row-gutter();
+.row(@spacing) {
+	.row;
+	margin: 0 -@spacing;
+	
+	> * {
+		padding: 0 @spacing;
+	}
 }
 
 // Column mixins

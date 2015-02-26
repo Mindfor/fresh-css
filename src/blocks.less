@@ -12,36 +12,43 @@
 	}
 }
 
-.blocks(@num) {
-	&:extend(.blocks all);	
+.blocks(@num, @spacing: @blocks-spacing) {
+	&:extend(.blocks all);
+	margin-left: -@blocks-spacing;
+	
 	> * {
-		width: percentage(1 / @num);
+		width: calc(percentage(1 / @num) ~" - " @spacing);
+		margin-left: @spacing;
 	}
 }
 
-.blocks(@num, @min-width) {
-	&:extend(.blocks all);	
+.blocks(@num, @min-width, @spacing) {
+	&:extend(.blocks all);
+	
 	@media (min-width: @min-width) {
+		margin-left: -@blocks-spacing;
+		
 		> * {
-			width: percentage(1 / @num);
+			width: calc(percentage(1 / @num) ~" - " @spacing);
+			margin-left: @spacing;
 		}
 	}
 }
 
 .blocks-sm(@num) {
-	.blocks(@min, @width-sm);
+	.blocks(@min, @width-sm, @blocks-spacing);
 }
 
 .blocks-md(@num) {
-	.blocks(@min, @width-md);
+	.blocks(@min, @width-md, @blocks-spacing);
 }
 
 .blocks-lg(@num) {
-	.blocks(@min, @width-lg);
+	.blocks(@min, @width-lg, @blocks-spacing);
 }
 
 .blocks-xl(@num) {
-	.blocks(@min, @width-xl);
+	.blocks(@min, @width-xl, @blocks-spacing);
 }
 .blocks-xxl(@num) {
 	.blocks(@min, @width-xxl);
@@ -57,7 +64,7 @@
 
 .blocks-loop(@num, @suffix, @min-width) when (@num <= @blocks-count) {
 	.blocks-@{suffix}-@{num} {
-		.blocks(@num, @min-width);
+		.blocks(@num, @min-width, @blocks-spacing);
 	}
 	.blocks-loop(@num + 1, @suffix, @min-width);
 }
