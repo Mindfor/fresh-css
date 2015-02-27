@@ -31,6 +31,12 @@
 	}
 }
 
+.btn-invert-color(@color) {
+	&:hover {
+		background: @color;
+	}
+}
+
 .btn {
 	display: inline-block;
 	vertical-align: baseline;
@@ -46,7 +52,8 @@
 	box-shadow: none;
 	cursor: pointer;
 	
-	border: @btn-border;
+	border-width: @btn-border-width;
+	border-style: @btn-border-style;
 	border-radius: @btn-border-radius;
 	padding: @btn-padding;
 	.transition(@btn-transition);
@@ -107,8 +114,9 @@
 	}
 }
 
-// Outline button
-.btn.outline {
+// Outline and inverted button
+.btn.outline,
+.btn.invert {
 	&,
 	&:active,
 	&.active {
@@ -120,8 +128,9 @@
 		background: none !important;
 		box-shadow: none;
 	}
+}
 
-	// Colors
+.btn.outline {
 	.btn-outline-color(@color-text);
 	
 	&.primary {
@@ -144,16 +153,130 @@
 		.btn-outline-color(@color-error);
 	}
 }
+	
+.btn.invert {
+	color: @color-invert;
+	border-color: @color-invert !important;
+	.btn-invert-color(@btn-bg);
+	
+	&.primary {
+		.btn-invert-color(@color-primary);
+	}
+	
+	&.secondary {
+		.btn-invert-color(@color-secondary);
+	}
+	
+	&.success {
+		.btn-invert-color(@color-success);
+	}
+	
+	&.warning {
+		.btn-invert-color(@color-warning);
+	}
+	
+	&.error {
+		.btn-invert-color(@color-error);
+	}
+}
 
-button[type="submit"],
-input[type="submit"] {
+// Button groups
+.btn-group {
+	.clearfix();
+	
+	> * {
+		&:extend(.btn all);
+		float: left;
+		
+		&:not(:first-child) {
+			.border-left-radius(0);
+			margin-left: -@btn-border-width;
+		}
+		
+		&:not(:last-child) {
+			.border-right-radius(0);
+		}
+	}
+	
+	&.primary {
+		> * {
+			&:extend(.btn.primary all);
+		}
+	}
+	
+	&.secondary {
+		> * {
+			&:extend(.btn.secondary all);
+		}
+	}
+	
+	&.success {
+		> * {
+			&:extend(.btn.success all);
+		}
+	}
+	
+	&.warning {
+		> * {
+			&:extend(.btn.warning all);
+		}
+	}
+	
+	&.error {
+		> * {
+			&:extend(.btn.error all);
+		}
+	}
+	
+	&.outline {
+		> .btn {
+			&:extend(.btn.outline all);
+		}
+		
+		&.primary {
+			> .btn {
+				&:extend(.btn.outline.primary all);
+			}
+		}
+		
+		&.secondary {
+			> .btn {
+				&:extend(.btn.outline.secondary all);
+			}
+		}
+		
+		&.success {
+			> .btn {
+				&:extend(.btn.outline.success all);
+			}
+		}
+		
+		&.warning {
+			> .btn {
+				&:extend(.btn.outline.warning all);
+			}
+		}
+		
+		&.error {
+			> .btn {
+				&:extend(.btn.outline.error all);
+			}
+		}
+	}
+}
+
+// Default buttons
+[type="submit"] {
 	&:extend(.btn all);
 	&:extend(.btn.primary all);
 }
 
-button[type="button"],
-button:not([type]),
-input[type="button"],
-input[type="reset"] {
+[type="submit"].invert {
+	&:extend(.btn.invert.primary all);
+}
+
+[type="button"],
+[type="reset"],
+button:not([type]) {
 	&:extend(.btn all);
 }
