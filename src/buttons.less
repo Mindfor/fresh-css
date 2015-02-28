@@ -17,7 +17,7 @@
 	}
 
 	&:focus {
-		box-shadow: 0 0 5px 0 @bg;
+		box-shadow: 0 0 0px 2px fade(@bg, 50%);
 	}
 }
 
@@ -40,7 +40,7 @@
 .btn {
 	display: inline-block;
 	vertical-align: baseline;
-
+	
 	font-family: @control-font-family;
 	font-weight: @btn-font-weight;
 	line-height: @line-height;
@@ -73,7 +73,7 @@
 	
 	&:active,
 	&.active {
-		box-shadow: 0 1px 3px rgba(0, 0, 0, .4) inset;
+		box-shadow: 0 0px 7px rgba(0, 0, 0, .5) inset !important;
 	}
 }
 
@@ -177,91 +177,6 @@
 	
 	&.error {
 		.btn-invert-color(@color-error);
-	}
-}
-
-// Button groups
-.btn-group {
-	.clearfix();
-	
-	> * {
-		&:extend(.btn all);
-		float: left;
-		
-		&:not(:first-child) {
-			.border-left-radius(0);
-			margin-left: -@btn-border-width;
-		}
-		
-		&:not(:last-child) {
-			.border-right-radius(0);
-		}
-	}
-	
-	&.primary {
-		> * {
-			&:extend(.btn.primary all);
-		}
-	}
-	
-	&.secondary {
-		> * {
-			&:extend(.btn.secondary all);
-		}
-	}
-	
-	&.success {
-		> * {
-			&:extend(.btn.success all);
-		}
-	}
-	
-	&.warning {
-		> * {
-			&:extend(.btn.warning all);
-		}
-	}
-	
-	&.error {
-		> * {
-			&:extend(.btn.error all);
-		}
-	}
-	
-	&.outline {
-		> .btn {
-			&:extend(.btn.outline all);
-		}
-		
-		&.primary {
-			> .btn {
-				&:extend(.btn.outline.primary all);
-			}
-		}
-		
-		&.secondary {
-			> .btn {
-				&:extend(.btn.outline.secondary all);
-			}
-		}
-		
-		&.success {
-			> .btn {
-				&:extend(.btn.outline.success all);
-			}
-		}
-		
-		&.warning {
-			> .btn {
-				&:extend(.btn.outline.warning all);
-			}
-		}
-		
-		&.error {
-			> .btn {
-				&:extend(.btn.outline.error all);
-			}
-		}
 	}
 }
 

@@ -1,0 +1,142 @@
+@import "variables.less";
+@import "mixins.less";
+@import "buttons.less";
+
+.btn-group {
+	.clearfix();
+	
+	> * {
+		&:extend(.btn all);
+		float: left;
+		
+		&:not(:first-child) {
+			.border-left-radius(0);
+			margin-left: -@btn-border-width;
+		}
+		
+		&:not(:last-child) {
+			.border-right-radius(0);
+		}
+	}
+	
+	&.vertical > * {
+		float: none;
+		display: block;
+		border-radius: @btn-border-radius;
+		margin: 0;
+		
+		&:not(:first-child) {
+			.border-top-radius(0);
+			margin-top: -@btn-border-width;
+		}
+
+		&:not(:last-child) {
+			.border-bottom-radius(0);
+		}
+	}
+	
+	// Normal buttons
+	&.primary {
+		> * {
+			&:extend(.btn.primary all);
+		}
+	}
+	
+	&.secondary {
+		> * {
+			&:extend(.btn.secondary all);
+		}
+	}
+	
+	&.success {
+		> * {
+			&:extend(.btn.success all);
+		}
+	}
+	
+	&.warning {
+		> * {
+			&:extend(.btn.warning all);
+		}
+	}
+	
+	&.error {
+		> * {
+			&:extend(.btn.error all);
+		}
+	}
+	
+	// Outline buttons
+	&.outline {
+		> .btn {
+			&:extend(.btn.outline all);
+		}
+		
+		&.primary {
+			> .btn {
+				&:extend(.btn.outline.primary all);
+			}
+		}
+		
+		&.secondary {
+			> .btn {
+				&:extend(.btn.outline.secondary all);
+			}
+		}
+		
+		&.success {
+			> .btn {
+				&:extend(.btn.outline.success all);
+			}
+		}
+		
+		&.warning {
+			> .btn {
+				&:extend(.btn.outline.warning all);
+			}
+		}
+		
+		&.error {
+			> .btn {
+				&:extend(.btn.outline.error all);
+			}
+		}
+	}
+	
+	// Invert buttons
+	&.invert {
+		> .btn {
+			&:extend(.btn.invert all);
+		}
+		
+		&.primary {
+			> .btn {
+				&:extend(.btn.invert.primary all);
+			}
+		}
+		
+		&.secondary {
+			> .btn {
+				&:extend(.btn.invert.secondary all);
+			}
+		}
+		
+		&.success {
+			> .btn {
+				&:extend(.btn.invert.success all);
+			}
+		}
+		
+		&.warning {
+			> .btn {
+				&:extend(.btn.invert.warning all);
+			}
+		}
+		
+		&.error {
+			> .btn {
+				&:extend(.btn.invert.error all);
+			}
+		}
+	}
+}

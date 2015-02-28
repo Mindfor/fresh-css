@@ -250,7 +250,7 @@ abbr[title].text-help,
   color: #56b9d9;
 }
 .text-success {
-  color: #1cb841;
+  color: #5cb85c;
 }
 .text-warning {
   color: #df7514;
@@ -280,7 +280,7 @@ table th.secondary {
 table tr.success,
 table td.success,
 table th.success {
-  background: #adf3be;
+  background: #eaf6ea;
 }
 .bg-warning,
 table tr.warning,
@@ -308,12 +308,15 @@ a {
   color: #105c9a;
   text-decoration: underline;
   outline: none;
-  -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s;
-  transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s;
+  -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 a:hover {
   color: #093355;
   text-decoration: none;
+}
+a:focus {
+  box-shadow: 0 0 0 2px rgba(16, 92, 154, 0.3);
 }
 h1,
 h2,
@@ -1988,8 +1991,8 @@ select {
   border-radius: 2px;
   padding: 0.3em 0.5em;
   vertical-align: middle;
-  -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s;
-  transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s;
+  -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 input[type="text"][disabled],
 input[type="password"][disabled],
@@ -2047,7 +2050,7 @@ input[type="datetime-local"]:focus,
 textarea:focus,
 select:focus {
   border-color: #105c9a;
-  box-shadow: 0 0 5px 0 rgba(16, 92, 154, 0.5);
+  box-shadow: 0 0 0 2px rgba(16, 92, 154, 0.3);
 }
 input[type="text"]:-ms-input-placeholder,
 input[type="password"]:-ms-input-placeholder,
@@ -2163,6 +2166,15 @@ form.width-xl,
 fieldset.width-xl {
   max-width: 64em;
 }
+input.width-xxl,
+button.width-xxl,
+textarea.width-xxl,
+select.width-xxl,
+label.width-xxl,
+form.width-xxl,
+fieldset.width-xxl {
+  max-width: 80em;
+}
 input.success,
 textarea.success,
 select.success,
@@ -2172,7 +2184,7 @@ select.success,
 form:not(.flat) > .success input,
 form:not(.flat) > .success textarea,
 form:not(.flat) > .success select {
-  border-color: #1cb841;
+  border-color: #5cb85c;
 }
 input.success:focus,
 textarea.success:focus,
@@ -2183,7 +2195,7 @@ select.success:focus,
 form:not(.flat) > .success input:focus,
 form:not(.flat) > .success textarea:focus,
 form:not(.flat) > .success select:focus {
-  box-shadow: 0 0 5px 0 rgba(28, 184, 65, 0.5);
+  box-shadow: 0 0 5px 0 rgba(92, 184, 92, 0.5);
 }
 input.warning,
 textarea.warning,
@@ -2230,7 +2242,7 @@ form:not(.flat) > .error select:focus {
   box-shadow: 0 0 5px 0 rgba(202, 60, 60, 0.5);
 }
 label.success {
-  color: #1cb841;
+  color: #5cb85c;
 }
 label.warning {
   color: #df7514;
@@ -2239,11 +2251,11 @@ label.error {
   color: #ca3c3c;
 }
 .btn,
-.btn-group > *,
 [type="submit"],
 [type="button"],
 [type="reset"],
-button:not([type]) {
+button:not([type]),
+.btn-group > * {
   display: inline-block;
   vertical-align: baseline;
   font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
@@ -2259,22 +2271,20 @@ button:not([type]) {
   border-style: solid;
   border-radius: 4px;
   padding: 0.3em 1em;
-  -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s;
-  transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s;
+  -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 .btn::-moz-focus-inner,
-.btn-group > *::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
-button:not([type])::-moz-focus-inner {
+button:not([type])::-moz-focus-inner,
+.btn-group > *::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 .btn[disabled],
 .btn.disabled,
-.btn-group > *[disabled],
-.btn-group > *.disabled,
 [type="submit"][disabled],
 [type="submit"].disabled,
 [type="button"][disabled],
@@ -2282,7 +2292,9 @@ button:not([type])::-moz-focus-inner {
 [type="reset"][disabled],
 [type="reset"].disabled,
 button:not([type])[disabled],
-button:not([type]).disabled {
+button:not([type]).disabled,
+.btn-group > *[disabled],
+.btn-group > *.disabled {
   cursor: not-allowed;
   box-shadow: none;
   color: #b4b4b4 !important;
@@ -2290,8 +2302,6 @@ button:not([type]).disabled {
 }
 .btn:active,
 .btn.active,
-.btn-group > *:active,
-.btn-group > *.active,
 [type="submit"]:active,
 [type="submit"].active,
 [type="button"]:active,
@@ -2299,32 +2309,31 @@ button:not([type]).disabled {
 [type="reset"]:active,
 [type="reset"].active,
 button:not([type]):active,
-button:not([type]).active {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) inset;
+button:not([type]).active,
+.btn-group > *:active,
+.btn-group > *.active {
+  box-shadow: 0 0px 7px rgba(0, 0, 0, 0.5) inset !important;
 }
 .btn,
-.btn-group > *,
 [type="submit"],
 [type="button"],
 [type="reset"],
-button:not([type]) {
+button:not([type]),
+.btn-group > * {
   color: white;
 }
 .btn:hover,
-.btn-group > *:hover,
 [type="submit"]:hover,
 [type="button"]:hover,
 [type="reset"]:hover,
-button:not([type]):hover {
+button:not([type]):hover,
+.btn-group > *:hover {
   background: #848484;
   border-color: #848484;
 }
 .btn,
 .btn:active,
 .btn.active,
-.btn-group > *,
-.btn-group > *:active,
-.btn-group > *.active,
 [type="submit"],
 [type="submit"]:active,
 [type="submit"].active,
@@ -2336,48 +2345,45 @@ button:not([type]):hover {
 [type="reset"].active,
 button:not([type]),
 button:not([type]):active,
-button:not([type]).active {
+button:not([type]).active,
+.btn-group > *,
+.btn-group > *:active,
+.btn-group > *.active {
   background: #aaaaaa;
   border-color: #9d9d9d;
 }
 .btn:focus,
-.btn-group > *:focus,
 [type="submit"]:focus,
 [type="button"]:focus,
 [type="reset"]:focus,
-button:not([type]):focus {
-  box-shadow: 0 0 5px 0 #aaaaaa;
+button:not([type]):focus,
+.btn-group > *:focus {
+  box-shadow: 0 0 0px 2px rgba(170, 170, 170, 0.5);
 }
 .btn.primary,
-.btn-group > *.primary,
-.btn-group.primary > *,
 [type="submit"].primary,
 [type="submit"],
 [type="button"].primary,
 [type="reset"].primary,
-button:not([type]).primary {
+button:not([type]).primary,
+.btn-group > *.primary,
+.btn-group.primary > * {
   color: white;
 }
 .btn.primary:hover,
-.btn-group > *.primary:hover,
-.btn-group.primary > *:hover,
 [type="submit"].primary:hover,
 [type="submit"]:hover,
 [type="button"].primary:hover,
 [type="reset"].primary:hover,
-button:not([type]).primary:hover {
+button:not([type]).primary:hover,
+.btn-group > *.primary:hover,
+.btn-group.primary > *:hover {
   background: #093355;
   border-color: #093355;
 }
 .btn.primary,
 .btn.primary:active,
 .btn.primary.active,
-.btn-group > *.primary,
-.btn-group > *.primary:active,
-.btn-group > *.primary.active,
-.btn-group.primary > *,
-.btn-group.primary > *:active,
-.btn-group.primary > *.active,
 [type="submit"].primary,
 [type="submit"].primary:active,
 [type="submit"].primary.active,
@@ -2392,48 +2398,48 @@ button:not([type]).primary:hover {
 [type="reset"].primary.active,
 button:not([type]).primary,
 button:not([type]).primary:active,
-button:not([type]).primary.active {
+button:not([type]).primary.active,
+.btn-group > *.primary,
+.btn-group > *.primary:active,
+.btn-group > *.primary.active,
+.btn-group.primary > *,
+.btn-group.primary > *:active,
+.btn-group.primary > *.active {
   background: #105c9a;
   border-color: #0e4e83;
 }
 .btn.primary:focus,
-.btn-group > *.primary:focus,
-.btn-group.primary > *:focus,
 [type="submit"].primary:focus,
 [type="submit"]:focus,
 [type="button"].primary:focus,
 [type="reset"].primary:focus,
-button:not([type]).primary:focus {
-  box-shadow: 0 0 5px 0 #105c9a;
+button:not([type]).primary:focus,
+.btn-group > *.primary:focus,
+.btn-group.primary > *:focus {
+  box-shadow: 0 0 0px 2px rgba(16, 92, 154, 0.5);
 }
 .btn.secondary,
-.btn-group > *.secondary,
-.btn-group.secondary > *,
 [type="submit"].secondary,
 [type="button"].secondary,
 [type="reset"].secondary,
-button:not([type]).secondary {
+button:not([type]).secondary,
+.btn-group > *.secondary,
+.btn-group.secondary > * {
   color: white;
 }
 .btn.secondary:hover,
-.btn-group > *.secondary:hover,
-.btn-group.secondary > *:hover,
 [type="submit"].secondary:hover,
 [type="button"].secondary:hover,
 [type="reset"].secondary:hover,
-button:not([type]).secondary:hover {
+button:not([type]).secondary:hover,
+.btn-group > *.secondary:hover,
+.btn-group.secondary > *:hover {
   background: #2a96b9;
   border-color: #2a96b9;
 }
 .btn.secondary,
 .btn.secondary:active,
 .btn.secondary.active,
-.btn-group > *.secondary,
-.btn-group > *.secondary:active,
-.btn-group > *.secondary.active,
-.btn-group.secondary > *,
-.btn-group.secondary > *:active,
-.btn-group.secondary > *.active,
 [type="submit"].secondary,
 [type="submit"].secondary:active,
 [type="submit"].secondary.active,
@@ -2445,47 +2451,47 @@ button:not([type]).secondary:hover {
 [type="reset"].secondary.active,
 button:not([type]).secondary,
 button:not([type]).secondary:active,
-button:not([type]).secondary.active {
+button:not([type]).secondary.active,
+.btn-group > *.secondary,
+.btn-group > *.secondary:active,
+.btn-group > *.secondary.active,
+.btn-group.secondary > *,
+.btn-group.secondary > *:active,
+.btn-group.secondary > *.active {
   background: #56b9d9;
   border-color: #41b0d4;
 }
 .btn.secondary:focus,
-.btn-group > *.secondary:focus,
-.btn-group.secondary > *:focus,
 [type="submit"].secondary:focus,
 [type="button"].secondary:focus,
 [type="reset"].secondary:focus,
-button:not([type]).secondary:focus {
-  box-shadow: 0 0 5px 0 #56b9d9;
+button:not([type]).secondary:focus,
+.btn-group > *.secondary:focus,
+.btn-group.secondary > *:focus {
+  box-shadow: 0 0 0px 2px rgba(86, 185, 217, 0.5);
 }
 .btn.success,
-.btn-group > *.success,
-.btn-group.success > *,
 [type="submit"].success,
 [type="button"].success,
 [type="reset"].success,
-button:not([type]).success {
+button:not([type]).success,
+.btn-group > *.success,
+.btn-group.success > * {
   color: white;
 }
 .btn.success:hover,
-.btn-group > *.success:hover,
-.btn-group.success > *:hover,
 [type="submit"].success:hover,
 [type="button"].success:hover,
 [type="reset"].success:hover,
-button:not([type]).success:hover {
-  background: #12762a;
-  border-color: #12762a;
+button:not([type]).success:hover,
+.btn-group > *.success:hover,
+.btn-group.success > *:hover {
+  background: #3d8b3d;
+  border-color: #3d8b3d;
 }
 .btn.success,
 .btn.success:active,
 .btn.success.active,
-.btn-group > *.success,
-.btn-group > *.success:active,
-.btn-group > *.success.active,
-.btn-group.success > *,
-.btn-group.success > *:active,
-.btn-group.success > *.active,
 [type="submit"].success,
 [type="submit"].success:active,
 [type="submit"].success.active,
@@ -2497,47 +2503,47 @@ button:not([type]).success:hover {
 [type="reset"].success.active,
 button:not([type]).success,
 button:not([type]).success:active,
-button:not([type]).success.active {
-  background: #1cb841;
-  border-color: #19a239;
+button:not([type]).success.active,
+.btn-group > *.success,
+.btn-group > *.success:active,
+.btn-group > *.success.active,
+.btn-group.success > *,
+.btn-group.success > *:active,
+.btn-group.success > *.active {
+  background: #5cb85c;
+  border-color: #4cae4c;
 }
 .btn.success:focus,
-.btn-group > *.success:focus,
-.btn-group.success > *:focus,
 [type="submit"].success:focus,
 [type="button"].success:focus,
 [type="reset"].success:focus,
-button:not([type]).success:focus {
-  box-shadow: 0 0 5px 0 #1cb841;
+button:not([type]).success:focus,
+.btn-group > *.success:focus,
+.btn-group.success > *:focus {
+  box-shadow: 0 0 0px 2px rgba(92, 184, 92, 0.5);
 }
 .btn.warning,
-.btn-group > *.warning,
-.btn-group.warning > *,
 [type="submit"].warning,
 [type="button"].warning,
 [type="reset"].warning,
-button:not([type]).warning {
+button:not([type]).warning,
+.btn-group > *.warning,
+.btn-group.warning > * {
   color: white;
 }
 .btn.warning:hover,
-.btn-group > *.warning:hover,
-.btn-group.warning > *:hover,
 [type="submit"].warning:hover,
 [type="button"].warning:hover,
 [type="reset"].warning:hover,
-button:not([type]).warning:hover {
+button:not([type]).warning:hover,
+.btn-group > *.warning:hover,
+.btn-group.warning > *:hover {
   background: #99500e;
   border-color: #99500e;
 }
 .btn.warning,
 .btn.warning:active,
 .btn.warning.active,
-.btn-group > *.warning,
-.btn-group > *.warning:active,
-.btn-group > *.warning.active,
-.btn-group.warning > *,
-.btn-group.warning > *:active,
-.btn-group.warning > *.active,
 [type="submit"].warning,
 [type="submit"].warning:active,
 [type="submit"].warning.active,
@@ -2549,47 +2555,47 @@ button:not([type]).warning:hover {
 [type="reset"].warning.active,
 button:not([type]).warning,
 button:not([type]).warning:active,
-button:not([type]).warning.active {
+button:not([type]).warning.active,
+.btn-group > *.warning,
+.btn-group > *.warning:active,
+.btn-group > *.warning.active,
+.btn-group.warning > *,
+.btn-group.warning > *:active,
+.btn-group.warning > *.active {
   background: #df7514;
   border-color: #c86912;
 }
 .btn.warning:focus,
-.btn-group > *.warning:focus,
-.btn-group.warning > *:focus,
 [type="submit"].warning:focus,
 [type="button"].warning:focus,
 [type="reset"].warning:focus,
-button:not([type]).warning:focus {
-  box-shadow: 0 0 5px 0 #df7514;
+button:not([type]).warning:focus,
+.btn-group > *.warning:focus,
+.btn-group.warning > *:focus {
+  box-shadow: 0 0 0px 2px rgba(223, 117, 20, 0.5);
 }
 .btn.error,
-.btn-group > *.error,
-.btn-group.error > *,
 [type="submit"].error,
 [type="button"].error,
 [type="reset"].error,
-button:not([type]).error {
+button:not([type]).error,
+.btn-group > *.error,
+.btn-group.error > * {
   color: white;
 }
 .btn.error:hover,
-.btn-group > *.error:hover,
-.btn-group.error > *:hover,
 [type="submit"].error:hover,
 [type="button"].error:hover,
 [type="reset"].error:hover,
-button:not([type]).error:hover {
+button:not([type]).error:hover,
+.btn-group > *.error:hover,
+.btn-group.error > *:hover {
   background: #922828;
   border-color: #922828;
 }
 .btn.error,
 .btn.error:active,
 .btn.error.active,
-.btn-group > *.error,
-.btn-group > *.error:active,
-.btn-group > *.error.active,
-.btn-group.error > *,
-.btn-group.error > *:active,
-.btn-group.error > *.active,
 [type="submit"].error,
 [type="submit"].error:active,
 [type="submit"].error.active,
@@ -2601,36 +2607,42 @@ button:not([type]).error:hover {
 [type="reset"].error.active,
 button:not([type]).error,
 button:not([type]).error:active,
-button:not([type]).error.active {
+button:not([type]).error.active,
+.btn-group > *.error,
+.btn-group > *.error:active,
+.btn-group > *.error.active,
+.btn-group.error > *,
+.btn-group.error > *:active,
+.btn-group.error > *.active {
   background: #ca3c3c;
   border-color: #ba3333;
 }
 .btn.error:focus,
-.btn-group > *.error:focus,
-.btn-group.error > *:focus,
 [type="submit"].error:focus,
 [type="button"].error:focus,
 [type="reset"].error:focus,
-button:not([type]).error:focus {
-  box-shadow: 0 0 5px 0 #ca3c3c;
+button:not([type]).error:focus,
+.btn-group > *.error:focus,
+.btn-group.error > *:focus {
+  box-shadow: 0 0 0px 2px rgba(202, 60, 60, 0.5);
 }
 .btn.link,
-.btn-group > *.link,
 [type="submit"].link,
 [type="button"].link,
 [type="reset"].link,
-button:not([type]).link {
+button:not([type]).link,
+.btn-group > *.link {
   color: #105c9a;
   background: none !important;
   border-color: transparent !important;
   text-decoration: underline;
 }
 .btn.link:hover,
-.btn-group > *.link:hover,
 [type="submit"].link:hover,
 [type="button"].link:hover,
 [type="reset"].link:hover,
-button:not([type]).link:hover {
+button:not([type]).link:hover,
+.btn-group > *.link:hover {
   color: #093355;
   text-decoration: none;
 }
@@ -2640,15 +2652,6 @@ button:not([type]).link:hover {
 .btn.invert:active,
 .btn.outline.active,
 .btn.invert.active,
-.btn-group > *.outline,
-.btn-group > *.invert,
-.btn-group > *.outline:active,
-.btn-group > *.invert:active,
-.btn-group > *.outline.active,
-.btn-group > *.invert.active,
-.btn-group.outline > .btn,
-.btn-group.outline > .btn:active,
-.btn-group.outline > .btn.active,
 [type="submit"].outline,
 [type="submit"].invert,
 [type="submit"].outline:active,
@@ -2673,33 +2676,54 @@ button:not([type]).outline:active,
 button:not([type]).invert:active,
 button:not([type]).outline.active,
 button:not([type]).invert.active,
-.btn-group.outline > .btn-group > *,
-.btn-group.outline > .btn-group > *:active,
-.btn-group.outline > .btn-group > *.active,
+.btn-group > *.outline,
+.btn-group > *.invert,
+.btn-group > *.outline:active,
+.btn-group > *.invert:active,
+.btn-group > *.outline.active,
+.btn-group > *.invert.active,
+.btn-group.outline > .btn,
+.btn-group.outline > .btn:active,
+.btn-group.outline > .btn.active,
+.btn-group.invert > .btn,
+.btn-group.invert > .btn:active,
+.btn-group.invert > .btn.active,
 .btn-group.outline > [type="submit"],
 .btn-group.outline > [type="submit"]:active,
 .btn-group.outline > [type="submit"].active,
+.btn-group.invert > [type="submit"],
+.btn-group.invert > [type="submit"]:active,
+.btn-group.invert > [type="submit"].active,
 .btn-group.outline > [type="button"],
 .btn-group.outline > [type="button"]:active,
 .btn-group.outline > [type="button"].active,
+.btn-group.invert > [type="button"],
+.btn-group.invert > [type="button"]:active,
+.btn-group.invert > [type="button"].active,
 .btn-group.outline > [type="reset"],
 .btn-group.outline > [type="reset"]:active,
 .btn-group.outline > [type="reset"].active,
+.btn-group.invert > [type="reset"],
+.btn-group.invert > [type="reset"]:active,
+.btn-group.invert > [type="reset"].active,
 .btn-group.outline > button:not([type]),
 .btn-group.outline > button:not([type]):active,
-.btn-group.outline > button:not([type]).active {
+.btn-group.outline > button:not([type]).active,
+.btn-group.invert > button:not([type]),
+.btn-group.invert > button:not([type]):active,
+.btn-group.invert > button:not([type]).active,
+.btn-group.outline > .btn-group > *,
+.btn-group.outline > .btn-group > *:active,
+.btn-group.outline > .btn-group > *.active,
+.btn-group.invert > .btn-group > *,
+.btn-group.invert > .btn-group > *:active,
+.btn-group.invert > .btn-group > *.active {
   background: none;
 }
 .btn.outline[disabled],
 .btn.invert[disabled],
 .btn.outline.disabled,
 .btn.invert.disabled,
-.btn-group > *.outline[disabled],
-.btn-group > *.invert[disabled],
-.btn-group > *.outline.disabled,
-.btn-group > *.invert.disabled,
-.btn-group.outline > .btn[disabled],
-.btn-group.outline > .btn.disabled,
 [type="submit"].outline[disabled],
 [type="submit"].invert[disabled],
 [type="submit"].outline.disabled,
@@ -2716,59 +2740,75 @@ button:not([type]).outline[disabled],
 button:not([type]).invert[disabled],
 button:not([type]).outline.disabled,
 button:not([type]).invert.disabled,
-.btn-group.outline > .btn-group > *[disabled],
-.btn-group.outline > .btn-group > *.disabled,
+.btn-group > *.outline[disabled],
+.btn-group > *.invert[disabled],
+.btn-group > *.outline.disabled,
+.btn-group > *.invert.disabled,
+.btn-group.outline > .btn[disabled],
+.btn-group.outline > .btn.disabled,
+.btn-group.invert > .btn[disabled],
+.btn-group.invert > .btn.disabled,
 .btn-group.outline > [type="submit"][disabled],
 .btn-group.outline > [type="submit"].disabled,
+.btn-group.invert > [type="submit"][disabled],
+.btn-group.invert > [type="submit"].disabled,
 .btn-group.outline > [type="button"][disabled],
 .btn-group.outline > [type="button"].disabled,
+.btn-group.invert > [type="button"][disabled],
+.btn-group.invert > [type="button"].disabled,
 .btn-group.outline > [type="reset"][disabled],
 .btn-group.outline > [type="reset"].disabled,
+.btn-group.invert > [type="reset"][disabled],
+.btn-group.invert > [type="reset"].disabled,
 .btn-group.outline > button:not([type])[disabled],
-.btn-group.outline > button:not([type]).disabled {
+.btn-group.outline > button:not([type]).disabled,
+.btn-group.invert > button:not([type])[disabled],
+.btn-group.invert > button:not([type]).disabled,
+.btn-group.outline > .btn-group > *[disabled],
+.btn-group.outline > .btn-group > *.disabled,
+.btn-group.invert > .btn-group > *[disabled],
+.btn-group.invert > .btn-group > *.disabled {
   background: none !important;
   box-shadow: none;
 }
 .btn.outline,
-.btn-group > *.outline,
-.btn-group.outline > .btn,
 [type="submit"].outline,
 [type="button"].outline,
 [type="reset"].outline,
 button:not([type]).outline,
-.btn-group.outline > .btn-group > *,
+.btn-group > *.outline,
+.btn-group.outline > .btn,
 .btn-group.outline > [type="submit"],
 .btn-group.outline > [type="button"],
 .btn-group.outline > [type="reset"],
-.btn-group.outline > button:not([type]) {
+.btn-group.outline > button:not([type]),
+.btn-group.outline > .btn-group > * {
   color: #222222;
   border-color: #222222;
 }
 .btn.outline:hover,
-.btn-group > *.outline:hover,
-.btn-group.outline > .btn:hover,
 [type="submit"].outline:hover,
 [type="button"].outline:hover,
 [type="reset"].outline:hover,
 button:not([type]).outline:hover,
-.btn-group.outline > .btn-group > *:hover,
+.btn-group > *.outline:hover,
+.btn-group.outline > .btn:hover,
 .btn-group.outline > [type="submit"]:hover,
 .btn-group.outline > [type="button"]:hover,
 .btn-group.outline > [type="reset"]:hover,
-.btn-group.outline > button:not([type]):hover {
+.btn-group.outline > button:not([type]):hover,
+.btn-group.outline > .btn-group > *:hover {
   color: white;
   background: #222222;
 }
 .btn.outline.primary,
-.btn-group > *.outline.primary,
-.btn-group.outline > .btn.primary,
-.btn-group.outline.primary > .btn,
 [type="submit"].outline.primary,
 [type="button"].outline.primary,
 [type="reset"].outline.primary,
 button:not([type]).outline.primary,
-.btn-group.outline > .btn-group > *.primary,
-.btn-group.outline.primary > .btn-group > *,
+.btn-group > *.outline.primary,
+.btn-group.outline > .btn.primary,
+.btn-group.outline.primary > .btn,
 .btn-group.outline > [type="submit"].primary,
 .btn-group.outline.primary > [type="submit"],
 .btn-group.outline > [type="button"].primary,
@@ -2776,20 +2816,20 @@ button:not([type]).outline.primary,
 .btn-group.outline > [type="reset"].primary,
 .btn-group.outline.primary > [type="reset"],
 .btn-group.outline > button:not([type]).primary,
-.btn-group.outline.primary > button:not([type]) {
+.btn-group.outline.primary > button:not([type]),
+.btn-group.outline > .btn-group > *.primary,
+.btn-group.outline.primary > .btn-group > * {
   color: #105c9a;
   border-color: #105c9a;
 }
 .btn.outline.primary:hover,
-.btn-group > *.outline.primary:hover,
-.btn-group.outline > .btn.primary:hover,
-.btn-group.outline.primary > .btn:hover,
 [type="submit"].outline.primary:hover,
 [type="button"].outline.primary:hover,
 [type="reset"].outline.primary:hover,
 button:not([type]).outline.primary:hover,
-.btn-group.outline > .btn-group > *.primary:hover,
-.btn-group.outline.primary > .btn-group > *:hover,
+.btn-group > *.outline.primary:hover,
+.btn-group.outline > .btn.primary:hover,
+.btn-group.outline.primary > .btn:hover,
 .btn-group.outline > [type="submit"].primary:hover,
 .btn-group.outline.primary > [type="submit"]:hover,
 .btn-group.outline > [type="button"].primary:hover,
@@ -2797,20 +2837,20 @@ button:not([type]).outline.primary:hover,
 .btn-group.outline > [type="reset"].primary:hover,
 .btn-group.outline.primary > [type="reset"]:hover,
 .btn-group.outline > button:not([type]).primary:hover,
-.btn-group.outline.primary > button:not([type]):hover {
+.btn-group.outline.primary > button:not([type]):hover,
+.btn-group.outline > .btn-group > *.primary:hover,
+.btn-group.outline.primary > .btn-group > *:hover {
   color: white;
   background: #105c9a;
 }
 .btn.outline.secondary,
-.btn-group > *.outline.secondary,
-.btn-group.outline > .btn.secondary,
-.btn-group.outline.secondary > .btn,
 [type="submit"].outline.secondary,
 [type="button"].outline.secondary,
 [type="reset"].outline.secondary,
 button:not([type]).outline.secondary,
-.btn-group.outline > .btn-group > *.secondary,
-.btn-group.outline.secondary > .btn-group > *,
+.btn-group > *.outline.secondary,
+.btn-group.outline > .btn.secondary,
+.btn-group.outline.secondary > .btn,
 .btn-group.outline > [type="submit"].secondary,
 .btn-group.outline.secondary > [type="submit"],
 .btn-group.outline > [type="button"].secondary,
@@ -2818,20 +2858,20 @@ button:not([type]).outline.secondary,
 .btn-group.outline > [type="reset"].secondary,
 .btn-group.outline.secondary > [type="reset"],
 .btn-group.outline > button:not([type]).secondary,
-.btn-group.outline.secondary > button:not([type]) {
+.btn-group.outline.secondary > button:not([type]),
+.btn-group.outline > .btn-group > *.secondary,
+.btn-group.outline.secondary > .btn-group > * {
   color: #56b9d9;
   border-color: #56b9d9;
 }
 .btn.outline.secondary:hover,
-.btn-group > *.outline.secondary:hover,
-.btn-group.outline > .btn.secondary:hover,
-.btn-group.outline.secondary > .btn:hover,
 [type="submit"].outline.secondary:hover,
 [type="button"].outline.secondary:hover,
 [type="reset"].outline.secondary:hover,
 button:not([type]).outline.secondary:hover,
-.btn-group.outline > .btn-group > *.secondary:hover,
-.btn-group.outline.secondary > .btn-group > *:hover,
+.btn-group > *.outline.secondary:hover,
+.btn-group.outline > .btn.secondary:hover,
+.btn-group.outline.secondary > .btn:hover,
 .btn-group.outline > [type="submit"].secondary:hover,
 .btn-group.outline.secondary > [type="submit"]:hover,
 .btn-group.outline > [type="button"].secondary:hover,
@@ -2839,20 +2879,20 @@ button:not([type]).outline.secondary:hover,
 .btn-group.outline > [type="reset"].secondary:hover,
 .btn-group.outline.secondary > [type="reset"]:hover,
 .btn-group.outline > button:not([type]).secondary:hover,
-.btn-group.outline.secondary > button:not([type]):hover {
+.btn-group.outline.secondary > button:not([type]):hover,
+.btn-group.outline > .btn-group > *.secondary:hover,
+.btn-group.outline.secondary > .btn-group > *:hover {
   color: white;
   background: #56b9d9;
 }
 .btn.outline.success,
-.btn-group > *.outline.success,
-.btn-group.outline > .btn.success,
-.btn-group.outline.success > .btn,
 [type="submit"].outline.success,
 [type="button"].outline.success,
 [type="reset"].outline.success,
 button:not([type]).outline.success,
-.btn-group.outline > .btn-group > *.success,
-.btn-group.outline.success > .btn-group > *,
+.btn-group > *.outline.success,
+.btn-group.outline > .btn.success,
+.btn-group.outline.success > .btn,
 .btn-group.outline > [type="submit"].success,
 .btn-group.outline.success > [type="submit"],
 .btn-group.outline > [type="button"].success,
@@ -2860,20 +2900,20 @@ button:not([type]).outline.success,
 .btn-group.outline > [type="reset"].success,
 .btn-group.outline.success > [type="reset"],
 .btn-group.outline > button:not([type]).success,
-.btn-group.outline.success > button:not([type]) {
-  color: #1cb841;
-  border-color: #1cb841;
+.btn-group.outline.success > button:not([type]),
+.btn-group.outline > .btn-group > *.success,
+.btn-group.outline.success > .btn-group > * {
+  color: #5cb85c;
+  border-color: #5cb85c;
 }
 .btn.outline.success:hover,
-.btn-group > *.outline.success:hover,
-.btn-group.outline > .btn.success:hover,
-.btn-group.outline.success > .btn:hover,
 [type="submit"].outline.success:hover,
 [type="button"].outline.success:hover,
 [type="reset"].outline.success:hover,
 button:not([type]).outline.success:hover,
-.btn-group.outline > .btn-group > *.success:hover,
-.btn-group.outline.success > .btn-group > *:hover,
+.btn-group > *.outline.success:hover,
+.btn-group.outline > .btn.success:hover,
+.btn-group.outline.success > .btn:hover,
 .btn-group.outline > [type="submit"].success:hover,
 .btn-group.outline.success > [type="submit"]:hover,
 .btn-group.outline > [type="button"].success:hover,
@@ -2881,20 +2921,20 @@ button:not([type]).outline.success:hover,
 .btn-group.outline > [type="reset"].success:hover,
 .btn-group.outline.success > [type="reset"]:hover,
 .btn-group.outline > button:not([type]).success:hover,
-.btn-group.outline.success > button:not([type]):hover {
+.btn-group.outline.success > button:not([type]):hover,
+.btn-group.outline > .btn-group > *.success:hover,
+.btn-group.outline.success > .btn-group > *:hover {
   color: white;
-  background: #1cb841;
+  background: #5cb85c;
 }
 .btn.outline.warning,
-.btn-group > *.outline.warning,
-.btn-group.outline > .btn.warning,
-.btn-group.outline.warning > .btn,
 [type="submit"].outline.warning,
 [type="button"].outline.warning,
 [type="reset"].outline.warning,
 button:not([type]).outline.warning,
-.btn-group.outline > .btn-group > *.warning,
-.btn-group.outline.warning > .btn-group > *,
+.btn-group > *.outline.warning,
+.btn-group.outline > .btn.warning,
+.btn-group.outline.warning > .btn,
 .btn-group.outline > [type="submit"].warning,
 .btn-group.outline.warning > [type="submit"],
 .btn-group.outline > [type="button"].warning,
@@ -2902,20 +2942,20 @@ button:not([type]).outline.warning,
 .btn-group.outline > [type="reset"].warning,
 .btn-group.outline.warning > [type="reset"],
 .btn-group.outline > button:not([type]).warning,
-.btn-group.outline.warning > button:not([type]) {
+.btn-group.outline.warning > button:not([type]),
+.btn-group.outline > .btn-group > *.warning,
+.btn-group.outline.warning > .btn-group > * {
   color: #df7514;
   border-color: #df7514;
 }
 .btn.outline.warning:hover,
-.btn-group > *.outline.warning:hover,
-.btn-group.outline > .btn.warning:hover,
-.btn-group.outline.warning > .btn:hover,
 [type="submit"].outline.warning:hover,
 [type="button"].outline.warning:hover,
 [type="reset"].outline.warning:hover,
 button:not([type]).outline.warning:hover,
-.btn-group.outline > .btn-group > *.warning:hover,
-.btn-group.outline.warning > .btn-group > *:hover,
+.btn-group > *.outline.warning:hover,
+.btn-group.outline > .btn.warning:hover,
+.btn-group.outline.warning > .btn:hover,
 .btn-group.outline > [type="submit"].warning:hover,
 .btn-group.outline.warning > [type="submit"]:hover,
 .btn-group.outline > [type="button"].warning:hover,
@@ -2923,20 +2963,20 @@ button:not([type]).outline.warning:hover,
 .btn-group.outline > [type="reset"].warning:hover,
 .btn-group.outline.warning > [type="reset"]:hover,
 .btn-group.outline > button:not([type]).warning:hover,
-.btn-group.outline.warning > button:not([type]):hover {
+.btn-group.outline.warning > button:not([type]):hover,
+.btn-group.outline > .btn-group > *.warning:hover,
+.btn-group.outline.warning > .btn-group > *:hover {
   color: white;
   background: #df7514;
 }
 .btn.outline.error,
-.btn-group > *.outline.error,
-.btn-group.outline > .btn.error,
-.btn-group.outline.error > .btn,
 [type="submit"].outline.error,
 [type="button"].outline.error,
 [type="reset"].outline.error,
 button:not([type]).outline.error,
-.btn-group.outline > .btn-group > *.error,
-.btn-group.outline.error > .btn-group > *,
+.btn-group > *.outline.error,
+.btn-group.outline > .btn.error,
+.btn-group.outline.error > .btn,
 .btn-group.outline > [type="submit"].error,
 .btn-group.outline.error > [type="submit"],
 .btn-group.outline > [type="button"].error,
@@ -2944,20 +2984,20 @@ button:not([type]).outline.error,
 .btn-group.outline > [type="reset"].error,
 .btn-group.outline.error > [type="reset"],
 .btn-group.outline > button:not([type]).error,
-.btn-group.outline.error > button:not([type]) {
+.btn-group.outline.error > button:not([type]),
+.btn-group.outline > .btn-group > *.error,
+.btn-group.outline.error > .btn-group > * {
   color: #ca3c3c;
   border-color: #ca3c3c;
 }
 .btn.outline.error:hover,
-.btn-group > *.outline.error:hover,
-.btn-group.outline > .btn.error:hover,
-.btn-group.outline.error > .btn:hover,
 [type="submit"].outline.error:hover,
 [type="button"].outline.error:hover,
 [type="reset"].outline.error:hover,
 button:not([type]).outline.error:hover,
-.btn-group.outline > .btn-group > *.error:hover,
-.btn-group.outline.error > .btn-group > *:hover,
+.btn-group > *.outline.error:hover,
+.btn-group.outline > .btn.error:hover,
+.btn-group.outline.error > .btn:hover,
 .btn-group.outline > [type="submit"].error:hover,
 .btn-group.outline.error > [type="submit"]:hover,
 .btn-group.outline > [type="button"].error:hover,
@@ -2965,66 +3005,140 @@ button:not([type]).outline.error:hover,
 .btn-group.outline > [type="reset"].error:hover,
 .btn-group.outline.error > [type="reset"]:hover,
 .btn-group.outline > button:not([type]).error:hover,
-.btn-group.outline.error > button:not([type]):hover {
+.btn-group.outline.error > button:not([type]):hover,
+.btn-group.outline > .btn-group > *.error:hover,
+.btn-group.outline.error > .btn-group > *:hover {
   color: white;
   background: #ca3c3c;
 }
 .btn.invert,
-.btn-group > *.invert,
 [type="submit"].invert,
 [type="button"].invert,
 [type="reset"].invert,
-button:not([type]).invert {
+button:not([type]).invert,
+.btn-group > *.invert,
+.btn-group.invert > .btn,
+.btn-group.invert > [type="submit"],
+.btn-group.invert > [type="button"],
+.btn-group.invert > [type="reset"],
+.btn-group.invert > button:not([type]),
+.btn-group.invert > .btn-group > * {
   color: white;
   border-color: white !important;
 }
 .btn.invert:hover,
-.btn-group > *.invert:hover,
 [type="submit"].invert:hover,
 [type="button"].invert:hover,
 [type="reset"].invert:hover,
-button:not([type]).invert:hover {
+button:not([type]).invert:hover,
+.btn-group > *.invert:hover,
+.btn-group.invert > .btn:hover,
+.btn-group.invert > [type="submit"]:hover,
+.btn-group.invert > [type="button"]:hover,
+.btn-group.invert > [type="reset"]:hover,
+.btn-group.invert > button:not([type]):hover,
+.btn-group.invert > .btn-group > *:hover {
   background: #aaaaaa;
 }
 .btn.invert.primary:hover,
-.btn-group > *.invert.primary:hover,
 [type="submit"].invert.primary:hover,
 [type="submit"].invert:hover,
 [type="button"].invert.primary:hover,
 [type="reset"].invert.primary:hover,
-button:not([type]).invert.primary:hover {
+button:not([type]).invert.primary:hover,
+.btn-group > *.invert.primary:hover,
+.btn-group.invert > .btn.primary:hover,
+.btn-group.invert.primary > .btn:hover,
+.btn-group.invert > [type="submit"].primary:hover,
+.btn-group.invert.primary > [type="submit"]:hover,
+.btn-group.invert > [type="button"].primary:hover,
+.btn-group.invert.primary > [type="button"]:hover,
+.btn-group.invert > [type="reset"].primary:hover,
+.btn-group.invert.primary > [type="reset"]:hover,
+.btn-group.invert > button:not([type]).primary:hover,
+.btn-group.invert.primary > button:not([type]):hover,
+.btn-group.invert > .btn-group > *.primary:hover,
+.btn-group.invert.primary > .btn-group > *:hover {
   background: #105c9a;
 }
 .btn.invert.secondary:hover,
-.btn-group > *.invert.secondary:hover,
 [type="submit"].invert.secondary:hover,
 [type="button"].invert.secondary:hover,
 [type="reset"].invert.secondary:hover,
-button:not([type]).invert.secondary:hover {
+button:not([type]).invert.secondary:hover,
+.btn-group > *.invert.secondary:hover,
+.btn-group.invert > .btn.secondary:hover,
+.btn-group.invert.secondary > .btn:hover,
+.btn-group.invert > [type="submit"].secondary:hover,
+.btn-group.invert.secondary > [type="submit"]:hover,
+.btn-group.invert > [type="button"].secondary:hover,
+.btn-group.invert.secondary > [type="button"]:hover,
+.btn-group.invert > [type="reset"].secondary:hover,
+.btn-group.invert.secondary > [type="reset"]:hover,
+.btn-group.invert > button:not([type]).secondary:hover,
+.btn-group.invert.secondary > button:not([type]):hover,
+.btn-group.invert > .btn-group > *.secondary:hover,
+.btn-group.invert.secondary > .btn-group > *:hover {
   background: #56b9d9;
 }
 .btn.invert.success:hover,
-.btn-group > *.invert.success:hover,
 [type="submit"].invert.success:hover,
 [type="button"].invert.success:hover,
 [type="reset"].invert.success:hover,
-button:not([type]).invert.success:hover {
-  background: #1cb841;
+button:not([type]).invert.success:hover,
+.btn-group > *.invert.success:hover,
+.btn-group.invert > .btn.success:hover,
+.btn-group.invert.success > .btn:hover,
+.btn-group.invert > [type="submit"].success:hover,
+.btn-group.invert.success > [type="submit"]:hover,
+.btn-group.invert > [type="button"].success:hover,
+.btn-group.invert.success > [type="button"]:hover,
+.btn-group.invert > [type="reset"].success:hover,
+.btn-group.invert.success > [type="reset"]:hover,
+.btn-group.invert > button:not([type]).success:hover,
+.btn-group.invert.success > button:not([type]):hover,
+.btn-group.invert > .btn-group > *.success:hover,
+.btn-group.invert.success > .btn-group > *:hover {
+  background: #5cb85c;
 }
 .btn.invert.warning:hover,
-.btn-group > *.invert.warning:hover,
 [type="submit"].invert.warning:hover,
 [type="button"].invert.warning:hover,
 [type="reset"].invert.warning:hover,
-button:not([type]).invert.warning:hover {
+button:not([type]).invert.warning:hover,
+.btn-group > *.invert.warning:hover,
+.btn-group.invert > .btn.warning:hover,
+.btn-group.invert.warning > .btn:hover,
+.btn-group.invert > [type="submit"].warning:hover,
+.btn-group.invert.warning > [type="submit"]:hover,
+.btn-group.invert > [type="button"].warning:hover,
+.btn-group.invert.warning > [type="button"]:hover,
+.btn-group.invert > [type="reset"].warning:hover,
+.btn-group.invert.warning > [type="reset"]:hover,
+.btn-group.invert > button:not([type]).warning:hover,
+.btn-group.invert.warning > button:not([type]):hover,
+.btn-group.invert > .btn-group > *.warning:hover,
+.btn-group.invert.warning > .btn-group > *:hover {
   background: #df7514;
 }
 .btn.invert.error:hover,
-.btn-group > *.invert.error:hover,
 [type="submit"].invert.error:hover,
 [type="button"].invert.error:hover,
 [type="reset"].invert.error:hover,
-button:not([type]).invert.error:hover {
+button:not([type]).invert.error:hover,
+.btn-group > *.invert.error:hover,
+.btn-group.invert > .btn.error:hover,
+.btn-group.invert.error > .btn:hover,
+.btn-group.invert > [type="submit"].error:hover,
+.btn-group.invert.error > [type="submit"]:hover,
+.btn-group.invert > [type="button"].error:hover,
+.btn-group.invert.error > [type="button"]:hover,
+.btn-group.invert > [type="reset"].error:hover,
+.btn-group.invert.error > [type="reset"]:hover,
+.btn-group.invert > button:not([type]).error:hover,
+.btn-group.invert.error > button:not([type]):hover,
+.btn-group.invert > .btn-group > *.error:hover,
+.btn-group.invert.error > .btn-group > *:hover {
   background: #ca3c3c;
 }
 .btn-group:after {
@@ -3043,6 +3157,21 @@ button:not([type]).invert.error:hover {
 .btn-group > *:not(:last-child) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
+}
+.btn-group.vertical > * {
+  float: none;
+  display: block;
+  border-radius: 4px;
+  margin: 0;
+}
+.btn-group.vertical > *:not(:first-child) {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  margin-top: -1px;
+}
+.btn-group.vertical > *:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 table {
   max-width: 100%;
@@ -3561,7 +3690,7 @@ ul.checkbox-inline > li {
 form:not(.flat) > .success .input-group input,
 form:not(.flat) > .success .input-group textarea,
 form:not(.flat) > .success .input-group select {
-  border-color: #1cb841;
+  border-color: #5cb85c;
 }
 .input-group.success input:focus,
 .input-group.success textarea:focus,
@@ -3572,7 +3701,7 @@ form:not(.flat) > .success .input-group select {
 form:not(.flat) > .success .input-group input:focus,
 form:not(.flat) > .success .input-group textarea:focus,
 form:not(.flat) > .success .input-group select:focus {
-  box-shadow: 0 0 5px 0 rgba(28, 184, 65, 0.5);
+  box-shadow: 0 0 5px 0 rgba(92, 184, 92, 0.5);
 }
 .input-group.success > span,
 .input-group.success > label,
@@ -3580,13 +3709,13 @@ form:not(.flat) > .success .input-group select:focus {
 .form > .success .input-group > label,
 form:not(.flat) > .success .input-group > span,
 form:not(.flat) > .success .input-group > label {
-  border-color: #1cb841;
+  border-color: #5cb85c;
 }
 .input-group.success > span,
 .form > .success .input-group > span,
 form:not(.flat) > .success .input-group > span {
-  color: #1cb841;
-  background: #adf3be;
+  color: #5cb85c;
+  background: #eaf6ea;
 }
 .input-group.warning input,
 .input-group.warning textarea,
@@ -3662,15 +3791,18 @@ form:not(.flat) > .error .input-group > span {
 }
 ul.pagination {
   display: inline-block;
-  overflow: auto;
   list-style: none;
   margin: 0 0 1em;
   padding: 0;
 }
+ul.pagination:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 ul.pagination > li {
   float: left;
   display: block;
-  overflow: auto;
   margin: 0;
   border: 1px solid #bdbdbd;
 }
@@ -3717,7 +3849,7 @@ ul.pagination > li[disabled] > span {
 }
 .fa-plus,
 .fa-check {
-  color: #1cb841;
+  color: #5cb85c;
 }
 .fa-close,
 .fa-remove,

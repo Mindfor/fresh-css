@@ -44,7 +44,7 @@ select {
 
 	&:focus {
 		border-color: @control-active-border-color;
-		box-shadow: 0 0 5px 0 fade(@control-active-border-color, 50%);
+		box-shadow: 0 0 0 2px fade(@control-active-border-color, 30%);
 	}
 
 	&:-ms-input-placeholder {
@@ -137,6 +137,10 @@ fieldset {
 	
 	&.width-xl {
 		max-width: @control-width-xl;
+	}
+	
+	&.width-xxl {
+		max-width: @control-width-xxl;
 	}
 }
 
