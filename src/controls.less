@@ -43,8 +43,8 @@ select {
 	}
 
 	&:focus {
-		border-color: @control-active-border-color;
-		box-shadow: 0 0 0 2px fade(@control-active-border-color, 30%);
+		border-color: @control-active-color;
+		box-shadow: 0 0 0 2px fade(@control-active-color, @control-focus-fade);
 	}
 
 	&:-ms-input-placeholder {
@@ -84,12 +84,18 @@ input[type="radio"] {
 	}
 }
 
+input[type="checkbox"] {
+	border-radius: 3px;
+}
+
+input[type="radio"] {
+	border-radius: 50%;
+}
+
 input[type="checkbox"],
 input[type="radio"] {
-	border-radius: 3px;
-	
 	&:focus {
-		box-shadow: 0 0 5px 0 @control-active-border-color;
+		box-shadow: 0 0 0 2px fade(@control-active-color, @control-focus-fade);
 	}
 }
 
@@ -152,7 +158,8 @@ select {
 		border-color: @color;
 		
 		&:focus {
-			box-shadow: 0 0 5px 0 fade(@color, 50%);
+			border-color: @color;
+			box-shadow: 0 0 0 2px fade(@color, @control-focus-fade);
 		}
 	}
 	

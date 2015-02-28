@@ -17,7 +17,7 @@
 	}
 
 	&:focus {
-		box-shadow: 0 0 0px 2px fade(@bg, 50%);
+		box-shadow: 0 0 0px 2px fade(@bg, @btn-focus-fade);
 	}
 }
 
@@ -184,6 +184,10 @@
 [type="submit"] {
 	&:extend(.btn all);
 	&:extend(.btn.primary all);
+}
+
+[type="submit"].outline {
+	&:extend(.btn.outline.primary all);
 }
 
 [type="submit"].invert {

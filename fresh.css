@@ -2097,13 +2097,15 @@ input[type="checkbox"][disabled],
 input[type="radio"][disabled] {
   cursor: default;
 }
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"] {
   border-radius: 3px;
+}
+input[type="radio"] {
+  border-radius: 50%;
 }
 input[type="checkbox"]:focus,
 input[type="radio"]:focus {
-  box-shadow: 0 0 5px 0 #105c9a;
+  box-shadow: 0 0 0 2px rgba(16, 92, 154, 0.3);
 }
 input::-moz-focus-inner,
 button::-moz-focus-inner {
@@ -2195,7 +2197,8 @@ select.success:focus,
 form:not(.flat) > .success input:focus,
 form:not(.flat) > .success textarea:focus,
 form:not(.flat) > .success select:focus {
-  box-shadow: 0 0 5px 0 rgba(92, 184, 92, 0.5);
+  border-color: #5cb85c;
+  box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.3);
 }
 input.warning,
 textarea.warning,
@@ -2217,7 +2220,8 @@ select.warning:focus,
 form:not(.flat) > .warning input:focus,
 form:not(.flat) > .warning textarea:focus,
 form:not(.flat) > .warning select:focus {
-  box-shadow: 0 0 5px 0 rgba(223, 117, 20, 0.5);
+  border-color: #df7514;
+  box-shadow: 0 0 0 2px rgba(223, 117, 20, 0.3);
 }
 input.error,
 textarea.error,
@@ -2239,7 +2243,8 @@ select.error:focus,
 form:not(.flat) > .error input:focus,
 form:not(.flat) > .error textarea:focus,
 form:not(.flat) > .error select:focus {
-  box-shadow: 0 0 5px 0 rgba(202, 60, 60, 0.5);
+  border-color: #ca3c3c;
+  box-shadow: 0 0 0 2px rgba(202, 60, 60, 0.3);
 }
 label.success {
   color: #5cb85c;
@@ -2682,42 +2687,12 @@ button:not([type]).invert.active,
 .btn-group > *.invert:active,
 .btn-group > *.outline.active,
 .btn-group > *.invert.active,
-.btn-group.outline > .btn,
-.btn-group.outline > .btn:active,
-.btn-group.outline > .btn.active,
-.btn-group.invert > .btn,
-.btn-group.invert > .btn:active,
-.btn-group.invert > .btn.active,
-.btn-group.outline > [type="submit"],
-.btn-group.outline > [type="submit"]:active,
-.btn-group.outline > [type="submit"].active,
-.btn-group.invert > [type="submit"],
-.btn-group.invert > [type="submit"]:active,
-.btn-group.invert > [type="submit"].active,
-.btn-group.outline > [type="button"],
-.btn-group.outline > [type="button"]:active,
-.btn-group.outline > [type="button"].active,
-.btn-group.invert > [type="button"],
-.btn-group.invert > [type="button"]:active,
-.btn-group.invert > [type="button"].active,
-.btn-group.outline > [type="reset"],
-.btn-group.outline > [type="reset"]:active,
-.btn-group.outline > [type="reset"].active,
-.btn-group.invert > [type="reset"],
-.btn-group.invert > [type="reset"]:active,
-.btn-group.invert > [type="reset"].active,
-.btn-group.outline > button:not([type]),
-.btn-group.outline > button:not([type]):active,
-.btn-group.outline > button:not([type]).active,
-.btn-group.invert > button:not([type]),
-.btn-group.invert > button:not([type]):active,
-.btn-group.invert > button:not([type]).active,
-.btn-group.outline > .btn-group > *,
-.btn-group.outline > .btn-group > *:active,
-.btn-group.outline > .btn-group > *.active,
-.btn-group.invert > .btn-group > *,
-.btn-group.invert > .btn-group > *:active,
-.btn-group.invert > .btn-group > *.active {
+.btn-group.outline > *,
+.btn-group.outline > *:active,
+.btn-group.outline > *.active,
+.btn-group.invert > *,
+.btn-group.invert > *:active,
+.btn-group.invert > *.active {
   background: none;
 }
 .btn.outline[disabled],
@@ -2744,30 +2719,10 @@ button:not([type]).invert.disabled,
 .btn-group > *.invert[disabled],
 .btn-group > *.outline.disabled,
 .btn-group > *.invert.disabled,
-.btn-group.outline > .btn[disabled],
-.btn-group.outline > .btn.disabled,
-.btn-group.invert > .btn[disabled],
-.btn-group.invert > .btn.disabled,
-.btn-group.outline > [type="submit"][disabled],
-.btn-group.outline > [type="submit"].disabled,
-.btn-group.invert > [type="submit"][disabled],
-.btn-group.invert > [type="submit"].disabled,
-.btn-group.outline > [type="button"][disabled],
-.btn-group.outline > [type="button"].disabled,
-.btn-group.invert > [type="button"][disabled],
-.btn-group.invert > [type="button"].disabled,
-.btn-group.outline > [type="reset"][disabled],
-.btn-group.outline > [type="reset"].disabled,
-.btn-group.invert > [type="reset"][disabled],
-.btn-group.invert > [type="reset"].disabled,
-.btn-group.outline > button:not([type])[disabled],
-.btn-group.outline > button:not([type]).disabled,
-.btn-group.invert > button:not([type])[disabled],
-.btn-group.invert > button:not([type]).disabled,
-.btn-group.outline > .btn-group > *[disabled],
-.btn-group.outline > .btn-group > *.disabled,
-.btn-group.invert > .btn-group > *[disabled],
-.btn-group.invert > .btn-group > *.disabled {
+.btn-group.outline > *[disabled],
+.btn-group.outline > *.disabled,
+.btn-group.invert > *[disabled],
+.btn-group.invert > *.disabled {
   background: none !important;
   box-shadow: none;
 }
@@ -2777,12 +2732,7 @@ button:not([type]).invert.disabled,
 [type="reset"].outline,
 button:not([type]).outline,
 .btn-group > *.outline,
-.btn-group.outline > .btn,
-.btn-group.outline > [type="submit"],
-.btn-group.outline > [type="button"],
-.btn-group.outline > [type="reset"],
-.btn-group.outline > button:not([type]),
-.btn-group.outline > .btn-group > * {
+.btn-group.outline > * {
   color: #222222;
   border-color: #222222;
 }
@@ -2792,54 +2742,31 @@ button:not([type]).outline,
 [type="reset"].outline:hover,
 button:not([type]).outline:hover,
 .btn-group > *.outline:hover,
-.btn-group.outline > .btn:hover,
-.btn-group.outline > [type="submit"]:hover,
-.btn-group.outline > [type="button"]:hover,
-.btn-group.outline > [type="reset"]:hover,
-.btn-group.outline > button:not([type]):hover,
-.btn-group.outline > .btn-group > *:hover {
+.btn-group.outline > *:hover {
   color: white;
   background: #222222;
 }
 .btn.outline.primary,
 [type="submit"].outline.primary,
+[type="submit"].outline,
 [type="button"].outline.primary,
 [type="reset"].outline.primary,
 button:not([type]).outline.primary,
 .btn-group > *.outline.primary,
-.btn-group.outline > .btn.primary,
-.btn-group.outline.primary > .btn,
-.btn-group.outline > [type="submit"].primary,
-.btn-group.outline.primary > [type="submit"],
-.btn-group.outline > [type="button"].primary,
-.btn-group.outline.primary > [type="button"],
-.btn-group.outline > [type="reset"].primary,
-.btn-group.outline.primary > [type="reset"],
-.btn-group.outline > button:not([type]).primary,
-.btn-group.outline.primary > button:not([type]),
-.btn-group.outline > .btn-group > *.primary,
-.btn-group.outline.primary > .btn-group > * {
+.btn-group.outline > *.primary,
+.btn-group.outline.primary > * {
   color: #105c9a;
   border-color: #105c9a;
 }
 .btn.outline.primary:hover,
 [type="submit"].outline.primary:hover,
+[type="submit"].outline:hover,
 [type="button"].outline.primary:hover,
 [type="reset"].outline.primary:hover,
 button:not([type]).outline.primary:hover,
 .btn-group > *.outline.primary:hover,
-.btn-group.outline > .btn.primary:hover,
-.btn-group.outline.primary > .btn:hover,
-.btn-group.outline > [type="submit"].primary:hover,
-.btn-group.outline.primary > [type="submit"]:hover,
-.btn-group.outline > [type="button"].primary:hover,
-.btn-group.outline.primary > [type="button"]:hover,
-.btn-group.outline > [type="reset"].primary:hover,
-.btn-group.outline.primary > [type="reset"]:hover,
-.btn-group.outline > button:not([type]).primary:hover,
-.btn-group.outline.primary > button:not([type]):hover,
-.btn-group.outline > .btn-group > *.primary:hover,
-.btn-group.outline.primary > .btn-group > *:hover {
+.btn-group.outline > *.primary:hover,
+.btn-group.outline.primary > *:hover {
   color: white;
   background: #105c9a;
 }
@@ -2849,18 +2776,8 @@ button:not([type]).outline.primary:hover,
 [type="reset"].outline.secondary,
 button:not([type]).outline.secondary,
 .btn-group > *.outline.secondary,
-.btn-group.outline > .btn.secondary,
-.btn-group.outline.secondary > .btn,
-.btn-group.outline > [type="submit"].secondary,
-.btn-group.outline.secondary > [type="submit"],
-.btn-group.outline > [type="button"].secondary,
-.btn-group.outline.secondary > [type="button"],
-.btn-group.outline > [type="reset"].secondary,
-.btn-group.outline.secondary > [type="reset"],
-.btn-group.outline > button:not([type]).secondary,
-.btn-group.outline.secondary > button:not([type]),
-.btn-group.outline > .btn-group > *.secondary,
-.btn-group.outline.secondary > .btn-group > * {
+.btn-group.outline > *.secondary,
+.btn-group.outline.secondary > * {
   color: #56b9d9;
   border-color: #56b9d9;
 }
@@ -2870,18 +2787,8 @@ button:not([type]).outline.secondary,
 [type="reset"].outline.secondary:hover,
 button:not([type]).outline.secondary:hover,
 .btn-group > *.outline.secondary:hover,
-.btn-group.outline > .btn.secondary:hover,
-.btn-group.outline.secondary > .btn:hover,
-.btn-group.outline > [type="submit"].secondary:hover,
-.btn-group.outline.secondary > [type="submit"]:hover,
-.btn-group.outline > [type="button"].secondary:hover,
-.btn-group.outline.secondary > [type="button"]:hover,
-.btn-group.outline > [type="reset"].secondary:hover,
-.btn-group.outline.secondary > [type="reset"]:hover,
-.btn-group.outline > button:not([type]).secondary:hover,
-.btn-group.outline.secondary > button:not([type]):hover,
-.btn-group.outline > .btn-group > *.secondary:hover,
-.btn-group.outline.secondary > .btn-group > *:hover {
+.btn-group.outline > *.secondary:hover,
+.btn-group.outline.secondary > *:hover {
   color: white;
   background: #56b9d9;
 }
@@ -2891,18 +2798,8 @@ button:not([type]).outline.secondary:hover,
 [type="reset"].outline.success,
 button:not([type]).outline.success,
 .btn-group > *.outline.success,
-.btn-group.outline > .btn.success,
-.btn-group.outline.success > .btn,
-.btn-group.outline > [type="submit"].success,
-.btn-group.outline.success > [type="submit"],
-.btn-group.outline > [type="button"].success,
-.btn-group.outline.success > [type="button"],
-.btn-group.outline > [type="reset"].success,
-.btn-group.outline.success > [type="reset"],
-.btn-group.outline > button:not([type]).success,
-.btn-group.outline.success > button:not([type]),
-.btn-group.outline > .btn-group > *.success,
-.btn-group.outline.success > .btn-group > * {
+.btn-group.outline > *.success,
+.btn-group.outline.success > * {
   color: #5cb85c;
   border-color: #5cb85c;
 }
@@ -2912,18 +2809,8 @@ button:not([type]).outline.success,
 [type="reset"].outline.success:hover,
 button:not([type]).outline.success:hover,
 .btn-group > *.outline.success:hover,
-.btn-group.outline > .btn.success:hover,
-.btn-group.outline.success > .btn:hover,
-.btn-group.outline > [type="submit"].success:hover,
-.btn-group.outline.success > [type="submit"]:hover,
-.btn-group.outline > [type="button"].success:hover,
-.btn-group.outline.success > [type="button"]:hover,
-.btn-group.outline > [type="reset"].success:hover,
-.btn-group.outline.success > [type="reset"]:hover,
-.btn-group.outline > button:not([type]).success:hover,
-.btn-group.outline.success > button:not([type]):hover,
-.btn-group.outline > .btn-group > *.success:hover,
-.btn-group.outline.success > .btn-group > *:hover {
+.btn-group.outline > *.success:hover,
+.btn-group.outline.success > *:hover {
   color: white;
   background: #5cb85c;
 }
@@ -2933,18 +2820,8 @@ button:not([type]).outline.success:hover,
 [type="reset"].outline.warning,
 button:not([type]).outline.warning,
 .btn-group > *.outline.warning,
-.btn-group.outline > .btn.warning,
-.btn-group.outline.warning > .btn,
-.btn-group.outline > [type="submit"].warning,
-.btn-group.outline.warning > [type="submit"],
-.btn-group.outline > [type="button"].warning,
-.btn-group.outline.warning > [type="button"],
-.btn-group.outline > [type="reset"].warning,
-.btn-group.outline.warning > [type="reset"],
-.btn-group.outline > button:not([type]).warning,
-.btn-group.outline.warning > button:not([type]),
-.btn-group.outline > .btn-group > *.warning,
-.btn-group.outline.warning > .btn-group > * {
+.btn-group.outline > *.warning,
+.btn-group.outline.warning > * {
   color: #df7514;
   border-color: #df7514;
 }
@@ -2954,18 +2831,8 @@ button:not([type]).outline.warning,
 [type="reset"].outline.warning:hover,
 button:not([type]).outline.warning:hover,
 .btn-group > *.outline.warning:hover,
-.btn-group.outline > .btn.warning:hover,
-.btn-group.outline.warning > .btn:hover,
-.btn-group.outline > [type="submit"].warning:hover,
-.btn-group.outline.warning > [type="submit"]:hover,
-.btn-group.outline > [type="button"].warning:hover,
-.btn-group.outline.warning > [type="button"]:hover,
-.btn-group.outline > [type="reset"].warning:hover,
-.btn-group.outline.warning > [type="reset"]:hover,
-.btn-group.outline > button:not([type]).warning:hover,
-.btn-group.outline.warning > button:not([type]):hover,
-.btn-group.outline > .btn-group > *.warning:hover,
-.btn-group.outline.warning > .btn-group > *:hover {
+.btn-group.outline > *.warning:hover,
+.btn-group.outline.warning > *:hover {
   color: white;
   background: #df7514;
 }
@@ -2975,18 +2842,8 @@ button:not([type]).outline.warning:hover,
 [type="reset"].outline.error,
 button:not([type]).outline.error,
 .btn-group > *.outline.error,
-.btn-group.outline > .btn.error,
-.btn-group.outline.error > .btn,
-.btn-group.outline > [type="submit"].error,
-.btn-group.outline.error > [type="submit"],
-.btn-group.outline > [type="button"].error,
-.btn-group.outline.error > [type="button"],
-.btn-group.outline > [type="reset"].error,
-.btn-group.outline.error > [type="reset"],
-.btn-group.outline > button:not([type]).error,
-.btn-group.outline.error > button:not([type]),
-.btn-group.outline > .btn-group > *.error,
-.btn-group.outline.error > .btn-group > * {
+.btn-group.outline > *.error,
+.btn-group.outline.error > * {
   color: #ca3c3c;
   border-color: #ca3c3c;
 }
@@ -2996,18 +2853,8 @@ button:not([type]).outline.error,
 [type="reset"].outline.error:hover,
 button:not([type]).outline.error:hover,
 .btn-group > *.outline.error:hover,
-.btn-group.outline > .btn.error:hover,
-.btn-group.outline.error > .btn:hover,
-.btn-group.outline > [type="submit"].error:hover,
-.btn-group.outline.error > [type="submit"]:hover,
-.btn-group.outline > [type="button"].error:hover,
-.btn-group.outline.error > [type="button"]:hover,
-.btn-group.outline > [type="reset"].error:hover,
-.btn-group.outline.error > [type="reset"]:hover,
-.btn-group.outline > button:not([type]).error:hover,
-.btn-group.outline.error > button:not([type]):hover,
-.btn-group.outline > .btn-group > *.error:hover,
-.btn-group.outline.error > .btn-group > *:hover {
+.btn-group.outline > *.error:hover,
+.btn-group.outline.error > *:hover {
   color: white;
   background: #ca3c3c;
 }
@@ -3017,12 +2864,7 @@ button:not([type]).outline.error:hover,
 [type="reset"].invert,
 button:not([type]).invert,
 .btn-group > *.invert,
-.btn-group.invert > .btn,
-.btn-group.invert > [type="submit"],
-.btn-group.invert > [type="button"],
-.btn-group.invert > [type="reset"],
-.btn-group.invert > button:not([type]),
-.btn-group.invert > .btn-group > * {
+.btn-group.invert > * {
   color: white;
   border-color: white !important;
 }
@@ -3032,12 +2874,7 @@ button:not([type]).invert,
 [type="reset"].invert:hover,
 button:not([type]).invert:hover,
 .btn-group > *.invert:hover,
-.btn-group.invert > .btn:hover,
-.btn-group.invert > [type="submit"]:hover,
-.btn-group.invert > [type="button"]:hover,
-.btn-group.invert > [type="reset"]:hover,
-.btn-group.invert > button:not([type]):hover,
-.btn-group.invert > .btn-group > *:hover {
+.btn-group.invert > *:hover {
   background: #aaaaaa;
 }
 .btn.invert.primary:hover,
@@ -3047,18 +2884,8 @@ button:not([type]).invert:hover,
 [type="reset"].invert.primary:hover,
 button:not([type]).invert.primary:hover,
 .btn-group > *.invert.primary:hover,
-.btn-group.invert > .btn.primary:hover,
-.btn-group.invert.primary > .btn:hover,
-.btn-group.invert > [type="submit"].primary:hover,
-.btn-group.invert.primary > [type="submit"]:hover,
-.btn-group.invert > [type="button"].primary:hover,
-.btn-group.invert.primary > [type="button"]:hover,
-.btn-group.invert > [type="reset"].primary:hover,
-.btn-group.invert.primary > [type="reset"]:hover,
-.btn-group.invert > button:not([type]).primary:hover,
-.btn-group.invert.primary > button:not([type]):hover,
-.btn-group.invert > .btn-group > *.primary:hover,
-.btn-group.invert.primary > .btn-group > *:hover {
+.btn-group.invert > *.primary:hover,
+.btn-group.invert.primary > *:hover {
   background: #105c9a;
 }
 .btn.invert.secondary:hover,
@@ -3067,18 +2894,8 @@ button:not([type]).invert.primary:hover,
 [type="reset"].invert.secondary:hover,
 button:not([type]).invert.secondary:hover,
 .btn-group > *.invert.secondary:hover,
-.btn-group.invert > .btn.secondary:hover,
-.btn-group.invert.secondary > .btn:hover,
-.btn-group.invert > [type="submit"].secondary:hover,
-.btn-group.invert.secondary > [type="submit"]:hover,
-.btn-group.invert > [type="button"].secondary:hover,
-.btn-group.invert.secondary > [type="button"]:hover,
-.btn-group.invert > [type="reset"].secondary:hover,
-.btn-group.invert.secondary > [type="reset"]:hover,
-.btn-group.invert > button:not([type]).secondary:hover,
-.btn-group.invert.secondary > button:not([type]):hover,
-.btn-group.invert > .btn-group > *.secondary:hover,
-.btn-group.invert.secondary > .btn-group > *:hover {
+.btn-group.invert > *.secondary:hover,
+.btn-group.invert.secondary > *:hover {
   background: #56b9d9;
 }
 .btn.invert.success:hover,
@@ -3087,18 +2904,8 @@ button:not([type]).invert.secondary:hover,
 [type="reset"].invert.success:hover,
 button:not([type]).invert.success:hover,
 .btn-group > *.invert.success:hover,
-.btn-group.invert > .btn.success:hover,
-.btn-group.invert.success > .btn:hover,
-.btn-group.invert > [type="submit"].success:hover,
-.btn-group.invert.success > [type="submit"]:hover,
-.btn-group.invert > [type="button"].success:hover,
-.btn-group.invert.success > [type="button"]:hover,
-.btn-group.invert > [type="reset"].success:hover,
-.btn-group.invert.success > [type="reset"]:hover,
-.btn-group.invert > button:not([type]).success:hover,
-.btn-group.invert.success > button:not([type]):hover,
-.btn-group.invert > .btn-group > *.success:hover,
-.btn-group.invert.success > .btn-group > *:hover {
+.btn-group.invert > *.success:hover,
+.btn-group.invert.success > *:hover {
   background: #5cb85c;
 }
 .btn.invert.warning:hover,
@@ -3107,18 +2914,8 @@ button:not([type]).invert.success:hover,
 [type="reset"].invert.warning:hover,
 button:not([type]).invert.warning:hover,
 .btn-group > *.invert.warning:hover,
-.btn-group.invert > .btn.warning:hover,
-.btn-group.invert.warning > .btn:hover,
-.btn-group.invert > [type="submit"].warning:hover,
-.btn-group.invert.warning > [type="submit"]:hover,
-.btn-group.invert > [type="button"].warning:hover,
-.btn-group.invert.warning > [type="button"]:hover,
-.btn-group.invert > [type="reset"].warning:hover,
-.btn-group.invert.warning > [type="reset"]:hover,
-.btn-group.invert > button:not([type]).warning:hover,
-.btn-group.invert.warning > button:not([type]):hover,
-.btn-group.invert > .btn-group > *.warning:hover,
-.btn-group.invert.warning > .btn-group > *:hover {
+.btn-group.invert > *.warning:hover,
+.btn-group.invert.warning > *:hover {
   background: #df7514;
 }
 .btn.invert.error:hover,
@@ -3127,18 +2924,8 @@ button:not([type]).invert.warning:hover,
 [type="reset"].invert.error:hover,
 button:not([type]).invert.error:hover,
 .btn-group > *.invert.error:hover,
-.btn-group.invert > .btn.error:hover,
-.btn-group.invert.error > .btn:hover,
-.btn-group.invert > [type="submit"].error:hover,
-.btn-group.invert.error > [type="submit"]:hover,
-.btn-group.invert > [type="button"].error:hover,
-.btn-group.invert.error > [type="button"]:hover,
-.btn-group.invert > [type="reset"].error:hover,
-.btn-group.invert.error > [type="reset"]:hover,
-.btn-group.invert > button:not([type]).error:hover,
-.btn-group.invert.error > button:not([type]):hover,
-.btn-group.invert > .btn-group > *.error:hover,
-.btn-group.invert.error > .btn-group > *:hover {
+.btn-group.invert > *.error:hover,
+.btn-group.invert.error > *:hover {
   background: #ca3c3c;
 }
 .btn-group:after {
@@ -3701,7 +3488,7 @@ form:not(.flat) > .success .input-group select {
 form:not(.flat) > .success .input-group input:focus,
 form:not(.flat) > .success .input-group textarea:focus,
 form:not(.flat) > .success .input-group select:focus {
-  box-shadow: 0 0 5px 0 rgba(92, 184, 92, 0.5);
+  box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.3);
 }
 .input-group.success > span,
 .input-group.success > label,
@@ -3737,7 +3524,7 @@ form:not(.flat) > .warning .input-group select {
 form:not(.flat) > .warning .input-group input:focus,
 form:not(.flat) > .warning .input-group textarea:focus,
 form:not(.flat) > .warning .input-group select:focus {
-  box-shadow: 0 0 5px 0 rgba(223, 117, 20, 0.5);
+  box-shadow: 0 0 0 2px rgba(223, 117, 20, 0.3);
 }
 .input-group.warning > span,
 .input-group.warning > label,
@@ -3773,7 +3560,7 @@ form:not(.flat) > .error .input-group select {
 form:not(.flat) > .error .input-group input:focus,
 form:not(.flat) > .error .input-group textarea:focus,
 form:not(.flat) > .error .input-group select:focus {
-  box-shadow: 0 0 5px 0 rgba(202, 60, 60, 0.5);
+  box-shadow: 0 0 0 2px rgba(202, 60, 60, 0.3);
 }
 .input-group.error > span,
 .input-group.error > label,
