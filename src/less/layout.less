@@ -1,0 +1,68 @@
+@import "variables.less";
+
+body > header {
+	background-color: @color-primary;
+	margin-bottom: 2em;
+	
+	&.index {
+		height: 300px;
+		
+		.logo {
+			width: 100%;
+			text-align: center;
+			padding-top: 3.5em;
+
+			.text {
+				font-size: 10em;
+			}
+
+			.download-btn {
+				margin-top: 1em;
+
+				button {
+					color: white;
+					font-size: 2em;
+					border-color: white;
+					&:hover {
+						color: @color-primary;
+						border-color: white !important;
+						background-color: white !important;
+					}
+				}
+			}
+		}
+	}
+	
+	&:not(.index) {
+		height: 4em;
+		line-height: 4em;
+		
+		> div {
+			.container-lg;
+		}
+		
+		a.logo {
+			font-size: 2.5em;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+	}
+	
+	a.logo {
+		color: white;
+	}
+}
+
+body > section {
+	.container-lg;
+	.row();
+	
+	> nav {
+		.col(3);
+		padding-right: 2em;
+	}
+	
+	> div {
+		.col(9);
+	}
+}

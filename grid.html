@@ -1,50 +1,34 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
 
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link href="/fresh-css/css/main.css" rel="stylesheet" />
 	<link href="main.css" rel="stylesheet" />
 </head>
-
 <body>
-	<header class="little">
-	<div class="logo">
-		<span class="text">FRESH-CSS</span>
+	<header>
+	<div>
+		<a href="./" class="logo">Fresh-Css</a>
 	</div>
 </header>
-	<div class="container-lg">
-		<div class="row">
-			<div class="col-3">
-				<nav class="vertical lined left-menu">
+	<section>
+		<nav id="Menu" class="vertical lined">
 	<ul>
-		<li class=""><a href="getstarted.html">Get Started</a>
-		</li>
-		<li class=""><a href="typography.html">Typography</a>
-		</li>
-		<li class="active"><a href="grid.html">Grid</a>
-		</li>
-		<li class=""><a href="blocks.html">Blocks</a>
-		</li>
-		<li class=""><a href="tables.html">Tables</a>
-		</li>
-		<li class=""><a href="forms.html">Forms</a>
-		</li>
-		<li class=""><a href="navigation.html">Navigation</a>
-		</li>
-
-		<li class=""><a href="buttons.html">Buttons</a>
-		</li>
-		<li class=""><a href="labels.html">Labels</a>
-		</li>
-		<li class=""><a href="helpers.html">Helpers</a>
-		</li>
+		<li><a href="/">Get Started</a></li>
+		<li><a href="/typography.html">Typography</a></li>
+		<li><a href="/grid.html">Grid</a></li>
+		<li><a href="/blocks.html">Blocks</a></li>
+		<li><a href="/tables.html">Tables</a></li>
+		<li><a href="/forms.html">Forms</a></li>
+		<li><a href="/navigation.html">Navigation</a></li>
+		<li><a href="/buttons.html">Buttons</a></li>
+		<li><a href="/labels.html">Labels</a></li>
+		<li><a href="/helpers.html">Helpers</a></li>
 	</ul>
 </nav>
-			</div>
-			<div class="col-9">
-				<h1>Grid system</h1>
+		<div>
+			<h1>Grid system</h1>
 <h3><strong>Responsive flexible grid.</strong></h3>
 <p><strong>Fresh-css includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts.</strong>
 </p>
@@ -747,10 +731,19 @@
 		</li>
 	</ol>
 </div>
-			</div>
 		</div>
 	</div>
+	
+	<script>
+		var url = window.location.pathname.toLowerCase();
+		[].forEach.call(
+			document.querySelectorAll("#Menu ul > li"),
+			function (item) {
+				var href = item.children[0].getAttribute("href").toLowerCase();
+				if (href == url)
+					item.classList.add("active");
+			}
+		);
+	</script>
 </body>
-
-
 </html>

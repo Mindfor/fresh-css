@@ -1,34 +1,30 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
 
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<!-- build:[href]:release /fresh-css/css/ -->
-	<link href="main.css" rel="stylesheet" />
-	<!-- /build -->
 	<link href="main.css" rel="stylesheet" />
 </head>
-
 <body>
-	<!-- build:include {{headerTemplate}} -->
-	This will be replaced by the content of header.html
-	<!-- /build -->
-	<div class="container-lg">
-		<div class="row">
-			<div class="col-3">
-				<!-- build:include left-menu.html -->
-				This will be replaced by the content of left-menu.html
-				<!-- /build -->
-			</div>
-			<div class="col-9">
-				<!-- build:include {{contentTemplate}} -->
-				This will be replaced by the content of get-started.html
-				<!-- /build -->
-			</div>
+	<!-- build:include {{header}} --><!-- /build -->
+	<section>
+		<!-- build:include menu.html --><!-- /build -->
+		<div>
+			<!-- build:include content/{{content}} --><!-- /build -->
 		</div>
 	</div>
+	<!-- build:include footer.html --><!-- /build -->
+	<script>
+		var url = window.location.pathname.toLowerCase();
+		[].forEach.call(
+			document.querySelectorAll("#Menu ul > li"),
+			function (item) {
+				var href = item.children[0].getAttribute("href").toLowerCase();
+				if (href == url)
+					item.classList.add("active");
+			}
+		);
+	</script>
 </body>
-
-
 </html>
