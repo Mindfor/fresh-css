@@ -54,7 +54,7 @@ gulp.task("compile", function () {
 
 			// Choose header depending on whether it start page or others pages
 			if (name == "index")
-				options.data.headerTemplate = "header-index.html";
+				options.data.header = "header-index.html";
 		
 			return gulp.src(paths.src + "/layout.html")
 				.pipe($.processhtml(options))
