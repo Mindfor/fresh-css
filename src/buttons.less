@@ -17,7 +17,7 @@
 	}
 
 	&:focus {
-		box-shadow: 0 0 0px 2px fade(@bg, @btn-focus-fade);
+		box-shadow: 0 0 @btn-focus-blur @btn-focus-spread fade(@bg, @btn-focus-fade);
 	}
 }
 
@@ -73,7 +73,7 @@
 	
 	&:active,
 	&.active {
-		box-shadow: 0 0px 7px rgba(0, 0, 0, .5) inset !important;
+		box-shadow: @btn-active-shadow !important;
 	}
 }
 

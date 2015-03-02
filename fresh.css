@@ -615,7 +615,7 @@ kbd {
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
-  justify-content: flext-start;
+  justify-content: flex-start;
 }
 .row:after {
   content: "";
@@ -1247,7 +1247,7 @@ kbd {
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
-  justify-content: flext-start;
+  justify-content: flex-start;
   list-style: none;
   padding: 0;
 }
@@ -2363,7 +2363,7 @@ button:not([type]).active,
 [type="reset"]:focus,
 button:not([type]):focus,
 .btn-group > *:focus {
-  box-shadow: 0 0 0px 2px rgba(170, 170, 170, 0.5);
+  box-shadow: 0 0 0 2px rgba(170, 170, 170, 0.5);
 }
 .btn.primary,
 [type="submit"].primary,
@@ -2421,7 +2421,7 @@ button:not([type]).primary.active,
 button:not([type]).primary:focus,
 .btn-group > *.primary:focus,
 .btn-group.primary > *:focus {
-  box-shadow: 0 0 0px 2px rgba(16, 92, 154, 0.5);
+  box-shadow: 0 0 0 2px rgba(16, 92, 154, 0.5);
 }
 .btn.secondary,
 [type="submit"].secondary,
@@ -2473,7 +2473,7 @@ button:not([type]).secondary.active,
 button:not([type]).secondary:focus,
 .btn-group > *.secondary:focus,
 .btn-group.secondary > *:focus {
-  box-shadow: 0 0 0px 2px rgba(86, 185, 217, 0.5);
+  box-shadow: 0 0 0 2px rgba(86, 185, 217, 0.5);
 }
 .btn.success,
 [type="submit"].success,
@@ -2525,7 +2525,7 @@ button:not([type]).success.active,
 button:not([type]).success:focus,
 .btn-group > *.success:focus,
 .btn-group.success > *:focus {
-  box-shadow: 0 0 0px 2px rgba(92, 184, 92, 0.5);
+  box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.5);
 }
 .btn.warning,
 [type="submit"].warning,
@@ -2577,7 +2577,7 @@ button:not([type]).warning.active,
 button:not([type]).warning:focus,
 .btn-group > *.warning:focus,
 .btn-group.warning > *:focus {
-  box-shadow: 0 0 0px 2px rgba(223, 117, 20, 0.5);
+  box-shadow: 0 0 0 2px rgba(223, 117, 20, 0.5);
 }
 .btn.error,
 [type="submit"].error,
@@ -2629,7 +2629,7 @@ button:not([type]).error.active,
 button:not([type]).error:focus,
 .btn-group > *.error:focus,
 .btn-group.error > *:focus {
-  box-shadow: 0 0 0px 2px rgba(202, 60, 60, 0.5);
+  box-shadow: 0 0 0 2px rgba(202, 60, 60, 0.5);
 }
 .btn.link,
 [type="submit"].link,
@@ -3329,7 +3329,7 @@ form:not(.flat) > section:not(.controls) {
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
-  justify-content: flext-start;
+  justify-content: flex-start;
   margin-bottom: 1em;
 }
 .form > section:not(.controls):after,
