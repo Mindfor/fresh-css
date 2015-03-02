@@ -3058,12 +3058,10 @@ nav:not(.flat):after {
 nav:not(.flat) ul {
   display: inline-block;
 }
-.nav > a,
-.nav > span,
-nav:not(.flat) > a,
-nav:not(.flat) > span {
+.nav > header,
+nav:not(.flat) > header {
   display: inline-block;
-  padding: 0.6em 1em;
+  padding: 0.4em 1em;
   font-size: 0.9em;
   text-transform: uppercase;
 }
@@ -3076,7 +3074,7 @@ nav:not(.flat) ul > li {
 nav:not(.flat) ul > li > a,
 nav:not(.flat) ul > li > span {
   display: block;
-  padding: 0.6em 1em;
+  padding: 0.4em 1em;
   text-decoration: none;
   border-radius: 2px;
   border: 1px solid transparent;
@@ -3103,10 +3101,8 @@ nav:not(.flat) ul > li.disabled > span {
   background: none;
   cursor: not-allowed;
 }
-.nav.vertical > a,
-.nav.vertical > span,
-nav:not(.flat).vertical > a,
-nav:not(.flat).vertical > span {
+.nav.vertical > header,
+nav:not(.flat).vertical > header {
   display: block;
   border-bottom: 1px solid #bdbdbd;
   margin-top: 0.5em;
