@@ -1964,6 +1964,10 @@ kbd {
     margin-left: 1em;
   }
 }
+input,
+select {
+  line-height: normal;
+}
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -1989,7 +1993,7 @@ select {
   background: white;
   border: 1px solid #bdbdbd;
   border-radius: 2px;
-  padding: 0.3em 0.5em;
+  padding: 0.6em 0.5em;
   vertical-align: middle;
   -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
   transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
@@ -2069,22 +2073,6 @@ input[type="datetime-local"]:-ms-input-placeholder,
 textarea:-ms-input-placeholder,
 select:-ms-input-placeholder {
   color: #565d64;
-}
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="url"],
-input[type="phone"],
-input[type="tel"],
-input[type="number"],
-input[type="datetime"],
-input[type="date"],
-input[type="month"],
-input[type="color"],
-input[type="time"],
-input[type="search"],
-input[type="datetime-local"] {
-  line-height: 1.65em;
 }
 textarea,
 select[multiple],
@@ -2265,7 +2253,7 @@ button:not([type]),
   vertical-align: baseline;
   font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
   font-weight: normal;
-  line-height: 1.65em;
+  line-height: normal;
   text-align: center;
   text-decoration: none;
   -webkit-appearance: none;
@@ -2275,7 +2263,7 @@ button:not([type]),
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
-  padding: 0.3em 1em;
+  padding: 0.6em 1em;
   -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
   transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
@@ -3075,7 +3063,7 @@ nav:not(.flat) ul {
 nav:not(.flat) > a,
 nav:not(.flat) > span {
   display: inline-block;
-  padding: 0.3em 1em;
+  padding: 0.6em 1em;
   font-size: 0.9em;
   text-transform: uppercase;
 }
@@ -3088,7 +3076,7 @@ nav:not(.flat) ul > li {
 nav:not(.flat) ul > li > a,
 nav:not(.flat) ul > li > span {
   display: block;
-  padding: 0.3em 1em;
+  padding: 0.6em 1em;
   text-decoration: none;
   border-radius: 2px;
   border: 1px solid transparent;
@@ -3385,7 +3373,7 @@ form:not(.flat) > section:not(.controls) > output {
   .form > section:not(.controls) > output,
   form:not(.flat) > section:not(.controls) > label,
   form:not(.flat) > section:not(.controls) > output {
-    padding-top: 0.3em;
+    padding-top: 0.6em;
     border-top: 1px solid transparent;
   }
 }
@@ -3463,7 +3451,8 @@ ul.checkbox-inline > li {
   border-top-left-radius: 0;
 }
 .input-group > span {
-  padding: 0.3em 0.5em;
+  line-height: normal;
+  padding: 0.6em 0.5em;
   border: 1px solid #bdbdbd;
   border-radius: 2px;
   background-color: #f4f4f4;
@@ -3607,7 +3596,7 @@ ul.pagination > li:not(:first-child) {
 ul.pagination > li > a,
 ul.pagination > li > span {
   display: block;
-  padding: 0.3em 0.8em;
+  padding: 0.6em 0.8em;
   text-decoration: none;
 }
 ul.pagination > li > a:hover,

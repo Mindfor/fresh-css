@@ -1,6 +1,11 @@
 @import "variables.less";
 @import "mixins.less";
 
+input,
+select {
+	line-height: normal;
+}
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -27,7 +32,7 @@ select {
 	background: @control-bg;
 	border: @control-border;
 	border-radius: @control-border-radius;
-	padding: @control-padding;
+	padding: @control-padding-v @control-padding-h;
 	vertical-align: middle;
 	.transition(@control-transition);
 
@@ -52,27 +57,10 @@ select {
 	}
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="url"],
-input[type="phone"],
-input[type="tel"],
-input[type="number"],
-input[type="datetime"],
-input[type="date"],
-input[type="month"],
-input[type="color"],
-input[type="time"],
-input[type="search"],
-input[type="datetime-local"] {
-	line-height: @line-height;
-}
-
 textarea,
 select[multiple],
 select[multiple="multiple"] {
-	line-height: 1.35em;
+	line-height: @control-multiline-height;
 	width: 100%;
 }
 
