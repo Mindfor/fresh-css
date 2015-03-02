@@ -3596,7 +3596,8 @@ ul.pagination > li:not(:first-child) {
 ul.pagination > li > a,
 ul.pagination > li > span {
   display: block;
-  padding: 0.6em 0.8em;
+  line-height: normal;
+  padding: 0.6em 0.9em;
   text-decoration: none;
 }
 ul.pagination > li > a:hover,
