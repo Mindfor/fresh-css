@@ -3,11 +3,11 @@
 @import "buttons.less";
 
 .btn-group {
+	&:extend(.flex all);
 	.clearfix();
 	
 	> * {
 		&:extend(.btn all);
-		float: left;
 		
 		&:not(:first-child) {
 			.border-left-radius(0);
@@ -19,8 +19,11 @@
 		}
 	}
 	
+	&.vertical {
+		display: block;
+	}
+	
 	&.vertical > * {
-		float: none;
 		display: block;
 		border-radius: @btn-border-radius;
 		margin: 0;

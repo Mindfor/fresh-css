@@ -607,6 +607,39 @@ kbd {
     max-width: 80em;
   }
 }
+.flex,
+.btn-group {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.flex.pull-left,
+.btn-group.pull-left {
+  float: none;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.flex.pull-right,
+.btn-group.pull-right {
+  float: none;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.flex.pull-center,
+.btn-group.pull-center {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+}
 .row {
   display: -webkit-box;
   display: -moz-box;
@@ -2921,9 +2954,6 @@ button:not([type]).invert.error:hover,
   display: table;
   clear: both;
 }
-.btn-group > * {
-  float: left;
-}
 .btn-group > *:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -2933,8 +2963,10 @@ button:not([type]).invert.error:hover,
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
+.btn-group.vertical {
+  display: block;
+}
 .btn-group.vertical > * {
-  float: none;
   display: block;
   border-radius: 4px;
   margin: 0;
