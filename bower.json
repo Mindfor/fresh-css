@@ -3,7 +3,7 @@
 	"private": true,
 	"authors": ["Mindfor Ltd."],
 	"dependencies": {
-		"fresh-css": "*",
+		"fresh-css": "0.4.3",
 		"font-awesome": "^4.3.0"
 	}
 }
