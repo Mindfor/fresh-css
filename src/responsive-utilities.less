@@ -1,0 +1,33 @@
+@import "variables.less";
+@import "mixins.less";
+
+.hidden(@suffix, @min-width, @max-width) {
+	.hidden-@{suffix}{
+			@media (min-width: @min-width) {
+		display: none !important;
+	}
+	}
+	.hidden-@{suffix}-only{
+		@media (min-width: @min-width) and (max-width: @max-width) {
+		display: none !important;
+	}
+	}
+}
+.hidden-before(@suffix, @max-width) {
+	.hidden-before-@{suffix}{
+			@media (max-width: @max-width) {
+		display: none !important;
+	}
+	}
+}
+.hidden-before(sm, @width-sm);
+.hidden(sm, @width-sm, @width-md);
+.hidden(md, @width-md, @width-lg);
+.hidden(lg, @width-lg, @width-xxl);
+
+.hidden-xxl, 
+.hidden-xxl-only{
+	@media (min-width:  @width-xxl){
+		display: none !important;
+	}
+}
