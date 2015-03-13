@@ -21,8 +21,9 @@ legend {
 
 // Form
 .form {
-	// One-by-one labels with controls
-	> label {
+	// One-by-one labels or vertical sections with controls
+	> label,
+	> section.vertical {
 		.clearfix();
 		display: block;
 		margin: 0 -@control-border-radius 1em @control-border-radius;
@@ -74,8 +75,9 @@ legend {
 	}
 	
 	// Inline container
-	&.inline, > .inline {
+	&.inline, .inline {
 		input,
+		.input-group,
 		button,
 		textarea,
 		select {
@@ -86,8 +88,8 @@ legend {
 	}
 	
 	// Section = aligned row
-	> fieldset > section:not(.controls),
-	> section:not(.controls) {
+	> section:not(.vertical):not(.controls),
+	> fieldset > section:not(.vertical):not(.controls) {
 		.row;
 		margin-bottom: 1em;
 		
@@ -103,6 +105,10 @@ legend {
 		> output {
 			.col(1, 1);
 			.col-md(@form-aligned-right, @form-aligned-columns);
+			
+			&:first-child {
+				.col-offset-md(@form-aligned-left, @form-aligned-columns);
+			}
 		}
 		
 		@media (min-width: @width-md) {
@@ -167,11 +173,10 @@ form:not(.flat) {
 }
 
 // Required
-label.req {
-	> span:first-child:after {
-		content: " *";
-		color: red;
-	}
+section.req > label:first-child:after,
+label.req > span:first-child:after {
+	content: " *";
+	color: red;
 }
 
 // Checkbox / radio list

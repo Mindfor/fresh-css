@@ -3372,44 +3372,74 @@ legend {
   border-bottom: 1px solid #bdbdbd;
 }
 .form > label,
-form:not(.flat) > label {
+.form > section.vertical,
+form:not(.flat) > label,
+form:not(.flat) > section.vertical {
   display: block;
   margin: 0 -2px 1em 2px;
 }
 .form > label:after,
-form:not(.flat) > label:after {
+.form > section.vertical:after,
+form:not(.flat) > label:after,
+form:not(.flat) > section.vertical:after {
   content: "";
   display: table;
   clear: both;
 }
 .form > label > input,
+.form > section.vertical > input,
 .form > label > textarea,
+.form > section.vertical > textarea,
 .form > label > select,
+.form > section.vertical > select,
 .form > label > div,
+.form > section.vertical > div,
 .form > label > label,
+.form > section.vertical > label,
 form:not(.flat) > label > input,
+form:not(.flat) > section.vertical > input,
 form:not(.flat) > label > textarea,
+form:not(.flat) > section.vertical > textarea,
 form:not(.flat) > label > select,
+form:not(.flat) > section.vertical > select,
 form:not(.flat) > label > div,
-form:not(.flat) > label > label {
+form:not(.flat) > section.vertical > div,
+form:not(.flat) > label > label,
+form:not(.flat) > section.vertical > label {
   margin-left: -2px;
 }
 .form > label > input + label.radio,
+.form > section.vertical > input + label.radio,
 .form > label > textarea + label.radio,
+.form > section.vertical > textarea + label.radio,
 .form > label > select + label.radio,
+.form > section.vertical > select + label.radio,
 .form > label > div + label.radio,
+.form > section.vertical > div + label.radio,
 .form > label > input + label.checkbox,
+.form > section.vertical > input + label.checkbox,
 .form > label > textarea + label.checkbox,
+.form > section.vertical > textarea + label.checkbox,
 .form > label > select + label.checkbox,
+.form > section.vertical > select + label.checkbox,
 .form > label > div + label.checkbox,
+.form > section.vertical > div + label.checkbox,
 form:not(.flat) > label > input + label.radio,
+form:not(.flat) > section.vertical > input + label.radio,
 form:not(.flat) > label > textarea + label.radio,
+form:not(.flat) > section.vertical > textarea + label.radio,
 form:not(.flat) > label > select + label.radio,
+form:not(.flat) > section.vertical > select + label.radio,
 form:not(.flat) > label > div + label.radio,
+form:not(.flat) > section.vertical > div + label.radio,
 form:not(.flat) > label > input + label.checkbox,
+form:not(.flat) > section.vertical > input + label.checkbox,
 form:not(.flat) > label > textarea + label.checkbox,
+form:not(.flat) > section.vertical > textarea + label.checkbox,
 form:not(.flat) > label > select + label.checkbox,
-form:not(.flat) > label > div + label.checkbox {
+form:not(.flat) > section.vertical > select + label.checkbox,
+form:not(.flat) > label > div + label.checkbox,
+form:not(.flat) > section.vertical > div + label.checkbox {
   margin-top: .25em;
 }
 .form input[type="text"],
@@ -3458,29 +3488,33 @@ form:not(.flat) > * {
   clear: both;
 }
 .form.inline input,
-.form > .inline input,
+.form .inline input,
+.form.inline .input-group,
+.form .inline .input-group,
 .form.inline button,
-.form > .inline button,
+.form .inline button,
 .form.inline textarea,
-.form > .inline textarea,
+.form .inline textarea,
 .form.inline select,
-.form > .inline select,
+.form .inline select,
 form:not(.flat).inline input,
-form:not(.flat) > .inline input,
+form:not(.flat) .inline input,
+form:not(.flat).inline .input-group,
+form:not(.flat) .inline .input-group,
 form:not(.flat).inline button,
-form:not(.flat) > .inline button,
+form:not(.flat) .inline button,
 form:not(.flat).inline textarea,
-form:not(.flat) > .inline textarea,
+form:not(.flat) .inline textarea,
 form:not(.flat).inline select,
-form:not(.flat) > .inline select {
+form:not(.flat) .inline select {
   display: inline-block;
   vertical-align: middle;
   width: auto;
 }
-.form > fieldset > section:not(.controls),
-.form > section:not(.controls),
-form:not(.flat) > fieldset > section:not(.controls),
-form:not(.flat) > section:not(.controls) {
+.form > section:not(.vertical):not(.controls),
+.form > fieldset > section:not(.vertical):not(.controls),
+form:not(.flat) > section:not(.vertical):not(.controls),
+form:not(.flat) > fieldset > section:not(.vertical):not(.controls) {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -3491,104 +3525,128 @@ form:not(.flat) > section:not(.controls) {
   justify-content: flex-start;
   margin-bottom: 1em;
 }
-.form > fieldset > section:not(.controls):after,
-.form > section:not(.controls):after,
-form:not(.flat) > fieldset > section:not(.controls):after,
-form:not(.flat) > section:not(.controls):after {
+.form > section:not(.vertical):not(.controls):after,
+.form > fieldset > section:not(.vertical):not(.controls):after,
+form:not(.flat) > section:not(.vertical):not(.controls):after,
+form:not(.flat) > fieldset > section:not(.vertical):not(.controls):after {
   content: "";
   display: table;
   clear: both;
 }
-.form > fieldset > section:not(.controls) > *,
-.form > section:not(.controls) > *,
-form:not(.flat) > fieldset > section:not(.controls) > *,
-form:not(.flat) > section:not(.controls) > * {
+.form > section:not(.vertical):not(.controls) > *,
+.form > fieldset > section:not(.vertical):not(.controls) > *,
+form:not(.flat) > section:not(.vertical):not(.controls) > *,
+form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > * {
   display: block;
   width: 100%;
 }
-.form > fieldset > section:not(.controls) > script,
-.form > section:not(.controls) > script,
-form:not(.flat) > fieldset > section:not(.controls) > script,
-form:not(.flat) > section:not(.controls) > script {
+.form > section:not(.vertical):not(.controls) > script,
+.form > fieldset > section:not(.vertical):not(.controls) > script,
+form:not(.flat) > section:not(.vertical):not(.controls) > script,
+form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > script {
   display: none;
 }
-.form > fieldset > section:not(.controls) > label,
-.form > section:not(.controls) > label,
-form:not(.flat) > fieldset > section:not(.controls) > label,
-form:not(.flat) > section:not(.controls) > label {
+.form > section:not(.vertical):not(.controls) > label,
+.form > fieldset > section:not(.vertical):not(.controls) > label,
+form:not(.flat) > section:not(.vertical):not(.controls) > label,
+form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > label {
   width: 100%;
 }
 @media (min-width: 48em) {
-  .form > fieldset > section:not(.controls) > label,
-  .form > section:not(.controls) > label,
-  form:not(.flat) > fieldset > section:not(.controls) > label,
-  form:not(.flat) > section:not(.controls) > label {
+  .form > section:not(.vertical):not(.controls) > label,
+  .form > fieldset > section:not(.vertical):not(.controls) > label,
+  form:not(.flat) > section:not(.vertical):not(.controls) > label,
+  form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > label {
     width: 25%;
   }
 }
-.form > fieldset > section:not(.controls) > input,
-.form > section:not(.controls) > input,
-.form > fieldset > section:not(.controls) > textarea,
-.form > section:not(.controls) > textarea,
-.form > fieldset > section:not(.controls) > select,
-.form > section:not(.controls) > select,
-.form > fieldset > section:not(.controls) > div,
-.form > section:not(.controls) > div,
-.form > fieldset > section:not(.controls) > output,
-.form > section:not(.controls) > output,
-form:not(.flat) > fieldset > section:not(.controls) > input,
-form:not(.flat) > section:not(.controls) > input,
-form:not(.flat) > fieldset > section:not(.controls) > textarea,
-form:not(.flat) > section:not(.controls) > textarea,
-form:not(.flat) > fieldset > section:not(.controls) > select,
-form:not(.flat) > section:not(.controls) > select,
-form:not(.flat) > fieldset > section:not(.controls) > div,
-form:not(.flat) > section:not(.controls) > div,
-form:not(.flat) > fieldset > section:not(.controls) > output,
-form:not(.flat) > section:not(.controls) > output {
+.form > section:not(.vertical):not(.controls) > input,
+.form > fieldset > section:not(.vertical):not(.controls) > input,
+.form > section:not(.vertical):not(.controls) > textarea,
+.form > fieldset > section:not(.vertical):not(.controls) > textarea,
+.form > section:not(.vertical):not(.controls) > select,
+.form > fieldset > section:not(.vertical):not(.controls) > select,
+.form > section:not(.vertical):not(.controls) > div,
+.form > fieldset > section:not(.vertical):not(.controls) > div,
+.form > section:not(.vertical):not(.controls) > output,
+.form > fieldset > section:not(.vertical):not(.controls) > output,
+form:not(.flat) > section:not(.vertical):not(.controls) > input,
+form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > input,
+form:not(.flat) > section:not(.vertical):not(.controls) > textarea,
+form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > textarea,
+form:not(.flat) > section:not(.vertical):not(.controls) > select,
+form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > select,
+form:not(.flat) > section:not(.vertical):not(.controls) > div,
+form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > div,
+form:not(.flat) > section:not(.vertical):not(.controls) > output,
+form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > output {
   width: 100%;
 }
 @media (min-width: 48em) {
-  .form > fieldset > section:not(.controls) > input,
-  .form > section:not(.controls) > input,
-  .form > fieldset > section:not(.controls) > textarea,
-  .form > section:not(.controls) > textarea,
-  .form > fieldset > section:not(.controls) > select,
-  .form > section:not(.controls) > select,
-  .form > fieldset > section:not(.controls) > div,
-  .form > section:not(.controls) > div,
-  .form > fieldset > section:not(.controls) > output,
-  .form > section:not(.controls) > output,
-  form:not(.flat) > fieldset > section:not(.controls) > input,
-  form:not(.flat) > section:not(.controls) > input,
-  form:not(.flat) > fieldset > section:not(.controls) > textarea,
-  form:not(.flat) > section:not(.controls) > textarea,
-  form:not(.flat) > fieldset > section:not(.controls) > select,
-  form:not(.flat) > section:not(.controls) > select,
-  form:not(.flat) > fieldset > section:not(.controls) > div,
-  form:not(.flat) > section:not(.controls) > div,
-  form:not(.flat) > fieldset > section:not(.controls) > output,
-  form:not(.flat) > section:not(.controls) > output {
+  .form > section:not(.vertical):not(.controls) > input,
+  .form > fieldset > section:not(.vertical):not(.controls) > input,
+  .form > section:not(.vertical):not(.controls) > textarea,
+  .form > fieldset > section:not(.vertical):not(.controls) > textarea,
+  .form > section:not(.vertical):not(.controls) > select,
+  .form > fieldset > section:not(.vertical):not(.controls) > select,
+  .form > section:not(.vertical):not(.controls) > div,
+  .form > fieldset > section:not(.vertical):not(.controls) > div,
+  .form > section:not(.vertical):not(.controls) > output,
+  .form > fieldset > section:not(.vertical):not(.controls) > output,
+  form:not(.flat) > section:not(.vertical):not(.controls) > input,
+  form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > input,
+  form:not(.flat) > section:not(.vertical):not(.controls) > textarea,
+  form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > textarea,
+  form:not(.flat) > section:not(.vertical):not(.controls) > select,
+  form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > select,
+  form:not(.flat) > section:not(.vertical):not(.controls) > div,
+  form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > div,
+  form:not(.flat) > section:not(.vertical):not(.controls) > output,
+  form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > output {
     width: 75%;
   }
 }
 @media (min-width: 48em) {
-  .form > fieldset > section:not(.controls) > label,
-  .form > section:not(.controls) > label,
-  .form > fieldset > section:not(.controls) > output,
-  .form > section:not(.controls) > output,
-  form:not(.flat) > fieldset > section:not(.controls) > label,
-  form:not(.flat) > section:not(.controls) > label,
-  form:not(.flat) > fieldset > section:not(.controls) > output,
-  form:not(.flat) > section:not(.controls) > output {
+  .form > section:not(.vertical):not(.controls) > input:first-child,
+  .form > fieldset > section:not(.vertical):not(.controls) > input:first-child,
+  .form > section:not(.vertical):not(.controls) > textarea:first-child,
+  .form > fieldset > section:not(.vertical):not(.controls) > textarea:first-child,
+  .form > section:not(.vertical):not(.controls) > select:first-child,
+  .form > fieldset > section:not(.vertical):not(.controls) > select:first-child,
+  .form > section:not(.vertical):not(.controls) > div:first-child,
+  .form > fieldset > section:not(.vertical):not(.controls) > div:first-child,
+  .form > section:not(.vertical):not(.controls) > output:first-child,
+  .form > fieldset > section:not(.vertical):not(.controls) > output:first-child,
+  form:not(.flat) > section:not(.vertical):not(.controls) > input:first-child,
+  form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > input:first-child,
+  form:not(.flat) > section:not(.vertical):not(.controls) > textarea:first-child,
+  form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > textarea:first-child,
+  form:not(.flat) > section:not(.vertical):not(.controls) > select:first-child,
+  form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > select:first-child,
+  form:not(.flat) > section:not(.vertical):not(.controls) > div:first-child,
+  form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > div:first-child,
+  form:not(.flat) > section:not(.vertical):not(.controls) > output:first-child,
+  form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > output:first-child {
+    margin-left: 25%;
+  }
+}
+@media (min-width: 48em) {
+  .form > section:not(.vertical):not(.controls) > label,
+  .form > fieldset > section:not(.vertical):not(.controls) > label,
+  .form > section:not(.vertical):not(.controls) > output,
+  .form > fieldset > section:not(.vertical):not(.controls) > output,
+  form:not(.flat) > section:not(.vertical):not(.controls) > label,
+  form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > label,
+  form:not(.flat) > section:not(.vertical):not(.controls) > output,
+  form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > output {
     padding-top: 0.6em;
     border-top: 1px solid transparent;
   }
 }
-.form > fieldset > section:not(.controls) > div > label,
-.form > section:not(.controls) > div > label,
-form:not(.flat) > fieldset > section:not(.controls) > div > label,
-form:not(.flat) > section:not(.controls) > div > label {
+.form > section:not(.vertical):not(.controls) > div > label,
+.form > fieldset > section:not(.vertical):not(.controls) > div > label,
+form:not(.flat) > section:not(.vertical):not(.controls) > div > label,
+form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > div > label {
   display: block;
   margin-top: .25em;
 }
@@ -3598,6 +3656,7 @@ form:not(.flat) > section:not(.controls) > div > label {
     margin-left: 25%;
   }
 }
+section.req > label:first-child:after,
 label.req > span:first-child:after {
   content: " *";
   color: red;
