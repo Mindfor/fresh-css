@@ -96,6 +96,7 @@ legend {
 		> label {
 			.col(1, 1);
 			.col-md(@form-aligned-left, @form-aligned-columns);
+			padding-right: 1em;
 		}
 		
 		> input,
@@ -122,6 +123,16 @@ legend {
 		> div > label { // checkboxes
 			display: block;
 			margin-top: .25em;
+		}
+	}
+	
+	// add margin and padding to custom grid row
+	> div.row,
+	> fieldset > div.row {
+		margin-bottom: 1em;
+		
+		> *:first-child {
+			padding-right: 1em;
 		}
 	}
 	
