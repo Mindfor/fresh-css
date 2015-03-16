@@ -2248,6 +2248,7 @@ select:not([multiple]) {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhklEQVR4nL3QMQrCUBBF0WMTCwtBsHEjrsPF2Ih7ssk2dA9prG0U1EKrwCfkj/kB82C6uXcewx+zRYPdWPiGD16lkhRuZ7CkDy6SNBm4nScWKTDrCNZYBgceuP5qUZRugwM2wf4dR7xzCyfxD86ookZz1Bn4glUER5LBcJ+kGE4l+7HwdPkCCQI2aLN6q8oAAAAASUVORK5CYII=);
   background-repeat: no-repeat;
   background-position: right .5em center;
+  padding-right: 2em;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   select:not([multiple]) {
@@ -3499,29 +3500,40 @@ form:not(.flat) select {
 form:not(.flat) > * {
   clear: both;
 }
-.form.inline input,
-.form .inline input,
-.form.inline .input-group,
-.form .inline .input-group,
-.form.inline button,
-.form .inline button,
-.form.inline textarea,
-.form .inline textarea,
-.form.inline select,
-.form .inline select,
-form:not(.flat).inline input,
-form:not(.flat) .inline input,
-form:not(.flat).inline .input-group,
-form:not(.flat) .inline .input-group,
-form:not(.flat).inline button,
-form:not(.flat) .inline button,
-form:not(.flat).inline textarea,
-form:not(.flat) .inline textarea,
-form:not(.flat).inline select,
-form:not(.flat) .inline select {
+.form.inline > input,
+.form .inline > input,
+.form.inline > .input-group,
+.form .inline > .input-group,
+.form.inline > button,
+.form .inline > button,
+.form.inline > textarea,
+.form .inline > textarea,
+.form.inline > select,
+.form .inline > select,
+.form.inline > label,
+.form .inline > label,
+form:not(.flat).inline > input,
+form:not(.flat) .inline > input,
+form:not(.flat).inline > .input-group,
+form:not(.flat) .inline > .input-group,
+form:not(.flat).inline > button,
+form:not(.flat) .inline > button,
+form:not(.flat).inline > textarea,
+form:not(.flat) .inline > textarea,
+form:not(.flat).inline > select,
+form:not(.flat) .inline > select,
+form:not(.flat).inline > label,
+form:not(.flat) .inline > label {
   display: inline-block;
   vertical-align: middle;
   width: auto;
+  float: none;
+}
+.form.inline > label,
+.form .inline > label,
+form:not(.flat).inline > label,
+form:not(.flat) .inline > label {
+  display: inline-block !important;
 }
 .form > section:not(.vertical):not(.controls),
 .form > fieldset > section:not(.vertical):not(.controls),

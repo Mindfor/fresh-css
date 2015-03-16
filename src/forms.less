@@ -76,14 +76,20 @@ legend {
 	
 	// Inline container
 	&.inline, .inline {
-		input,
-		.input-group,
-		button,
-		textarea,
-		select {
+		> input,
+		> .input-group,
+		> button,
+		> textarea,
+		> select,
+		> label {
 			display: inline-block;
 			vertical-align: middle;
 			width: auto;
+			float: none;
+		}
+		
+		> label {
+			display: inline-block !important;
 		}
 	}
 	
