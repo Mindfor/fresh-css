@@ -26,6 +26,18 @@
 	justify-content: @value;
 }
 
+.box-shadow(@shadow) {
+	-webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+		-moz-box-shadow: @shadow;
+		box-shadow: @shadow;
+}
+
+.box-shadow(@shadow, @important) when (@important = true) {
+	-webkit-box-shadow: @shadow !important; // iOS <4.3 & Android <4.1
+	-moz-box-shadow: @shadow  !important;
+		box-shadow: @shadow  !important;
+}
+
 // Border-radius
 .border-top-radius(@radius) {
 	border-top-right-radius: @radius;
