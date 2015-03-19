@@ -63,10 +63,14 @@ legend {
 	input[type="range"],
 	input[type="file"],
 	input[type="datetime-local"],
-	.input-group,
 	textarea,
 	select {
 		display: block;
+		width: 100%;
+	}
+	
+	.input-group {
+		display: table;
 		width: 100%;
 	}
 	
@@ -77,7 +81,6 @@ legend {
 	// Inline container
 	&.inline, .inline {
 		> input,
-		> .input-group,
 		> button,
 		> textarea,
 		> select,
@@ -86,6 +89,11 @@ legend {
 			vertical-align: middle;
 			width: auto;
 			float: none;
+		}
+		
+		> .input-group {
+			display: inline-table;
+			width: auto;
 		}
 		
 		> label {
@@ -222,15 +230,15 @@ ul.checkbox-inline {
 
 // Input group
 .input-group {
-	display: inline-table !important;
+	display: inline-table;
 	border-collapse: separate;
 	vertical-align: middle;
-
-    input {
+	
+	> input {
 		display: table-cell !important;
 		width: 100%;
-        
-        &:not(:first-child) {
+		
+		&:not(:first-child) {
 			.border-left-radius(0) !important;
         }
         
@@ -245,6 +253,11 @@ ul.checkbox-inline {
 		vertical-align: middle;
 		white-space: nowrap;
 		width: 1px;
+		
+		> * {
+			height: 100%;
+			box-sizing: content-box;
+		}
         
         &:first-child {
 			&, > * {

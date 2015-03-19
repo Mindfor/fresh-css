@@ -678,39 +678,6 @@ kbd {
     max-width: 80em;
   }
 }
-.flex,
-.btn-group {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  justify-content: flex-start;
-}
-.flex.pull-left,
-.btn-group.pull-left {
-  float: none;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  justify-content: flex-start;
-}
-.flex.pull-right,
-.btn-group.pull-right {
-  float: none;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
-  justify-content: flex-end;
-}
-.flex.pull-center,
-.btn-group.pull-center {
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
-}
 .row {
   display: -webkit-box;
   display: -moz-box;
@@ -1282,6 +1249,126 @@ kbd {
 }
 @media (min-width: 80em) {
   .col-offset-xl-12 {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 96em) {
+  .col-xxl-1 {
+    width: 8.33333333%;
+  }
+}
+@media (min-width: 96em) {
+  .col-offset-xxl-1 {
+    margin-left: 8.33333333%;
+  }
+}
+@media (min-width: 96em) {
+  .col-xxl-2 {
+    width: 16.66666667%;
+  }
+}
+@media (min-width: 96em) {
+  .col-offset-xxl-2 {
+    margin-left: 16.66666667%;
+  }
+}
+@media (min-width: 96em) {
+  .col-xxl-3 {
+    width: 25%;
+  }
+}
+@media (min-width: 96em) {
+  .col-offset-xxl-3 {
+    margin-left: 25%;
+  }
+}
+@media (min-width: 96em) {
+  .col-xxl-4 {
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 96em) {
+  .col-offset-xxl-4 {
+    margin-left: 33.33333333%;
+  }
+}
+@media (min-width: 96em) {
+  .col-xxl-5 {
+    width: 41.66666667%;
+  }
+}
+@media (min-width: 96em) {
+  .col-offset-xxl-5 {
+    margin-left: 41.66666667%;
+  }
+}
+@media (min-width: 96em) {
+  .col-xxl-6 {
+    width: 50%;
+  }
+}
+@media (min-width: 96em) {
+  .col-offset-xxl-6 {
+    margin-left: 50%;
+  }
+}
+@media (min-width: 96em) {
+  .col-xxl-7 {
+    width: 58.33333333%;
+  }
+}
+@media (min-width: 96em) {
+  .col-offset-xxl-7 {
+    margin-left: 58.33333333%;
+  }
+}
+@media (min-width: 96em) {
+  .col-xxl-8 {
+    width: 66.66666667%;
+  }
+}
+@media (min-width: 96em) {
+  .col-offset-xxl-8 {
+    margin-left: 66.66666667%;
+  }
+}
+@media (min-width: 96em) {
+  .col-xxl-9 {
+    width: 75%;
+  }
+}
+@media (min-width: 96em) {
+  .col-offset-xxl-9 {
+    margin-left: 75%;
+  }
+}
+@media (min-width: 96em) {
+  .col-xxl-10 {
+    width: 83.33333333%;
+  }
+}
+@media (min-width: 96em) {
+  .col-offset-xxl-10 {
+    margin-left: 83.33333333%;
+  }
+}
+@media (min-width: 96em) {
+  .col-xxl-11 {
+    width: 91.66666667%;
+  }
+}
+@media (min-width: 96em) {
+  .col-offset-xxl-11 {
+    margin-left: 91.66666667%;
+  }
+}
+@media (min-width: 96em) {
+  .col-xxl-12 {
+    width: 100%;
+  }
+}
+@media (min-width: 96em) {
+  .col-offset-xxl-12 {
     margin-left: 100%;
   }
 }
@@ -2163,7 +2250,7 @@ select {
   background: white;
   border: 1px solid #bdbdbd;
   border-radius: 2px;
-  padding: 0.6em 0.5em;
+  padding: 0.599em 0.5em;
   vertical-align: middle;
   -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
   transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
@@ -2244,10 +2331,14 @@ textarea:-ms-input-placeholder,
 select:-ms-input-placeholder {
   color: #565d64;
 }
+select::-ms-expand {
+  display: none;
+}
 select:not([multiple]) {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhklEQVR4nL3QMQrCUBBF0WMTCwtBsHEjrsPF2Ih7ssk2dA9prG0U1EKrwCfkj/kB82C6uXcewx+zRYPdWPiGD16lkhRuZ7CkDy6SNBm4nScWKTDrCNZYBgceuP5qUZRugwM2wf4dR7xzCyfxD86ookZz1Bn4glUER5LBcJ+kGE4l+7HwdPkCCQI2aLN6q8oAAAAASUVORK5CYII=);
   background-repeat: no-repeat;
   background-position: right .5em center;
+  background-size: 16px 16px;
   padding-right: 2em;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -2450,7 +2541,7 @@ button:not([type]),
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
-  padding: 0.6em 1em;
+  padding: 0.599em 1em;
   -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
   transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
@@ -3103,10 +3194,31 @@ button:not([type]).invert.error:hover,
 .btn-group.invert.error > *:hover {
   background: #ca3c3c;
 }
+.btn-group {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
 .btn-group:after {
   content: "";
   display: table;
   clear: both;
+}
+.btn-group.pull-left {
+  float: none;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.btn-group.pull-right {
+  float: none;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.btn-group.pull-center {
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 .btn-group > *:not(:first-child) {
   border-bottom-left-radius: 0;
@@ -3471,7 +3583,6 @@ form:not(.flat) > section.vertical > div + label.checkbox {
 .form input[type="range"],
 .form input[type="file"],
 .form input[type="datetime-local"],
-.form .input-group,
 .form textarea,
 .form select,
 form:not(.flat) input[type="text"],
@@ -3490,10 +3601,14 @@ form:not(.flat) input[type="search"],
 form:not(.flat) input[type="range"],
 form:not(.flat) input[type="file"],
 form:not(.flat) input[type="datetime-local"],
-form:not(.flat) .input-group,
 form:not(.flat) textarea,
 form:not(.flat) select {
   display: block;
+  width: 100%;
+}
+.form .input-group,
+form:not(.flat) .input-group {
+  display: table;
   width: 100%;
 }
 .form > *,
@@ -3502,8 +3617,6 @@ form:not(.flat) > * {
 }
 .form.inline > input,
 .form .inline > input,
-.form.inline > .input-group,
-.form .inline > .input-group,
 .form.inline > button,
 .form .inline > button,
 .form.inline > textarea,
@@ -3514,8 +3627,6 @@ form:not(.flat) > * {
 .form .inline > label,
 form:not(.flat).inline > input,
 form:not(.flat) .inline > input,
-form:not(.flat).inline > .input-group,
-form:not(.flat) .inline > .input-group,
 form:not(.flat).inline > button,
 form:not(.flat) .inline > button,
 form:not(.flat).inline > textarea,
@@ -3528,6 +3639,13 @@ form:not(.flat) .inline > label {
   vertical-align: middle;
   width: auto;
   float: none;
+}
+.form.inline > .input-group,
+.form .inline > .input-group,
+form:not(.flat).inline > .input-group,
+form:not(.flat) .inline > .input-group {
+  display: inline-table;
+  width: auto;
 }
 .form.inline > label,
 .form .inline > label,
@@ -3664,7 +3782,7 @@ form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > output {
   form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > label,
   form:not(.flat) > section:not(.vertical):not(.controls) > output,
   form:not(.flat) > fieldset > section:not(.vertical):not(.controls) > output {
-    padding-top: 0.6em;
+    padding-top: 0.599em;
     border-top: 1px solid transparent;
   }
 }
@@ -3717,19 +3835,19 @@ ul.checkbox-inline > li {
   margin-right: 1em;
 }
 .input-group {
-  display: inline-table !important;
+  display: inline-table;
   border-collapse: separate;
   vertical-align: middle;
 }
-.input-group input {
+.input-group > input {
   display: table-cell !important;
   width: 100%;
 }
-.input-group input:not(:first-child) {
+.input-group > input:not(:first-child) {
   border-bottom-left-radius: 0 !important;
   border-top-left-radius: 0 !important;
 }
-.input-group input:not(:last-child) {
+.input-group > input:not(:last-child) {
   border-bottom-right-radius: 0 !important;
   border-top-right-radius: 0 !important;
 }
@@ -3739,6 +3857,11 @@ ul.checkbox-inline > li {
   vertical-align: middle;
   white-space: nowrap;
   width: 1px;
+}
+.input-group > span > *,
+.input-group > label > * {
+  height: 100%;
+  box-sizing: content-box;
 }
 .input-group > span:first-child,
 .input-group > label:first-child,
@@ -3758,7 +3881,7 @@ ul.checkbox-inline > li {
 }
 .input-group > span {
   line-height: normal;
-  padding: 0.6em 0.5em;
+  padding: 0.599em 0.5em;
   border: 1px solid #bdbdbd;
   border-radius: 2px;
   background-color: #f4f4f4;
@@ -3903,7 +4026,7 @@ ul.pagination > li > a,
 ul.pagination > li > span {
   display: block;
   line-height: normal;
-  padding: 0.6em 0.9em;
+  padding: 0.599em 0.9em;
   text-decoration: none;
 }
 ul.pagination > li > a:hover,

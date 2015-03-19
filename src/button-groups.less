@@ -3,8 +3,9 @@
 @import "buttons.less";
 
 .btn-group {
-	&:extend(.flex all);
 	.clearfix();
+	.flex-container();
+	.flex-pull();
 	
 	> * {
 		&:extend(.btn all);
