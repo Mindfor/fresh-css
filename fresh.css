@@ -3351,9 +3351,16 @@ nav:not(.flat).lined ul > li > a,
 nav:not(.flat).lined ul > li > span {
   border: none;
   margin-bottom: 1px;
+  color: #222222;
   border-bottom: 1px solid transparent;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+}
+.nav.lined ul > li > a > [class|="fa"],
+.nav.lined ul > li > span > [class|="fa"],
+nav:not(.flat).lined ul > li > a > [class|="fa"],
+nav:not(.flat).lined ul > li > span > [class|="fa"] {
+  color: #105c9a;
 }
 .nav.lined ul > li > a:hover,
 nav:not(.flat).lined ul > li > a:hover {
