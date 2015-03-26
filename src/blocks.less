@@ -14,7 +14,7 @@
 
 .blocks(@num, @spacing: @blocks-spacing) {
 	&:extend(.blocks all);
-	margin-left: -@blocks-spacing;
+	margin-left: -@spacing;
 	
 	> * {
 		width: calc(percentage(1 / @num) ~" - " @spacing);
@@ -27,7 +27,7 @@
 	&:extend(.blocks all);
 	
 	@media (min-width: @min-width) {
-		margin-left: -@blocks-spacing;
+		margin-left: -@spacing;
 		
 		> * {
 			width: calc(percentage(1 / @num) ~" - " @spacing);
