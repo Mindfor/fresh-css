@@ -335,43 +335,43 @@ abbr[title].text-help,
 .text-invert {
   color: white;
 }
-.bg-primary,
-table tr.primary,
-table td.primary,
-table th.primary {
-  background: #84c1f2;
+.bg-primary {
+  background-color: #105c9a;
 }
-.bg-secondary,
-table tr.secondary,
-table td.secondary,
-table th.secondary {
-  background: #d3edf5;
+.bg-secondary {
+  background-color: #56b9d9;
 }
-.bg-success,
-table tr.success,
-table td.success,
-table th.success {
-  background: #eaf6ea;
+.bg-success {
+  background-color: #5cb85c;
 }
-.bg-warning,
-table tr.warning,
-table td.warning,
-table th.warning {
-  background: #fadec5;
+.bg-warning {
+  background-color: #df7514;
 }
-.bg-error,
-table tr.error,
-table td.error,
-table th.error {
-  background: #f6dcdc;
+.bg-error {
+  background-color: #ca3c3c;
 }
 .bg-gray {
   background: #f4f4f4;
 }
+.bg-light-primary {
+  background-color: #84c1f2;
+}
+.bg-light-secondary {
+  background-color: #d3edf5;
+}
+.bg-light-success {
+  background-color: #eaf6ea;
+}
+.bg-light-warning {
+  background-color: #fadec5;
+}
+.bg-light-error {
+  background-color: #f6dcdc;
+}
 body {
   font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
   font-size: 15px;
-  line-height: 1.65em;
+  line-height: 1.5em;
   background: #ffffff;
   color: #222222;
 }
@@ -405,7 +405,7 @@ h6,
   font-weight: normal;
   color: black;
   text-rendering: optimizeLegibility;
-  margin: 1.65em 0 0.5em;
+  margin: 1.5em 0 0.5em;
 }
 h1:first-child,
 h2:first-child,
@@ -459,7 +459,7 @@ dt,
 blockquote,
 td,
 th {
-  line-height: 1.65em;
+  line-height: 1.5em;
 }
 p,
 .p,
@@ -1569,7 +1569,7 @@ kbd {
 .blocks-1 > * {
   width: calc(100%  -  1em);
   margin-left: 1em;
-  margin-bottom: 1.65em;
+  margin-bottom: 1.5em;
 }
 .blocks-2 {
   margin-left: -1em;
@@ -1577,7 +1577,7 @@ kbd {
 .blocks-2 > * {
   width: calc(50%  -  1em);
   margin-left: 1em;
-  margin-bottom: 1.65em;
+  margin-bottom: 1.5em;
 }
 .blocks-3 {
   margin-left: -1em;
@@ -1585,7 +1585,7 @@ kbd {
 .blocks-3 > * {
   width: calc(33.33333333%  -  1em);
   margin-left: 1em;
-  margin-bottom: 1.65em;
+  margin-bottom: 1.5em;
 }
 .blocks-4 {
   margin-left: -1em;
@@ -1593,7 +1593,7 @@ kbd {
 .blocks-4 > * {
   width: calc(25%  -  1em);
   margin-left: 1em;
-  margin-bottom: 1.65em;
+  margin-bottom: 1.5em;
 }
 .blocks-5 {
   margin-left: -1em;
@@ -1601,7 +1601,7 @@ kbd {
 .blocks-5 > * {
   width: calc(20%  -  1em);
   margin-left: 1em;
-  margin-bottom: 1.65em;
+  margin-bottom: 1.5em;
 }
 .blocks-6 {
   margin-left: -1em;
@@ -1609,7 +1609,7 @@ kbd {
 .blocks-6 > * {
   width: calc(16.66666667%  -  1em);
   margin-left: 1em;
-  margin-bottom: 1.65em;
+  margin-bottom: 1.5em;
 }
 .blocks-7 {
   margin-left: -1em;
@@ -1617,7 +1617,7 @@ kbd {
 .blocks-7 > * {
   width: calc(14.28571429%  -  1em);
   margin-left: 1em;
-  margin-bottom: 1.65em;
+  margin-bottom: 1.5em;
 }
 .blocks-8 {
   margin-left: -1em;
@@ -1625,7 +1625,7 @@ kbd {
 .blocks-8 > * {
   width: calc(12.5%  -  1em);
   margin-left: 1em;
-  margin-bottom: 1.65em;
+  margin-bottom: 1.5em;
 }
 .blocks-9 {
   margin-left: -1em;
@@ -1633,7 +1633,7 @@ kbd {
 .blocks-9 > * {
   width: calc(11.11111111%  -  1em);
   margin-left: 1em;
-  margin-bottom: 1.65em;
+  margin-bottom: 1.5em;
 }
 .blocks-10 {
   margin-left: -1em;
@@ -1641,7 +1641,7 @@ kbd {
 .blocks-10 > * {
   width: calc(10%  -  1em);
   margin-left: 1em;
-  margin-bottom: 1.65em;
+  margin-bottom: 1.5em;
 }
 @media (min-width: 35.5em) {
   .blocks-sm-1 {
@@ -1650,7 +1650,7 @@ kbd {
   .blocks-sm-1 > * {
     width: calc(100%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 35.5em) {
@@ -1660,7 +1660,7 @@ kbd {
   .blocks-sm-2 > * {
     width: calc(50%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 35.5em) {
@@ -1670,7 +1670,7 @@ kbd {
   .blocks-sm-3 > * {
     width: calc(33.33333333%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 35.5em) {
@@ -1680,7 +1680,7 @@ kbd {
   .blocks-sm-4 > * {
     width: calc(25%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 35.5em) {
@@ -1690,7 +1690,7 @@ kbd {
   .blocks-sm-5 > * {
     width: calc(20%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 35.5em) {
@@ -1700,7 +1700,7 @@ kbd {
   .blocks-sm-6 > * {
     width: calc(16.66666667%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 35.5em) {
@@ -1710,7 +1710,7 @@ kbd {
   .blocks-sm-7 > * {
     width: calc(14.28571429%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 35.5em) {
@@ -1720,7 +1720,7 @@ kbd {
   .blocks-sm-8 > * {
     width: calc(12.5%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 35.5em) {
@@ -1730,7 +1730,7 @@ kbd {
   .blocks-sm-9 > * {
     width: calc(11.11111111%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 35.5em) {
@@ -1740,7 +1740,7 @@ kbd {
   .blocks-sm-10 > * {
     width: calc(10%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 48em) {
@@ -1750,7 +1750,7 @@ kbd {
   .blocks-md-1 > * {
     width: calc(100%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 48em) {
@@ -1760,7 +1760,7 @@ kbd {
   .blocks-md-2 > * {
     width: calc(50%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 48em) {
@@ -1770,7 +1770,7 @@ kbd {
   .blocks-md-3 > * {
     width: calc(33.33333333%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 48em) {
@@ -1780,7 +1780,7 @@ kbd {
   .blocks-md-4 > * {
     width: calc(25%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 48em) {
@@ -1790,7 +1790,7 @@ kbd {
   .blocks-md-5 > * {
     width: calc(20%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 48em) {
@@ -1800,7 +1800,7 @@ kbd {
   .blocks-md-6 > * {
     width: calc(16.66666667%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 48em) {
@@ -1810,7 +1810,7 @@ kbd {
   .blocks-md-7 > * {
     width: calc(14.28571429%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 48em) {
@@ -1820,7 +1820,7 @@ kbd {
   .blocks-md-8 > * {
     width: calc(12.5%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 48em) {
@@ -1830,7 +1830,7 @@ kbd {
   .blocks-md-9 > * {
     width: calc(11.11111111%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 48em) {
@@ -1840,7 +1840,7 @@ kbd {
   .blocks-md-10 > * {
     width: calc(10%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 64em) {
@@ -1850,7 +1850,7 @@ kbd {
   .blocks-lg-1 > * {
     width: calc(100%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 64em) {
@@ -1860,7 +1860,7 @@ kbd {
   .blocks-lg-2 > * {
     width: calc(50%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 64em) {
@@ -1870,7 +1870,7 @@ kbd {
   .blocks-lg-3 > * {
     width: calc(33.33333333%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 64em) {
@@ -1880,7 +1880,7 @@ kbd {
   .blocks-lg-4 > * {
     width: calc(25%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 64em) {
@@ -1890,7 +1890,7 @@ kbd {
   .blocks-lg-5 > * {
     width: calc(20%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 64em) {
@@ -1900,7 +1900,7 @@ kbd {
   .blocks-lg-6 > * {
     width: calc(16.66666667%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 64em) {
@@ -1910,7 +1910,7 @@ kbd {
   .blocks-lg-7 > * {
     width: calc(14.28571429%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 64em) {
@@ -1920,7 +1920,7 @@ kbd {
   .blocks-lg-8 > * {
     width: calc(12.5%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 64em) {
@@ -1930,7 +1930,7 @@ kbd {
   .blocks-lg-9 > * {
     width: calc(11.11111111%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 64em) {
@@ -1940,7 +1940,7 @@ kbd {
   .blocks-lg-10 > * {
     width: calc(10%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 80em) {
@@ -1950,7 +1950,7 @@ kbd {
   .blocks-xl-1 > * {
     width: calc(100%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 80em) {
@@ -1960,7 +1960,7 @@ kbd {
   .blocks-xl-2 > * {
     width: calc(50%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 80em) {
@@ -1970,7 +1970,7 @@ kbd {
   .blocks-xl-3 > * {
     width: calc(33.33333333%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 80em) {
@@ -1980,7 +1980,7 @@ kbd {
   .blocks-xl-4 > * {
     width: calc(25%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 80em) {
@@ -1990,7 +1990,7 @@ kbd {
   .blocks-xl-5 > * {
     width: calc(20%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 80em) {
@@ -2000,7 +2000,7 @@ kbd {
   .blocks-xl-6 > * {
     width: calc(16.66666667%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 80em) {
@@ -2010,7 +2010,7 @@ kbd {
   .blocks-xl-7 > * {
     width: calc(14.28571429%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 80em) {
@@ -2020,7 +2020,7 @@ kbd {
   .blocks-xl-8 > * {
     width: calc(12.5%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 80em) {
@@ -2030,7 +2030,7 @@ kbd {
   .blocks-xl-9 > * {
     width: calc(11.11111111%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 80em) {
@@ -2040,7 +2040,7 @@ kbd {
   .blocks-xl-10 > * {
     width: calc(10%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 96em) {
@@ -2050,7 +2050,7 @@ kbd {
   .blocks-xxl-1 > * {
     width: calc(100%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 96em) {
@@ -2060,7 +2060,7 @@ kbd {
   .blocks-xxl-2 > * {
     width: calc(50%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 96em) {
@@ -2070,7 +2070,7 @@ kbd {
   .blocks-xxl-3 > * {
     width: calc(33.33333333%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 96em) {
@@ -2080,7 +2080,7 @@ kbd {
   .blocks-xxl-4 > * {
     width: calc(25%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 96em) {
@@ -2090,7 +2090,7 @@ kbd {
   .blocks-xxl-5 > * {
     width: calc(20%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 96em) {
@@ -2100,7 +2100,7 @@ kbd {
   .blocks-xxl-6 > * {
     width: calc(16.66666667%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 96em) {
@@ -2110,7 +2110,7 @@ kbd {
   .blocks-xxl-7 > * {
     width: calc(14.28571429%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 96em) {
@@ -2120,7 +2120,7 @@ kbd {
   .blocks-xxl-8 > * {
     width: calc(12.5%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 96em) {
@@ -2130,7 +2130,7 @@ kbd {
   .blocks-xxl-9 > * {
     width: calc(11.11111111%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 @media (min-width: 96em) {
@@ -2140,7 +2140,7 @@ kbd {
   .blocks-xxl-10 > * {
     width: calc(10%  -  1em);
     margin-left: 1em;
-    margin-bottom: 1.65em;
+    margin-bottom: 1.5em;
   }
 }
 input,
@@ -2842,77 +2842,72 @@ button:not([type]).link:hover,
   text-decoration: none;
 }
 .btn.outline,
-.btn.invert,
+.btn.clear,
 .btn.outline:active,
-.btn.invert:active,
+.btn.clear:active,
 .btn.outline.active,
-.btn.invert.active,
+.btn.clear.active,
 [type="submit"].outline,
-[type="submit"].invert,
+[type="submit"].clear,
 [type="submit"].outline:active,
-[type="submit"].invert:active,
+[type="submit"].clear:active,
 [type="submit"].outline.active,
-[type="submit"].invert.active,
+[type="submit"].clear.active,
 [type="button"].outline,
-[type="button"].invert,
+[type="button"].clear,
 [type="button"].outline:active,
-[type="button"].invert:active,
+[type="button"].clear:active,
 [type="button"].outline.active,
-[type="button"].invert.active,
+[type="button"].clear.active,
 [type="reset"].outline,
-[type="reset"].invert,
+[type="reset"].clear,
 [type="reset"].outline:active,
-[type="reset"].invert:active,
+[type="reset"].clear:active,
 [type="reset"].outline.active,
-[type="reset"].invert.active,
+[type="reset"].clear.active,
 button:not([type]).outline,
-button:not([type]).invert,
+button:not([type]).clear,
 button:not([type]).outline:active,
-button:not([type]).invert:active,
+button:not([type]).clear:active,
 button:not([type]).outline.active,
-button:not([type]).invert.active,
+button:not([type]).clear.active,
 .btn-group > *.outline,
-.btn-group > *.invert,
+.btn-group > *.clear,
 .btn-group > *.outline:active,
-.btn-group > *.invert:active,
+.btn-group > *.clear:active,
 .btn-group > *.outline.active,
-.btn-group > *.invert.active,
+.btn-group > *.clear.active,
 .btn-group.outline > *,
 .btn-group.outline > *:active,
-.btn-group.outline > *.active,
-.btn-group.invert > *,
-.btn-group.invert > *:active,
-.btn-group.invert > *.active {
+.btn-group.outline > *.active {
   background: none;
 }
 .btn.outline[disabled],
-.btn.invert[disabled],
+.btn.clear[disabled],
 .btn.outline.disabled,
-.btn.invert.disabled,
+.btn.clear.disabled,
 [type="submit"].outline[disabled],
-[type="submit"].invert[disabled],
+[type="submit"].clear[disabled],
 [type="submit"].outline.disabled,
-[type="submit"].invert.disabled,
+[type="submit"].clear.disabled,
 [type="button"].outline[disabled],
-[type="button"].invert[disabled],
+[type="button"].clear[disabled],
 [type="button"].outline.disabled,
-[type="button"].invert.disabled,
+[type="button"].clear.disabled,
 [type="reset"].outline[disabled],
-[type="reset"].invert[disabled],
+[type="reset"].clear[disabled],
 [type="reset"].outline.disabled,
-[type="reset"].invert.disabled,
+[type="reset"].clear.disabled,
 button:not([type]).outline[disabled],
-button:not([type]).invert[disabled],
+button:not([type]).clear[disabled],
 button:not([type]).outline.disabled,
-button:not([type]).invert.disabled,
+button:not([type]).clear.disabled,
 .btn-group > *.outline[disabled],
-.btn-group > *.invert[disabled],
+.btn-group > *.clear[disabled],
 .btn-group > *.outline.disabled,
-.btn-group > *.invert.disabled,
+.btn-group > *.clear.disabled,
 .btn-group.outline > *[disabled],
-.btn-group.outline > *.disabled,
-.btn-group.invert > *[disabled],
-.btn-group.invert > *.disabled {
+.btn-group.outline > *.disabled {
   background: none !important;
   box-shadow: none;
 }
@@ -3048,74 +3043,61 @@ button:not([type]).outline.error:hover,
   color: white;
   background: #ca3c3c;
 }
-.btn.invert,
-[type="submit"].invert,
-[type="button"].invert,
-[type="reset"].invert,
-button:not([type]).invert,
-.btn-group > *.invert,
-.btn-group.invert > * {
+.btn.clear,
+[type="submit"].clear,
+[type="button"].clear,
+[type="reset"].clear,
+button:not([type]).clear,
+.btn-group > *.clear {
   color: white;
   border-color: white !important;
 }
-.btn.invert:hover,
-[type="submit"].invert:hover,
-[type="button"].invert:hover,
-[type="reset"].invert:hover,
-button:not([type]).invert:hover,
-.btn-group > *.invert:hover,
-.btn-group.invert > *:hover {
+.btn.clear:hover,
+[type="submit"].clear:hover,
+[type="button"].clear:hover,
+[type="reset"].clear:hover,
+button:not([type]).clear:hover,
+.btn-group > *.clear:hover {
   background: #aaaaaa;
 }
-.btn.invert.primary:hover,
-[type="submit"].invert.primary:hover,
-[type="submit"].invert:hover,
-[type="button"].invert.primary:hover,
-[type="reset"].invert.primary:hover,
-button:not([type]).invert.primary:hover,
-.btn-group > *.invert.primary:hover,
-.btn-group.invert > *.primary:hover,
-.btn-group.invert.primary > *:hover {
+.btn.clear.primary:hover,
+[type="submit"].clear.primary:hover,
+[type="button"].clear.primary:hover,
+[type="reset"].clear.primary:hover,
+button:not([type]).clear.primary:hover,
+.btn-group > *.clear.primary:hover {
   background: #105c9a;
 }
-.btn.invert.secondary:hover,
-[type="submit"].invert.secondary:hover,
-[type="button"].invert.secondary:hover,
-[type="reset"].invert.secondary:hover,
-button:not([type]).invert.secondary:hover,
-.btn-group > *.invert.secondary:hover,
-.btn-group.invert > *.secondary:hover,
-.btn-group.invert.secondary > *:hover {
+.btn.clear.secondary:hover,
+[type="submit"].clear.secondary:hover,
+[type="button"].clear.secondary:hover,
+[type="reset"].clear.secondary:hover,
+button:not([type]).clear.secondary:hover,
+.btn-group > *.clear.secondary:hover {
   background: #56b9d9;
 }
-.btn.invert.success:hover,
-[type="submit"].invert.success:hover,
-[type="button"].invert.success:hover,
-[type="reset"].invert.success:hover,
-button:not([type]).invert.success:hover,
-.btn-group > *.invert.success:hover,
-.btn-group.invert > *.success:hover,
-.btn-group.invert.success > *:hover {
+.btn.clear.success:hover,
+[type="submit"].clear.success:hover,
+[type="button"].clear.success:hover,
+[type="reset"].clear.success:hover,
+button:not([type]).clear.success:hover,
+.btn-group > *.clear.success:hover {
   background: #5cb85c;
 }
-.btn.invert.warning:hover,
-[type="submit"].invert.warning:hover,
-[type="button"].invert.warning:hover,
-[type="reset"].invert.warning:hover,
-button:not([type]).invert.warning:hover,
-.btn-group > *.invert.warning:hover,
-.btn-group.invert > *.warning:hover,
-.btn-group.invert.warning > *:hover {
+.btn.clear.warning:hover,
+[type="submit"].clear.warning:hover,
+[type="button"].clear.warning:hover,
+[type="reset"].clear.warning:hover,
+button:not([type]).clear.warning:hover,
+.btn-group > *.clear.warning:hover {
   background: #df7514;
 }
-.btn.invert.error:hover,
-[type="submit"].invert.error:hover,
-[type="button"].invert.error:hover,
-[type="reset"].invert.error:hover,
-button:not([type]).invert.error:hover,
-.btn-group > *.invert.error:hover,
-.btn-group.invert > *.error:hover,
-.btn-group.invert.error > *:hover {
+.btn.clear.error:hover,
+[type="submit"].clear.error:hover,
+[type="button"].clear.error:hover,
+[type="reset"].clear.error:hover,
+button:not([type]).clear.error:hover,
+.btn-group > *.clear.error:hover {
   background: #ca3c3c;
 }
 .btn-group {
@@ -3183,6 +3165,31 @@ table td,
 table th {
   -webkit-transition: background 0.2s;
   transition: background 0.2s;
+}
+table tr.primary,
+table td.primary,
+table th.primary {
+  background: #84c1f2;
+}
+table tr.secondary,
+table td.secondary,
+table th.secondary {
+  background: #d3edf5;
+}
+table tr.success,
+table td.success,
+table th.success {
+  background: #eaf6ea;
+}
+table tr.warning,
+table td.warning,
+table th.warning {
+  background: #fadec5;
+}
+table tr.error,
+table td.error,
+table th.error {
+  background: #f6dcdc;
 }
 table caption {
   text-align: left;
@@ -3255,7 +3262,7 @@ table tbody > td[data-href]:hover {
 .table-container {
   width: 100%;
   overflow: auto;
-  margin-bottom: 1.65em;
+  margin-bottom: 1.5em;
 }
 .table-container table {
   margin-bottom: 0;

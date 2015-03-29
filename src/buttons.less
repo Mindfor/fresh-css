@@ -31,7 +31,7 @@
 	}
 }
 
-.btn-invert-color(@color) {
+.btn-clear-color(@color) {
 	&:hover {
 		background: @color;
 	}
@@ -116,7 +116,7 @@
 
 // Outline and inverted button
 .btn.outline,
-.btn.invert {
+.btn.clear {
 	&,
 	&:active,
 	&.active {
@@ -154,29 +154,29 @@
 	}
 }
 	
-.btn.invert {
+.btn.clear {
 	color: @color-invert;
 	border-color: @color-invert !important;
-	.btn-invert-color(@btn-bg);
+	.btn-clear-color(@btn-bg);
 	
 	&.primary {
-		.btn-invert-color(@color-primary);
+		.btn-clear-color(@color-primary);
 	}
 	
 	&.secondary {
-		.btn-invert-color(@color-secondary);
+		.btn-clear-color(@color-secondary);
 	}
 	
 	&.success {
-		.btn-invert-color(@color-success);
+		.btn-clear-color(@color-success);
 	}
 	
 	&.warning {
-		.btn-invert-color(@color-warning);
+		.btn-clear-color(@color-warning);
 	}
 	
 	&.error {
-		.btn-invert-color(@color-error);
+		.btn-clear-color(@color-error);
 	}
 }
 
