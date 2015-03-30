@@ -4,10 +4,10 @@
 	padding: 0 1em;
 }
 
-.container(@width) {
+.container(@max-width) {
 	.container;
 	.pull-center;
-	max-width: @width;
+	max-width: @max-width;
 }
 
 .container-sm {
@@ -24,6 +24,10 @@
 
 .container-xl {
 	.container(@width-xl);
+}
+
+.container-xxl {
+	.container(@width-xxl);
 }
 
 .container-responsive {
@@ -44,5 +48,9 @@
 
 	@media (min-width: @width-xl) {
 		max-width: @width-xl;
+	}
+	
+	@media (min-width: @width-xxl) {
+		max-width: @width-xxl;
 	}
 }
