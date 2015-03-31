@@ -1,6 +1,5 @@
 @import "variables.less";
 @import "mixins.less";
-@import "buttons.less";
 
 .btn-group {
 	.clearfix();
@@ -8,8 +7,6 @@
 	.flex-pull();
 	
 	> * {
-		&:extend(.btn all);
-		
 		&:not(:first-child) {
 			.border-left-radius(0);
 			margin-left: -@btn-border-width;
@@ -19,15 +16,13 @@
 			.border-right-radius(0);
 		}
 	}
+}
+
+.btn-group-vertical {
+	display: block;
 	
-	&.vertical {
-		display: block;
-	}
-	
-	&.vertical > * {
-		display: block;
-		border-radius: @btn-border-radius;
-		margin: 0;
+	> * {
+		display: block !important;
 		
 		&:not(:first-child) {
 			.border-top-radius(0);
@@ -36,111 +31,6 @@
 
 		&:not(:last-child) {
 			.border-bottom-radius(0);
-		}
-	}
-	
-	// Normal buttons
-	&.primary {
-		> * {
-			&:extend(.btn.primary all);
-		}
-	}
-	
-	&.secondary {
-		> * {
-			&:extend(.btn.secondary all);
-		}
-	}
-	
-	&.success {
-		> * {
-			&:extend(.btn.success all);
-		}
-	}
-	
-	&.warning {
-		> * {
-			&:extend(.btn.warning all);
-		}
-	}
-	
-	&.error {
-		> * {
-			&:extend(.btn.error all);
-		}
-	}
-	
-	// Outline buttons
-	&.outline {
-		> * {
-			&:extend(.btn.outline all);
-		}
-		
-		&.primary {
-			> * {
-				&:extend(.btn.outline.primary all);
-			}
-		}
-		
-		&.secondary {
-			> * {
-				&:extend(.btn.outline.secondary all);
-			}
-		}
-		
-		&.success {
-			> * {
-				&:extend(.btn.outline.success all);
-			}
-		}
-		
-		&.warning {
-			> * {
-				&:extend(.btn.outline.warning all);
-			}
-		}
-		
-		&.error {
-			> * {
-				&:extend(.btn.outline.error all);
-			}
-		}
-	}
-	
-	// Invert buttons
-	&.invert {
-		> * {
-			&:extend(.btn.invert all);
-		}
-		
-		&.primary {
-			> * {
-				&:extend(.btn.invert.primary all);
-			}
-		}
-		
-		&.secondary {
-			> * {
-				&:extend(.btn.invert.secondary all);
-			}
-		}
-		
-		&.success {
-			> * {
-				&:extend(.btn.invert.success all);
-			}
-		}
-		
-		&.warning {
-			> * {
-				&:extend(.btn.invert.warning all);
-			}
-		}
-		
-		&.error {
-			> * {
-				&:extend(.btn.invert.error all);
-			}
 		}
 	}
 }

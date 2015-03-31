@@ -204,14 +204,14 @@
 		<button class="primary active">Primary active</button>
 		<button type="button" class="link" disabled>Link</button>
 		<br/>
-		<button type="button" class="outline">Outline</button>
-		<button type="submit" class="outline">Primary</button>
-		<button type="button" class="outline secondary">Secondary</button>
-		<button type="button" class="outline success">Success</button>
-		<button type="button" class="outline warning">Warning</button>
-		<button type="button" class="outline error">Error</button>
-		<button type="button" class="outline error disabled">Error disabled</button>
-		<button type="button" class="outline error active">Error active</button>
+		<button type="button" class="btn-outline">Outline</button>
+		<button type="submit" class="btn-outline">Primary</button>
+		<button type="button" class="btn-outline secondary">Secondary</button>
+		<button type="button" class="btn-outline success">Success</button>
+		<button type="button" class="btn-outline warning">Warning</button>
+		<button type="button" class="btn-outline error">Error</button>
+		<button type="button" class="btn-outline error disabled">Error disabled</button>
+		<button type="button" class="btn-outline error active">Error active</button>
 		<br/>
 		<button>Normal</button>
 		<button class="xs">Tiny</button>
@@ -221,12 +221,12 @@
 	</div>
 	
 	<div class="p" style="background:gray; padding:5px;">
-		<button type="button" class="clear">Clear button</button>
-		<button type="submit" class="clear">Primary</button>
-		<button type="button" class="clear secondary">Secondary</button>
-		<button type="button" class="clear success">Some button</button>
-		<button type="button" class="clear warning">Some button</button>
-		<button type="button" class="clear error">Some button</button>
+		<button type="button" class="btn-clear">Clear button</button>
+		<button type="submit" class="btn-clear">Primary</button>
+		<button type="button" class="btn-clear secondary">Secondary</button>
+		<button type="button" class="btn-clear success">Some button</button>
+		<button type="button" class="btn-clear warning">Some button</button>
+		<button type="button" class="btn-clear error">Some button</button>
 	</div>
 	
 	<div class="p btn-group">
@@ -235,47 +235,47 @@
 		<button type="button" class="warning">Btn3</button>
 	</div>
 	
-	<div class="p btn-group primary pull-center">
-		<button type="button">Btn1</button>
-		<button type="button" class="active">Btn2</button>
-		<button type="button">Btn3</button>
+	<div class="p btn-group pull-center">
+		<button type="button" class="primary">Btn1</button>
+		<button type="button" class="primary active">Btn2</button>
+		<button type="button" class="primary">Btn3</button>
 	</div>
 	
-	<div class="p btn-group error vertical">
-		<button type="button">Btn1</button>
-		<button type="button">Btn2</button>
-		<button type="button">Btn3</button>
+	<div class="p btn-group-vertical error">
+		<button type="button" class="error">Btn1</button>
+		<button type="button" class="error">Btn2</button>
+		<button type="button" class="error">Btn3</button>
 	</div>
 	
 	<div class="p btn-group">
-		<button type="button" class="primary outline">Btn1</button>
-		<button type="button" class="success outline">Btn2</button>
-		<button type="button" class="warning outline">Btn3</button>
+		<button type="button" class="primary btn-outline">Btn1</button>
+		<button type="button" class="success btn-outline">Btn2</button>
+		<button type="button" class="warning btn-outline">Btn3</button>
 	</div>
 	
-	<div class="p btn-group outline">
-		<button type="button">Btn1</button>
-		<button type="button" class="active">Btn2</button>
-		<button type="button">Btn3</button>
+	<div class="p btn-group">
+		<button type="button" class="btn-outline">Btn1</button>
+		<button type="button" class="btn-outline active">Btn2</button>
+		<button type="button" class="btn-outline">Btn3</button>
 	</div>
 	
-	<div class="p btn-group outline success">
-		<button type="button">Btn1</button>
-		<button type="button" class="active">Btn2</button>
-		<button type="button">Btn3</button>
+	<div class="p btn-group">
+		<button type="button" class="btn-outline success">Btn1</button>
+		<button type="button" class="btn-outline success active">Btn2</button>
+		<button type="button" class="btn-outline success">Btn3</button>
 	</div>
 	
-	<div class="p btn-group outline vertical warning">
-		<button type="button">Btn1</button>
-		<button type="button">Btn2</button>
-		<button type="button">Btn3</button>
+	<div class="p btn-group-vertical">
+		<button type="button" class="btn-outline warning">Btn1</button>
+		<button type="button" class="btn-outline warning">Btn2</button>
+		<button type="button" class="btn-outline warning">Btn3</button>
 	</div>
 	
 	<div class="p" style="background-color:gray; padding: 1em">
-		<div class="btn-group invert vertical secondary">
-			<button type="button">Btn1</button>
-			<button type="button">Btn2</button>
-			<button type="button">Btn3</button>
+		<div class="btn-group-vertical">
+			<button type="button" class="btn-clear secondary">Btn1</button>
+			<button type="button" class="btn-clear secondary">Btn2</button>
+			<button type="button" class="btn-clear secondary">Btn3</button>
 		</div>
 	</div>
 	
@@ -552,5 +552,15 @@
 			</div>
 		</section>
 	</form>
+	
+	<h2>Outline</h2>
+	<div class="bg-primary" style="height:300px; overflow:auto;">
+		<form class="pull-center" style="width:50%; margin-top:100px;">
+			<div class="input-group">
+				<input type="text" class="clear" />
+				<label><button type="submit" class="clear">Find</button></label>
+			</div>
+		</form>
+	</div>
 </body>
 </html>

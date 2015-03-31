@@ -62,7 +62,7 @@
 			border-color: @color;
 			
 			&:focus {
-				box-shadow: 0 0 0 2px fade(@color, @control-focus-fade);
+				box-shadow: 0 0 @control-focus-blur @control-focus-spread fade(@color, @control-focus-fade);
 			}
 		}
 		
