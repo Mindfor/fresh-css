@@ -37,6 +37,7 @@ select {
 	padding: @control-padding-v @control-padding-h;
 	vertical-align: middle;
 	.transition(@control-transition);
+	.placeholder-color(@color-gray);
 
 	&[disabled] {
 		resize: none;
@@ -52,10 +53,6 @@ select {
 	&:focus {
 		border-color: @control-active-color;
 		box-shadow: 0 0 0 2px fade(@control-active-color, @control-focus-fade);
-	}
-
-	&:-ms-input-placeholder {
-		color: @color-gray;
 	}
 }
 
@@ -193,5 +190,41 @@ label {
 	
 	&.error {
 		color: @color-error;
+	}
+}
+
+// Clear controls
+input,
+textarea,
+select {
+	.control-color(@color) {
+		&:focus {
+			background: @color;
+			border-color: @color-invert;
+		}
+	}
+	
+	&.control-clear {
+		color: @color-invert;
+		border-color: @color-invert;
+		background: transparent;
+		.control-color(@control-active-color);
+		.placeholder-color(@color-invert);
+		
+		&.secondary {
+			.control-color(@color-secondary);
+		}
+		
+		&.success {
+			.control-color(@color-success);
+		}
+
+		&.warning {
+			.control-color(@color-warning);
+		}
+
+		&.error {
+			.control-color(@color-error);
+		}
 	}
 }

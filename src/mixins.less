@@ -20,6 +20,20 @@
 	background-image: linear-gradient(top, @from 0%, @to 100%);
 }
 
+.placeholder-color(@color) {
+	&:-ms-input-placeholder {
+		color: @color;
+	}
+	
+	&::-moz-placeholder {
+		color: @color;
+	}
+	
+	&::-webkit-input-placeholder {
+		color: @color;
+	}
+}
+
 // Flex
 .flex-container() {
 	display: -webkit-box;
