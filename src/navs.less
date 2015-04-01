@@ -1,28 +1,17 @@
 @import "variables.less";
 
-.nav {
-	.clearfix;
-	
-	ul {
-		display: inline-block;
-	}
-	
+.nav-base {
 	> header {
-		display: inline-block;
 		padding: @nav-padding;
 		font-size: 0.9em;
 		text-transform: uppercase;
 	}
 	
 	ul > li {
-		display: inline-block;
-		
 		> a, > span {
 			display: block;
 			padding: @nav-padding;
 			text-decoration: none;
-			border-radius: @nav-border-radius;
-			border: 1px solid transparent;
 		}
 
 		a:hover {
@@ -40,19 +29,32 @@
 			> a, > span {
 				color: @control-disabled-color;
 				background: none;
+				border-color: transparent !important;
 				cursor: @control-disabled-cursor;
 			}
 		}
 	}
 }
 
-.nav.vertical {
+.nav-base-horizontal {
+	&:extend(.nav-base all);
+	
+	ul,
+	ul > li,
+	> header, {
+		display: inline-block;
+	}
+}
+
+.nav-base-vertical {
+	&:extend(.nav-base all);
+	
 	> header {
 		display: block;
-		border-bottom: 1px solid @color-border;
+		border-bottom: @nav-border-width solid @color-border;
 		margin-top: @nav-heading-margin-top;
 	}
-
+	
 	ul {
 		display: block;
 	}
@@ -60,83 +62,83 @@
 	ul > li {
 		display: block;
 
-		&:not(:first-child) {
-			margin-top: .1em;
-		}
-
 		> ul {
 			margin-left: 2em;
 		}
 	}
 }
 
-.nav.lined {
+// Normal navigation
+.nav,
+.nav-vertical {
 	ul > li {
 		> a, > span {
-			border: none;
-			margin-bottom: 1px;
-			color: @color-text;
+			border-radius: @nav-border-radius;
+			border: @nav-border-width solid transparent;
+		}
+	}
+}
 
-			border-bottom: 1px solid transparent;
-			.border-bottom-radius(0);
+.nav {
+	&:extend(.nav-base-horizontal all);
+}
+
+.nav-vertical {
+	&:extend(.nav-base-vertical all);
+}
+
+// Lined navigation
+.nav-lined,
+.nav-lined-vertical {
+	ul > li {
+		> a, > span {
+			color: @color-text;
 		}
 		
 		> a:hover {
 			border-color: @nav-active-bg;			
 		}
+	}
+}
+
+.nav-lined {
+	&:extend(.nav-base-horizontal all);
+	
+	ul > li {
+		> a, > span {
+			margin-bottom: 1px;
+			border-bottom: 1px solid transparent;
+		}
 		
 		&.active {
 			> a, > span {
 				margin-bottom: 0;
-				border-bottom: 2px solid @nav-active-bg;
-			}
-		}
-		
-		&[disabled],
-		&.disabled {
-			> a {
-				border-color: transparent;
+				border-bottom-width: 2px;
 			}
 		}
 	}
 }
 
-.nav.lined.vertical {
-	> a, > span {
-		margin-left: 2px;
+.nav-lined-vertical {
+	&:extend(.nav-base-vertical all);
+	
+	> header {
+		> a, > span {
+			padding-left: 2px;
+		}
 	}
 
 	ul > li {
 		> a, > span {
-			margin-bottom: 0;
-			border-bottom: none;
-			
 			margin-left: 1px;				
 			border-left: 1px solid transparent;
-			.border-left-radius(0);
-		}
-
-		> a:hover {
-			border-color: @nav-active-bg;
 		}
 
 		&.active {
 			> a, > span {
-				border-bottom: 0;					
 				margin-left: 0;
-				border-left: 2px solid @nav-active-bg;
-			}
-		}
-
-		&[disabled],
-		&.disabled {
-			> a:hover {
-				border-color: transparent;
+				border-left-width: 2px;
 			}
 		}
 	}
-}
-
-nav:not(.flat) {
-	&:extend(.nav all);
 }

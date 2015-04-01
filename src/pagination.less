@@ -5,7 +5,7 @@ ul.pagination {
 	.clearfix();
 	display: inline-block;
 	list-style: none;
-	margin: 0 0 1em;
+	margin: 0 0 @line-margin;
 	padding: 0;
 	
 	> li {
@@ -15,13 +15,11 @@ ul.pagination {
 		border: @control-border;
 		
 		&:first-child {
-			border-top-left-radius: @control-border-radius;
-			border-bottom-left-radius: @control-border-radius;
+			.border-left-radius(@control-border-radius);
 		}
 
 		&:last-child {
-			border-top-right-radius: @control-border-radius;
-			border-bottom-right-radius: @control-border-radius;
+			.border-right-radius(@control-border-radius);
 		}
 
 		&:not(:first-child) {

@@ -3127,143 +3127,166 @@ table tbody > td[data-href]:hover {
   border: 3px solid #fff;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.nav:after,
-nav:not(.flat):after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.nav ul,
-nav:not(.flat) ul {
-  display: inline-block;
-}
+.nav-base > header,
+.nav-base-horizontal > header,
+.nav-base-vertical > header,
 .nav > header,
-nav:not(.flat) > header {
-  display: inline-block;
+.nav-vertical > header,
+.nav-lined > header,
+.nav-lined-vertical > header {
   padding: 0.4em 1em;
   font-size: 0.9em;
   text-transform: uppercase;
 }
-.nav ul > li,
-nav:not(.flat) ul > li {
-  display: inline-block;
-}
+.nav-base ul > li > a,
+.nav-base ul > li > span,
+.nav-base-horizontal ul > li > a,
+.nav-base-horizontal ul > li > span,
+.nav-base-vertical ul > li > a,
+.nav-base-vertical ul > li > span,
 .nav ul > li > a,
 .nav ul > li > span,
-nav:not(.flat) ul > li > a,
-nav:not(.flat) ul > li > span {
+.nav-vertical ul > li > a,
+.nav-vertical ul > li > span,
+.nav-lined ul > li > a,
+.nav-lined ul > li > span,
+.nav-lined-vertical ul > li > a,
+.nav-lined-vertical ul > li > span {
   display: block;
   padding: 0.4em 1em;
   text-decoration: none;
-  border-radius: 2px;
-  border: 1px solid transparent;
 }
+.nav-base ul > li a:hover,
+.nav-base-horizontal ul > li a:hover,
+.nav-base-vertical ul > li a:hover,
 .nav ul > li a:hover,
-nav:not(.flat) ul > li a:hover {
+.nav-vertical ul > li a:hover,
+.nav-lined ul > li a:hover,
+.nav-lined-vertical ul > li a:hover {
   background: #f4f4f4;
 }
+.nav-base ul > li.active > a,
+.nav-base ul > li.active > span,
+.nav-base-horizontal ul > li.active > a,
+.nav-base-horizontal ul > li.active > span,
+.nav-base-vertical ul > li.active > a,
+.nav-base-vertical ul > li.active > span,
 .nav ul > li.active > a,
 .nav ul > li.active > span,
-nav:not(.flat) ul > li.active > a,
-nav:not(.flat) ul > li.active > span {
+.nav-vertical ul > li.active > a,
+.nav-vertical ul > li.active > span,
+.nav-lined ul > li.active > a,
+.nav-lined ul > li.active > span,
+.nav-lined-vertical ul > li.active > a,
+.nav-lined-vertical ul > li.active > span {
   border-color: #105c9a;
 }
+.nav-base ul > li[disabled] > a,
+.nav-base ul > li.disabled > a,
+.nav-base ul > li[disabled] > span,
+.nav-base ul > li.disabled > span,
+.nav-base-horizontal ul > li[disabled] > a,
+.nav-base-horizontal ul > li.disabled > a,
+.nav-base-horizontal ul > li[disabled] > span,
+.nav-base-horizontal ul > li.disabled > span,
+.nav-base-vertical ul > li[disabled] > a,
+.nav-base-vertical ul > li.disabled > a,
+.nav-base-vertical ul > li[disabled] > span,
+.nav-base-vertical ul > li.disabled > span,
 .nav ul > li[disabled] > a,
 .nav ul > li.disabled > a,
 .nav ul > li[disabled] > span,
 .nav ul > li.disabled > span,
-nav:not(.flat) ul > li[disabled] > a,
-nav:not(.flat) ul > li.disabled > a,
-nav:not(.flat) ul > li[disabled] > span,
-nav:not(.flat) ul > li.disabled > span {
+.nav-vertical ul > li[disabled] > a,
+.nav-vertical ul > li.disabled > a,
+.nav-vertical ul > li[disabled] > span,
+.nav-vertical ul > li.disabled > span,
+.nav-lined ul > li[disabled] > a,
+.nav-lined ul > li.disabled > a,
+.nav-lined ul > li[disabled] > span,
+.nav-lined ul > li.disabled > span,
+.nav-lined-vertical ul > li[disabled] > a,
+.nav-lined-vertical ul > li.disabled > a,
+.nav-lined-vertical ul > li[disabled] > span,
+.nav-lined-vertical ul > li.disabled > span {
   color: #b4b4b4;
   background: none;
+  border-color: transparent !important;
   cursor: not-allowed;
 }
-.nav.vertical > header,
-nav:not(.flat).vertical > header {
+.nav-base-horizontal ul,
+.nav-base-horizontal ul > li,
+.nav-base-horizontal > header,
+.nav ul,
+.nav ul > li,
+.nav > header,
+.nav-lined ul,
+.nav-lined ul > li,
+.nav-lined > header {
+  display: inline-block;
+}
+.nav-base-vertical > header,
+.nav-vertical > header,
+.nav-lined-vertical > header {
   display: block;
   border-bottom: 1px solid #bdbdbd;
   margin-top: 0.5em;
 }
-.nav.vertical ul,
-nav:not(.flat).vertical ul {
+.nav-base-vertical ul,
+.nav-vertical ul,
+.nav-lined-vertical ul {
   display: block;
 }
-.nav.vertical ul > li,
-nav:not(.flat).vertical ul > li {
+.nav-base-vertical ul > li,
+.nav-vertical ul > li,
+.nav-lined-vertical ul > li {
   display: block;
 }
-.nav.vertical ul > li:not(:first-child),
-nav:not(.flat).vertical ul > li:not(:first-child) {
-  margin-top: .1em;
-}
-.nav.vertical ul > li > ul,
-nav:not(.flat).vertical ul > li > ul {
+.nav-base-vertical ul > li > ul,
+.nav-vertical ul > li > ul,
+.nav-lined-vertical ul > li > ul {
   margin-left: 2em;
 }
-.nav.lined ul > li > a,
-.nav.lined ul > li > span,
-nav:not(.flat).lined ul > li > a,
-nav:not(.flat).lined ul > li > span {
-  border: none;
-  margin-bottom: 1px;
-  color: #222222;
-  border-bottom: 1px solid transparent;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+.nav ul > li > a,
+.nav-vertical ul > li > a,
+.nav ul > li > span,
+.nav-vertical ul > li > span {
+  border-radius: 2px;
+  border: 1px solid transparent;
 }
-.nav.lined ul > li > a:hover,
-nav:not(.flat).lined ul > li > a:hover {
+.nav-lined ul > li > a,
+.nav-lined-vertical ul > li > a,
+.nav-lined ul > li > span,
+.nav-lined-vertical ul > li > span {
+  color: #222222;
+}
+.nav-lined ul > li > a:hover,
+.nav-lined-vertical ul > li > a:hover {
   border-color: #105c9a;
 }
-.nav.lined ul > li.active > a,
-.nav.lined ul > li.active > span,
-nav:not(.flat).lined ul > li.active > a,
-nav:not(.flat).lined ul > li.active > span {
+.nav-lined ul > li > a,
+.nav-lined ul > li > span {
+  margin-bottom: 1px;
+  border-bottom: 1px solid transparent;
+}
+.nav-lined ul > li.active > a,
+.nav-lined ul > li.active > span {
   margin-bottom: 0;
-  border-bottom: 2px solid #105c9a;
+  border-bottom-width: 2px;
 }
-.nav.lined ul > li[disabled] > a,
-.nav.lined ul > li.disabled > a,
-nav:not(.flat).lined ul > li[disabled] > a,
-nav:not(.flat).lined ul > li.disabled > a {
-  border-color: transparent;
+.nav-lined-vertical > header > a,
+.nav-lined-vertical > header > span {
+  padding-left: 2px;
 }
-.nav.lined.vertical > a,
-.nav.lined.vertical > span,
-nav:not(.flat).lined.vertical > a,
-nav:not(.flat).lined.vertical > span {
-  margin-left: 2px;
-}
-.nav.lined.vertical ul > li > a,
-.nav.lined.vertical ul > li > span,
-nav:not(.flat).lined.vertical ul > li > a,
-nav:not(.flat).lined.vertical ul > li > span {
-  margin-bottom: 0;
-  border-bottom: none;
+.nav-lined-vertical ul > li > a,
+.nav-lined-vertical ul > li > span {
   margin-left: 1px;
   border-left: 1px solid transparent;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
 }
-.nav.lined.vertical ul > li > a:hover,
-nav:not(.flat).lined.vertical ul > li > a:hover {
-  border-color: #105c9a;
-}
-.nav.lined.vertical ul > li.active > a,
-.nav.lined.vertical ul > li.active > span,
-nav:not(.flat).lined.vertical ul > li.active > a,
-nav:not(.flat).lined.vertical ul > li.active > span {
-  border-bottom: 0;
+.nav-lined-vertical ul > li.active > a,
+.nav-lined-vertical ul > li.active > span {
   margin-left: 0;
-  border-left: 2px solid #105c9a;
-}
-.nav.lined.vertical ul > li[disabled] > a:hover,
-.nav.lined.vertical ul > li.disabled > a:hover,
-nav:not(.flat).lined.vertical ul > li[disabled] > a:hover,
-nav:not(.flat).lined.vertical ul > li.disabled > a:hover {
-  border-color: transparent;
+  border-left-width: 2px;
 }
 fieldset {
   padding: 0;
