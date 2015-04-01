@@ -280,7 +280,7 @@
 	</div>
 	
 	<h2>Navigations</h2>
-	<nav class="nav">
+	<nav class="nav-horizontal">
 		<ul>
 			<li><a href="#">One</a></li>
 			<li><a href="#">Two</a></li>
@@ -293,7 +293,7 @@
 		</ul>
 	</nav>
 	
-	<nav class="nav">
+	<nav class="nav-horizontal">
 		<header><a href="#">Sec 1</a></header>
 		<ul>
 			<li><a href="#">One</a></li>
@@ -306,7 +306,7 @@
 		</ul>
 	</nav>
 	
-	<nav class="nav-lined">
+	<nav class="nav-lined-horizontal">
 		<ul>
 			<li><a href="#">One</a></li>
 			<li><a href="#">Two</a></li>
@@ -374,7 +374,7 @@
     
 	<h2>Forms</h2>
 	<h3>Default form</h3>
-	<form class="width-sm">
+	<form class="form width-sm">
 		<label class="req">
 			<span>Email</span>
 			<input type="email" />
@@ -393,7 +393,7 @@
 	
 	<fieldset class="width-sm">
 		<legend>Simple form</legend>
-		<form>
+		<form class="form">
 			<label>
 				<div class="input-group">
 					<input type="email" placeholder="Email" />
@@ -447,13 +447,14 @@
 	</fieldset>
 	
 	<h3>Inline big form</h3>
-	<form class="inline">
+	<form class="form-inline">
+		<label class="lg">This is texbox:</label>
     	<input type="text" class="lg" placeholder="Title">
     	<button class="secondary lg">Big</button>
 	</form>
 	
 	<h3>Aligned form</h3>
-	<form class="aligned">
+	<form class="form-aligned">
 		<section class="req">
 			<label>Name</label>
 			<input type="text" />
@@ -479,7 +480,7 @@
 		</div>
 		
 		<section>
-			<label>Test</label>
+			<label>Inline test</label>
 			<div class="inline">
 				<input type="text" class="width-sm" />
 				<label class="checkbox">
@@ -490,9 +491,12 @@
 			</div>
 		</section>
 		
-		<section class="controls">
+		<div class="controls">
+			<input type="submit" value="Go" />
+		</div>		
+		<div class="controls">
 			<button type="submit">Go</button>
-		</section>
+		</div>
 	</form>
 	
 	<h3>Color controls</h3>
@@ -514,7 +518,7 @@
 	</div>
 	
 	<h3>Color form</h3>
-	<form class="width-sm">
+	<form class="form width-sm">
 		<label class="req success">
 			<span>Label</span>
 			<input type="text" />

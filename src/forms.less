@@ -19,22 +19,14 @@ legend {
 	border-bottom: 1px solid @color-border;
 }
 
-// Form
+// Normal Form
 .form {
 	// One-by-one labels or vertical sections with controls
 	> label,
-	> section.vertical {
+	> section {
 		.clearfix();
 		display: block;
-		margin: 0 -@control-border-radius 1em @control-border-radius;
-		
-		> input,
-		> textarea,
-		> select,
-		> div,
-		> label {
-			margin-left: -@control-border-radius;
-		}
+		margin-bottom: @line-margin;
 		
 		> input,
 		> textarea,
@@ -47,26 +39,24 @@ legend {
 		}
 	}
 	
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	input[type="url"],
-	input[type="phone"],
-	input[type="tel"],
-	input[type="number"],
-	input[type="datetime"],
-	input[type="date"],
-	input[type="month"],
-	input[type="color"],
-	input[type="time"],
-	input[type="search"],
-	input[type="range"],
-	input[type="file"],
-	input[type="datetime-local"],
+	> * {
+		clear: both;
+	}
+	
+	input,
 	textarea,
 	select {
 		display: block;
 		width: 100%;
+	}
+	
+	input[type="submit"],
+	input[type="button"],
+	input[type="reset"],
+	input[type="checkbox"],
+	input[type="radio"] {
+		display: initial;
+		width: initial;
 	}
 	
 	.input-group {
@@ -74,85 +64,14 @@ legend {
 		width: 100%;
 	}
 	
-	> * {
-		clear: both;
-	}
-	
-	// Inline container
-	&.inline, .inline {
-		> input,
-		> button,
-		> textarea,
-		> select,
-		> label {
-			display: inline-block;
-			vertical-align: middle;
-			width: auto;
-			float: none;
-		}
-		
-		> .input-group {
-			display: inline-table;
-			width: auto;
-		}
-		
-		> label {
-			display: inline-block !important;
-		}
-	}
-	
-	// Section = aligned row
-	> section:not(.vertical):not(.controls),
-	> fieldset > section:not(.vertical):not(.controls) {
-		.row;
-		margin-bottom: 1em;
-		
-		> label {
-			.col(1, 1);
-			.col-md(@form-aligned-left, @form-aligned-columns);
-			padding-right: 1em;
-		}
-		
-		> input,
-		> textarea,
-		> select,
-		> div,
-		> output {
-			.col(1, 1);
-			.col-md(@form-aligned-right, @form-aligned-columns);
-			
-			&:first-child {
-				.col-offset-md(@form-aligned-left, @form-aligned-columns);
-			}
-		}
-		
-		@media (min-width: @width-md) {
-			> label,
-			> output {
-				padding-top: @control-padding-v;
-				border-top: @control-border-width solid transparent;
-			}
-		}
-		
-		> div > label { // checkboxes
-			display: block;
-			margin-top: .25em;
-		}
-	}
-	
 	// add margin and padding to custom grid row
 	> div.row,
 	> fieldset > div.row {
-		margin-bottom: 1em;
+		margin-bottom: @line-margin;
 		
 		> *:first-child {
 			padding-right: 1em;
 		}
-	}
-	
-	// controls
-	> section.controls {
-		.col-offset-md(@form-aligned-left, @form-aligned-columns);
 	}
 	
 	// colors
@@ -193,13 +112,86 @@ legend {
 	}
 }
 
-form:not(.flat) {
+// Inline form
+.form-inline {
 	&:extend(.form all);
 }
 
+.form-inline,
+.form .inline {
+	> input,
+	> button,
+	> textarea,
+	> select,
+	> label {
+		display: inline-block;
+		vertical-align: middle;
+		width: auto;
+		float: none;
+	}
+
+	> label {
+		margin-bottom: 0;
+	}
+
+	> .input-group {
+		display: inline-table;
+		width: auto;
+	}
+}
+
+// Aligned form
+.form-aligned {
+	&:extend(.form all);
+}
+
+.form > .aligned,
+.form > fieldset > .aligned,
+.form-aligned > section,
+.form-aligned > fieldset > section {
+	.row;
+		
+	> label {
+		.col(1, 1);
+		.col-md(@form-aligned-left, @form-aligned-columns);
+		padding-right: 1em;
+	}
+
+	> input,
+	> textarea,
+	> select,
+	> div,
+	> output {
+		.col(1, 1);
+		.col-md(@form-aligned-right, @form-aligned-columns);
+
+		&:first-child {
+			.col-offset-md(@form-aligned-left, @form-aligned-columns);
+		}
+	}
+
+	@media (min-width: @width-md) {
+		> label,
+		> output {
+			padding-top: @control-padding-v;
+			border-top: @control-border-width solid transparent;
+		}
+	}
+
+	> div > label { // checkboxes
+		display: block;
+		margin-top: .25em;
+	}
+}
+
+.form > .aligned-controls,
+.form-aligned > .controls {
+	.col-offset-md(@form-aligned-left, @form-aligned-columns);
+	margin-bottom: @line-margin;
+}
+
 // Required
-section.req > label:first-child:after,
-label.req > span:first-child:after {
+.req > :first-child:after {
 	content: " *";
 	color: red;
 }
