@@ -2414,6 +2414,26 @@ form.width-xxl,
 fieldset.width-xxl {
   max-width: 80em;
 }
+input.primary,
+textarea.primary,
+select.primary {
+  border-color: #105c9a;
+}
+input.primary:focus,
+textarea.primary:focus,
+select.primary:focus {
+  box-shadow: 0 0 0 2px rgba(16, 92, 154, 0.3);
+}
+input.secondary,
+textarea.secondary,
+select.secondary {
+  border-color: #56b9d9;
+}
+input.secondary:focus,
+textarea.secondary:focus,
+select.secondary:focus {
+  box-shadow: 0 0 0 2px rgba(86, 185, 217, 0.3);
+}
 input.success,
 textarea.success,
 select.success,
@@ -2593,7 +2613,7 @@ button:not([type]):not([class|="btn"]) {
 [type="button"]:not([class|="btn"]):focus,
 [type="reset"]:not([class|="btn"]):focus,
 button:not([type]):not([class|="btn"]):focus {
-  box-shadow: 0 0 0 2px rgba(170, 170, 170, 0.5);
+  box-shadow: 0 0 0 2px rgba(170, 170, 170, 0.9);
 }
 .btn-base::-moz-focus-inner,
 .btn::-moz-focus-inner,
@@ -2653,7 +2673,7 @@ button:not([type]):not([class|="btn"]).active {
 [type="button"]:not([class|="btn"]).primary:focus,
 [type="reset"]:not([class|="btn"]).primary:focus,
 button:not([type]):not([class|="btn"]).primary:focus {
-  box-shadow: 0 0 0 2px rgba(16, 92, 154, 0.5);
+  box-shadow: 0 0 0 2px rgba(16, 92, 154, 0.9);
 }
 .btn-base.secondary:focus,
 .btn.secondary:focus,
@@ -2663,7 +2683,7 @@ button:not([type]):not([class|="btn"]).primary:focus {
 [type="button"]:not([class|="btn"]).secondary:focus,
 [type="reset"]:not([class|="btn"]).secondary:focus,
 button:not([type]):not([class|="btn"]).secondary:focus {
-  box-shadow: 0 0 0 2px rgba(86, 185, 217, 0.5);
+  box-shadow: 0 0 0 2px rgba(86, 185, 217, 0.9);
 }
 .btn-base.success:focus,
 .btn.success:focus,
@@ -2673,7 +2693,7 @@ button:not([type]):not([class|="btn"]).secondary:focus {
 [type="button"]:not([class|="btn"]).success:focus,
 [type="reset"]:not([class|="btn"]).success:focus,
 button:not([type]):not([class|="btn"]).success:focus {
-  box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.5);
+  box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.9);
 }
 .btn-base.warning:focus,
 .btn.warning:focus,
@@ -2683,7 +2703,7 @@ button:not([type]):not([class|="btn"]).success:focus {
 [type="button"]:not([class|="btn"]).warning:focus,
 [type="reset"]:not([class|="btn"]).warning:focus,
 button:not([type]):not([class|="btn"]).warning:focus {
-  box-shadow: 0 0 0 2px rgba(223, 117, 20, 0.5);
+  box-shadow: 0 0 0 2px rgba(223, 117, 20, 0.9);
 }
 .btn-base.error:focus,
 .btn.error:focus,
@@ -2693,7 +2713,7 @@ button:not([type]):not([class|="btn"]).warning:focus {
 [type="button"]:not([class|="btn"]).error:focus,
 [type="reset"]:not([class|="btn"]).error:focus,
 button:not([type]):not([class|="btn"]).error:focus {
-  box-shadow: 0 0 0 2px rgba(202, 60, 60, 0.5);
+  box-shadow: 0 0 0 2px rgba(202, 60, 60, 0.9);
 }
 .btn,
 [type="submit"]:not([class|="btn"]),
