@@ -3001,17 +3001,17 @@ button:not([type]):not([class|="btn"]).link:hover {
 .input-group > label:first-child,
 .input-group > span:first-child > *,
 .input-group > label:first-child > * {
-  border-right: none;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-right: none !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 .input-group > span:last-child,
 .input-group > label:last-child,
 .input-group > span:last-child > *,
 .input-group > label:last-child > * {
-  border-left: none;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-left: none !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
 .input-group > span {
   line-height: normal;
