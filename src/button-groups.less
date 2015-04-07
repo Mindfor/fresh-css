@@ -8,12 +8,12 @@
 	
 	> * {
 		&:not(:first-child) {
-			.border-left-radius(0);
+			.border-left-radius(0) !important;
 			margin-left: -@btn-border-width;
 		}
 		
 		&:not(:last-child) {
-			.border-right-radius(0);
+			.border-right-radius(0) !important;
 		}
 	}
 }
@@ -25,12 +25,12 @@
 		display: block !important;
 		
 		&:not(:first-child) {
-			.border-top-radius(0);
+			.border-top-radius(0) !important;
 			margin-top: -@btn-border-width;
 		}
 
 		&:not(:last-child) {
-			.border-bottom-radius(0);
+			.border-bottom-radius(0) !important;
 		}
 	}
 }

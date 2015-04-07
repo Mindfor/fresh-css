@@ -2945,13 +2945,13 @@ button:not([type]):not([class|="btn"]).link:hover {
   justify-content: center;
 }
 .btn-group > *:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
   margin-left: -1px;
 }
 .btn-group > *:not(:last-child) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 .btn-group-vertical {
   display: block;
@@ -2960,13 +2960,13 @@ button:not([type]):not([class|="btn"]).link:hover {
   display: block !important;
 }
 .btn-group-vertical > *:not(:first-child) {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
   margin-top: -1px;
 }
 .btn-group-vertical > *:not(:last-child) {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 .input-group {
   display: inline-table;
