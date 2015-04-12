@@ -1,11 +1,13 @@
 @import "variables.less";
 @import "mixins.less";
 
+.control,
 input,
 select {
 	line-height: normal;
 }
 
+.control,
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -121,6 +123,7 @@ select {
 	margin-bottom: 0 !important;
 }
 
+.control,
 input,
 button,
 textarea,
@@ -155,6 +158,7 @@ fieldset {
 }
 
 // Colors
+.control,
 input,
 textarea,
 select {
@@ -202,37 +206,37 @@ label {
 }
 
 // Clear controls
-input,
-textarea,
-select {
+// Hint: we use tag names to override default input styles
+.control-clear,
+input.control-clear,
+textarea.control-clear,
+select.control-clear {
+	color: @color-invert;
+	border-color: @color-invert;
+	background: transparent;
+	.control-color(@control-active-color);
+	.placeholder-color(@color-invert);
+
 	.control-color(@color) {
 		&:focus {
 			background: @color;
 			border-color: @color-invert;
 		}
 	}
-	
-	&.control-clear {
-		color: @color-invert;
-		border-color: @color-invert;
-		background: transparent;
-		.control-color(@control-active-color);
-		.placeholder-color(@color-invert);
-		
-		&.secondary {
-			.control-color(@color-secondary);
-		}
-		
-		&.success {
-			.control-color(@color-success);
-		}
 
-		&.warning {
-			.control-color(@color-warning);
-		}
+	&.secondary {
+		.control-color(@color-secondary);
+	}
 
-		&.error {
-			.control-color(@color-error);
-		}
+	&.success {
+		.control-color(@color-success);
+	}
+
+	&.warning {
+		.control-color(@color-warning);
+	}
+
+	&.error {
+		.control-color(@color-error);
 	}
 }

@@ -2151,10 +2151,12 @@ kbd {
     margin-bottom: 1em;
   }
 }
+.control,
 input,
 select {
   line-height: normal;
 }
+.control,
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -2187,6 +2189,7 @@ select {
   -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
   transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
+.control:-ms-input-placeholder,
 input[type="text"]:-ms-input-placeholder,
 input[type="password"]:-ms-input-placeholder,
 input[type="email"]:-ms-input-placeholder,
@@ -2205,6 +2208,7 @@ textarea:-ms-input-placeholder,
 select:-ms-input-placeholder {
   color: #565d64;
 }
+.control::-moz-placeholder,
 input[type="text"]::-moz-placeholder,
 input[type="password"]::-moz-placeholder,
 input[type="email"]::-moz-placeholder,
@@ -2223,6 +2227,7 @@ textarea::-moz-placeholder,
 select::-moz-placeholder {
   color: #565d64;
 }
+.control::-webkit-input-placeholder,
 input[type="text"]::-webkit-input-placeholder,
 input[type="password"]::-webkit-input-placeholder,
 input[type="email"]::-webkit-input-placeholder,
@@ -2241,6 +2246,7 @@ textarea::-webkit-input-placeholder,
 select::-webkit-input-placeholder {
   color: #565d64;
 }
+.control[disabled],
 input[type="text"][disabled],
 input[type="password"][disabled],
 input[type="email"][disabled],
@@ -2262,6 +2268,7 @@ select[disabled] {
   background: #f4f4f4;
   cursor: not-allowed;
 }
+.control[readonly],
 input[type="text"][readonly],
 input[type="password"][readonly],
 input[type="email"][readonly],
@@ -2280,6 +2287,7 @@ textarea[readonly],
 select[readonly] {
   background: #f4f4f4;
 }
+.control:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
@@ -2351,6 +2359,7 @@ input[type="range"] {
 select {
   margin-bottom: 0 !important;
 }
+.control.width-xs,
 input.width-xs,
 button.width-xs,
 textarea.width-xs,
@@ -2361,6 +2370,7 @@ form.width-xs,
 fieldset.width-xs {
   max-width: 12em;
 }
+.control.width-sm,
 input.width-sm,
 button.width-sm,
 textarea.width-sm,
@@ -2371,6 +2381,7 @@ form.width-sm,
 fieldset.width-sm {
   max-width: 24em;
 }
+.control.width-md,
 input.width-md,
 button.width-md,
 textarea.width-md,
@@ -2381,6 +2392,7 @@ form.width-md,
 fieldset.width-md {
   max-width: 36em;
 }
+.control.width-lg,
 input.width-lg,
 button.width-lg,
 textarea.width-lg,
@@ -2391,6 +2403,7 @@ form.width-lg,
 fieldset.width-lg {
   max-width: 48em;
 }
+.control.width-xl,
 input.width-xl,
 button.width-xl,
 textarea.width-xl,
@@ -2401,6 +2414,7 @@ form.width-xl,
 fieldset.width-xl {
   max-width: 64em;
 }
+.control.width-xxl,
 input.width-xxl,
 button.width-xxl,
 textarea.width-xxl,
@@ -2411,26 +2425,31 @@ form.width-xxl,
 fieldset.width-xxl {
   max-width: 80em;
 }
+.control.primary,
 input.primary,
 textarea.primary,
 select.primary {
   border-color: #105c9a;
 }
+.control.primary:focus,
 input.primary:focus,
 textarea.primary:focus,
 select.primary:focus {
   box-shadow: 0 0 0 2px rgba(16, 92, 154, 0.3);
 }
+.control.secondary,
 input.secondary,
 textarea.secondary,
 select.secondary {
   border-color: #56b9d9;
 }
+.control.secondary:focus,
 input.secondary:focus,
 textarea.secondary:focus,
 select.secondary:focus {
   box-shadow: 0 0 0 2px rgba(86, 185, 217, 0.3);
 }
+.control.success,
 input.success,
 textarea.success,
 select.success,
@@ -2445,6 +2464,7 @@ select.success,
 .form-aligned > .success select {
   border-color: #5cb85c;
 }
+.control.success:focus,
 input.success:focus,
 textarea.success:focus,
 select.success:focus,
@@ -2459,6 +2479,7 @@ select.success:focus,
 .form-aligned > .success select:focus {
   box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.3);
 }
+.control.warning,
 input.warning,
 textarea.warning,
 select.warning,
@@ -2473,6 +2494,7 @@ select.warning,
 .form-aligned > .warning select {
   border-color: #df7514;
 }
+.control.warning:focus,
 input.warning:focus,
 textarea.warning:focus,
 select.warning:focus,
@@ -2487,6 +2509,7 @@ select.warning:focus,
 .form-aligned > .warning select:focus {
   box-shadow: 0 0 0 2px rgba(223, 117, 20, 0.3);
 }
+.control.error,
 input.error,
 textarea.error,
 select.error,
@@ -2501,6 +2524,7 @@ select.error,
 .form-aligned > .error select {
   border-color: #ca3c3c;
 }
+.control.error:focus,
 input.error:focus,
 textarea.error:focus,
 select.error:focus,
@@ -2524,6 +2548,7 @@ label.warning {
 label.error {
   color: #ca3c3c;
 }
+.control-clear,
 input.control-clear,
 textarea.control-clear,
 select.control-clear {
@@ -2531,45 +2556,53 @@ select.control-clear {
   border-color: white;
   background: transparent;
 }
+.control-clear:focus,
 input.control-clear:focus,
 textarea.control-clear:focus,
 select.control-clear:focus {
   background: #105c9a;
   border-color: white;
 }
+.control-clear:-ms-input-placeholder,
 input.control-clear:-ms-input-placeholder,
 textarea.control-clear:-ms-input-placeholder,
 select.control-clear:-ms-input-placeholder {
   color: white;
 }
+.control-clear::-moz-placeholder,
 input.control-clear::-moz-placeholder,
 textarea.control-clear::-moz-placeholder,
 select.control-clear::-moz-placeholder {
   color: white;
 }
+.control-clear::-webkit-input-placeholder,
 input.control-clear::-webkit-input-placeholder,
 textarea.control-clear::-webkit-input-placeholder,
 select.control-clear::-webkit-input-placeholder {
   color: white;
 }
+.control-clear.secondary:focus,
 input.control-clear.secondary:focus,
 textarea.control-clear.secondary:focus,
 select.control-clear.secondary:focus {
   background: #56b9d9;
   border-color: white;
 }
+.control-clear.success:focus,
 input.control-clear.success:focus,
 textarea.control-clear.success:focus,
 select.control-clear.success:focus {
   background: #5cb85c;
   border-color: white;
 }
+.control-clear.warning:focus,
 input.control-clear.warning:focus,
 textarea.control-clear.warning:focus,
 select.control-clear.warning:focus {
   background: #df7514;
   border-color: white;
 }
+.control-clear.error:focus,
 input.control-clear.error:focus,
 textarea.control-clear.error:focus,
 select.control-clear.error:focus {
