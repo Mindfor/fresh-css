@@ -107,6 +107,7 @@
 }
 
 .btn-color(@color) {
+	.btn-base-color(@color);
 	color: @btn-color;
 	background: @color;
 	border-color: darken(@color, 5%);
@@ -149,6 +150,7 @@
 }
 
 .btn-outline-color(@color) {
+	.btn-base-color(@color);
 	color: @color;
 	border-color: @color;
 	
@@ -194,6 +196,10 @@
 .btn-clear-color(@color) {
 	&:hover {
 		background: @color;
+	}
+	
+	&:focus {
+		box-shadow: 0 0 @btn-focus-blur @btn-focus-spread fade(@color, 90%);
 	}
 }
 

@@ -52,7 +52,7 @@ select {
 
 	&:focus {
 		border-color: @control-active-color;
-		box-shadow: 0 0 0 2px fade(@control-active-color, @control-focus-fade);
+		box-shadow: 0 0 @control-focus-blur @control-focus-spread fade(@control-active-color, @control-focus-fade);
 	}
 }
 
@@ -98,7 +98,7 @@ input[type="radio"] {
 input[type="checkbox"],
 input[type="radio"] {
 	&:focus {
-		box-shadow: 0 0 0 2px fade(@control-active-color, @control-focus-fade);
+		box-shadow: 0 0 @control-focus-blur @control-focus-spread fade(@control-active-color, @control-focus-fade);
 	}
 }
 
