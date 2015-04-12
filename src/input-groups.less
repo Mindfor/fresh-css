@@ -20,6 +20,7 @@
 	input[type="datetime-local"],
 	textarea {
 		.flex(1);
+		border-width: @control-border-width;
 		
 		&:not(:first-child) {
 			.border-left-radius(0) !important;
@@ -31,12 +32,12 @@
 	}
 	
 	:first-child {
-		border-right: none !important;
+		border-right-width: 0;
 		.border-right-radius(0) !important;
 	}
         
 	:last-child {
-		border-left: none !important;
+		border-left-width: 0;
 		.border-left-radius(0) !important;
 	}
 	

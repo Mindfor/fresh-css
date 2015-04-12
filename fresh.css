@@ -3069,6 +3069,7 @@ button:not([type]):not([class|="btn"]).link:hover {
 .input-group textarea {
   -webkit-flex: 1;
   flex: 1;
+  border-width: 1px;
 }
 .input-group input[type="text"]:not(:first-child),
 .input-group input[type="password"]:not(:first-child),
@@ -3107,12 +3108,12 @@ button:not([type]):not([class|="btn"]).link:hover {
   border-bottom-right-radius: 0 !important;
 }
 .input-group :first-child {
-  border-right: none !important;
+  border-right-width: 0;
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
 }
 .input-group :last-child {
-  border-left: none !important;
+  border-left-width: 0;
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
 }
