@@ -1,13 +1,21 @@
 @import "variables.less";
 
 .nav-base {
+	.clearfix();
+	
 	> header {
 		padding: @nav-padding;
 		font-size: 0.9em;
 		text-transform: uppercase;
 	}
 	
-	ul > li {
+	ul {
+		display: block;
+	}
+	
+	li {
+		display: block;
+		
 		> a, > span {
 			display: block;
 			padding: @nav-padding;
@@ -39,10 +47,14 @@
 .nav-base-horizontal {
 	&:extend(.nav-base all);
 	
-	ul,
-	ul > li,
+	ul, li,
 	> header, {
-		display: inline-block;
+		float: left;
+		margin-left: @nav-spacing;
+		
+		&:first-child {
+			margin-left: 0;
+		}
 	}
 }
 
@@ -50,20 +62,23 @@
 	&:extend(.nav-base all);
 	
 	> header {
-		display: block;
 		border-bottom: @nav-border-width solid @color-border;
-		margin-top: @nav-heading-margin-top;
+		margin-top: @nav-heading-margin-top + @nav-spacing;
+		
+		&:first-child {
+			margin-top: 0;
+		}
 	}
 	
-	ul {
-		display: block;
+	li > ul {
+		margin-left: 2em;
 	}
-
-	ul > li {
-		display: block;
-
-		> ul {
-			margin-left: 2em;
+	
+	ul, li {
+		margin-top: @nav-spacing;
+		
+		&:first-child {
+			margin-top: 0;
 		}
 	}
 }
@@ -71,7 +86,7 @@
 // Normal navigation
 .nav-horizontal,
 .nav-vertical {
-	ul > li {
+	li {
 		> a, > span {
 			border-radius: @nav-border-radius;
 			border: @nav-border-width solid transparent;
@@ -90,7 +105,7 @@
 // Lined navigation
 .nav-lined-horizontal,
 .nav-lined-vertical {
-	ul > li {
+	li {
 		> a, > span {
 			color: @color-text;
 		}
@@ -104,7 +119,7 @@
 .nav-lined-horizontal {
 	&:extend(.nav-base-horizontal all);
 	
-	ul > li {
+	li {
 		> a, > span {
 			margin-bottom: 1px;
 			border-bottom: 1px solid transparent;
@@ -128,7 +143,7 @@
 		}
 	}
 
-	ul > li {
+	li {
 		> a, > span {
 			margin-left: 1px;				
 			border-left: 1px solid transparent;
