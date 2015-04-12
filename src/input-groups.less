@@ -2,13 +2,24 @@
 @import "mixins.less";
 
 .input-group {
-	display: inline-table;
-	border-collapse: separate;
-	vertical-align: middle;
+	.flex-container-inline();
 	
-	> input {
-		display: table-cell !important;
-		width: 100%;
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="url"],
+	input[type="phone"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="datetime"],
+	input[type="date"],
+	input[type="month"],
+	input[type="color"],
+	input[type="time"],
+	input[type="search"],
+	input[type="datetime-local"],
+	textarea {
+		.flex(1);
 		
 		&:not(:first-child) {
 			.border-left-radius(0) !important;
@@ -18,32 +29,15 @@
 			.border-right-radius(0) !important;
         }
 	}
-
-	> span,
-    > label {
-        display: table-cell !important;
-		vertical-align: middle;
-		white-space: nowrap;
-		width: 1px;
-		
-		> * {
-			height: 100%;
-			box-sizing: content-box;
-		}
+	
+	:first-child {
+		border-right: none !important;
+		.border-right-radius(0) !important;
+	}
         
-        &:first-child {
-			&, > * {
-				border-right: none !important;
-				.border-right-radius(0) !important;
-			}
-        }
-        
-        &:last-child {
-			&, > * {
-				border-left: none !important;
-				.border-left-radius(0) !important;
-			}
-        }
+	:last-child {
+		border-left: none !important;
+		.border-left-radius(0) !important;
 	}
 	
 	> span {
