@@ -1,0 +1,54 @@
+@import "variables.less";
+
+.alert-color(@color, @bg) {
+	color: @color;
+	border-color: @color;
+	background: @bg;
+	
+	li {
+		border-color: @color;
+	}
+}
+
+.alert {
+	padding: 1em;
+	margin-bottom: @line-margin;
+	border: @control-border;
+	border-radius: @control-border-radius;
+	list-style: none;
+	
+	:last-child {
+		margin-bottom: 0;
+	}
+	
+	> ul {
+		list-style: none;
+		padding-left: 0;
+	}
+	
+	li {
+		border-left: 1px solid @color-border;
+		padding-left: .5em;
+		margin: 3px 0;
+	}
+	
+	&.primary {
+		.alert-color(@color-primary, @color-bg-primary);
+	}
+	
+	&.secondary {
+		.alert-color(@color-secondary, @color-bg-secondary);
+	}
+	
+	&.success {
+		.alert-color(@color-success, @color-bg-success);
+	}
+	
+	&.warning {
+		.alert-color(@color-warning, @color-bg-warning);
+	}
+	
+	&.error {
+		.alert-color(@color-error, @color-bg-error);
+	}
+}
