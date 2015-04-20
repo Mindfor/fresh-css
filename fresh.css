@@ -242,6 +242,30 @@ img {
 .width-50 {
   width: 50%;
 }
+.width-xs {
+  width: 100%;
+  max-width: 12em;
+}
+.width-sm {
+  width: 100%;
+  max-width: 24em;
+}
+.width-md {
+  width: 100%;
+  max-width: 36em;
+}
+.width-lg {
+  width: 100%;
+  max-width: 48em;
+}
+.width-xl {
+  width: 100%;
+  max-width: 64em;
+}
+.width-xxl {
+  width: 100%;
+  max-width: 80em;
+}
 .xl {
   font-size: 1.5em;
 }
@@ -2358,72 +2382,6 @@ input[type="range"] {
 }
 select {
   margin-bottom: 0 !important;
-}
-.control.width-xs,
-input.width-xs,
-button.width-xs,
-textarea.width-xs,
-select.width-xs,
-label.width-xs,
-form.width-xs,
-.input-group.width-xs,
-fieldset.width-xs {
-  max-width: 12em;
-}
-.control.width-sm,
-input.width-sm,
-button.width-sm,
-textarea.width-sm,
-select.width-sm,
-label.width-sm,
-form.width-sm,
-.input-group.width-sm,
-fieldset.width-sm {
-  max-width: 24em;
-}
-.control.width-md,
-input.width-md,
-button.width-md,
-textarea.width-md,
-select.width-md,
-label.width-md,
-form.width-md,
-.input-group.width-md,
-fieldset.width-md {
-  max-width: 36em;
-}
-.control.width-lg,
-input.width-lg,
-button.width-lg,
-textarea.width-lg,
-select.width-lg,
-label.width-lg,
-form.width-lg,
-.input-group.width-lg,
-fieldset.width-lg {
-  max-width: 48em;
-}
-.control.width-xl,
-input.width-xl,
-button.width-xl,
-textarea.width-xl,
-select.width-xl,
-label.width-xl,
-form.width-xl,
-.input-group.width-xl,
-fieldset.width-xl {
-  max-width: 64em;
-}
-.control.width-xxl,
-input.width-xxl,
-button.width-xxl,
-textarea.width-xxl,
-select.width-xxl,
-label.width-xxl,
-form.width-xxl,
-.input-group.width-xxl,
-fieldset.width-xxl {
-  max-width: 80em;
 }
 .control.primary,
 input.primary,
