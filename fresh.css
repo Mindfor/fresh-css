@@ -3307,8 +3307,8 @@ table th.min,
 table td.min {
   width: 1px;
 }
-table th.control,
-table td.control {
+table th.buttons,
+table td.buttons {
   width: 1px;
   white-space: nowrap;
   text-align: center;
@@ -3774,18 +3774,24 @@ legend {
   width: 100%;
 }
 .form > div.row,
+.form > fieldset > section,
 .form > fieldset > div.row,
 .form-inline > div.row,
+.form-inline > fieldset > section,
 .form-inline > fieldset > div.row,
 .form-aligned > div.row,
+.form-aligned > fieldset > section,
 .form-aligned > fieldset > div.row {
   margin-bottom: 1em;
 }
 .form > div.row > *:first-child,
+.form > fieldset > section > *:first-child,
 .form > fieldset > div.row > *:first-child,
 .form-inline > div.row > *:first-child,
+.form-inline > fieldset > section > *:first-child,
 .form-inline > fieldset > div.row > *:first-child,
 .form-aligned > div.row > *:first-child,
+.form-aligned > fieldset > section > *:first-child,
 .form-aligned > fieldset > div.row > *:first-child {
   padding-right: 1em;
 }
