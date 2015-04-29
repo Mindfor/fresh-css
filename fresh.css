@@ -2205,6 +2205,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  color: black;
   background: white;
   border: 1px solid #bdbdbd;
   border-radius: 2px;
@@ -3114,6 +3115,7 @@ button:not([type]):not([class|="btn"]).link:hover {
   border: 1px solid #bdbdbd;
   border-radius: 2px;
   background-color: #f4f4f4;
+  color: black;
 }
 .input-group.success input,
 .input-group.success textarea,
@@ -3907,6 +3909,10 @@ legend {
 .form > fieldset > .aligned > output,
 .form-aligned > section > output,
 .form-aligned > fieldset > section > output,
+.form > .aligned > .input-group,
+.form > fieldset > .aligned > .input-group,
+.form-aligned > section > .input-group,
+.form-aligned > fieldset > section > .input-group,
 .form-inline > .aligned > input,
 .form-inline > fieldset > .aligned > input,
 .form-inline > .aligned > textarea,
@@ -3917,6 +3923,8 @@ legend {
 .form-inline > fieldset > .aligned > div,
 .form-inline > .aligned > output,
 .form-inline > fieldset > .aligned > output,
+.form-inline > .aligned > .input-group,
+.form-inline > fieldset > .aligned > .input-group,
 .form-aligned > .aligned > input,
 .form-aligned > fieldset > .aligned > input,
 .form-aligned > .aligned > textarea,
@@ -3926,7 +3934,9 @@ legend {
 .form-aligned > .aligned > div,
 .form-aligned > fieldset > .aligned > div,
 .form-aligned > .aligned > output,
-.form-aligned > fieldset > .aligned > output {
+.form-aligned > fieldset > .aligned > output,
+.form-aligned > .aligned > .input-group,
+.form-aligned > fieldset > .aligned > .input-group {
   width: 100%;
 }
 @media (min-width: 48em) {
@@ -3950,6 +3960,10 @@ legend {
   .form > fieldset > .aligned > output,
   .form-aligned > section > output,
   .form-aligned > fieldset > section > output,
+  .form > .aligned > .input-group,
+  .form > fieldset > .aligned > .input-group,
+  .form-aligned > section > .input-group,
+  .form-aligned > fieldset > section > .input-group,
   .form-inline > .aligned > input,
   .form-inline > fieldset > .aligned > input,
   .form-inline > .aligned > textarea,
@@ -3960,6 +3974,8 @@ legend {
   .form-inline > fieldset > .aligned > div,
   .form-inline > .aligned > output,
   .form-inline > fieldset > .aligned > output,
+  .form-inline > .aligned > .input-group,
+  .form-inline > fieldset > .aligned > .input-group,
   .form-aligned > .aligned > input,
   .form-aligned > fieldset > .aligned > input,
   .form-aligned > .aligned > textarea,
@@ -3969,7 +3985,9 @@ legend {
   .form-aligned > .aligned > div,
   .form-aligned > fieldset > .aligned > div,
   .form-aligned > .aligned > output,
-  .form-aligned > fieldset > .aligned > output {
+  .form-aligned > fieldset > .aligned > output,
+  .form-aligned > .aligned > .input-group,
+  .form-aligned > fieldset > .aligned > .input-group {
     width: 75%;
   }
 }
@@ -3994,6 +4012,10 @@ legend {
   .form > fieldset > .aligned > output:first-child,
   .form-aligned > section > output:first-child,
   .form-aligned > fieldset > section > output:first-child,
+  .form > .aligned > .input-group:first-child,
+  .form > fieldset > .aligned > .input-group:first-child,
+  .form-aligned > section > .input-group:first-child,
+  .form-aligned > fieldset > section > .input-group:first-child,
   .form-inline > .aligned > input:first-child,
   .form-inline > fieldset > .aligned > input:first-child,
   .form-inline > .aligned > textarea:first-child,
@@ -4004,6 +4026,8 @@ legend {
   .form-inline > fieldset > .aligned > div:first-child,
   .form-inline > .aligned > output:first-child,
   .form-inline > fieldset > .aligned > output:first-child,
+  .form-inline > .aligned > .input-group:first-child,
+  .form-inline > fieldset > .aligned > .input-group:first-child,
   .form-aligned > .aligned > input:first-child,
   .form-aligned > fieldset > .aligned > input:first-child,
   .form-aligned > .aligned > textarea:first-child,
@@ -4013,7 +4037,9 @@ legend {
   .form-aligned > .aligned > div:first-child,
   .form-aligned > fieldset > .aligned > div:first-child,
   .form-aligned > .aligned > output:first-child,
-  .form-aligned > fieldset > .aligned > output:first-child {
+  .form-aligned > fieldset > .aligned > output:first-child,
+  .form-aligned > .aligned > .input-group:first-child,
+  .form-aligned > fieldset > .aligned > .input-group:first-child {
     margin-left: 25%;
   }
 }
