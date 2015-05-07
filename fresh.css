@@ -3062,51 +3062,14 @@ button:not([type]):not([class|="btn"]).link:hover {
   flex: 1;
   border-width: 1px;
 }
-.input-group input[type="text"]:not(:first-child),
-.input-group input[type="password"]:not(:first-child),
-.input-group input[type="email"]:not(:first-child),
-.input-group input[type="url"]:not(:first-child),
-.input-group input[type="phone"]:not(:first-child),
-.input-group input[type="tel"]:not(:first-child),
-.input-group input[type="number"]:not(:first-child),
-.input-group input[type="datetime"]:not(:first-child),
-.input-group input[type="date"]:not(:first-child),
-.input-group input[type="month"]:not(:first-child),
-.input-group input[type="color"]:not(:first-child),
-.input-group input[type="time"]:not(:first-child),
-.input-group input[type="search"]:not(:first-child),
-.input-group input[type="datetime-local"]:not(:first-child),
-.input-group textarea:not(:first-child) {
+.input-group :not(:first-child) {
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
 }
-.input-group input[type="text"]:not(:last-child),
-.input-group input[type="password"]:not(:last-child),
-.input-group input[type="email"]:not(:last-child),
-.input-group input[type="url"]:not(:last-child),
-.input-group input[type="phone"]:not(:last-child),
-.input-group input[type="tel"]:not(:last-child),
-.input-group input[type="number"]:not(:last-child),
-.input-group input[type="datetime"]:not(:last-child),
-.input-group input[type="date"]:not(:last-child),
-.input-group input[type="month"]:not(:last-child),
-.input-group input[type="color"]:not(:last-child),
-.input-group input[type="time"]:not(:last-child),
-.input-group input[type="search"]:not(:last-child),
-.input-group input[type="datetime-local"]:not(:last-child),
-.input-group textarea:not(:last-child) {
+.input-group :not(:last-child) {
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
-}
-.input-group :first-child {
-  border-right-width: 0;
-  border-top-right-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
-}
-.input-group :last-child {
-  border-left-width: 0;
-  border-top-left-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
+  border-right-width: 0 !important;
 }
 .input-group > span {
   line-height: normal;

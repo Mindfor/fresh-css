@@ -21,24 +21,15 @@
 	textarea {
 		.flex(1);
 		border-width: @control-border-width;
-		
-		&:not(:first-child) {
-			.border-left-radius(0) !important;
-        }
-        
-        &:not(:last-child) {
-			.border-right-radius(0) !important;
-        }
 	}
 	
-	:first-child {
-		border-right-width: 0;
-		.border-right-radius(0) !important;
-	}
-        
-	:last-child {
-		border-left-width: 0;
+	:not(:first-child) {
 		.border-left-radius(0) !important;
+	}
+	
+	:not(:last-child) {
+		.border-right-radius(0) !important;
+		border-right-width: 0 !important;
 	}
 	
 	> span {
