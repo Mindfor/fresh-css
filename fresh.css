@@ -711,11 +711,10 @@ kbd {
   }
 }
 .row {
-  display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -ms-flex-flow: row wrap;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
 }
@@ -1457,11 +1456,10 @@ kbd {
 .blocks-xxl-8,
 .blocks-xxl-9,
 .blocks-xxl-10 {
-  display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -ms-flex-flow: row wrap;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
   list-style: none;
@@ -2989,8 +2987,6 @@ button:not([type]):not([class|="btn"]).link:hover {
   box-shadow: 0 0 0 2px rgba(202, 60, 60, 0.9);
 }
 .btn-group {
-  display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -3039,8 +3035,7 @@ button:not([type]):not([class|="btn"]).link:hover {
   border-bottom-right-radius: 0 !important;
 }
 .input-group {
-  display: -webkit-inline-box;
-  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
   display: inline-flex;
 }
@@ -3059,6 +3054,7 @@ button:not([type]):not([class|="btn"]).link:hover {
 .input-group input[type="search"],
 .input-group input[type="datetime-local"],
 .input-group textarea {
+  -ms-flex: 1;
   -webkit-flex: 1;
   flex: 1;
   border-width: 1px;
@@ -3768,8 +3764,6 @@ legend {
 .form .input-group,
 .form-inline .input-group,
 .form-aligned .input-group {
-  display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -3832,8 +3826,7 @@ legend {
 .form .inline > .input-group,
 .form-inline .inline > .input-group,
 .form-aligned .inline > .input-group {
-  display: -webkit-inline-box;
-  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
   display: inline-flex;
   width: auto;
@@ -3846,11 +3839,10 @@ legend {
 .form-inline > fieldset > .aligned,
 .form-aligned > .aligned,
 .form-aligned > fieldset > .aligned {
-  display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -ms-flex-flow: row wrap;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
 }

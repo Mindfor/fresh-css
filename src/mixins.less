@@ -36,33 +36,33 @@
 
 // Flex
 .flex-container() {
-	display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
+	display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
 }
 
 .flex-container-inline() {
-	display: -webkit-inline-box;
-	display: -moz-inline-box;
-    display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: -webkit-inline-flex;
 	display: inline-flex;
 }
 
 .flex-container(@flow) {
 	.flex-container();
+	-ms-flex-flow: @flow;
 	-webkit-flex-flow: @flow;
 	flex-flow: @flow;
 }
 
 .flex-container-inline(@flow) {
 	.flex-container-inline();
+	-ms-flex-flow: @flow;
 	-webkit-flex-flow: @flow;
 	flex-flow: @flow;
 }
 
 .flex(@value) {
+	-ms-flex: @value;
 	-webkit-flex: @value;
 	flex: @value;
 }
@@ -104,6 +104,7 @@
 }
 
 .order(@value) {
+	-ms-flex-order: @value;
 	-webkit-order: @value;
 	order: @value;
 }
