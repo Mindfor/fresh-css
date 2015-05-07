@@ -3000,15 +3000,18 @@ button:not([type]):not([class|="btn"]).link:hover {
   float: none;
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
+  -ms-flex-pack: start;
 }
 .btn-group.pull-right {
   float: none;
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
+  -ms-flex-pack: end;
 }
 .btn-group.pull-center {
   -webkit-justify-content: center;
   justify-content: center;
+  -ms-flex-pack: center;
 }
 .btn-group > *:not(:first-child) {
   border-top-left-radius: 0 !important;
