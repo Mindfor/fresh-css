@@ -39,7 +39,8 @@ select {
 	border-radius: @control-border-radius;
 	padding: @control-padding-v @control-padding-h;
 	vertical-align: middle;
-	.transition(@control-transition);
+	-webkit-transition: @control-transition-webkit;
+	transition: @control-transition;
 	.placeholder-color(@color-gray);
 
 	&[disabled] {

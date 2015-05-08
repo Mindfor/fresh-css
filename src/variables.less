@@ -2,6 +2,7 @@
 @body-bg:					#fff;
 @transition-duration:		0.2s;
 @transition-default:		color @transition-duration, background @transition-duration, border-color @transition-duration, transform @transition-duration, box-shadow @transition-duration;
+@transition-webkit:			color @transition-duration, background @transition-duration, border-color @transition-duration, -webkit-transform @transition-duration, box-shadow @transition-duration;
 
 // Typography
 @font-family-base:			"Helvetica Neue", Helvetica, Tahoma, sans-serif;
@@ -48,6 +49,7 @@
 @link-color:				@color-primary;
 @link-hover-color:			darken(@link-color, 15%);
 @link-transition:			@transition-default;
+@link-transition-webkit:	@transition-webkit;
 
 // Code
 @code-font-family:			Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -76,6 +78,7 @@
 @control-focus-blur:			0;
 @control-focus-spread:			2px;
 @control-transition:			@transition-default;
+@control-transition-webkit:		@transition-webkit;
 @control-multiline-height:		1.35em;
 
 @control-width-xs:				12em;
@@ -99,6 +102,7 @@
 @btn-focus-spread:			@control-focus-spread;
 @btn-active-shadow:			0 0px 7px rgba(0, 0, 0, .5) inset;
 @btn-transition:			@link-transition;
+@btn-transition-webkit:		@link-transition-webkit;
 
 // Table
 @table-border:				1px solid @color-border;

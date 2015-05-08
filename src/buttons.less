@@ -20,7 +20,8 @@
 	outline: none;
 	box-shadow: none;
 	cursor: pointer;
-	.transition(@btn-transition);
+	-webkit-transition: @btn-transition-webkit;
+	transition: @btn-transition;
 	.btn-base-color(@btn-bg);
 	
 	&::-moz-focus-inner {

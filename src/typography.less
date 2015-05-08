@@ -14,8 +14,9 @@ a {
 	color: @link-color;
 	text-decoration: underline;
 	outline: none;
-	.transition(@link-transition);
-
+	-webkit-transition: @link-transition-webkit;
+	transition: @link-transition;
+	
 	&:hover {
 		color: @link-hover-color;
         text-decoration: none;
