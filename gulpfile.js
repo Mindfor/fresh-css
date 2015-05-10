@@ -18,10 +18,8 @@ gulp.task("less", function () {
 		.pipe(gulp.dest("./"));
 });
 
-gulp.task("watch", function() {
-	gulp.watch([ "fresh.less", "src/*" ], [ "less" ]);
-});
+gulp.task("default", ["less"]);
 
-gulp.task("default", [ "less" ], function () {
-    gulp.start("watch");
+gulp.task("watch", ["default"], function() {
+	gulp.watch([ "fresh.less", "src/*" ], [ "less" ]);
 });
