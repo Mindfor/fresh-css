@@ -2205,7 +2205,7 @@ select {
   background: white;
   border: 1px solid #bdbdbd;
   border-radius: 2px;
-  padding: 0.5em 0.6em;
+  padding: 0.6em 0.5em;
   vertical-align: middle;
   -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s, -webkit-transform 0.2s, box-shadow 0.2s;
   transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
@@ -2576,7 +2576,7 @@ select.control-clear.error:focus {
   line-height: normal;
   text-align: center;
   text-decoration: none;
-  padding: 0.5em 1em;
+  padding: 0.6em 0.9em;
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
@@ -2970,7 +2970,7 @@ select.control-clear.error:focus {
 }
 .input-group > span {
   line-height: normal;
-  padding: 0.5em 0.6em;
+  padding: 0.6em 0.5em;
   border: 1px solid #bdbdbd;
   border-radius: 2px;
   background-color: #f4f4f4;
@@ -4002,7 +4002,7 @@ legend {
   .form-aligned > fieldset > .aligned > label,
   .form-aligned > .aligned > output,
   .form-aligned > fieldset > .aligned > output {
-    padding-top: 0.5em;
+    padding-top: 0.6em;
     border-top: 1px solid transparent;
   }
 }
@@ -4085,7 +4085,7 @@ ul.pagination > li > a,
 ul.pagination > li > span {
   display: block;
   line-height: normal;
-  padding: 0.5em 0.9em;
+  padding: 0.6em 0.9em;
   text-decoration: none;
 }
 ul.pagination > li > a:hover,
