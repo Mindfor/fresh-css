@@ -231,9 +231,8 @@
 	}
 }
 
-// Default buttons
-[type="submit"]:not([class|="btn"]) {
-	&:extend(.btn all);
+// Default submit buttons
+[type="submit"].btn {
 	&:extend(.btn.primary all);
 }
 
@@ -243,13 +242,4 @@
 
 [type="submit"].btn-clear {
 	&:extend(.btn-clear.primary all);
-}
-
-
-[type="button"],
-[type="reset"],
-button:not([type]) {
-	&:not([class|="btn"]) {
-		&:extend(.btn all);
-	}
 }
