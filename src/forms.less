@@ -23,10 +23,19 @@ legend {
 .form {
 	// One-by-one labels or vertical sections with controls
 	> label,
-	> section {
+	> section,
+	> fieldset > label,
+	> fieldset > section {
 		.clearfix();
 		display: block;
 		margin-bottom: @line-margin;
+		
+		> input,
+		> textarea,
+		> select {
+			display: block;
+			width: 100%;
+		}
 		
 		> input,
 		> textarea,
@@ -42,14 +51,7 @@ legend {
 	> * {
 		clear: both;
 	}
-	
-	input,
-	textarea,
-	select {
-		display: block;
-		width: 100%;
-	}
-	
+		
 	input[type="submit"],
 	input[type="button"],
 	input[type="reset"],

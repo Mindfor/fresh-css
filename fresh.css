@@ -393,7 +393,7 @@ abbr[title].text-help,
 body {
   font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
   font-size: 15px;
-  line-height: 1.5em;
+  line-height: 1.5;
   background: #ffffff;
   color: #222222;
 }
@@ -424,7 +424,7 @@ h6,
   font-weight: normal;
   color: black;
   text-rendering: optimizeLegibility;
-  margin: 1.5em 0 0.5em;
+  margin: 1.5 0 0.5em;
 }
 h1:first-child,
 h2:first-child,
@@ -478,7 +478,7 @@ dt,
 blockquote,
 td,
 th {
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 p,
 .p,
@@ -2174,7 +2174,7 @@ kbd {
 .control,
 input,
 select {
-  line-height: normal;
+  line-height: 1;
 }
 .control,
 input[type="text"],
@@ -2346,7 +2346,7 @@ select:not([multiple]) {
 textarea,
 select[multiple],
 select[multiple="multiple"] {
-  line-height: 1.35em;
+  line-height: 1.35;
   width: 100%;
 }
 select[disabled],
@@ -3322,7 +3322,7 @@ table tbody > td[data-href]:hover {
 .table-container {
   width: 100%;
   overflow: auto;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5;
 }
 .table-container table {
   margin-bottom: 0;
@@ -3623,89 +3623,176 @@ legend {
 }
 .form > label,
 .form > section,
+.form > fieldset > label,
+.form > fieldset > section,
 .form-inline > label,
 .form-inline > section,
+.form-inline > fieldset > label,
+.form-inline > fieldset > section,
 .form-aligned > label,
-.form-aligned > section {
+.form-aligned > section,
+.form-aligned > fieldset > label,
+.form-aligned > fieldset > section {
   display: block;
   margin-bottom: 1em;
 }
 .form > label:after,
 .form > section:after,
+.form > fieldset > label:after,
+.form > fieldset > section:after,
 .form-inline > label:after,
 .form-inline > section:after,
+.form-inline > fieldset > label:after,
+.form-inline > fieldset > section:after,
 .form-aligned > label:after,
-.form-aligned > section:after {
+.form-aligned > section:after,
+.form-aligned > fieldset > label:after,
+.form-aligned > fieldset > section:after {
   content: "";
   display: table;
   clear: both;
 }
+.form > label > input,
+.form > section > input,
+.form > fieldset > label > input,
+.form > fieldset > section > input,
+.form > label > textarea,
+.form > section > textarea,
+.form > fieldset > label > textarea,
+.form > fieldset > section > textarea,
+.form > label > select,
+.form > section > select,
+.form > fieldset > label > select,
+.form > fieldset > section > select,
+.form-inline > label > input,
+.form-inline > section > input,
+.form-inline > fieldset > label > input,
+.form-inline > fieldset > section > input,
+.form-inline > label > textarea,
+.form-inline > section > textarea,
+.form-inline > fieldset > label > textarea,
+.form-inline > fieldset > section > textarea,
+.form-inline > label > select,
+.form-inline > section > select,
+.form-inline > fieldset > label > select,
+.form-inline > fieldset > section > select,
+.form-aligned > label > input,
+.form-aligned > section > input,
+.form-aligned > fieldset > label > input,
+.form-aligned > fieldset > section > input,
+.form-aligned > label > textarea,
+.form-aligned > section > textarea,
+.form-aligned > fieldset > label > textarea,
+.form-aligned > fieldset > section > textarea,
+.form-aligned > label > select,
+.form-aligned > section > select,
+.form-aligned > fieldset > label > select,
+.form-aligned > fieldset > section > select {
+  display: block;
+  width: 100%;
+}
 .form > label > input + label.radio,
 .form > section > input + label.radio,
+.form > fieldset > label > input + label.radio,
+.form > fieldset > section > input + label.radio,
 .form > label > textarea + label.radio,
 .form > section > textarea + label.radio,
+.form > fieldset > label > textarea + label.radio,
+.form > fieldset > section > textarea + label.radio,
 .form > label > select + label.radio,
 .form > section > select + label.radio,
+.form > fieldset > label > select + label.radio,
+.form > fieldset > section > select + label.radio,
 .form > label > div + label.radio,
 .form > section > div + label.radio,
+.form > fieldset > label > div + label.radio,
+.form > fieldset > section > div + label.radio,
 .form > label > input + label.checkbox,
 .form > section > input + label.checkbox,
+.form > fieldset > label > input + label.checkbox,
+.form > fieldset > section > input + label.checkbox,
 .form > label > textarea + label.checkbox,
 .form > section > textarea + label.checkbox,
+.form > fieldset > label > textarea + label.checkbox,
+.form > fieldset > section > textarea + label.checkbox,
 .form > label > select + label.checkbox,
 .form > section > select + label.checkbox,
+.form > fieldset > label > select + label.checkbox,
+.form > fieldset > section > select + label.checkbox,
 .form > label > div + label.checkbox,
 .form > section > div + label.checkbox,
+.form > fieldset > label > div + label.checkbox,
+.form > fieldset > section > div + label.checkbox,
 .form-inline > label > input + label.radio,
 .form-inline > section > input + label.radio,
+.form-inline > fieldset > label > input + label.radio,
+.form-inline > fieldset > section > input + label.radio,
 .form-inline > label > textarea + label.radio,
 .form-inline > section > textarea + label.radio,
+.form-inline > fieldset > label > textarea + label.radio,
+.form-inline > fieldset > section > textarea + label.radio,
 .form-inline > label > select + label.radio,
 .form-inline > section > select + label.radio,
+.form-inline > fieldset > label > select + label.radio,
+.form-inline > fieldset > section > select + label.radio,
 .form-inline > label > div + label.radio,
 .form-inline > section > div + label.radio,
+.form-inline > fieldset > label > div + label.radio,
+.form-inline > fieldset > section > div + label.radio,
 .form-inline > label > input + label.checkbox,
 .form-inline > section > input + label.checkbox,
+.form-inline > fieldset > label > input + label.checkbox,
+.form-inline > fieldset > section > input + label.checkbox,
 .form-inline > label > textarea + label.checkbox,
 .form-inline > section > textarea + label.checkbox,
+.form-inline > fieldset > label > textarea + label.checkbox,
+.form-inline > fieldset > section > textarea + label.checkbox,
 .form-inline > label > select + label.checkbox,
 .form-inline > section > select + label.checkbox,
+.form-inline > fieldset > label > select + label.checkbox,
+.form-inline > fieldset > section > select + label.checkbox,
 .form-inline > label > div + label.checkbox,
 .form-inline > section > div + label.checkbox,
+.form-inline > fieldset > label > div + label.checkbox,
+.form-inline > fieldset > section > div + label.checkbox,
 .form-aligned > label > input + label.radio,
 .form-aligned > section > input + label.radio,
+.form-aligned > fieldset > label > input + label.radio,
+.form-aligned > fieldset > section > input + label.radio,
 .form-aligned > label > textarea + label.radio,
 .form-aligned > section > textarea + label.radio,
+.form-aligned > fieldset > label > textarea + label.radio,
+.form-aligned > fieldset > section > textarea + label.radio,
 .form-aligned > label > select + label.radio,
 .form-aligned > section > select + label.radio,
+.form-aligned > fieldset > label > select + label.radio,
+.form-aligned > fieldset > section > select + label.radio,
 .form-aligned > label > div + label.radio,
 .form-aligned > section > div + label.radio,
+.form-aligned > fieldset > label > div + label.radio,
+.form-aligned > fieldset > section > div + label.radio,
 .form-aligned > label > input + label.checkbox,
 .form-aligned > section > input + label.checkbox,
+.form-aligned > fieldset > label > input + label.checkbox,
+.form-aligned > fieldset > section > input + label.checkbox,
 .form-aligned > label > textarea + label.checkbox,
 .form-aligned > section > textarea + label.checkbox,
+.form-aligned > fieldset > label > textarea + label.checkbox,
+.form-aligned > fieldset > section > textarea + label.checkbox,
 .form-aligned > label > select + label.checkbox,
 .form-aligned > section > select + label.checkbox,
+.form-aligned > fieldset > label > select + label.checkbox,
+.form-aligned > fieldset > section > select + label.checkbox,
 .form-aligned > label > div + label.checkbox,
-.form-aligned > section > div + label.checkbox {
+.form-aligned > section > div + label.checkbox,
+.form-aligned > fieldset > label > div + label.checkbox,
+.form-aligned > fieldset > section > div + label.checkbox {
   margin-top: .25em;
 }
 .form > *,
 .form-inline > *,
 .form-aligned > * {
   clear: both;
-}
-.form input,
-.form textarea,
-.form select,
-.form-inline input,
-.form-inline textarea,
-.form-inline select,
-.form-aligned input,
-.form-aligned textarea,
-.form-aligned select {
-  display: block;
-  width: 100%;
 }
 .form input[type="submit"],
 .form input[type="button"],
