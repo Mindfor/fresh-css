@@ -93,18 +93,6 @@
 	&.error {
 		.btn-color(@color-error);
 	}
-	
-	&.link {
-		color: @link-color;
-		background: none !important;
-		border-color: transparent !important;
-		text-decoration: underline;
-		
-		&:hover {
-			color: @link-hover-color;
-			text-decoration: none;
-		}
-	}
 }
 
 .btn-color(@color) {
@@ -117,6 +105,45 @@
 		background: darken(@color, @btn-hovering);
 		border-color: darken(@color, @btn-hovering);
 	}
+}
+
+// Link button
+.btn-link {
+	&:extend(.btn-base all);
+	border-color: transparent !important;
+	.btn-link-color(@link-color);
+	
+	&:hover {
+		color: @link-hover-color;
+		text-decoration: none;
+		
+		background-color: @color-light;
+		border-color: @color-light;
+	}
+	
+	&.primary {
+		.btn-link-color(@color-primary);
+	}
+	
+	&.secondary {
+		.btn-link-color(@color-secondary);
+	}
+	
+	&.success {
+		.btn-link-color(@color-success);
+	}
+	
+	&.warning {
+		.btn-link-color(@color-warning);
+	}
+	
+	&.error {
+		.btn-link-color(@color-error);
+	}
+}
+
+.btn-link-color(@color) {
+	color: @color;
 }
 
 // Outline button
