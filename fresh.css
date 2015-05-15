@@ -3799,12 +3799,12 @@ legend {
 .form-aligned > fieldset > div.row div + label.checkbox {
   margin-top: .25em;
 }
-.form > div.row.padding :not(last-child),
-.form > fieldset > div.row.padding :not(last-child),
-.form-inline > div.row.padding :not(last-child),
-.form-inline > fieldset > div.row.padding :not(last-child),
-.form-aligned > div.row.padding :not(last-child),
-.form-aligned > fieldset > div.row.padding :not(last-child) {
+.form > div.row.padding > :not(:last-child),
+.form > fieldset > div.row.padding > :not(:last-child),
+.form-inline > div.row.padding > :not(:last-child),
+.form-inline > fieldset > div.row.padding > :not(:last-child),
+.form-aligned > div.row.padding > :not(:last-child),
+.form-aligned > fieldset > div.row.padding > :not(:last-child) {
   padding-right: 1em;
 }
 .form > *,
