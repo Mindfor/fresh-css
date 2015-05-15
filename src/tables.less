@@ -45,6 +45,7 @@ table {
 	
 	th, td {
 		text-align: left;
+		vertical-align: middle;
 		padding: 0.75em 1em;
 		border-bottom: @table-border;
 		background: @table-row-bg;
@@ -62,6 +63,10 @@ table {
 	
 	thead > tr {
 		background: @table-header-bg;
+		
+		th {
+			text-align: center;
+		}
 	}
 
 	tfoot > tr {
@@ -93,7 +98,7 @@ table.flat {
 
 table.stripped {
 	> tr:nth-child(odd),
-    > tbody tr:nth-child(odd) {
+    > tbody > tr:nth-child(odd) {
         background: @table-odd-bg;
     }
 }
@@ -115,6 +120,40 @@ table tbody > td[data-href] {
 		background: @table-hover-bg !important;
     }
 }
+
+table.tbody {
+	> tbody > tr:not(:last-child) {
+		th, td {
+			border-bottom: none;
+		}
+	}
+	
+	&.stripped {
+		> tbody:nth-child(even) > tr {
+			background: @table-row-bg;
+		}
+
+		> tbody:nth-child(odd) > tr {
+			background: @table-odd-bg;
+		}
+	}
+	
+	&.hover {
+		tbody:hover > tr {
+			background: @table-hover-bg !important;
+		}
+	}
+	
+	&.click > tbody,
+	> tbody[data-href] {
+		cursor: pointer;
+	
+		&:hover > tr {
+			background: @table-hover-bg !important;
+		}
+	}
+}
+
 
 .table-container {
 	width: 100%;
