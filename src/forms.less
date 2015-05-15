@@ -23,13 +23,17 @@ legend {
 .form {
 	// One-by-one labels or vertical sections with controls
 	> label,
+	> fieldset > label {
+		display: block;
+	}
+	
+	> label,
 	> section,
 	> div.row,
 	> fieldset > label,
 	> fieldset > section,
 	> fieldset > div.row {
 		.clearfix();
-		display: block;
 		margin-bottom: @line-margin;
 		
 		input,
@@ -50,15 +54,7 @@ legend {
 		}
 	}
 	
-	//padding for first label
-	> section,
-	> fieldset > section {
-		> :first-child {
-			padding-right: 1em;
-		}
-	}
-	
-	// padding for each column
+	// padding for each column in the row
 	> div.row.padding,
 	> fieldset > div.row.padding {
 		:not(last-child) {
@@ -160,11 +156,10 @@ legend {
 .form-aligned > section,
 .form-aligned > fieldset > section {
 	.row;
-		
+	
 	> label {
 		.col(1, 1);
 		.col-md(@form-aligned-left, @form-aligned-columns);
-		padding-right: 1em;
 	}
 
 	> input,
@@ -182,6 +177,10 @@ legend {
 	}
 
 	@media (min-width: @width-md) {
+		> label {
+			padding-right: 1em;
+		}
+		
 		> label,
 		> output {
 			padding-top: @control-padding-v;

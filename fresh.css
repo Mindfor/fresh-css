@@ -3547,6 +3547,14 @@ legend {
   border-bottom: 1px solid #bdbdbd;
 }
 .form > label,
+.form > fieldset > label,
+.form-inline > label,
+.form-inline > fieldset > label,
+.form-aligned > label,
+.form-aligned > fieldset > label {
+  display: block;
+}
+.form > label,
 .form > section,
 .form > div.row,
 .form > fieldset > label,
@@ -3564,7 +3572,6 @@ legend {
 .form-aligned > fieldset > label,
 .form-aligned > fieldset > section,
 .form-aligned > fieldset > div.row {
-  display: block;
   margin-bottom: 1em;
 }
 .form > label:after,
@@ -3792,14 +3799,6 @@ legend {
 .form-aligned > fieldset > div.row div + label.checkbox {
   margin-top: .25em;
 }
-.form > section > :first-child,
-.form > fieldset > section > :first-child,
-.form-inline > section > :first-child,
-.form-inline > fieldset > section > :first-child,
-.form-aligned > section > :first-child,
-.form-aligned > fieldset > section > :first-child {
-  padding-right: 1em;
-}
 .form > div.row.padding :not(last-child),
 .form > fieldset > div.row.padding :not(last-child),
 .form-inline > div.row.padding :not(last-child),
@@ -3915,7 +3914,6 @@ legend {
 .form-aligned > .aligned > label,
 .form-aligned > fieldset > .aligned > label {
   width: 100%;
-  padding-right: 1em;
 }
 @media (min-width: 48em) {
   .form > .aligned > label,
@@ -4084,6 +4082,16 @@ legend {
   }
 }
 @media (min-width: 48em) {
+  .form > .aligned > label,
+  .form > fieldset > .aligned > label,
+  .form-aligned > section > label,
+  .form-aligned > fieldset > section > label,
+  .form-inline > .aligned > label,
+  .form-inline > fieldset > .aligned > label,
+  .form-aligned > .aligned > label,
+  .form-aligned > fieldset > .aligned > label {
+    padding-right: 1em;
+  }
   .form > .aligned > label,
   .form > fieldset > .aligned > label,
   .form-aligned > section > label,
