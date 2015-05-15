@@ -111,9 +111,9 @@ table.hover {
 }
 
 table.click	> tr,
-table.click tbody > tr,
+table.click > tbody > tr,
 table > tr[data-href],
-table tbody > td[data-href] {
+table > tbody > tr[data-href] {
 	cursor: pointer;
 	
 	&:hover {
@@ -139,7 +139,7 @@ table.tbody {
 	}
 	
 	&.hover {
-		tbody:hover > tr {
+		> tbody:hover > tr {
 			background: @table-hover-bg !important;
 		}
 	}
