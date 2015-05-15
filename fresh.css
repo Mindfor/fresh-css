@@ -2953,7 +2953,8 @@ select.control-clear.error:focus {
 .input-group input[type="time"],
 .input-group input[type="search"],
 .input-group input[type="datetime-local"],
-.input-group textarea {
+.input-group textarea,
+.input-group select {
   -ms-flex: 1;
   -webkit-flex: 1;
   flex: 1;
@@ -3160,6 +3161,7 @@ table caption {
 table th,
 table td {
   text-align: left;
+  vertical-align: middle;
   padding: 0.75em 1em;
   border-bottom: 1px solid #bdbdbd;
   background: transparent;
@@ -3176,6 +3178,9 @@ table td.buttons {
 }
 table thead > tr {
   background: transparent;
+}
+table thead > tr th {
+  text-align: center;
 }
 table tfoot > tr {
   color: #565d64;
@@ -3199,7 +3204,7 @@ table.flat caption {
   padding: 0;
 }
 table.stripped > tr:nth-child(odd),
-table.stripped > tbody tr:nth-child(odd) {
+table.stripped > tbody > tr:nth-child(odd) {
   background: #f4f4f4;
 }
 table.hover > tr:hover,
@@ -3216,6 +3221,27 @@ table.click > tr:hover,
 table.click tbody > tr:hover,
 table > tr[data-href]:hover,
 table tbody > td[data-href]:hover {
+  background: #56b9d9 !important;
+}
+table.tbody > tbody > tr:not(:last-child) th,
+table.tbody > tbody > tr:not(:last-child) td {
+  border-bottom: none;
+}
+table.tbody.stripped > tbody:nth-child(even) > tr {
+  background: transparent;
+}
+table.tbody.stripped > tbody:nth-child(odd) > tr {
+  background: #f4f4f4;
+}
+table.tbody.hover tbody:hover > tr {
+  background: #56b9d9 !important;
+}
+table.tbody.click > tbody,
+table.tbody > tbody[data-href] {
+  cursor: pointer;
+}
+table.tbody.click > tbody:hover > tr,
+table.tbody > tbody[data-href]:hover > tr {
   background: #56b9d9 !important;
 }
 .table-container {

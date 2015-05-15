@@ -17,6 +17,7 @@
 .gradient(@bgcolor: #fff, @from: #fff, @to: #000) {
 	background-color: @bgcolor;
 	filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{from}', endColorstr='@{to}',GradientType=0)";
+	background-image: -webkit-linear-gradient(center top, @from 0%, @to 100%);
 	background-image: linear-gradient(top, @from 0%, @to 100%);
 }
 
@@ -32,6 +33,11 @@
 	&::-webkit-input-placeholder {
 		color: @color;
 	}
+}
+
+.filter(@value) {
+	-webkit-filter: @value;
+	filter: @value;
 }
 
 // Flex
@@ -233,6 +239,12 @@
 }
 
 // Transformations
+.transform(@value) {
+	-webkit-transform: @value;
+	-ms-transform: @value; // IE9 only
+	transform: @value;
+}
+
 .scale(@ratio) {
 	-webkit-transform: scale(@ratio);
 	-ms-transform: scale(@ratio); // IE9 only
