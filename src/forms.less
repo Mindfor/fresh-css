@@ -24,27 +24,45 @@ legend {
 	// One-by-one labels or vertical sections with controls
 	> label,
 	> section,
+	> div.row,
 	> fieldset > label,
-	> fieldset > section {
+	> fieldset > section,
+	> fieldset > div.row {
 		.clearfix();
 		display: block;
 		margin-bottom: @line-margin;
 		
-		> input,
-		> textarea,
-		> select {
+		input,
+		textarea,
+		select {
 			display: block;
 			width: 100%;
 		}
 		
-		> input,
-		> textarea,
-		> select,
-		> div {
+		input,
+		textarea,
+		select,
+		div {
 			& + label.radio,
 			& + label.checkbox {
 				margin-top: .25em;
 			}
+		}
+	}
+	
+	//padding for first label
+	> section,
+	> fieldset > section {
+		> :first-child {
+			padding-right: 1em;
+		}
+	}
+	
+	// padding for each column
+	> div.row.padding,
+	> fieldset > div.row.padding {
+		:not(last-child) {
+			padding-right: 1em;
 		}
 	}
 	
@@ -64,17 +82,6 @@ legend {
 	.input-group {
 		.flex-container();
 		width: 100%;
-	}
-	
-	// add margin and padding to custom grid row
-	> div.row,
-	> fieldset > section,
-	> fieldset > div.row {
-		margin-bottom: @line-margin;
-		
-		> *:first-child {
-			padding-right: 1em;
-		}
 	}
 	
 	// colors
