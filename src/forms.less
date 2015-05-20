@@ -158,6 +158,10 @@ legend {
 .form-aligned > fieldset > section {
 	.row;
 	
+	@media (min-width: @width-md) {
+		-webkit-flex-wrap: nowrap; // fix for Safari wrapping element with width=100%
+	}
+	
 	> label {
 		.col(1, 1);
 		.col-md(@form-aligned-left, @form-aligned-columns);

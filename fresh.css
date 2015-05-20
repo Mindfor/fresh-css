@@ -424,7 +424,7 @@ h6,
   font-weight: normal;
   color: black;
   text-rendering: optimizeLegibility;
-  margin: 1.5 0 0.5em;
+  margin: 1.5em 0 0.5em;
 }
 h1:first-child,
 h2:first-child,
@@ -3905,6 +3905,18 @@ legend {
   content: "";
   display: table;
   clear: both;
+}
+@media (min-width: 48em) {
+  .form > .aligned,
+  .form > fieldset > .aligned,
+  .form-aligned > section,
+  .form-aligned > fieldset > section,
+  .form-inline > .aligned,
+  .form-inline > fieldset > .aligned,
+  .form-aligned > .aligned,
+  .form-aligned > fieldset > .aligned {
+    -webkit-flex-wrap: nowrap;
+  }
 }
 .form > .aligned > label,
 .form > fieldset > .aligned > label,
