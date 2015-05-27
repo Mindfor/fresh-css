@@ -24,16 +24,18 @@
 		border-width: @control-border-width;
 	}
 	
-	:not(:first-child) {
+	:not(:first-child),
+	:not(:first-child) .select2-selection {
 		.border-left-radius(0) !important;
 	}
 	
-	:not(:last-child) {
+	:not(:last-child),
+	:not(:last-child) .select2-selection {
 		.border-right-radius(0) !important;
 		border-right-width: 0 !important;
 	}
 	
-	> span {
+	> span:not(.select2) {
 		line-height: normal;
 		padding: @control-padding-v @control-padding-h;
 		border: @control-border;
@@ -46,7 +48,8 @@
 	.input-group-color(@color, @bg) {
 		input,
 		textarea,
-		select {
+		select,
+		.select2 {
 			border-color: @color;
 			
 			&:focus {
@@ -59,7 +62,7 @@
 			border-color: @color;
 		}
 		
-		> span {
+		> span:not(.select2) {
 			color: @color;
 			background: @bg;
 		}

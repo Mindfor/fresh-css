@@ -1,0 +1,41 @@
+@import "variables.less";
+@import "controls.less";
+
+.select2-container--default {
+	.select2-selection {
+		height: inherit;		
+		color: @control-color;
+		background: @control-bg;
+		border: @control-border;
+		border-radius: @control-border-radius;
+		vertical-align: middle;
+		-webkit-transition: @control-transition-webkit;
+		transition: @control-transition;
+	}
+
+	.select2-selection__rendered {
+		padding: @control-padding-v @control-padding-h !important;	
+		line-height: 1 !important;
+		.select-arrow();
+	}
+
+	.select2-selection__arrow {
+		display: none !important;
+	}
+
+	.select2-search__field {
+		.control !important;
+	}
+
+	.select2-results__option--highlighted {
+		color: @color-invert !important;
+		background: @color-secondary !important;
+	}
+}
+
+.select2-container--focus {
+	.select2-selection {
+		border-color: @control-active-color;
+		box-shadow: 0 0 @control-focus-blur @control-focus-spread fade(@control-active-color, @control-focus-fade);
+	}
+}

@@ -2332,11 +2332,11 @@ select::-ms-expand {
   display: none;
 }
 select:not([multiple]) {
+  padding-right: 2em;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhklEQVR4nL3QMQrCUBBF0WMTCwtBsHEjrsPF2Ih7ssk2dA9prG0U1EKrwCfkj/kB82C6uXcewx+zRYPdWPiGD16lkhRuZ7CkDy6SNBm4nScWKTDrCNZYBgceuP5qUZRugwM2wf4dR7xzCyfxD86ookZz1Bn4glUER5LBcJ+kGE4l+7HwdPkCCQI2aLN6q8oAAAAASUVORK5CYII=);
   background-repeat: no-repeat;
   background-position: right .5em center;
   background-size: 16px 16px;
-  padding-right: 2em;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
   select:not([multiple]) {
@@ -2960,16 +2960,18 @@ select.control-clear.error:focus {
   flex: 1;
   border-width: 1px;
 }
-.input-group :not(:first-child) {
+.input-group :not(:first-child),
+.input-group :not(:first-child) .select2-selection {
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
 }
-.input-group :not(:last-child) {
+.input-group :not(:last-child),
+.input-group :not(:last-child) .select2-selection {
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
   border-right-width: 0 !important;
 }
-.input-group > span {
+.input-group > span:not(.select2) {
   line-height: normal;
   padding: 0.6em 0.5em;
   border: 1px solid #bdbdbd;
@@ -2980,29 +2982,37 @@ select.control-clear.error:focus {
 .input-group.success input,
 .input-group.success textarea,
 .input-group.success select,
+.input-group.success .select2,
 .form > .success .input-group input,
 .form > .success .input-group textarea,
 .form > .success .input-group select,
+.form > .success .input-group .select2,
 .form-inline > .success .input-group input,
 .form-inline > .success .input-group textarea,
 .form-inline > .success .input-group select,
+.form-inline > .success .input-group .select2,
 .form-aligned > .success .input-group input,
 .form-aligned > .success .input-group textarea,
-.form-aligned > .success .input-group select {
+.form-aligned > .success .input-group select,
+.form-aligned > .success .input-group .select2 {
   border-color: #5cb85c;
 }
 .input-group.success input:focus,
 .input-group.success textarea:focus,
 .input-group.success select:focus,
+.input-group.success .select2:focus,
 .form > .success .input-group input:focus,
 .form > .success .input-group textarea:focus,
 .form > .success .input-group select:focus,
+.form > .success .input-group .select2:focus,
 .form-inline > .success .input-group input:focus,
 .form-inline > .success .input-group textarea:focus,
 .form-inline > .success .input-group select:focus,
+.form-inline > .success .input-group .select2:focus,
 .form-aligned > .success .input-group input:focus,
 .form-aligned > .success .input-group textarea:focus,
-.form-aligned > .success .input-group select:focus {
+.form-aligned > .success .input-group select:focus,
+.form-aligned > .success .input-group .select2:focus {
   box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.3);
 }
 .input-group.success > span,
@@ -3015,39 +3025,47 @@ select.control-clear.error:focus {
 .form-aligned > .success .input-group > label {
   border-color: #5cb85c;
 }
-.input-group.success > span,
-.form > .success .input-group > span,
-.form-inline > .success .input-group > span,
-.form-aligned > .success .input-group > span {
+.input-group.success > span:not(.select2),
+.form > .success .input-group > span:not(.select2),
+.form-inline > .success .input-group > span:not(.select2),
+.form-aligned > .success .input-group > span:not(.select2) {
   color: #5cb85c;
   background: #eaf6ea;
 }
 .input-group.warning input,
 .input-group.warning textarea,
 .input-group.warning select,
+.input-group.warning .select2,
 .form > .warning .input-group input,
 .form > .warning .input-group textarea,
 .form > .warning .input-group select,
+.form > .warning .input-group .select2,
 .form-inline > .warning .input-group input,
 .form-inline > .warning .input-group textarea,
 .form-inline > .warning .input-group select,
+.form-inline > .warning .input-group .select2,
 .form-aligned > .warning .input-group input,
 .form-aligned > .warning .input-group textarea,
-.form-aligned > .warning .input-group select {
+.form-aligned > .warning .input-group select,
+.form-aligned > .warning .input-group .select2 {
   border-color: #df7514;
 }
 .input-group.warning input:focus,
 .input-group.warning textarea:focus,
 .input-group.warning select:focus,
+.input-group.warning .select2:focus,
 .form > .warning .input-group input:focus,
 .form > .warning .input-group textarea:focus,
 .form > .warning .input-group select:focus,
+.form > .warning .input-group .select2:focus,
 .form-inline > .warning .input-group input:focus,
 .form-inline > .warning .input-group textarea:focus,
 .form-inline > .warning .input-group select:focus,
+.form-inline > .warning .input-group .select2:focus,
 .form-aligned > .warning .input-group input:focus,
 .form-aligned > .warning .input-group textarea:focus,
-.form-aligned > .warning .input-group select:focus {
+.form-aligned > .warning .input-group select:focus,
+.form-aligned > .warning .input-group .select2:focus {
   box-shadow: 0 0 0 2px rgba(223, 117, 20, 0.3);
 }
 .input-group.warning > span,
@@ -3060,39 +3078,47 @@ select.control-clear.error:focus {
 .form-aligned > .warning .input-group > label {
   border-color: #df7514;
 }
-.input-group.warning > span,
-.form > .warning .input-group > span,
-.form-inline > .warning .input-group > span,
-.form-aligned > .warning .input-group > span {
+.input-group.warning > span:not(.select2),
+.form > .warning .input-group > span:not(.select2),
+.form-inline > .warning .input-group > span:not(.select2),
+.form-aligned > .warning .input-group > span:not(.select2) {
   color: #df7514;
   background: #fadec5;
 }
 .input-group.error input,
 .input-group.error textarea,
 .input-group.error select,
+.input-group.error .select2,
 .form > .error .input-group input,
 .form > .error .input-group textarea,
 .form > .error .input-group select,
+.form > .error .input-group .select2,
 .form-inline > .error .input-group input,
 .form-inline > .error .input-group textarea,
 .form-inline > .error .input-group select,
+.form-inline > .error .input-group .select2,
 .form-aligned > .error .input-group input,
 .form-aligned > .error .input-group textarea,
-.form-aligned > .error .input-group select {
+.form-aligned > .error .input-group select,
+.form-aligned > .error .input-group .select2 {
   border-color: #ca3c3c;
 }
 .input-group.error input:focus,
 .input-group.error textarea:focus,
 .input-group.error select:focus,
+.input-group.error .select2:focus,
 .form > .error .input-group input:focus,
 .form > .error .input-group textarea:focus,
 .form > .error .input-group select:focus,
+.form > .error .input-group .select2:focus,
 .form-inline > .error .input-group input:focus,
 .form-inline > .error .input-group textarea:focus,
 .form-inline > .error .input-group select:focus,
+.form-inline > .error .input-group .select2:focus,
 .form-aligned > .error .input-group input:focus,
 .form-aligned > .error .input-group textarea:focus,
-.form-aligned > .error .input-group select:focus {
+.form-aligned > .error .input-group select:focus,
+.form-aligned > .error .input-group .select2:focus {
   box-shadow: 0 0 0 2px rgba(202, 60, 60, 0.3);
 }
 .input-group.error > span,
@@ -3105,10 +3131,10 @@ select.control-clear.error:focus {
 .form-aligned > .error .input-group > label {
   border-color: #ca3c3c;
 }
-.input-group.error > span,
-.form > .error .input-group > span,
-.form-inline > .error .input-group > span,
-.form-aligned > .error .input-group > span {
+.input-group.error > span:not(.select2),
+.form > .error .input-group > span:not(.select2),
+.form-inline > .error .input-group > span:not(.select2),
+.form-aligned > .error .input-group > span:not(.select2) {
   color: #ca3c3c;
   background: #f6dcdc;
 }
@@ -4247,4 +4273,109 @@ ul.pagination > li[disabled] > span {
 }
 .fa-trophy {
   color: goldenrod;
+}
+.select2-container--default .select2-selection {
+  height: inherit;
+  color: black;
+  background: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 2px;
+  vertical-align: middle;
+  -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s, -webkit-transform 0.2s, box-shadow 0.2s;
+  transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.select2-container--default .select2-selection__rendered {
+  padding: 0.6em 0.5em !important;
+  line-height: 1 !important;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhklEQVR4nL3QMQrCUBBF0WMTCwtBsHEjrsPF2Ih7ssk2dA9prG0U1EKrwCfkj/kB82C6uXcewx+zRYPdWPiGD16lkhRuZ7CkDy6SNBm4nScWKTDrCNZYBgceuP5qUZRugwM2wf4dR7xzCyfxD86ookZz1Bn4glUER5LBcJ+kGE4l+7HwdPkCCQI2aLN6q8oAAAAASUVORK5CYII=);
+  background-repeat: no-repeat;
+  background-position: right .5em center;
+  background-size: 16px 16px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  .select2-container--default .select2-selection__rendered {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA0ElEQVR4nO2TuwrCQBAAR4VUFqKNChZ2VvobfnNaP8BGEEvBMoWFgl1sEghCdpPbeyBkINXtZeY4Dgb+lCmQA3fgkEJ+AsrqK2JG/MqjRrTJo0Ro8qARXeVBIvrKvUa4yr1F5AZ5M2IpScbC2s5SXzEHFtLASFhbAXtlRuMBXAz7B8Ij3W8GbJQZjQJ4um4+Y3+GL2ArSaRnaDl5zcTynzVww/30H+Do3m6L8CJ3jfAq7xsRRN41Iqhci4gib4uIKm9GXIF3CnlNBsxSyQe88QUurrhQwQZiMAAAAABJRU5ErkJggg==);
+  }
+}
+.select2-container--default .select2-selection__arrow {
+  display: none !important;
+}
+.select2-container--default .select2-search__field {
+  line-height: 1 !important;
+  font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif !important;
+  box-shadow: none !important;
+  outline: none !important;
+  position: relative !important;
+  z-index: 2 !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  color: black !important;
+  background: white !important;
+  border: 1px solid #bdbdbd !important;
+  border-radius: 2px !important;
+  padding: 0.6em 0.5em !important;
+  vertical-align: middle !important;
+  -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s, -webkit-transform 0.2s, box-shadow 0.2s !important;
+  transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s !important;
+}
+.select2-container--default .select2-search__field:-ms-input-placeholder {
+  color: #565d64 !important;
+}
+.select2-container--default .select2-search__field::-moz-placeholder {
+  color: #565d64 !important;
+}
+.select2-container--default .select2-search__field::-webkit-input-placeholder {
+  color: #565d64 !important;
+}
+.select2-container--default .select2-search__field[disabled] {
+  resize: none !important;
+  color: #b4b4b4 !important;
+  background: #f4f4f4 !important;
+  cursor: not-allowed !important;
+}
+.select2-container--default .select2-search__field[readonly] {
+  background: #f4f4f4 !important;
+}
+.select2-container--default .select2-search__field:focus {
+  border-color: #105c9a !important;
+  box-shadow: 0 0 0 2px rgba(16, 92, 154, 0.3) !important;
+}
+.select2-container--default .select2-search__field.primary {
+  border-color: #105c9a !important;
+}
+.select2-container--default .select2-search__field.primary:focus {
+  box-shadow: 0 0 0 2px rgba(16, 92, 154, 0.3) !important;
+}
+.select2-container--default .select2-search__field.secondary {
+  border-color: #56b9d9 !important;
+}
+.select2-container--default .select2-search__field.secondary:focus {
+  box-shadow: 0 0 0 2px rgba(86, 185, 217, 0.3) !important;
+}
+.select2-container--default .select2-search__field.success {
+  border-color: #5cb85c !important;
+}
+.select2-container--default .select2-search__field.success:focus {
+  box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.3) !important;
+}
+.select2-container--default .select2-search__field.warning {
+  border-color: #df7514 !important;
+}
+.select2-container--default .select2-search__field.warning:focus {
+  box-shadow: 0 0 0 2px rgba(223, 117, 20, 0.3) !important;
+}
+.select2-container--default .select2-search__field.error {
+  border-color: #ca3c3c !important;
+}
+.select2-container--default .select2-search__field.error:focus {
+  box-shadow: 0 0 0 2px rgba(202, 60, 60, 0.3) !important;
+}
+.select2-container--default .select2-results__option--highlighted {
+  color: white !important;
+  background: #56b9d9 !important;
+}
+.select2-container--focus .select2-selection {
+  border-color: #105c9a;
+  box-shadow: 0 0 0 2px rgba(16, 92, 154, 0.3);
 }
