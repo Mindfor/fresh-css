@@ -35,14 +35,7 @@ legend {
 	> fieldset > div.row {
 		.clearfix();
 		margin-bottom: @line-margin;
-		
-		input,
-		textarea,
-		select {
-			display: block;
-			width: 100%;
-		}
-		
+
 		input,
 		textarea,
 		select,
@@ -51,6 +44,18 @@ legend {
 			& + label.checkbox {
 				margin-top: .25em;
 			}
+		}
+	}
+
+	> label,
+	> section,
+	> fieldset > label,
+	> fieldset > section {
+		input,
+		textarea,
+		select {
+			display: block;
+			width: 100%;
 		}
 	}
 	
