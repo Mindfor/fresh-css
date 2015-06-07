@@ -1,10 +1,9 @@
 {
 	"name": "fresh-css",
-	"version": "1.0.0",
-	"authors": [ "Mindfor Ltd." ],
+	"version": "0.5.31",
 	"description": "Lightweight and simple CSS-framework for responsive web projects.",
+	"authors": [ "Mindfor Ltd." ],
 	"homepage": "https://github.com/mindfor/fresh-css",
-	
 	"keywords": [
 		"css",
 		"less",
@@ -14,13 +13,11 @@
 		"front-end",
 		"web"
 	],
-
 	"main": [
 		"fresh.less",
-		"fresh.css",
+		"fresh.min.css",
 		"src/*"
 	],
-	
 	"ignore": [
 		".*",
 		"docs",
