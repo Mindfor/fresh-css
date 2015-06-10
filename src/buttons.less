@@ -99,11 +99,11 @@
 	.btn-base-color(@color);
 	color: @btn-color;
 	background: @color;
-	border-color: darken(@color, 5%);
+	border-color: darken(@color, @btn-border-darken);
 	
 	&:hover {
 		background: darken(@color, @btn-hovering);
-		border-color: darken(@color, @btn-hovering);
+		border-color: darken(darken(@color, @btn-border-darken), @btn-hovering);
 	}
 }
 
