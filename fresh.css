@@ -2674,7 +2674,7 @@ select.control-clear.error:focus {
 }
 .btn:hover {
   background: #848484;
-  border-color: #848484;
+  border-color: #777777;
 }
 .btn.primary,
 [type="submit"].btn {
@@ -2689,7 +2689,7 @@ select.control-clear.error:focus {
 .btn.primary:hover,
 [type="submit"].btn:hover {
   background: #093355;
-  border-color: #093355;
+  border-color: #06253e;
 }
 .btn.secondary {
   color: white;
@@ -2701,7 +2701,7 @@ select.control-clear.error:focus {
 }
 .btn.secondary:hover {
   background: #2a96b9;
-  border-color: #2a96b9;
+  border-color: #2585a4;
 }
 .btn.success {
   color: white;
@@ -2713,7 +2713,7 @@ select.control-clear.error:focus {
 }
 .btn.success:hover {
   background: #3d8b3d;
-  border-color: #3d8b3d;
+  border-color: #357935;
 }
 .btn.warning {
   color: white;
@@ -2725,7 +2725,7 @@ select.control-clear.error:focus {
 }
 .btn.warning:hover {
   background: #99500e;
-  border-color: #99500e;
+  border-color: #81440c;
 }
 .btn.error {
   color: white;
@@ -2737,7 +2737,7 @@ select.control-clear.error:focus {
 }
 .btn.error:hover {
   background: #922828;
-  border-color: #922828;
+  border-color: #7e2222;
 }
 .btn-link {
   border-color: transparent !important;
@@ -3622,63 +3622,6 @@ legend {
   display: table;
   clear: both;
 }
-.form > label input,
-.form > section input,
-.form > div.row input,
-.form > fieldset > label input,
-.form > fieldset > section input,
-.form > fieldset > div.row input,
-.form > label textarea,
-.form > section textarea,
-.form > div.row textarea,
-.form > fieldset > label textarea,
-.form > fieldset > section textarea,
-.form > fieldset > div.row textarea,
-.form > label select,
-.form > section select,
-.form > div.row select,
-.form > fieldset > label select,
-.form > fieldset > section select,
-.form > fieldset > div.row select,
-.form-inline > label input,
-.form-inline > section input,
-.form-inline > div.row input,
-.form-inline > fieldset > label input,
-.form-inline > fieldset > section input,
-.form-inline > fieldset > div.row input,
-.form-inline > label textarea,
-.form-inline > section textarea,
-.form-inline > div.row textarea,
-.form-inline > fieldset > label textarea,
-.form-inline > fieldset > section textarea,
-.form-inline > fieldset > div.row textarea,
-.form-inline > label select,
-.form-inline > section select,
-.form-inline > div.row select,
-.form-inline > fieldset > label select,
-.form-inline > fieldset > section select,
-.form-inline > fieldset > div.row select,
-.form-aligned > label input,
-.form-aligned > section input,
-.form-aligned > div.row input,
-.form-aligned > fieldset > label input,
-.form-aligned > fieldset > section input,
-.form-aligned > fieldset > div.row input,
-.form-aligned > label textarea,
-.form-aligned > section textarea,
-.form-aligned > div.row textarea,
-.form-aligned > fieldset > label textarea,
-.form-aligned > fieldset > section textarea,
-.form-aligned > fieldset > div.row textarea,
-.form-aligned > label select,
-.form-aligned > section select,
-.form-aligned > div.row select,
-.form-aligned > fieldset > label select,
-.form-aligned > fieldset > section select,
-.form-aligned > fieldset > div.row select {
-  display: block;
-  width: 100%;
-}
 .form > label input + label.radio,
 .form > section input + label.radio,
 .form > div.row input + label.radio,
@@ -3825,6 +3768,45 @@ legend {
 .form-aligned > fieldset > div.row div + label.checkbox {
   margin-top: .25em;
 }
+.form > label input,
+.form > section input,
+.form > fieldset > label input,
+.form > fieldset > section input,
+.form > label textarea,
+.form > section textarea,
+.form > fieldset > label textarea,
+.form > fieldset > section textarea,
+.form > label select,
+.form > section select,
+.form > fieldset > label select,
+.form > fieldset > section select,
+.form-inline > label input,
+.form-inline > section input,
+.form-inline > fieldset > label input,
+.form-inline > fieldset > section input,
+.form-inline > label textarea,
+.form-inline > section textarea,
+.form-inline > fieldset > label textarea,
+.form-inline > fieldset > section textarea,
+.form-inline > label select,
+.form-inline > section select,
+.form-inline > fieldset > label select,
+.form-inline > fieldset > section select,
+.form-aligned > label input,
+.form-aligned > section input,
+.form-aligned > fieldset > label input,
+.form-aligned > fieldset > section input,
+.form-aligned > label textarea,
+.form-aligned > section textarea,
+.form-aligned > fieldset > label textarea,
+.form-aligned > fieldset > section textarea,
+.form-aligned > label select,
+.form-aligned > section select,
+.form-aligned > fieldset > label select,
+.form-aligned > fieldset > section select {
+  display: block;
+  width: 100%;
+}
 .form > div.row.padding > :not(:last-child),
 .form > fieldset > div.row.padding > :not(:last-child),
 .form-inline > div.row.padding > :not(:last-child),
@@ -3952,6 +3934,7 @@ legend {
 .form-inline > fieldset > .aligned > label,
 .form-aligned > .aligned > label,
 .form-aligned > fieldset > .aligned > label {
+  display: block;
   width: 100%;
 }
 @media (min-width: 48em) {
@@ -4378,4 +4361,7 @@ ul.pagination > li[disabled] > span {
 .select2-container--focus .select2-selection {
   border-color: #105c9a;
   box-shadow: 0 0 0 2px rgba(16, 92, 154, 0.3);
+}
+.select2-hidden-accessible {
+  width: 1px !important;
 }
