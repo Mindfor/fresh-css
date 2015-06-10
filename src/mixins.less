@@ -14,11 +14,19 @@
 	transform: translateY(-50%);
 }
 
-.gradient(@bgcolor: #fff, @from: #fff, @to: #000) {
-	background-color: @bgcolor;
-	filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{from}', endColorstr='@{to}',GradientType=0)";
-	background-image: -webkit-linear-gradient(center top, @from 0%, @to 100%);
-	background-image: linear-gradient(top, @from 0%, @to 100%);
+.linear-gradient(@angle, @from, @to) {
+	background-color: average(@from, @to);
+	background-image: linear-gradient(@angle, @from, @to);
+}
+
+.vertical-gradient(@from, @to) {
+	background-color: average(@from, @to);
+	background-image: linear-gradient(to bottom, @from, @to);
+}
+
+.horizontal-gradient(@from, @to) {
+	background-color: average(@from, @to);
+	background-image: linear-gradient(to right, @from, @to);
 }
 
 .placeholder-color(@color) {
