@@ -23,7 +23,7 @@
 		"src/*"
 	],
 	"devDependencies": {
-		"gulp": "^3.8.11",
+		"gulp": "^3.9.0",
 		"gulp-plumber": "^1.0.0",
 		"gulp-less": "^3.0.0",
 		"gulp-minify-css": "^0.4.5",

@@ -1,7 +1,23 @@
 @import "variables.less";
 
 .container {
-	padding: 0 1em;
+	padding-left: @padding-phone;
+	padding-right: @padding-phone;
+	
+	@media (min-width: @width-tablet) {
+		padding-left: @padding-tablet;
+		padding-right: @padding-tablet;
+	}
+	
+	@media (min-width: @width-desktop) {
+		padding-left: @padding-desktop;
+		padding-right: @padding-desktop;
+	}
+
+	@media (min-width: @width-hd) {
+		padding-left: @padding-hd;
+		padding-right: @padding-hd;
+	}
 }
 
 .container(@max-width) {
@@ -10,47 +26,36 @@
 	max-width: @max-width;
 }
 
-.container-sm {
-	.container(@width-sm);
+.container-phone {
+	.container(@width-phone);
 }
 
-.container-md {
-	.container(@width-md);
+.container-tablet {
+	.container(@width-tablet);
 }
 
-.container-lg {
-	.container(@width-lg);
+.container-desktop {
+	.container(@width-desktop);
 }
 
-.container-xl {
-	.container(@width-xl);
-}
-
-.container-xxl {
-	.container(@width-xxl);
+.container-hd {
+	.container(@width-hd);
 }
 
 .container-responsive {
 	.pull-center;
 	.container;
-
-	@media (min-width: @width-sm) {
-		max-width: @width-sm;
-	}
-
-	@media (min-width: @width-md) {
-		max-width: @width-md;
-	}
-
-	@media (min-width: @width-lg) {
-		max-width: @width-lg;
-	}
-
-	@media (min-width: @width-xl) {
-		max-width: @width-xl;
-	}
+	max-width: @width-phone;
 	
-	@media (min-width: @width-xxl) {
-		max-width: @width-xxl;
+	@media (min-width: @width-phone) {
+		max-width: @width-tablet;
+	}
+
+	@media (min-width: @width-tablet) {
+		max-width: @width-desktop;
+	}
+
+	@media (min-width: @width-desktop) {
+		max-width: @width-hd;
 	}
 }

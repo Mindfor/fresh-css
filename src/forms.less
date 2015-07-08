@@ -170,7 +170,7 @@ legend {
 	> label {
 		display: block;
 		.col(1, 1);
-		.col-md(@form-aligned-left, @form-aligned-columns);
+		.col-tablet(@form-aligned-left, @form-aligned-columns);
 	}
 
 	> input,
@@ -180,10 +180,10 @@ legend {
 	> output,
 	> .input-group {
 		.col(1, 1);
-		.col-md(@form-aligned-right, @form-aligned-columns);
+		.col-tablet(@form-aligned-right, @form-aligned-columns);
 
 		&:first-child {
-			.col-offset-md(@form-aligned-left, @form-aligned-columns);
+			.col-offset-tablet(@form-aligned-left, @form-aligned-columns);
 		}
 	}
 
@@ -208,7 +208,7 @@ legend {
 
 .form > .aligned-controls,
 .form-aligned > .controls {
-	.col-offset-md(@form-aligned-left, @form-aligned-columns);
+	.col-offset-tablet(@form-aligned-left, @form-aligned-columns);
 	margin-bottom: @line-margin;
 }
 
