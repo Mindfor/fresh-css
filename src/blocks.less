@@ -2,7 +2,7 @@
 @import "grid.less";
 
 // Mixins
-.blocks {
+.blocks-container() {
 	.row;
 	list-style: none;
 	padding: 0;
@@ -12,46 +12,7 @@
 	}
 }
 
-.blocks(@num) {
-	&:extend(.blocks all);
-	margin-left: -@padding-phone;
-	
-	> * {
-		width: calc(percentage(1 / @num) ~" - " @padding-phone);
-		margin-left: @padding-phone;
-		margin-bottom: @padding-phone;
-	}
-	
-	@media (min-width: @width-tablet) {
-		margin-left: -@padding-tablet;
-		> * {
-			width: calc(percentage(1 / @num) ~" - " @padding-tablet);
-			margin-left: @padding-tablet;
-			margin-bottom: @padding-tablet;
-		}
-	}
-	
-	@media (min-width: @width-desktop) {
-		margin-left: -@padding-desktop;
-		> * {
-			width: calc(percentage(1 / @num) ~" - " @padding-desktop);
-			margin-left: @padding-desktop;
-			margin-bottom: @padding-desktop;
-		}
-	}
-
-	@media (min-width: @width-hd) {
-		margin-left: -@padding-hd;
-		> * {
-			width: calc(percentage(1 / @num) ~" - " @padding-hd);
-			margin-left: @padding-hd;
-			margin-bottom: @padding-hd;
-		}
-	}
-}
-
-.blocks(@num, @spacing) {
-	&:extend(.blocks all);
+.blocks-count(@num, @spacing) {
 	margin-left: -@spacing;
 	
 	> * {
@@ -61,35 +22,43 @@
 	}
 }
 
-//.blocks-responsive(@num, @min-width, @spacing) {
-//	&:extend(.blocks all);
-//	
-//	@media (min-width: @min-width) {
-//		margin-left: -@spacing;
-//		
-//		> * {
-//			width: calc(percentage(1 / @num) ~" - " @spacing);
-//			margin-left: @spacing;
-//			margin-bottom: @spacing;
-//		}
-//	}
-//}
+.blocks(@num) {
+	.blocks-container();
+	.blocks-count(@num, @padding-phone);
+	
+	@media (min-width: @width-tablet) {
+		.blocks-count(@num, @padding-tablet);
+	}
+	
+	@media (min-width: @width-desktop) {
+		.blocks-count(@num, @padding-desktop);
+	}
+
+	@media (min-width: @width-hd) {
+		.blocks-count(@num, @padding-hd);
+	}
+}
+
+.blocks(@num, @spacing) {
+	.blocks-container();
+	.blocks-count(@num, @spacing);
+}
 
 .blocks-tablet(@num) {
 	@media (min-width: @width-tablet) {
-		.blocks(@num, @width-tablet);
+		.blocks(@num, @padding-tablet);
 	}
 }
 
 .blocks-desktop(@num) {
 	@media (min-width: @width-desktop) {
-		.blocks(@num, @width-desktop);
+		.blocks(@num, @padding-desktop);
 	}
 }
 
 .blocks-hd(@num) {
 	@media (min-width: @width-hd) {
-		.blocks(@num, @width-hd);
+		.blocks(@num, @padding-hd);
 	}
 }
 
@@ -101,16 +70,16 @@
 	.blocks-loop(@num + 1);
 }
 
-.blocks-loop(@num, @suffix, @min-width) when (@num <= @blocks-count) {
+.blocks-loop(@num, @suffix, @min-width, @spacing) when (@num <= @blocks-count) {
 	.blocks-@{suffix}-@{num} {
 		@media (min-width: @min-width) {
-			.blocks(@num);
+			.blocks(@num, @spacing);
 		}
 	}
-	.blocks-loop(@num + 1, @suffix, @min-width);
+	.blocks-loop(@num + 1, @suffix, @min-width, @spacing);
 }
 
 .blocks-loop(1);
-.blocks-loop(1, tablet, @width-tablet);
-.blocks-loop(1, desktop, @width-desktop);
-.blocks-loop(1, hd, @width-hd);
+.blocks-loop(1, tablet, @width-tablet, @padding-tablet);
+.blocks-loop(1, desktop, @width-desktop, @padding-desktop);
+.blocks-loop(1, hd, @width-hd, @padding-hd);
