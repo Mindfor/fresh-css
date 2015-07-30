@@ -23,22 +23,22 @@
 	width: percentage(@num / @total);
 }
 
-.col(@num, @total, @min-width) {
-	@media (min-width: @min-width) {
-		width: percentage(@num / @total);
+.col-tablet(@num, @total: @grid-columns) {
+	@media (min-width: @width-tablet) {
+		.col(@num, @total);
 	}
 }
 
-.col-tablet(@num, @total: @grid-columns) {
-	.col(@num, @total, @width-tablet);
-}
-
 .col-desktop(@num, @total: @grid-columns) {
-	.col(@num, @total, @width-desktop);
+	@media (min-width: @width-desktop) {
+		.col(@num, @total);
+	}
 }
 
 .col-hd(@num, @total: @grid-columns) {
-	.col(@num, @total, @width-hd);
+	@media (min-width: @width-hd) {
+		.col(@num, @total, @width-hd);
+	}
 }
 
 // Offset mixins
@@ -46,22 +46,22 @@
 	margin-left: percentage(@num / @total);
 }
 
-.col-offset(@num, @total, @min-width) {
-	@media (min-width: @min-width) {
-		margin-left: percentage(@num / @total);
+.col-offset-tablet(@num, @total: @grid-columns) {
+	@media (min-width: @width-tablet) {
+		.col-offset(@num, @total);
 	}
 }
 
-.col-offset-tablet(@num, @total: @grid-columns) {
-	.col-offset(@num, @total, @width-tablet);
-}
-
 .col-offset-desktop(@num, @total: @grid-columns) {
-	.col-offset(@num, @total, @width-desktop);
+	@media (min-width: @width-desktop) {
+		.col-offset(@num, @total);
+	}
 }
 
 .col-offset-hd(@num, @total: @grid-columns) {
-	.col-offset(@num, @total, @width-hd);
+	@media (min-width: @width-hd) {
+		.col-offset(@num, @total);
+	}
 }
 
 // Create default columns in loop
@@ -79,11 +79,15 @@
 
 .col-loop(@num, @suffix, @min-width) when (@num <= @grid-columns) {
 	.col-@{suffix}-@{num} {
-		.col(@num, @grid-columns, @min-width);
+		@media (min-width: @min-width) {
+			.col(@num, @grid-columns);
+		}
 	}
 
 	.col-offset-@{suffix}-@{num} {
-		.col-offset(@num, @grid-columns, @min-width);
+		@media (min-width: @min-width) {
+			.col-offset(@num, @grid-columns);
+		}
 	}
 
 	.col-loop(@num + 1, @suffix, @min-width);

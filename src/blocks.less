@@ -2,14 +2,10 @@
 @import "grid.less";
 
 // Mixins
-.blocks-container() {
+.blocks() {
 	.row;
 	list-style: none;
 	padding: 0;
-	
-	> * {
-		text-align: center;
-	}
 }
 
 .blocks-count(@num, @spacing) {
@@ -22,8 +18,13 @@
 	}
 }
 
-.blocks(@num) {
-	.blocks-container();
+.blocks(@num, @spacing) {
+	.blocks();
+	.blocks-count(@num, @spacing);
+}
+
+.blocks-responsive(@num) {
+	.blocks();
 	.blocks-count(@num, @padding-phone);
 	
 	@media (min-width: @width-tablet) {
@@ -39,47 +40,34 @@
 	}
 }
 
-.blocks(@num, @spacing) {
-	.blocks-container();
-	.blocks-count(@num, @spacing);
+.blocks-phone(@num) {
+	.blocks-count(@num, @padding-phone);
 }
 
 .blocks-tablet(@num) {
 	@media (min-width: @width-tablet) {
-		.blocks(@num, @padding-tablet);
+		.blocks-count(@num, @padding-tablet);
 	}
 }
 
 .blocks-desktop(@num) {
 	@media (min-width: @width-desktop) {
-		.blocks(@num, @padding-desktop);
+		.blocks-count(@num, @padding-desktop);
 	}
 }
 
 .blocks-hd(@num) {
 	@media (min-width: @width-hd) {
-		.blocks(@num, @padding-hd);
+		.blocks-count(@num, @padding-hd);
 	}
 }
 
 // Create default blocks in loop
 .blocks-loop(@num) when (@num <= @blocks-count) {
 	.blocks-@{num} {
-		.blocks(@num);
+		.blocks-responsive(@num);
 	}
 	.blocks-loop(@num + 1);
 }
 
-.blocks-loop(@num, @suffix, @min-width, @spacing) when (@num <= @blocks-count) {
-	.blocks-@{suffix}-@{num} {
-		@media (min-width: @min-width) {
-			.blocks(@num, @spacing);
-		}
-	}
-	.blocks-loop(@num + 1, @suffix, @min-width, @spacing);
-}
-
 .blocks-loop(1);
-.blocks-loop(1, tablet, @width-tablet, @padding-tablet);
-.blocks-loop(1, desktop, @width-desktop, @padding-desktop);
-.blocks-loop(1, hd, @width-hd, @padding-hd);
