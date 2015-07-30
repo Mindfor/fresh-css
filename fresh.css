@@ -356,12 +356,14 @@ abbr[title].text-help,
 .bg-light-error {
   background-color: #f6dcdc;
 }
-body {
+html {
   font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
   font-size: 15px;
   line-height: 1.5;
-  background: #ffffff;
   color: #222222;
+}
+body {
+  background: #ffffff;
 }
 a {
   color: #105c9a;
