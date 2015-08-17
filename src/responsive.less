@@ -22,16 +22,16 @@
 	}
 }
 
-.hidden-before(tablet, @width-tablet);
-.hidden-before(desktop, @width-desktop);
-.hidden-before(hd, @width-hd);
+.hidden-before(tablet, @device-tablet);
+.hidden-before(desktop, @device-desktop);
+.hidden-before(hd, @device-hd);
 
-.hidden(tablet, @width-tablet, @width-desktop);
+.hidden(tablet, @device-tablet, @device-desktop);
 .hidden(desktop, @width-md, @width-lg);
 
 .hidden-hd, 
 .hidden-only-hd {
-	@media (min-width: @width-hd){
+	@media (min-width: @device-hd){
 		display: none !important;
 	}
 }

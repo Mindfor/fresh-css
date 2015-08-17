@@ -27,15 +27,15 @@
 	.blocks();
 	.blocks-count(@num, @padding-phone);
 	
-	@media (min-width: @width-tablet) {
+	@media (min-width: @device-tablet) {
 		.blocks-count(@num, @padding-tablet);
 	}
 	
-	@media (min-width: @width-desktop) {
+	@media (min-width: @device-desktop) {
 		.blocks-count(@num, @padding-desktop);
 	}
 
-	@media (min-width: @width-hd) {
+	@media (min-width: @device-hd) {
 		.blocks-count(@num, @padding-hd);
 	}
 }
@@ -45,19 +45,19 @@
 }
 
 .blocks-tablet(@num) {
-	@media (min-width: @width-tablet) {
+	@media (min-width: @device-tablet) {
 		.blocks-count(@num, @padding-tablet);
 	}
 }
 
 .blocks-desktop(@num) {
-	@media (min-width: @width-desktop) {
+	@media (min-width: @device-desktop) {
 		.blocks-count(@num, @padding-desktop);
 	}
 }
 
 .blocks-hd(@num) {
-	@media (min-width: @width-hd) {
+	@media (min-width: @device-hd) {
 		.blocks-count(@num, @padding-hd);
 	}
 }

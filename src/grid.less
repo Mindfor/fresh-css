@@ -24,20 +24,20 @@
 }
 
 .col-tablet(@num, @total: @grid-columns) {
-	@media (min-width: @width-tablet) {
+	@media (min-width: @device-tablet) {
 		.col(@num, @total);
 	}
 }
 
 .col-desktop(@num, @total: @grid-columns) {
-	@media (min-width: @width-desktop) {
+	@media (min-width: @device-desktop) {
 		.col(@num, @total);
 	}
 }
 
 .col-hd(@num, @total: @grid-columns) {
-	@media (min-width: @width-hd) {
-		.col(@num, @total, @width-hd);
+	@media (min-width: @device-hd) {
+		.col(@num, @total, @device-hd);
 	}
 }
 
@@ -47,19 +47,19 @@
 }
 
 .col-offset-tablet(@num, @total: @grid-columns) {
-	@media (min-width: @width-tablet) {
+	@media (min-width: @device-tablet) {
 		.col-offset(@num, @total);
 	}
 }
 
 .col-offset-desktop(@num, @total: @grid-columns) {
-	@media (min-width: @width-desktop) {
+	@media (min-width: @device-desktop) {
 		.col-offset(@num, @total);
 	}
 }
 
 .col-offset-hd(@num, @total: @grid-columns) {
-	@media (min-width: @width-hd) {
+	@media (min-width: @device-hd) {
 		.col-offset(@num, @total);
 	}
 }
@@ -94,6 +94,6 @@
 }
 
 .col-loop(1);
-.col-loop(1, tablet, @width-tablet);
-.col-loop(1, desktop, @width-desktop);
-.col-loop(1, hd, @width-hd);
+.col-loop(1, tablet, @device-tablet);
+.col-loop(1, desktop, @device-desktop);
+.col-loop(1, hd, @device-hd);
