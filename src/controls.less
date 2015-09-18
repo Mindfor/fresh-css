@@ -145,30 +145,20 @@ select {
 input,
 textarea,
 select {
-    .control-color(@color) {
-        border-color: @color;
-        &:focus {
-            box-shadow: 0 0 @control-focus-blur @control-focus-spread fade(@color, @control-focus-fade);
-        }
-    }
+    @control-normal-ruleset();
     &.primary {
-        @control-normal-ruleset();
         .control-normal-extend(@color-primary);
     }
     &.secondary {
-        @control-normal-ruleset();
         .control-normal-extend(@color-secondary);
     }
     &.success {
-        @control-normal-ruleset();
         .control-normal-extend(@color-success);
     }
     &.warning {
-        @control-normal-ruleset();
         .control-normal-extend(@color-warning);
     }
     &.error {
-        @control-normal-ruleset();
         .control-normal-extend(@color-error);
     }
 }
@@ -209,19 +199,15 @@ select.control-clear {
     .control-clear-extend(@control-active-color);
     
     &.secondary {
-        @control-clear-ruleset();
         .control-clear-extend(@color-secondary);
     }
     &.success {
-        @control-clear-ruleset();
         .control-clear-extend(@color-success);
     }
     &.warning {
-        @control-clear-ruleset();
         .control-clear-extend(@color-warning);
     }
     &.error {
-        @control-clear-ruleset();
         .control-clear-extend(@color-error);
     }
 }
