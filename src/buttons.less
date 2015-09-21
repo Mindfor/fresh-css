@@ -26,6 +26,7 @@
 		border: 0;
 		padding: 0;
 	}
+	
 	&[disabled],
 	&.disabled {
 		cursor: @control-disabled-cursor;
@@ -37,6 +38,7 @@
 	&.active {
 		box-shadow: @btn-active-shadow !important;
 	}
+	
 	&.primary {
 		.btn-base-extend(@color-primary);
 	}
@@ -65,8 +67,10 @@
 // Normal button
 .btn {
 	&:extend(.btn-base all);
+	
 	@btn-normal-ruleset();
 	.btn-normal-extend(@btn-bg);
+	
 	&.primary {
 		.btn-normal-extend(@color-primary);
 	}
@@ -88,9 +92,11 @@
 	.btn-normal-extend(@color) {
 		@btn-base-ruleset();
 		.btn-base-extend(@color);
+		
 		color: @btn-color;
 		background: @color;
 		border-color: darken(@color, @btn-border-darken);
+		
 		&:hover {
 			background: darken(@color, @btn-hovering);
 			border-color: darken(darken(@color, @btn-border-darken), @btn-hovering);
@@ -101,15 +107,18 @@
 // Link button
 .btn-link {
 	&:extend(.btn-base all);
+	
 	border-color: transparent !important;
 	@btn-link-ruleset();
 	.btn-link-extend(@link-color);
+	
 	&:hover {
 		color: @link-hover-color;
 		text-decoration: none;
 		background-color: @color-light;
 		border-color: @color-light;
 	}
+	
 	&.primary {
 		.btn-link-extend(@color-primary);
 	}
@@ -136,11 +145,14 @@
 // Outline button
 .btn-outline {
 	&:extend(.btn-base all);
+	
 	@btn-outline-ruleset();
 	.btn-outline-extend(@color-text);
+	
 	&[disabled], &.disabled {
 		background: none !important;
 	}
+	
 	&.primary {
 		.btn-outline-extend(@color-primary);
 	}
@@ -162,8 +174,10 @@
 	.btn-outline-extend(@color) {
 		@btn-base-ruleset();
 		.btn-base-extend(@color);
+		
 		color: @color;
 		border-color: @color;
+		
 		&:hover {
 			color: @btn-color;
 			background: @color;
@@ -174,13 +188,16 @@
 // Clear button
 .btn-clear {
 	&:extend(.btn-base all);
+	
 	color: @color-invert;
 	border-color: @color-invert;
 	@btn-clear-ruleset();
 	.btn-clear-extend(@btn-bg);
+	
 	&[disabled], &.disabled {
 		background: none !important;
 	}
+	
 	&.primary {
 		.btn-clear-extend(@color-primary);
 	}

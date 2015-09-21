@@ -31,6 +31,7 @@ select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+	
 	color: @control-color;
 	background: @control-bg;
 	border: @control-border;
@@ -38,9 +39,9 @@ select {
 	padding: @control-padding-v @control-padding-h;
 	vertical-align: middle;
 	-webkit-transition: @control-transition-webkit;
-	transition: @control-transition;
-	
+	transition: @control-transition;	
 	.placeholder-color(@color-gray);
+	
 	@control-base-ruleset();
 	.control-base-extend(@control-active-color);
 	
@@ -73,6 +74,7 @@ select::-ms-expand {
 	background-repeat: no-repeat;
 	background-position: right .5em center;
 	background-size: 16px 16px;
+	
 	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
 		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA0ElEQVR4nO2TuwrCQBAAR4VUFqKNChZ2VvobfnNaP8BGEEvBMoWFgl1sEghCdpPbeyBkINXtZeY4Dgb+lCmQA3fgkEJ+AsrqK2JG/MqjRrTJo0Ro8qARXeVBIvrKvUa4yr1F5AZ5M2IpScbC2s5SXzEHFtLASFhbAXtlRuMBXAz7B8Ij3W8GbJQZjQJ4um4+Y3+GL2ArSaRnaDl5zcTynzVww/30H+Do3m6L8CJ3jfAq7xsRRN41Iqhci4gib4uIKm9GXIF3CnlNBsxSyQe88QUurrhQwQZiMAAAAABJRU5ErkJggg==);
 	}
@@ -146,6 +148,7 @@ input,
 textarea,
 select {
 	@control-normal-ruleset();
+	
 	&.primary {
 		.control-normal-extend(@color-primary);
 	}
