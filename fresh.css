@@ -1782,7 +1782,7 @@ kbd {
 .control,
 input,
 select {
-  line-height: 1;
+  line-height: normal;
 }
 .control,
 input[type="text"],
@@ -2586,6 +2586,13 @@ select.control-clear.error:focus {
   border-radius: 2px;
   background-color: #f4f4f4;
   color: black;
+}
+.input-group .btn-base,
+.input-group .btn,
+.input-group .btn-link,
+.input-group .btn-outline,
+.input-group .btn-clear {
+  border-radius: 2px;
 }
 .input-group.success input,
 .input-group.success textarea,
@@ -3740,7 +3747,7 @@ legend {
   .form-aligned > fieldset > .aligned > output {
     padding-top: 0.6em;
     border-top: 1px solid transparent;
-    line-height: 1;
+    line-height: normal;
   }
 }
 .form > .aligned > div > label,
@@ -3892,7 +3899,7 @@ ul.pagination > li[disabled] > span {
   display: none !important;
 }
 .select2-container--default .select2-search__field {
-  line-height: 1 !important;
+  line-height: normal !important;
   font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif !important;
   box-shadow: none !important;
   outline: none !important;
