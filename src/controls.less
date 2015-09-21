@@ -1,6 +1,5 @@
 @import "variables.less";
 @import "mixins.less";
-
 .control,
 input,
 select {
@@ -40,25 +39,31 @@ select {
 	padding: @control-padding-v @control-padding-h;
 	vertical-align: middle;
 	-webkit-transition: @control-transition-webkit;
-	transition: @control-transition;
+	transition: @control-transition;	
 	.placeholder-color(@color-gray);
-
+	
+	@control-base-ruleset();
+	.control-base-extend(@control-active-color);
+	
 	&[disabled] {
 		resize: none;
 		color: @control-disabled-color;
 		background: @control-disabled-bg;
 		cursor: @control-disabled-cursor;
 	}
-	
 	&[readonly] {
 		background: @control-disabled-bg;
 	}
-
-	&:focus {
-		border-color: @control-active-color;
-		box-shadow: 0 0 @control-focus-blur @control-focus-spread fade(@control-active-color, @control-focus-fade);
-	}
 }
+
+@control-base-ruleset: {
+	.control-base-extend(@color) {
+		&:focus {
+			border-color: @color;
+			box-shadow: 0 0 @control-focus-blur @control-focus-spread fade(@color, @control-focus-fade);
+		}
+	}
+};
 
 select::-ms-expand {
 	display: none;
@@ -70,7 +75,7 @@ select::-ms-expand {
 	background-position: right .5em center;
 	background-size: 16px 16px;
 	
-	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) { 
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
 		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA0ElEQVR4nO2TuwrCQBAAR4VUFqKNChZ2VvobfnNaP8BGEEvBMoWFgl1sEghCdpPbeyBkINXtZeY4Dgb+lCmQA3fgkEJ+AsrqK2JG/MqjRrTJo0Ro8qARXeVBIvrKvUa4yr1F5AZ5M2IpScbC2s5SXzEHFtLASFhbAXtlRuMBXAz7B8Ij3W8GbJQZjQJ4um4+Y3+GL2ArSaRnaDl5zcTynzVww/30H+Do3m6L8CJ3jfAq7xsRRN41Iqhci4gib4uIKm9GXIF3CnlNBsxSyQe88QUurrhQwQZiMAAAAABJRU5ErkJggg==);
 	}
 }
@@ -105,10 +110,17 @@ input[type="radio"] {
 
 input[type="checkbox"],
 input[type="radio"] {
-	&:focus {
-		box-shadow: 0 0 @control-focus-blur @control-focus-spread fade(@control-active-color, @control-focus-fade);
-	}
+	@control-checkbox-ruleset();
+	.control-checkbox-extend(@control-active-color);
 }
+
+@control-checkbox-ruleset: {
+	.control-checkbox-extend(@color) {
+		&:focus {
+			box-shadow: 0 0 @control-focus-blur @control-focus-spread fade(@color, @control-focus-fade);
+		}
+	}
+};
 
 input::-moz-focus-inner,
 button::-moz-focus-inner {
@@ -116,7 +128,8 @@ button::-moz-focus-inner {
 	padding: 0;
 }
 
-button:active, button:focus {
+button:active,
+button:focus {
 	outline: none;
 }
 
@@ -134,44 +147,41 @@ select {
 input,
 textarea,
 select {
-	.control-color(@color) {
+	@control-normal-ruleset();
+	
+	&.primary {
+		.control-normal-extend(@color-primary);
+	}
+	&.secondary {
+		.control-normal-extend(@color-secondary);
+	}
+	&.success {
+		.control-normal-extend(@color-success);
+	}
+	&.warning {
+		.control-normal-extend(@color-warning);
+	}
+	&.error {
+		.control-normal-extend(@color-error);
+	}
+}
+
+@control-normal-ruleset: {
+	.control-normal-extend(@color) {
 		border-color: @color;
-		
 		&:focus {
 			box-shadow: 0 0 @control-focus-blur @control-focus-spread fade(@color, @control-focus-fade);
 		}
 	}
-	
-	&.primary {
-		.control-color(@color-primary);
-	}
-	
-	&.secondary {
-		.control-color(@color-secondary);
-	}
-	
-	&.success {
-		.control-color(@color-success);
-	}
-	
-	&.warning {
-		.control-color(@color-warning);
-	}
-	
-	&.error {
-		.control-color(@color-error);
-	}
-}
+};
 
 label {
 	&.success {
 		color: @color-success;
 	}
-	
 	&.warning {
 		color: @color-warning;
 	}
-	
 	&.error {
 		color: @color-error;
 	}
@@ -186,29 +196,30 @@ select.control-clear {
 	color: @color-invert;
 	border-color: @color-invert;
 	background: transparent;
-	.control-color(@control-active-color);
 	.placeholder-color(@color-invert);
+	
+	@control-clear-ruleset();
+	.control-clear-extend(@control-active-color);
+	
+	&.secondary {
+		.control-clear-extend(@color-secondary);
+	}
+	&.success {
+		.control-clear-extend(@color-success);
+	}
+	&.warning {
+		.control-clear-extend(@color-warning);
+	}
+	&.error {
+		.control-clear-extend(@color-error);
+	}
+}
 
-	.control-color(@color) {
+@control-clear-ruleset: {
+	.control-clear-extend(@color) {
 		&:focus {
 			background: @color;
 			border-color: @color-invert;
 		}
 	}
-
-	&.secondary {
-		.control-color(@color-secondary);
-	}
-
-	&.success {
-		.control-color(@color-success);
-	}
-
-	&.warning {
-		.control-color(@color-warning);
-	}
-
-	&.error {
-		.control-color(@color-error);
-	}
-}
+};

@@ -1,29 +1,27 @@
 @import "variables.less";
 @import "mixins.less";
-
 .btn-base {
 	display: inline-block;
 	vertical-align: baseline;
-	
 	font-family: @control-font-family;
 	font-weight: @btn-font-weight;
 	line-height: normal;
-    text-align: center;
+	text-align: center;
 	text-decoration: none;
 	padding: @btn-padding;
-	
 	border-width: @btn-border-width;
 	border-style: @btn-border-style;
-	border-radius: @btn-border-radius;	
-	
+	border-radius: @btn-border-radius;
 	-webkit-appearance: none;
 	outline: none;
 	box-shadow: none;
 	cursor: pointer;
 	-webkit-transition: @btn-transition-webkit;
-	transition: @btn-transition;
-	.btn-base-color(@btn-bg);
-	
+	transition: @btn-transition;			 
+
+	@btn-base-ruleset();
+	.btn-base-extend(@btn-bg);
+
 	&::-moz-focus-inner {
 		border: 0;
 		padding: 0;
@@ -36,200 +34,197 @@
 		color: @control-disabled-color !important;
 		background: @control-disabled-bg !important;
 	}
-	
 	&:active,
 	&.active {
 		box-shadow: @btn-active-shadow !important;
 	}
 	
 	&.primary {
-		.btn-base-color(@color-primary);
+		.btn-base-extend(@color-primary);
 	}
-	
 	&.secondary {
-		.btn-base-color(@color-secondary);
+		.btn-base-extend(@color-secondary);
 	}
-	
 	&.success {
-		.btn-base-color(@color-success);
+		.btn-base-extend(@color-success);
 	}
-	
 	&.warning {
-		.btn-base-color(@color-warning);
+		.btn-base-extend(@color-warning);
 	}
-	
 	&.error {
-		.btn-base-color(@color-error);
+		.btn-base-extend(@color-error);
 	}
 }
 
-.btn-base-color(@color) {
-	&:focus {
-		box-shadow: 0 0 @btn-focus-blur @btn-focus-spread fade(@color, @btn-focus-fade);
+@btn-base-ruleset: {
+	.btn-base-extend(@color) {
+		&:focus {
+			box-shadow: 0px 0px @btn-focus-blur @btn-focus-spread fade(@color, @btn-focus-fade);
+		}
 	}
-}
+};
 
 // Normal button
 .btn {
 	&:extend(.btn-base all);
-	.btn-color(@btn-bg);
-		
+	
+	@btn-normal-ruleset();
+	.btn-normal-extend(@btn-bg);
+	
 	&.primary {
-		.btn-color(@color-primary);
+		.btn-normal-extend(@color-primary);
 	}
-	
 	&.secondary {
-		.btn-color(@color-secondary);
+		.btn-normal-extend(@color-secondary);
 	}
-	
 	&.success {
-		.btn-color(@color-success);
+		.btn-normal-extend(@color-success);
 	}
-	
 	&.warning {
-		.btn-color(@color-warning);
+		.btn-normal-extend(@color-warning);
 	}
-	
 	&.error {
-		.btn-color(@color-error);
+		.btn-normal-extend(@color-error);
 	}
 }
 
-.btn-color(@color) {
-	.btn-base-color(@color);
-	color: @btn-color;
-	background: @color;
-	border-color: darken(@color, @btn-border-darken);
-	
-	&:hover {
-		background: darken(@color, @btn-hovering);
-		border-color: darken(darken(@color, @btn-border-darken), @btn-hovering);
+@btn-normal-ruleset: {
+	.btn-normal-extend(@color) {
+		@btn-base-ruleset();
+		.btn-base-extend(@color);
+		
+		color: @btn-color;
+		background: @color;
+		border-color: darken(@color, @btn-border-darken);
+		
+		&:hover {
+			background: darken(@color, @btn-hovering);
+			border-color: darken(darken(@color, @btn-border-darken), @btn-hovering);
+		}
 	}
-}
+};
 
 // Link button
 .btn-link {
 	&:extend(.btn-base all);
+	
 	border-color: transparent !important;
-	.btn-link-color(@link-color);
+	@btn-link-ruleset();
+	.btn-link-extend(@link-color);
 	
 	&:hover {
 		color: @link-hover-color;
 		text-decoration: none;
-		
 		background-color: @color-light;
 		border-color: @color-light;
 	}
 	
 	&.primary {
-		.btn-link-color(@color-primary);
+		.btn-link-extend(@color-primary);
 	}
-	
 	&.secondary {
-		.btn-link-color(@color-secondary);
+		.btn-link-extend(@color-secondary);
 	}
-	
 	&.success {
-		.btn-link-color(@color-success);
+		.btn-link-extend(@color-success);
 	}
-	
 	&.warning {
-		.btn-link-color(@color-warning);
+		.btn-link-extend(@color-warning);
 	}
-	
 	&.error {
-		.btn-link-color(@color-error);
+		.btn-link-extend(@color-error);
 	}
 }
 
-.btn-link-color(@color) {
-	color: @color;
-}
+@btn-link-ruleset: {
+	.btn-link-extend(@color) {
+		color: @color;
+	}
+};
 
 // Outline button
 .btn-outline {
 	&:extend(.btn-base all);
-	.btn-outline-color(@color-text);
 	
-	&[disabled],
-	&.disabled {
+	@btn-outline-ruleset();
+	.btn-outline-extend(@color-text);
+	
+	&[disabled], &.disabled {
 		background: none !important;
 	}
 	
 	&.primary {
-		.btn-outline-color(@color-primary);
+		.btn-outline-extend(@color-primary);
 	}
-	
 	&.secondary {
-		.btn-outline-color(@color-secondary);
+		.btn-outline-extend(@color-secondary);
 	}
-	
 	&.success {
-		.btn-outline-color(@color-success);
+		.btn-outline-extend(@color-success);
 	}
-	
 	&.warning {
-		.btn-outline-color(@color-warning);
+		.btn-outline-extend(@color-warning);
 	}
-	
 	&.error {
-		.btn-outline-color(@color-error);
+		.btn-outline-extend(@color-error);
 	}
 }
 
-.btn-outline-color(@color) {
-	.btn-base-color(@color);
-	color: @color;
-	border-color: @color;
-	
-	&:hover {
-		color: @btn-color;
-		background: @color;
+@btn-outline-ruleset: {
+	.btn-outline-extend(@color) {
+		@btn-base-ruleset();
+		.btn-base-extend(@color);
+		
+		color: @color;
+		border-color: @color;
+		
+		&:hover {
+			color: @btn-color;
+			background: @color;
+		}
 	}
-}
+};
 
 // Clear button
 .btn-clear {
 	&:extend(.btn-base all);
+	
 	color: @color-invert;
 	border-color: @color-invert;
-	.btn-clear-color(@btn-bg);
+	@btn-clear-ruleset();
+	.btn-clear-extend(@btn-bg);
 	
-	&[disabled],
-	&.disabled {
+	&[disabled], &.disabled {
 		background: none !important;
 	}
 	
 	&.primary {
-		.btn-clear-color(@color-primary);
+		.btn-clear-extend(@color-primary);
 	}
-	
 	&.secondary {
-		.btn-clear-color(@color-secondary);
+		.btn-clear-extend(@color-secondary);
 	}
-	
 	&.success {
-		.btn-clear-color(@color-success);
+		.btn-clear-extend(@color-success);
 	}
-	
 	&.warning {
-		.btn-clear-color(@color-warning);
+		.btn-clear-extend(@color-warning);
 	}
-	
 	&.error {
-		.btn-clear-color(@color-error);
+		.btn-clear-extend(@color-error);
 	}
 }
 
-.btn-clear-color(@color) {
-	&:hover {
-		background: @color;
+@btn-clear-ruleset: {
+	.btn-clear-extend(@color) {
+		&:hover {
+			background: @color;
+		}
+		&:focus {
+			box-shadow: 0px 0px @btn-focus-blur @btn-focus-spread fade(@color, 90%);
+		}
 	}
-	
-	&:focus {
-		box-shadow: 0 0 @btn-focus-blur @btn-focus-spread fade(@color, 90%);
-	}
-}
+};
 
 // Default submit buttons
 [type="submit"].btn {
