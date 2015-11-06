@@ -21,56 +21,15 @@ legend {
 
 // Normal Form
 .form {
-	// One-by-one labels or vertical sections with controls
-	> label,
-	> fieldset > label {
+	// Controls
+	label,
+	input,
+	textarea,
+	select {
 		display: block;
+		width: 100%;
 	}
 	
-	> label,
-	> section,
-	> div.row,
-	> fieldset > label,
-	> fieldset > section,
-	> fieldset > div.row {
-		.clearfix();
-		margin-bottom: @line-margin;
-
-		input,
-		textarea,
-		select,
-		div {
-			& + label.radio,
-			& + label.checkbox {
-				margin-top: .25em;
-			}
-		}
-	}
-
-	> label,
-	> section,
-	> fieldset > label,
-	> fieldset > section {
-		input,
-		textarea,
-		select {
-			display: block;
-			width: 100%;
-		}
-	}
-	
-	// padding for each column in the row
-	> div.row.padding,
-	> fieldset > div.row.padding {
-		> :not(:last-child) {
-			padding-right: 1em;
-		}
-	}
-	
-	> * {
-		clear: both;
-	}
-		
 	input[type="submit"],
 	input[type="button"],
 	input[type="reset"],
@@ -85,7 +44,28 @@ legend {
 		width: 100%;
 	}
 	
-	// colors
+	// Group margin
+	> label,
+	> section,
+	> div,
+	> fieldset > label,
+	> fieldset > section,
+	> fieldset > div {
+		.clearfix();
+		margin-bottom: @line-margin;
+	}
+	
+	input,
+	textarea,
+	select,
+	div {
+		& + label.radio,
+		& + label.checkbox {
+			margin-top: .25em;
+		}
+	}
+	
+	// Colors
 	> .success {
 		input,
 		textarea,
@@ -123,13 +103,9 @@ legend {
 	}
 }
 
-// Inline form
-.form-inline {
-	&:extend(.form all);
-}
-
-.form-inline,
-.form .inline {
+// Inline form group
+.form.group-inline,
+.form .group-inline {
 	> input,
 	> button,
 	> textarea,
@@ -138,10 +114,6 @@ legend {
 		display: inline-block;
 		vertical-align: middle;
 		width: auto;
-		float: none;
-	}
-
-	> label {
 		margin-bottom: 0;
 	}
 
@@ -152,15 +124,8 @@ legend {
 	}
 }
 
-// Aligned form
-.form-aligned {
-	&:extend(.form all);
-}
-
-.form > .aligned,
-.form > fieldset > .aligned,
-.form-aligned > section,
-.form-aligned > fieldset > section {
+// Aligned form group
+.form .group-aligned {
 	.row;
 	
 	@media (min-width: @width-md) {
@@ -186,7 +151,7 @@ legend {
 			.col-offset-tablet(@form-aligned-left, @form-aligned-columns);
 		}
 	}
-
+	
 	@media (min-width: @width-md) {
 		> label {
 			padding-right: 1em;
@@ -206,10 +171,30 @@ legend {
 	}
 }
 
-.form > .aligned-controls,
-.form-aligned > .controls {
+// Form controls
+.form .controls {
+	margin-bottom: @line-margin;
+}
+
+.form .controls-aligned {
 	.col-offset-tablet(@form-aligned-left, @form-aligned-columns);
 	margin-bottom: @line-margin;
+}
+
+// Form row with padding between columns
+.form .group-row {
+	.row;
+	
+	> :not(:last-child) {
+		padding-right: 1em;
+	}
+	
+	> label,
+	> output {
+		padding-top: @control-padding-v;
+		border-top: @control-border-width solid transparent;
+		line-height: normal;
+	}
 }
 
 // Required
@@ -232,6 +217,7 @@ ul.radio-inline,
 ul.checkbox-inline {
 	list-style: none;
 	padding: 0;
+	clear: both;
 }
 
 ul.radio-inline,

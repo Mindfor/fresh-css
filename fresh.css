@@ -838,80 +838,80 @@ kbd {
   clear: both;
 }
 .col-1 {
-  width: 8.33333333%;
+  width: 8.33333333% !important;
 }
 .col-offset-1 {
   margin-left: 8.33333333%;
 }
 .col-2 {
-  width: 16.66666667%;
+  width: 16.66666667% !important;
 }
 .col-offset-2 {
   margin-left: 16.66666667%;
 }
 .col-3 {
-  width: 25%;
+  width: 25% !important;
 }
 .col-offset-3 {
   margin-left: 25%;
 }
 .col-4 {
-  width: 33.33333333%;
+  width: 33.33333333% !important;
 }
 .col-offset-4 {
   margin-left: 33.33333333%;
 }
 .col-5 {
-  width: 41.66666667%;
+  width: 41.66666667% !important;
 }
 .col-offset-5 {
   margin-left: 41.66666667%;
 }
 .col-6 {
-  width: 50%;
+  width: 50% !important;
 }
 .col-offset-6 {
   margin-left: 50%;
 }
 .col-7 {
-  width: 58.33333333%;
+  width: 58.33333333% !important;
 }
 .col-offset-7 {
   margin-left: 58.33333333%;
 }
 .col-8 {
-  width: 66.66666667%;
+  width: 66.66666667% !important;
 }
 .col-offset-8 {
   margin-left: 66.66666667%;
 }
 .col-9 {
-  width: 75%;
+  width: 75% !important;
 }
 .col-offset-9 {
   margin-left: 75%;
 }
 .col-10 {
-  width: 83.33333333%;
+  width: 83.33333333% !important;
 }
 .col-offset-10 {
   margin-left: 83.33333333%;
 }
 .col-11 {
-  width: 91.66666667%;
+  width: 91.66666667% !important;
 }
 .col-offset-11 {
   margin-left: 91.66666667%;
 }
 .col-12 {
-  width: 100%;
+  width: 100% !important;
 }
 .col-offset-12 {
   margin-left: 100%;
 }
 @media (min-width: 768px) {
   .col-tablet-1 {
-    width: 8.33333333%;
+    width: 8.33333333% !important;
   }
 }
 @media (min-width: 768px) {
@@ -921,7 +921,7 @@ kbd {
 }
 @media (min-width: 768px) {
   .col-tablet-2 {
-    width: 16.66666667%;
+    width: 16.66666667% !important;
   }
 }
 @media (min-width: 768px) {
@@ -931,7 +931,7 @@ kbd {
 }
 @media (min-width: 768px) {
   .col-tablet-3 {
-    width: 25%;
+    width: 25% !important;
   }
 }
 @media (min-width: 768px) {
@@ -941,7 +941,7 @@ kbd {
 }
 @media (min-width: 768px) {
   .col-tablet-4 {
-    width: 33.33333333%;
+    width: 33.33333333% !important;
   }
 }
 @media (min-width: 768px) {
@@ -951,7 +951,7 @@ kbd {
 }
 @media (min-width: 768px) {
   .col-tablet-5 {
-    width: 41.66666667%;
+    width: 41.66666667% !important;
   }
 }
 @media (min-width: 768px) {
@@ -961,7 +961,7 @@ kbd {
 }
 @media (min-width: 768px) {
   .col-tablet-6 {
-    width: 50%;
+    width: 50% !important;
   }
 }
 @media (min-width: 768px) {
@@ -971,7 +971,7 @@ kbd {
 }
 @media (min-width: 768px) {
   .col-tablet-7 {
-    width: 58.33333333%;
+    width: 58.33333333% !important;
   }
 }
 @media (min-width: 768px) {
@@ -981,7 +981,7 @@ kbd {
 }
 @media (min-width: 768px) {
   .col-tablet-8 {
-    width: 66.66666667%;
+    width: 66.66666667% !important;
   }
 }
 @media (min-width: 768px) {
@@ -991,7 +991,7 @@ kbd {
 }
 @media (min-width: 768px) {
   .col-tablet-9 {
-    width: 75%;
+    width: 75% !important;
   }
 }
 @media (min-width: 768px) {
@@ -1001,7 +1001,7 @@ kbd {
 }
 @media (min-width: 768px) {
   .col-tablet-10 {
-    width: 83.33333333%;
+    width: 83.33333333% !important;
   }
 }
 @media (min-width: 768px) {
@@ -1011,7 +1011,7 @@ kbd {
 }
 @media (min-width: 768px) {
   .col-tablet-11 {
-    width: 91.66666667%;
+    width: 91.66666667% !important;
   }
 }
 @media (min-width: 768px) {
@@ -1021,7 +1021,7 @@ kbd {
 }
 @media (min-width: 768px) {
   .col-tablet-12 {
-    width: 100%;
+    width: 100% !important;
   }
 }
 @media (min-width: 768px) {
@@ -1031,7 +1031,7 @@ kbd {
 }
 @media (min-width: 1014px) {
   .col-desktop-1 {
-    width: 8.33333333%;
+    width: 8.33333333% !important;
   }
 }
 @media (min-width: 1014px) {
@@ -1041,7 +1041,7 @@ kbd {
 }
 @media (min-width: 1014px) {
   .col-desktop-2 {
-    width: 16.66666667%;
+    width: 16.66666667% !important;
   }
 }
 @media (min-width: 1014px) {
@@ -1051,7 +1051,7 @@ kbd {
 }
 @media (min-width: 1014px) {
   .col-desktop-3 {
-    width: 25%;
+    width: 25% !important;
   }
 }
 @media (min-width: 1014px) {
@@ -1061,7 +1061,7 @@ kbd {
 }
 @media (min-width: 1014px) {
   .col-desktop-4 {
-    width: 33.33333333%;
+    width: 33.33333333% !important;
   }
 }
 @media (min-width: 1014px) {
@@ -1071,7 +1071,7 @@ kbd {
 }
 @media (min-width: 1014px) {
   .col-desktop-5 {
-    width: 41.66666667%;
+    width: 41.66666667% !important;
   }
 }
 @media (min-width: 1014px) {
@@ -1081,7 +1081,7 @@ kbd {
 }
 @media (min-width: 1014px) {
   .col-desktop-6 {
-    width: 50%;
+    width: 50% !important;
   }
 }
 @media (min-width: 1014px) {
@@ -1091,7 +1091,7 @@ kbd {
 }
 @media (min-width: 1014px) {
   .col-desktop-7 {
-    width: 58.33333333%;
+    width: 58.33333333% !important;
   }
 }
 @media (min-width: 1014px) {
@@ -1101,7 +1101,7 @@ kbd {
 }
 @media (min-width: 1014px) {
   .col-desktop-8 {
-    width: 66.66666667%;
+    width: 66.66666667% !important;
   }
 }
 @media (min-width: 1014px) {
@@ -1111,7 +1111,7 @@ kbd {
 }
 @media (min-width: 1014px) {
   .col-desktop-9 {
-    width: 75%;
+    width: 75% !important;
   }
 }
 @media (min-width: 1014px) {
@@ -1121,7 +1121,7 @@ kbd {
 }
 @media (min-width: 1014px) {
   .col-desktop-10 {
-    width: 83.33333333%;
+    width: 83.33333333% !important;
   }
 }
 @media (min-width: 1014px) {
@@ -1131,7 +1131,7 @@ kbd {
 }
 @media (min-width: 1014px) {
   .col-desktop-11 {
-    width: 91.66666667%;
+    width: 91.66666667% !important;
   }
 }
 @media (min-width: 1014px) {
@@ -1141,7 +1141,7 @@ kbd {
 }
 @media (min-width: 1014px) {
   .col-desktop-12 {
-    width: 100%;
+    width: 100% !important;
   }
 }
 @media (min-width: 1014px) {
@@ -1151,7 +1151,7 @@ kbd {
 }
 @media (min-width: 1440px) {
   .col-hd-1 {
-    width: 8.33333333%;
+    width: 8.33333333% !important;
   }
 }
 @media (min-width: 1440px) {
@@ -1161,7 +1161,7 @@ kbd {
 }
 @media (min-width: 1440px) {
   .col-hd-2 {
-    width: 16.66666667%;
+    width: 16.66666667% !important;
   }
 }
 @media (min-width: 1440px) {
@@ -1171,7 +1171,7 @@ kbd {
 }
 @media (min-width: 1440px) {
   .col-hd-3 {
-    width: 25%;
+    width: 25% !important;
   }
 }
 @media (min-width: 1440px) {
@@ -1181,7 +1181,7 @@ kbd {
 }
 @media (min-width: 1440px) {
   .col-hd-4 {
-    width: 33.33333333%;
+    width: 33.33333333% !important;
   }
 }
 @media (min-width: 1440px) {
@@ -1191,7 +1191,7 @@ kbd {
 }
 @media (min-width: 1440px) {
   .col-hd-5 {
-    width: 41.66666667%;
+    width: 41.66666667% !important;
   }
 }
 @media (min-width: 1440px) {
@@ -1201,7 +1201,7 @@ kbd {
 }
 @media (min-width: 1440px) {
   .col-hd-6 {
-    width: 50%;
+    width: 50% !important;
   }
 }
 @media (min-width: 1440px) {
@@ -1211,7 +1211,7 @@ kbd {
 }
 @media (min-width: 1440px) {
   .col-hd-7 {
-    width: 58.33333333%;
+    width: 58.33333333% !important;
   }
 }
 @media (min-width: 1440px) {
@@ -1221,7 +1221,7 @@ kbd {
 }
 @media (min-width: 1440px) {
   .col-hd-8 {
-    width: 66.66666667%;
+    width: 66.66666667% !important;
   }
 }
 @media (min-width: 1440px) {
@@ -1231,7 +1231,7 @@ kbd {
 }
 @media (min-width: 1440px) {
   .col-hd-9 {
-    width: 75%;
+    width: 75% !important;
   }
 }
 @media (min-width: 1440px) {
@@ -1241,7 +1241,7 @@ kbd {
 }
 @media (min-width: 1440px) {
   .col-hd-10 {
-    width: 83.33333333%;
+    width: 83.33333333% !important;
   }
 }
 @media (min-width: 1440px) {
@@ -1251,7 +1251,7 @@ kbd {
 }
 @media (min-width: 1440px) {
   .col-hd-11 {
-    width: 91.66666667%;
+    width: 91.66666667% !important;
   }
 }
 @media (min-width: 1440px) {
@@ -1261,7 +1261,7 @@ kbd {
 }
 @media (min-width: 1440px) {
   .col-hd-12 {
-    width: 100%;
+    width: 100% !important;
   }
 }
 @media (min-width: 1440px) {
@@ -2018,13 +2018,7 @@ textarea.success,
 select.success,
 .form > .success input,
 .form > .success textarea,
-.form > .success select,
-.form-inline > .success input,
-.form-inline > .success textarea,
-.form-inline > .success select,
-.form-aligned > .success input,
-.form-aligned > .success textarea,
-.form-aligned > .success select {
+.form > .success select {
   border-color: #5cb85c;
 }
 .control.success:focus,
@@ -2033,13 +2027,7 @@ textarea.success:focus,
 select.success:focus,
 .form > .success input:focus,
 .form > .success textarea:focus,
-.form > .success select:focus,
-.form-inline > .success input:focus,
-.form-inline > .success textarea:focus,
-.form-inline > .success select:focus,
-.form-aligned > .success input:focus,
-.form-aligned > .success textarea:focus,
-.form-aligned > .success select:focus {
+.form > .success select:focus {
   box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.3);
 }
 .control.warning,
@@ -2048,13 +2036,7 @@ textarea.warning,
 select.warning,
 .form > .warning input,
 .form > .warning textarea,
-.form > .warning select,
-.form-inline > .warning input,
-.form-inline > .warning textarea,
-.form-inline > .warning select,
-.form-aligned > .warning input,
-.form-aligned > .warning textarea,
-.form-aligned > .warning select {
+.form > .warning select {
   border-color: #df7514;
 }
 .control.warning:focus,
@@ -2063,13 +2045,7 @@ textarea.warning:focus,
 select.warning:focus,
 .form > .warning input:focus,
 .form > .warning textarea:focus,
-.form > .warning select:focus,
-.form-inline > .warning input:focus,
-.form-inline > .warning textarea:focus,
-.form-inline > .warning select:focus,
-.form-aligned > .warning input:focus,
-.form-aligned > .warning textarea:focus,
-.form-aligned > .warning select:focus {
+.form > .warning select:focus {
   box-shadow: 0 0 0 2px rgba(223, 117, 20, 0.3);
 }
 .control.error,
@@ -2078,13 +2054,7 @@ textarea.error,
 select.error,
 .form > .error input,
 .form > .error textarea,
-.form > .error select,
-.form-inline > .error input,
-.form-inline > .error textarea,
-.form-inline > .error select,
-.form-aligned > .error input,
-.form-aligned > .error textarea,
-.form-aligned > .error select {
+.form > .error select {
   border-color: #ca3c3c;
 }
 .control.error:focus,
@@ -2093,13 +2063,7 @@ textarea.error:focus,
 select.error:focus,
 .form > .error input:focus,
 .form > .error textarea:focus,
-.form > .error select:focus,
-.form-inline > .error input:focus,
-.form-inline > .error textarea:focus,
-.form-inline > .error select:focus,
-.form-aligned > .error input:focus,
-.form-aligned > .error textarea:focus,
-.form-aligned > .error select:focus {
+.form > .error select:focus {
   box-shadow: 0 0 0 2px rgba(202, 60, 60, 0.3);
 }
 label.success {
@@ -2601,15 +2565,7 @@ select.control-clear.error:focus {
 .form > .success .input-group input,
 .form > .success .input-group textarea,
 .form > .success .input-group select,
-.form > .success .input-group .select2,
-.form-inline > .success .input-group input,
-.form-inline > .success .input-group textarea,
-.form-inline > .success .input-group select,
-.form-inline > .success .input-group .select2,
-.form-aligned > .success .input-group input,
-.form-aligned > .success .input-group textarea,
-.form-aligned > .success .input-group select,
-.form-aligned > .success .input-group .select2 {
+.form > .success .input-group .select2 {
   border-color: #5cb85c;
 }
 .input-group.success input:focus,
@@ -2619,31 +2575,17 @@ select.control-clear.error:focus {
 .form > .success .input-group input:focus,
 .form > .success .input-group textarea:focus,
 .form > .success .input-group select:focus,
-.form > .success .input-group .select2:focus,
-.form-inline > .success .input-group input:focus,
-.form-inline > .success .input-group textarea:focus,
-.form-inline > .success .input-group select:focus,
-.form-inline > .success .input-group .select2:focus,
-.form-aligned > .success .input-group input:focus,
-.form-aligned > .success .input-group textarea:focus,
-.form-aligned > .success .input-group select:focus,
-.form-aligned > .success .input-group .select2:focus {
+.form > .success .input-group .select2:focus {
   box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.3);
 }
 .input-group.success > span,
 .input-group.success > label,
 .form > .success .input-group > span,
-.form > .success .input-group > label,
-.form-inline > .success .input-group > span,
-.form-inline > .success .input-group > label,
-.form-aligned > .success .input-group > span,
-.form-aligned > .success .input-group > label {
+.form > .success .input-group > label {
   border-color: #5cb85c;
 }
 .input-group.success > span:not(.select2),
-.form > .success .input-group > span:not(.select2),
-.form-inline > .success .input-group > span:not(.select2),
-.form-aligned > .success .input-group > span:not(.select2) {
+.form > .success .input-group > span:not(.select2) {
   color: #5cb85c;
   background: #eaf6ea;
 }
@@ -2654,15 +2596,7 @@ select.control-clear.error:focus {
 .form > .warning .input-group input,
 .form > .warning .input-group textarea,
 .form > .warning .input-group select,
-.form > .warning .input-group .select2,
-.form-inline > .warning .input-group input,
-.form-inline > .warning .input-group textarea,
-.form-inline > .warning .input-group select,
-.form-inline > .warning .input-group .select2,
-.form-aligned > .warning .input-group input,
-.form-aligned > .warning .input-group textarea,
-.form-aligned > .warning .input-group select,
-.form-aligned > .warning .input-group .select2 {
+.form > .warning .input-group .select2 {
   border-color: #df7514;
 }
 .input-group.warning input:focus,
@@ -2672,31 +2606,17 @@ select.control-clear.error:focus {
 .form > .warning .input-group input:focus,
 .form > .warning .input-group textarea:focus,
 .form > .warning .input-group select:focus,
-.form > .warning .input-group .select2:focus,
-.form-inline > .warning .input-group input:focus,
-.form-inline > .warning .input-group textarea:focus,
-.form-inline > .warning .input-group select:focus,
-.form-inline > .warning .input-group .select2:focus,
-.form-aligned > .warning .input-group input:focus,
-.form-aligned > .warning .input-group textarea:focus,
-.form-aligned > .warning .input-group select:focus,
-.form-aligned > .warning .input-group .select2:focus {
+.form > .warning .input-group .select2:focus {
   box-shadow: 0 0 0 2px rgba(223, 117, 20, 0.3);
 }
 .input-group.warning > span,
 .input-group.warning > label,
 .form > .warning .input-group > span,
-.form > .warning .input-group > label,
-.form-inline > .warning .input-group > span,
-.form-inline > .warning .input-group > label,
-.form-aligned > .warning .input-group > span,
-.form-aligned > .warning .input-group > label {
+.form > .warning .input-group > label {
   border-color: #df7514;
 }
 .input-group.warning > span:not(.select2),
-.form > .warning .input-group > span:not(.select2),
-.form-inline > .warning .input-group > span:not(.select2),
-.form-aligned > .warning .input-group > span:not(.select2) {
+.form > .warning .input-group > span:not(.select2) {
   color: #df7514;
   background: #fadec5;
 }
@@ -2707,15 +2627,7 @@ select.control-clear.error:focus {
 .form > .error .input-group input,
 .form > .error .input-group textarea,
 .form > .error .input-group select,
-.form > .error .input-group .select2,
-.form-inline > .error .input-group input,
-.form-inline > .error .input-group textarea,
-.form-inline > .error .input-group select,
-.form-inline > .error .input-group .select2,
-.form-aligned > .error .input-group input,
-.form-aligned > .error .input-group textarea,
-.form-aligned > .error .input-group select,
-.form-aligned > .error .input-group .select2 {
+.form > .error .input-group .select2 {
   border-color: #ca3c3c;
 }
 .input-group.error input:focus,
@@ -2725,31 +2637,17 @@ select.control-clear.error:focus {
 .form > .error .input-group input:focus,
 .form > .error .input-group textarea:focus,
 .form > .error .input-group select:focus,
-.form > .error .input-group .select2:focus,
-.form-inline > .error .input-group input:focus,
-.form-inline > .error .input-group textarea:focus,
-.form-inline > .error .input-group select:focus,
-.form-inline > .error .input-group .select2:focus,
-.form-aligned > .error .input-group input:focus,
-.form-aligned > .error .input-group textarea:focus,
-.form-aligned > .error .input-group select:focus,
-.form-aligned > .error .input-group .select2:focus {
+.form > .error .input-group .select2:focus {
   box-shadow: 0 0 0 2px rgba(202, 60, 60, 0.3);
 }
 .input-group.error > span,
 .input-group.error > label,
 .form > .error .input-group > span,
-.form > .error .input-group > label,
-.form-inline > .error .input-group > span,
-.form-inline > .error .input-group > label,
-.form-aligned > .error .input-group > span,
-.form-aligned > .error .input-group > label {
+.form > .error .input-group > label {
   border-color: #ca3c3c;
 }
 .input-group.error > span:not(.select2),
-.form > .error .input-group > span:not(.select2),
-.form-inline > .error .input-group > span:not(.select2),
-.form-aligned > .error .input-group > span:not(.select2) {
+.form > .error .input-group > span:not(.select2) {
   color: #ca3c3c;
   background: #f6dcdc;
 }
@@ -3187,329 +3085,79 @@ legend {
   padding: .3em 0;
   border-bottom: 1px solid #bdbdbd;
 }
-.form > label,
-.form > fieldset > label,
-.form-inline > label,
-.form-inline > fieldset > label,
-.form-aligned > label,
-.form-aligned > fieldset > label {
-  display: block;
-}
-.form > label,
-.form > section,
-.form > div.row,
-.form > fieldset > label,
-.form > fieldset > section,
-.form > fieldset > div.row,
-.form-inline > label,
-.form-inline > section,
-.form-inline > div.row,
-.form-inline > fieldset > label,
-.form-inline > fieldset > section,
-.form-inline > fieldset > div.row,
-.form-aligned > label,
-.form-aligned > section,
-.form-aligned > div.row,
-.form-aligned > fieldset > label,
-.form-aligned > fieldset > section,
-.form-aligned > fieldset > div.row {
-  margin-bottom: 1em;
-}
-.form > label:after,
-.form > section:after,
-.form > div.row:after,
-.form > fieldset > label:after,
-.form > fieldset > section:after,
-.form > fieldset > div.row:after,
-.form-inline > label:after,
-.form-inline > section:after,
-.form-inline > div.row:after,
-.form-inline > fieldset > label:after,
-.form-inline > fieldset > section:after,
-.form-inline > fieldset > div.row:after,
-.form-aligned > label:after,
-.form-aligned > section:after,
-.form-aligned > div.row:after,
-.form-aligned > fieldset > label:after,
-.form-aligned > fieldset > section:after,
-.form-aligned > fieldset > div.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.form > label input + label.radio,
-.form > section input + label.radio,
-.form > div.row input + label.radio,
-.form > fieldset > label input + label.radio,
-.form > fieldset > section input + label.radio,
-.form > fieldset > div.row input + label.radio,
-.form > label textarea + label.radio,
-.form > section textarea + label.radio,
-.form > div.row textarea + label.radio,
-.form > fieldset > label textarea + label.radio,
-.form > fieldset > section textarea + label.radio,
-.form > fieldset > div.row textarea + label.radio,
-.form > label select + label.radio,
-.form > section select + label.radio,
-.form > div.row select + label.radio,
-.form > fieldset > label select + label.radio,
-.form > fieldset > section select + label.radio,
-.form > fieldset > div.row select + label.radio,
-.form > label div + label.radio,
-.form > section div + label.radio,
-.form > div.row div + label.radio,
-.form > fieldset > label div + label.radio,
-.form > fieldset > section div + label.radio,
-.form > fieldset > div.row div + label.radio,
-.form > label input + label.checkbox,
-.form > section input + label.checkbox,
-.form > div.row input + label.checkbox,
-.form > fieldset > label input + label.checkbox,
-.form > fieldset > section input + label.checkbox,
-.form > fieldset > div.row input + label.checkbox,
-.form > label textarea + label.checkbox,
-.form > section textarea + label.checkbox,
-.form > div.row textarea + label.checkbox,
-.form > fieldset > label textarea + label.checkbox,
-.form > fieldset > section textarea + label.checkbox,
-.form > fieldset > div.row textarea + label.checkbox,
-.form > label select + label.checkbox,
-.form > section select + label.checkbox,
-.form > div.row select + label.checkbox,
-.form > fieldset > label select + label.checkbox,
-.form > fieldset > section select + label.checkbox,
-.form > fieldset > div.row select + label.checkbox,
-.form > label div + label.checkbox,
-.form > section div + label.checkbox,
-.form > div.row div + label.checkbox,
-.form > fieldset > label div + label.checkbox,
-.form > fieldset > section div + label.checkbox,
-.form > fieldset > div.row div + label.checkbox,
-.form-inline > label input + label.radio,
-.form-inline > section input + label.radio,
-.form-inline > div.row input + label.radio,
-.form-inline > fieldset > label input + label.radio,
-.form-inline > fieldset > section input + label.radio,
-.form-inline > fieldset > div.row input + label.radio,
-.form-inline > label textarea + label.radio,
-.form-inline > section textarea + label.radio,
-.form-inline > div.row textarea + label.radio,
-.form-inline > fieldset > label textarea + label.radio,
-.form-inline > fieldset > section textarea + label.radio,
-.form-inline > fieldset > div.row textarea + label.radio,
-.form-inline > label select + label.radio,
-.form-inline > section select + label.radio,
-.form-inline > div.row select + label.radio,
-.form-inline > fieldset > label select + label.radio,
-.form-inline > fieldset > section select + label.radio,
-.form-inline > fieldset > div.row select + label.radio,
-.form-inline > label div + label.radio,
-.form-inline > section div + label.radio,
-.form-inline > div.row div + label.radio,
-.form-inline > fieldset > label div + label.radio,
-.form-inline > fieldset > section div + label.radio,
-.form-inline > fieldset > div.row div + label.radio,
-.form-inline > label input + label.checkbox,
-.form-inline > section input + label.checkbox,
-.form-inline > div.row input + label.checkbox,
-.form-inline > fieldset > label input + label.checkbox,
-.form-inline > fieldset > section input + label.checkbox,
-.form-inline > fieldset > div.row input + label.checkbox,
-.form-inline > label textarea + label.checkbox,
-.form-inline > section textarea + label.checkbox,
-.form-inline > div.row textarea + label.checkbox,
-.form-inline > fieldset > label textarea + label.checkbox,
-.form-inline > fieldset > section textarea + label.checkbox,
-.form-inline > fieldset > div.row textarea + label.checkbox,
-.form-inline > label select + label.checkbox,
-.form-inline > section select + label.checkbox,
-.form-inline > div.row select + label.checkbox,
-.form-inline > fieldset > label select + label.checkbox,
-.form-inline > fieldset > section select + label.checkbox,
-.form-inline > fieldset > div.row select + label.checkbox,
-.form-inline > label div + label.checkbox,
-.form-inline > section div + label.checkbox,
-.form-inline > div.row div + label.checkbox,
-.form-inline > fieldset > label div + label.checkbox,
-.form-inline > fieldset > section div + label.checkbox,
-.form-inline > fieldset > div.row div + label.checkbox,
-.form-aligned > label input + label.radio,
-.form-aligned > section input + label.radio,
-.form-aligned > div.row input + label.radio,
-.form-aligned > fieldset > label input + label.radio,
-.form-aligned > fieldset > section input + label.radio,
-.form-aligned > fieldset > div.row input + label.radio,
-.form-aligned > label textarea + label.radio,
-.form-aligned > section textarea + label.radio,
-.form-aligned > div.row textarea + label.radio,
-.form-aligned > fieldset > label textarea + label.radio,
-.form-aligned > fieldset > section textarea + label.radio,
-.form-aligned > fieldset > div.row textarea + label.radio,
-.form-aligned > label select + label.radio,
-.form-aligned > section select + label.radio,
-.form-aligned > div.row select + label.radio,
-.form-aligned > fieldset > label select + label.radio,
-.form-aligned > fieldset > section select + label.radio,
-.form-aligned > fieldset > div.row select + label.radio,
-.form-aligned > label div + label.radio,
-.form-aligned > section div + label.radio,
-.form-aligned > div.row div + label.radio,
-.form-aligned > fieldset > label div + label.radio,
-.form-aligned > fieldset > section div + label.radio,
-.form-aligned > fieldset > div.row div + label.radio,
-.form-aligned > label input + label.checkbox,
-.form-aligned > section input + label.checkbox,
-.form-aligned > div.row input + label.checkbox,
-.form-aligned > fieldset > label input + label.checkbox,
-.form-aligned > fieldset > section input + label.checkbox,
-.form-aligned > fieldset > div.row input + label.checkbox,
-.form-aligned > label textarea + label.checkbox,
-.form-aligned > section textarea + label.checkbox,
-.form-aligned > div.row textarea + label.checkbox,
-.form-aligned > fieldset > label textarea + label.checkbox,
-.form-aligned > fieldset > section textarea + label.checkbox,
-.form-aligned > fieldset > div.row textarea + label.checkbox,
-.form-aligned > label select + label.checkbox,
-.form-aligned > section select + label.checkbox,
-.form-aligned > div.row select + label.checkbox,
-.form-aligned > fieldset > label select + label.checkbox,
-.form-aligned > fieldset > section select + label.checkbox,
-.form-aligned > fieldset > div.row select + label.checkbox,
-.form-aligned > label div + label.checkbox,
-.form-aligned > section div + label.checkbox,
-.form-aligned > div.row div + label.checkbox,
-.form-aligned > fieldset > label div + label.checkbox,
-.form-aligned > fieldset > section div + label.checkbox,
-.form-aligned > fieldset > div.row div + label.checkbox {
-  margin-top: .25em;
-}
-.form > label input,
-.form > section input,
-.form > fieldset > label input,
-.form > fieldset > section input,
-.form > label textarea,
-.form > section textarea,
-.form > fieldset > label textarea,
-.form > fieldset > section textarea,
-.form > label select,
-.form > section select,
-.form > fieldset > label select,
-.form > fieldset > section select,
-.form-inline > label input,
-.form-inline > section input,
-.form-inline > fieldset > label input,
-.form-inline > fieldset > section input,
-.form-inline > label textarea,
-.form-inline > section textarea,
-.form-inline > fieldset > label textarea,
-.form-inline > fieldset > section textarea,
-.form-inline > label select,
-.form-inline > section select,
-.form-inline > fieldset > label select,
-.form-inline > fieldset > section select,
-.form-aligned > label input,
-.form-aligned > section input,
-.form-aligned > fieldset > label input,
-.form-aligned > fieldset > section input,
-.form-aligned > label textarea,
-.form-aligned > section textarea,
-.form-aligned > fieldset > label textarea,
-.form-aligned > fieldset > section textarea,
-.form-aligned > label select,
-.form-aligned > section select,
-.form-aligned > fieldset > label select,
-.form-aligned > fieldset > section select {
+.form label,
+.form input,
+.form textarea,
+.form select {
   display: block;
   width: 100%;
-}
-.form > div.row.padding > :not(:last-child),
-.form > fieldset > div.row.padding > :not(:last-child),
-.form-inline > div.row.padding > :not(:last-child),
-.form-inline > fieldset > div.row.padding > :not(:last-child),
-.form-aligned > div.row.padding > :not(:last-child),
-.form-aligned > fieldset > div.row.padding > :not(:last-child) {
-  padding-right: 1em;
-}
-.form > *,
-.form-inline > *,
-.form-aligned > * {
-  clear: both;
 }
 .form input[type="submit"],
 .form input[type="button"],
 .form input[type="reset"],
 .form input[type="checkbox"],
-.form input[type="radio"],
-.form-inline input[type="submit"],
-.form-inline input[type="button"],
-.form-inline input[type="reset"],
-.form-inline input[type="checkbox"],
-.form-inline input[type="radio"],
-.form-aligned input[type="submit"],
-.form-aligned input[type="button"],
-.form-aligned input[type="reset"],
-.form-aligned input[type="checkbox"],
-.form-aligned input[type="radio"] {
+.form input[type="radio"] {
   display: inline-block;
   width: auto;
 }
-.form .input-group,
-.form-inline .input-group,
-.form-aligned .input-group {
+.form .input-group {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   width: 100%;
 }
-.form-inline > input,
-.form .inline > input,
-.form-inline > button,
-.form .inline > button,
-.form-inline > textarea,
-.form .inline > textarea,
-.form-inline > select,
-.form .inline > select,
-.form-inline > label,
-.form .inline > label,
-.form-inline .inline > input,
-.form-inline .inline > button,
-.form-inline .inline > textarea,
-.form-inline .inline > select,
-.form-inline .inline > label,
-.form-aligned .inline > input,
-.form-aligned .inline > button,
-.form-aligned .inline > textarea,
-.form-aligned .inline > select,
-.form-aligned .inline > label {
+.form > label,
+.form > section,
+.form > div,
+.form > fieldset > label,
+.form > fieldset > section,
+.form > fieldset > div {
+  margin-bottom: 1em;
+}
+.form > label:after,
+.form > section:after,
+.form > div:after,
+.form > fieldset > label:after,
+.form > fieldset > section:after,
+.form > fieldset > div:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.form input + label.radio,
+.form textarea + label.radio,
+.form select + label.radio,
+.form div + label.radio,
+.form input + label.checkbox,
+.form textarea + label.checkbox,
+.form select + label.checkbox,
+.form div + label.checkbox {
+  margin-top: .25em;
+}
+.form.group-inline > input,
+.form .group-inline > input,
+.form.group-inline > button,
+.form .group-inline > button,
+.form.group-inline > textarea,
+.form .group-inline > textarea,
+.form.group-inline > select,
+.form .group-inline > select,
+.form.group-inline > label,
+.form .group-inline > label {
   display: inline-block;
   vertical-align: middle;
   width: auto;
-  float: none;
-}
-.form-inline > label,
-.form .inline > label,
-.form-inline .inline > label,
-.form-aligned .inline > label {
   margin-bottom: 0;
 }
-.form-inline > .input-group,
-.form .inline > .input-group,
-.form-inline .inline > .input-group,
-.form-aligned .inline > .input-group {
+.form.group-inline > .input-group,
+.form .group-inline > .input-group {
   display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
   display: inline-flex;
   width: auto;
   vertical-align: middle;
 }
-.form > .aligned,
-.form > fieldset > .aligned,
-.form-aligned > section,
-.form-aligned > fieldset > section,
-.form-inline > .aligned,
-.form-inline > fieldset > .aligned,
-.form-aligned > .aligned,
-.form-aligned > fieldset > .aligned {
+.form .group-aligned {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -3517,263 +3165,100 @@ legend {
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
 }
-.form > .aligned:after,
-.form > fieldset > .aligned:after,
-.form-aligned > section:after,
-.form-aligned > fieldset > section:after,
-.form-inline > .aligned:after,
-.form-inline > fieldset > .aligned:after,
-.form-aligned > .aligned:after,
-.form-aligned > fieldset > .aligned:after {
+.form .group-aligned:after {
   content: "";
   display: table;
   clear: both;
 }
 @media (min-width: 36rem) {
-  .form > .aligned,
-  .form > fieldset > .aligned,
-  .form-aligned > section,
-  .form-aligned > fieldset > section,
-  .form-inline > .aligned,
-  .form-inline > fieldset > .aligned,
-  .form-aligned > .aligned,
-  .form-aligned > fieldset > .aligned {
+  .form .group-aligned {
     -webkit-flex-wrap: nowrap;
   }
 }
-.form > .aligned > label,
-.form > fieldset > .aligned > label,
-.form-aligned > section > label,
-.form-aligned > fieldset > section > label,
-.form-inline > .aligned > label,
-.form-inline > fieldset > .aligned > label,
-.form-aligned > .aligned > label,
-.form-aligned > fieldset > .aligned > label {
+.form .group-aligned > label {
   display: block;
-  width: 100%;
+  width: 100% !important;
 }
 @media (min-width: 768px) {
-  .form > .aligned > label,
-  .form > fieldset > .aligned > label,
-  .form-aligned > section > label,
-  .form-aligned > fieldset > section > label,
-  .form-inline > .aligned > label,
-  .form-inline > fieldset > .aligned > label,
-  .form-aligned > .aligned > label,
-  .form-aligned > fieldset > .aligned > label {
-    width: 25%;
+  .form .group-aligned > label {
+    width: 25% !important;
   }
 }
-.form > .aligned > input,
-.form > fieldset > .aligned > input,
-.form-aligned > section > input,
-.form-aligned > fieldset > section > input,
-.form > .aligned > textarea,
-.form > fieldset > .aligned > textarea,
-.form-aligned > section > textarea,
-.form-aligned > fieldset > section > textarea,
-.form > .aligned > select,
-.form > fieldset > .aligned > select,
-.form-aligned > section > select,
-.form-aligned > fieldset > section > select,
-.form > .aligned > div,
-.form > fieldset > .aligned > div,
-.form-aligned > section > div,
-.form-aligned > fieldset > section > div,
-.form > .aligned > output,
-.form > fieldset > .aligned > output,
-.form-aligned > section > output,
-.form-aligned > fieldset > section > output,
-.form > .aligned > .input-group,
-.form > fieldset > .aligned > .input-group,
-.form-aligned > section > .input-group,
-.form-aligned > fieldset > section > .input-group,
-.form-inline > .aligned > input,
-.form-inline > fieldset > .aligned > input,
-.form-inline > .aligned > textarea,
-.form-inline > fieldset > .aligned > textarea,
-.form-inline > .aligned > select,
-.form-inline > fieldset > .aligned > select,
-.form-inline > .aligned > div,
-.form-inline > fieldset > .aligned > div,
-.form-inline > .aligned > output,
-.form-inline > fieldset > .aligned > output,
-.form-inline > .aligned > .input-group,
-.form-inline > fieldset > .aligned > .input-group,
-.form-aligned > .aligned > input,
-.form-aligned > fieldset > .aligned > input,
-.form-aligned > .aligned > textarea,
-.form-aligned > fieldset > .aligned > textarea,
-.form-aligned > .aligned > select,
-.form-aligned > fieldset > .aligned > select,
-.form-aligned > .aligned > div,
-.form-aligned > fieldset > .aligned > div,
-.form-aligned > .aligned > output,
-.form-aligned > fieldset > .aligned > output,
-.form-aligned > .aligned > .input-group,
-.form-aligned > fieldset > .aligned > .input-group {
-  width: 100%;
+.form .group-aligned > input,
+.form .group-aligned > textarea,
+.form .group-aligned > select,
+.form .group-aligned > div,
+.form .group-aligned > output,
+.form .group-aligned > .input-group {
+  width: 100% !important;
 }
 @media (min-width: 768px) {
-  .form > .aligned > input,
-  .form > fieldset > .aligned > input,
-  .form-aligned > section > input,
-  .form-aligned > fieldset > section > input,
-  .form > .aligned > textarea,
-  .form > fieldset > .aligned > textarea,
-  .form-aligned > section > textarea,
-  .form-aligned > fieldset > section > textarea,
-  .form > .aligned > select,
-  .form > fieldset > .aligned > select,
-  .form-aligned > section > select,
-  .form-aligned > fieldset > section > select,
-  .form > .aligned > div,
-  .form > fieldset > .aligned > div,
-  .form-aligned > section > div,
-  .form-aligned > fieldset > section > div,
-  .form > .aligned > output,
-  .form > fieldset > .aligned > output,
-  .form-aligned > section > output,
-  .form-aligned > fieldset > section > output,
-  .form > .aligned > .input-group,
-  .form > fieldset > .aligned > .input-group,
-  .form-aligned > section > .input-group,
-  .form-aligned > fieldset > section > .input-group,
-  .form-inline > .aligned > input,
-  .form-inline > fieldset > .aligned > input,
-  .form-inline > .aligned > textarea,
-  .form-inline > fieldset > .aligned > textarea,
-  .form-inline > .aligned > select,
-  .form-inline > fieldset > .aligned > select,
-  .form-inline > .aligned > div,
-  .form-inline > fieldset > .aligned > div,
-  .form-inline > .aligned > output,
-  .form-inline > fieldset > .aligned > output,
-  .form-inline > .aligned > .input-group,
-  .form-inline > fieldset > .aligned > .input-group,
-  .form-aligned > .aligned > input,
-  .form-aligned > fieldset > .aligned > input,
-  .form-aligned > .aligned > textarea,
-  .form-aligned > fieldset > .aligned > textarea,
-  .form-aligned > .aligned > select,
-  .form-aligned > fieldset > .aligned > select,
-  .form-aligned > .aligned > div,
-  .form-aligned > fieldset > .aligned > div,
-  .form-aligned > .aligned > output,
-  .form-aligned > fieldset > .aligned > output,
-  .form-aligned > .aligned > .input-group,
-  .form-aligned > fieldset > .aligned > .input-group {
-    width: 75%;
+  .form .group-aligned > input,
+  .form .group-aligned > textarea,
+  .form .group-aligned > select,
+  .form .group-aligned > div,
+  .form .group-aligned > output,
+  .form .group-aligned > .input-group {
+    width: 75% !important;
   }
 }
 @media (min-width: 768px) {
-  .form > .aligned > input:first-child,
-  .form > fieldset > .aligned > input:first-child,
-  .form-aligned > section > input:first-child,
-  .form-aligned > fieldset > section > input:first-child,
-  .form > .aligned > textarea:first-child,
-  .form > fieldset > .aligned > textarea:first-child,
-  .form-aligned > section > textarea:first-child,
-  .form-aligned > fieldset > section > textarea:first-child,
-  .form > .aligned > select:first-child,
-  .form > fieldset > .aligned > select:first-child,
-  .form-aligned > section > select:first-child,
-  .form-aligned > fieldset > section > select:first-child,
-  .form > .aligned > div:first-child,
-  .form > fieldset > .aligned > div:first-child,
-  .form-aligned > section > div:first-child,
-  .form-aligned > fieldset > section > div:first-child,
-  .form > .aligned > output:first-child,
-  .form > fieldset > .aligned > output:first-child,
-  .form-aligned > section > output:first-child,
-  .form-aligned > fieldset > section > output:first-child,
-  .form > .aligned > .input-group:first-child,
-  .form > fieldset > .aligned > .input-group:first-child,
-  .form-aligned > section > .input-group:first-child,
-  .form-aligned > fieldset > section > .input-group:first-child,
-  .form-inline > .aligned > input:first-child,
-  .form-inline > fieldset > .aligned > input:first-child,
-  .form-inline > .aligned > textarea:first-child,
-  .form-inline > fieldset > .aligned > textarea:first-child,
-  .form-inline > .aligned > select:first-child,
-  .form-inline > fieldset > .aligned > select:first-child,
-  .form-inline > .aligned > div:first-child,
-  .form-inline > fieldset > .aligned > div:first-child,
-  .form-inline > .aligned > output:first-child,
-  .form-inline > fieldset > .aligned > output:first-child,
-  .form-inline > .aligned > .input-group:first-child,
-  .form-inline > fieldset > .aligned > .input-group:first-child,
-  .form-aligned > .aligned > input:first-child,
-  .form-aligned > fieldset > .aligned > input:first-child,
-  .form-aligned > .aligned > textarea:first-child,
-  .form-aligned > fieldset > .aligned > textarea:first-child,
-  .form-aligned > .aligned > select:first-child,
-  .form-aligned > fieldset > .aligned > select:first-child,
-  .form-aligned > .aligned > div:first-child,
-  .form-aligned > fieldset > .aligned > div:first-child,
-  .form-aligned > .aligned > output:first-child,
-  .form-aligned > fieldset > .aligned > output:first-child,
-  .form-aligned > .aligned > .input-group:first-child,
-  .form-aligned > fieldset > .aligned > .input-group:first-child {
+  .form .group-aligned > input:first-child,
+  .form .group-aligned > textarea:first-child,
+  .form .group-aligned > select:first-child,
+  .form .group-aligned > div:first-child,
+  .form .group-aligned > output:first-child,
+  .form .group-aligned > .input-group:first-child {
     margin-left: 25%;
   }
 }
 @media (min-width: 36rem) {
-  .form > .aligned > label,
-  .form > fieldset > .aligned > label,
-  .form-aligned > section > label,
-  .form-aligned > fieldset > section > label,
-  .form-inline > .aligned > label,
-  .form-inline > fieldset > .aligned > label,
-  .form-aligned > .aligned > label,
-  .form-aligned > fieldset > .aligned > label {
+  .form .group-aligned > label {
     padding-right: 1em;
   }
-  .form > .aligned > label,
-  .form > fieldset > .aligned > label,
-  .form-aligned > section > label,
-  .form-aligned > fieldset > section > label,
-  .form > .aligned > output,
-  .form > fieldset > .aligned > output,
-  .form-aligned > section > output,
-  .form-aligned > fieldset > section > output,
-  .form-inline > .aligned > label,
-  .form-inline > fieldset > .aligned > label,
-  .form-inline > .aligned > output,
-  .form-inline > fieldset > .aligned > output,
-  .form-aligned > .aligned > label,
-  .form-aligned > fieldset > .aligned > label,
-  .form-aligned > .aligned > output,
-  .form-aligned > fieldset > .aligned > output {
+  .form .group-aligned > label,
+  .form .group-aligned > output {
     padding-top: 0.6em;
     border-top: 1px solid transparent;
     line-height: normal;
   }
 }
-.form > .aligned > div > label,
-.form > fieldset > .aligned > div > label,
-.form-aligned > section > div > label,
-.form-aligned > fieldset > section > div > label,
-.form-inline > .aligned > div > label,
-.form-inline > fieldset > .aligned > div > label,
-.form-aligned > .aligned > div > label,
-.form-aligned > fieldset > .aligned > div > label {
+.form .group-aligned > div > label {
   display: block;
   margin-top: .25em;
 }
-.form > .aligned-controls,
-.form-aligned > .controls,
-.form-inline > .aligned-controls,
-.form-aligned > .aligned-controls {
+.form .controls {
+  margin-bottom: 1em;
+}
+.form .controls-aligned {
   margin-bottom: 1em;
 }
 @media (min-width: 768px) {
-  .form > .aligned-controls,
-  .form-aligned > .controls,
-  .form-inline > .aligned-controls,
-  .form-aligned > .aligned-controls {
+  .form .controls-aligned {
     margin-left: 25%;
   }
+}
+.form .group-row {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+.form .group-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.form .group-row > :not(:last-child) {
+  padding-right: 1em;
+}
+.form .group-row > label,
+.form .group-row > output {
+  padding-top: 0.6em;
+  border-top: 1px solid transparent;
+  line-height: normal;
 }
 .req > :first-child:after {
   content: " *";
@@ -3791,6 +3276,7 @@ ul.radio-inline,
 ul.checkbox-inline {
   list-style: none;
   padding: 0;
+  clear: both;
 }
 ul.radio-inline > li,
 ul.checkbox-inline > li {

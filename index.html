@@ -547,8 +547,8 @@
 				<span class="text-help">Description after field</span>
 			</label>
 			<p>
-				<button type="submit">Log in</button>
-				<button type="button">Cancel</button>
+				<button type="submit" class="btn">Log in</button>
+				<button type="button" class="btn">Cancel</button>
 			</p>
 		</form>
 
@@ -586,7 +586,8 @@
 					</select>
 				</label>
 				<label class="checkbox">
-					<input type="checkbox" /> Checkbox</label>
+					<input type="checkbox" /> Checkbox
+				</label>
 				<ul class="checkbox">
 					<li>
 						<label>
@@ -657,19 +658,19 @@
 		</fieldset>
 
 		<h3>Inline big form</h3>
-		<form class="form-inline">
+		<form class="form group-inline">
 			<label class="lg">This is texbox:</label>
 			<input type="text" class="lg" placeholder="Title">
 			<button class="btn secondary lg">Big</button>
 		</form>
 
 		<h3>Aligned form</h3>
-		<form class="form-aligned">
-			<section class="req">
+		<form class="form">
+			<div class="group-aligned req">
 				<label>Name</label>
 				<input type="text" />
-			</section>
-			<section>
+			</div>
+			<div class="group-aligned">
 				<label>Long name Long name Long name Long name</label>
 				<div>
 					<div class="input-group">
@@ -680,48 +681,55 @@
 					<label class="checkbox">
 						<input type="checkbox" /> Check inside</label>
 				</div>
-			</section>
-			<section>
+			</div>
+			<div class="group-aligned">
 				<label>Input-range</label>
 				<div class="input-group">
 					<input type="text" />
 					<span>-</span>
 					<input type="text" />
 				</div>
-			</section>
-			<section>
+			</div>
+			<div class="group-aligned">
 				<div>
 					<input type="text" />
 				</div>
-			</section>
+			</div>
+			
+			<div class="group-row">
+				<label class="col-3">Test custom row</label>
+				<div class="col-3"><input type="text"></div>
+				<label class="col-3">Test custom row</label>
+				<div class="col-3"><input type="text"></div>
+			</div>
 
 			<div class="row">
 				<div class="col-6">Custom columns inside form</div>
 				<div class="col-6">Column 2</div>
 			</div>
 
-			<section>
+			<div class="group-aligned">
 				<label>Inline test</label>
-				<div class="inline">
+				<div class="group-inline">
 					<input type="text" class="width-sm" />
 					<label class="checkbox">
 						<input type="checkbox" /> Some checkbox
 					</label>
 					<div class="text-help">Если не задано, то будет использоваться основной заголовок</div>
 				</div>
-			</section>
+			</div>
 			<fieldset>
-				<label for="">Some fieldset</label>
-				<section>
+				<legend>Some fieldset</legend>
+				<div class="group-aligned">
 					<label for="dsad">Some label</label>
 					<input type="text">
-				</section>
-				<section>
+				</div>
+				<div class="group-aligned">
 					<label for="dsad">Some label 2</label>
 					<input type="text">
-				</section>
+				</div>
 			</fieldset>
-			<div class="controls">
+			<div class="controls-aligned">
 				<input type="submit" class="btn" value="Go" />
 			</div>
 			<div class="controls">
