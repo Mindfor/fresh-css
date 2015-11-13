@@ -22,6 +22,8 @@
 	select {
 		.flex(1);
 		border-width: @control-border-width;
+        min-width: 1px; //workaround for bug in firefox and edge - bug report http://git.io/v4JEe; Read more on the fresh git - http://git.io/v4JzP
+        min-height: 1px; //this too
 	}
 	
 	:not(:first-child),
