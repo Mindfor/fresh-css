@@ -3,7 +3,7 @@
 
 .input-group {
 	.flex-container-inline();
-	
+
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
@@ -22,21 +22,21 @@
 	select {
 		.flex(1);
 		border-width: @control-border-width;
-        min-width: 1px; //workaround for bug in firefox and edge - bug report http://git.io/v4JEe; Read more on the fresh git - http://git.io/v4JzP
-        min-height: 1px; //this too
+		min-width: 1px; //workaround for bug in firefox and edge - bug report http://git.io/v4JEe; Read more on the fresh git - http://git.io/v4JzP
+		min-height: 1px; //this too
 	}
-	
+
 	:not(:first-child),
 	:not(:first-child) .select2-selection {
 		.border-left-radius(0) !important;
 	}
-	
+
 	:not(:last-child),
 	:not(:last-child) .select2-selection {
 		.border-right-radius(0) !important;
 		border-right-width: 0 !important;
 	}
-	
+
 	> span:not(.select2) {
 		line-height: normal;
 		padding: @control-padding-v @control-padding-h;
@@ -45,7 +45,6 @@
 		background-color: @color-light;
 		color: @control-color;
 	}
-	
 	// Colors
 	.input-group-color(@color, @bg) {
 		input,
@@ -53,31 +52,31 @@
 		select,
 		.select2 {
 			border-color: @color;
-			
+
 			&:focus {
 				box-shadow: 0 0 @control-focus-blur @control-focus-spread fade(@color, @control-focus-fade);
 			}
 		}
-		
+
 		> span,
 		> label {
 			border-color: @color;
 		}
-		
+
 		> span:not(.select2) {
 			color: @color;
 			background: @bg;
 		}
 	}
-	
+
 	&.success {
 		.input-group-color(@color-success, @color-bg-success);
 	}
-	
+
 	&.warning {
 		.input-group-color(@color-warning, @color-bg-warning);
 	}
-	
+
 	&.error {
 		.input-group-color(@color-error, @color-bg-error);
 	}
