@@ -30,12 +30,23 @@
 @font-size-sm:				.85rem;
 @font-size-xs:				.75rem;
 @font-size-fa:				14px;
+@font-size-help:            .85em;
 
 @line-height:				1.5;
+@line-height-help:          @line-height;
+
+@line-height-h1:			1.1;
+@line-height-h2:			1.1;
+@line-height-h3:			1.3;
+@line-height-h4:			1.3;
+@line-height-h5:			@line-height;
+@line-height-h6:			@line-height;
+
 @line-margin:				1em;
 
 // Colors
 @color-text:				#222;
+@color-text-help:           #565d64;
 @color-headings:			black;
 @color-invert:				white;
 @color-gray:				#565d64;
@@ -67,10 +78,21 @@
 @width-xl:					64rem;
 
 // Container paddings
-@padding-phone: 			.75rem;
-@padding-tablet: 			1rem;
-@padding-desktop: 			1.5rem;
-@padding-hd: 				2rem;
+@padding-phone-h:           .75rem;
+@padding-phone-v:           .75rem;
+@padding-phone: 			@padding-phone-v @padding-phone-h;
+
+@padding-tablet-h: 			1rem;
+@padding-tablet-v: 			1rem;
+@padding-tablet:            @padding-tablet-v @padding-tablet-h;
+
+@padding-desktop-h: 		1.5rem;
+@padding-desktop-v: 		1.5rem;
+@padding-desktop:           @padding-desktop-v @padding-desktop-h;
+
+@padding-hd-h: 				2rem;
+@padding-hd-v: 				2rem;
+@padding-hd:                @padding-hd-v @padding-hd-h;
 
 // Links
 @link-color:				@color-primary;
@@ -86,6 +108,12 @@
 // Grid
 @grid-columns:				12;
 @blocks-count:				10;
+
+//blocks
+@blocks-spacing-phone:      @padding-phone-h;
+@blocks-spacing-tablet:     @padding-tablet-h;
+@blocks-spacing-desktop:    @padding-desktop-h;
+@blocks-spacing-hd:         @padding-hd-h;
 
 // Controls
 @control-font-family:			@font-family-base;

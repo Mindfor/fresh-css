@@ -25,40 +25,40 @@
 
 .blocks-responsive(@num) {
 	.blocks();
-	.blocks-count(@num, @padding-phone);
+	.blocks-count(@num, @blocks-spacing-phone);
 	
 	@media (min-width: @device-tablet) {
-		.blocks-count(@num, @padding-tablet);
+		.blocks-count(@num, @blocks-spacing-tablet);
 	}
 	
 	@media (min-width: @device-desktop) {
-		.blocks-count(@num, @padding-desktop);
+		.blocks-count(@num, @blocks-spacing-desktop);
 	}
 
 	@media (min-width: @device-hd) {
-		.blocks-count(@num, @padding-hd);
+		.blocks-count(@num, @blocks-spacing-hd);
 	}
 }
 
 .blocks-phone(@num) {
-	.blocks-count(@num, @padding-phone);
+	.blocks-count(@num, @blocks-spacing-phone);
 }
 
 .blocks-tablet(@num) {
 	@media (min-width: @device-tablet) {
-		.blocks-count(@num, @padding-tablet);
+		.blocks-count(@num, @blocks-spacing-tablet);
 	}
 }
 
 .blocks-desktop(@num) {
 	@media (min-width: @device-desktop) {
-		.blocks-count(@num, @padding-desktop);
+		.blocks-count(@num, @blocks-spacing-desktop);
 	}
 }
 
 .blocks-hd(@num) {
 	@media (min-width: @device-hd) {
-		.blocks-count(@num, @padding-hd);
+		.blocks-count(@num, @blocks-spacing-hd);
 	}
 }
 
