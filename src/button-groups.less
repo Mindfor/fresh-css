@@ -6,7 +6,7 @@
 	.flex-container();
 	.flex-pull();
 	
-	> * {
+	> button {
 		&:not(:first-child) {
 			.border-left-radius(0) !important;
 			margin-left: -@btn-border-width;
@@ -15,13 +15,21 @@
 		&:not(:last-child) {
 			.border-right-radius(0) !important;
 		}
+        
+        &.active,
+		&:active,
+        &:hover{
+		   + button{
+			   	border-left-color: transparent;
+		   }
+		}
 	}
 }
 
 .btn-group-vertical {
 	display: block;
 	
-	> * {
+	> button {
 		display: block !important;
 		
 		&:not(:first-child) {
@@ -31,6 +39,14 @@
 
 		&:not(:last-child) {
 			.border-bottom-radius(0) !important;
+		}
+        
+        &.active,
+		&:active,
+        &:hover{
+		   + button{
+			   	border-top-color: transparent;
+		   }
 		}
 	}
 }
