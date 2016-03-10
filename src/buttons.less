@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixins.less";
+
 .btn-base {
 	display: inline-block;
 	vertical-align: baseline;
@@ -17,16 +18,16 @@
 	box-shadow: none;
 	cursor: pointer;
 	-webkit-transition: @btn-transition-webkit;
-	transition: @btn-transition;			 
+	transition: @btn-transition;
 
 	@btn-base-ruleset();
-	.btn-base-extend(@btn-bg);
+	.btn-base-extend(@btn-bg, @btn-bg, @btn-bg, @btn-bg);
 
 	&::-moz-focus-inner {
 		border: 0;
 		padding: 0;
 	}
-	
+
 	&[disabled],
 	&.disabled {
 		cursor: @control-disabled-cursor;
@@ -38,26 +39,26 @@
 	&.active {
 		box-shadow: @btn-active-shadow !important;
 	}
-	
+
 	&.primary {
-		.btn-base-extend(@color-primary);
+		.btn-base-extend(@color-primary, @color-primary-hover, @color-primary-border, @color-primary-border-hover);
 	}
 	&.secondary {
-		.btn-base-extend(@color-secondary);
+		.btn-base-extend(@color-secondary, @color-secondary-hover, @color-secondary-border, @color-secondary-border-hover);
 	}
 	&.success {
-		.btn-base-extend(@color-success);
+		.btn-base-extend(@color-success, @color-success-hover, @color-success-border, @color-success-border-hover);
 	}
 	&.warning {
-		.btn-base-extend(@color-warning);
+		.btn-base-extend(@color-warning, @color-warning-hover, @color-warning-border, @color-warning-border-hover);
 	}
 	&.error {
-		.btn-base-extend(@color-error);
+		.btn-base-extend(@color-error, @color-error-hover, @color-error-border, @color-error-border-hover);
 	}
 }
 
 @btn-base-ruleset: {
-	.btn-base-extend(@color) {
+	.btn-base-extend(@color, @color-hover, @color-b, @color-b-hover) {
 		&:focus {
 			box-shadow: 0px 0px @btn-focus-blur @btn-focus-spread fade(@color, @btn-focus-fade);
 		}
@@ -66,40 +67,40 @@
 
 // Normal button
 .btn {
-	&:extend(.btn-base all);
-	
-	@btn-normal-ruleset();
-	.btn-normal-extend(@btn-bg);
-	
+    &:extend(.btn-base all);
+    @btn-normal-ruleset();
+    .btn-normal-extend(@btn-bg,  @btn-bg, @btn-bg, @btn-bg);
+
 	&.primary {
-		.btn-normal-extend(@color-primary);
+		.btn-normal-extend(@color-primary, @color-primary-hover, @color-primary-border, @color-primary-border-hover);
 	}
 	&.secondary {
-		.btn-normal-extend(@color-secondary);
+		.btn-normal-extend(@color-secondary, @color-secondary-hover, @color-secondary-border, @color-secondary-border-hover);
 	}
 	&.success {
-		.btn-normal-extend(@color-success);
+		.btn-normal-extend(@color-success, @color-success-hover, @color-success-border, @color-success-border-hover);
 	}
 	&.warning {
-		.btn-normal-extend(@color-warning);
+		.btn-normal-extend(@color-warning, @color-warning-hover, @color-warning-border, @color-warning-border-hover);
 	}
 	&.error {
-		.btn-normal-extend(@color-error);
+		.btn-normal-extend(@color-error, @color-error-hover, @color-error-border, @color-error-border-hover);
 	}
 }
 
+
 @btn-normal-ruleset: {
-	.btn-normal-extend(@color) {
+	.btn-normal-extend(@color, @color-hover, @color-b, @color-b-hover) {
 		@btn-base-ruleset();
-		.btn-base-extend(@color);
-		
-		color: @btn-color;
+		.btn-base-extend(@color, @color-hover, @color-b, @color-b-hover);
+
+		color: @color-invert;
 		background: @color;
-		border-color: darken(@color, @btn-border-darken);
-		
+		border-color: @color-b;
+
 		&:hover {
-			background: darken(@color, @btn-hovering);
-			border-color: darken(darken(@color, @btn-border-darken), @btn-hovering);
+			background: @color-hover;
+			border-color: @color-b-hover;
 		}
 	}
 };
@@ -107,37 +108,37 @@
 // Link button
 .btn-link {
 	&:extend(.btn-base all);
-	
+
 	border-color: transparent !important;
 	@btn-link-ruleset();
-	.btn-link-extend(@link-color);
-	
+	.btn-link-extend(@link-color, @link-color, @link-color, @link-color);
+
 	&:hover {
 		color: @link-hover-color;
 		text-decoration: none;
 		background-color: @color-light;
 		border-color: @color-light;
 	}
-	
+
 	&.primary {
-		.btn-link-extend(@color-primary);
+		.btn-link-extend(@color-primary, @color-primary-hover, @color-primary-border, @color-primary-border-hover);
 	}
 	&.secondary {
-		.btn-link-extend(@color-secondary);
+		.btn-link-extend(@color-secondary, @color-secondary-hover, @color-secondary-border, @color-secondary-border-hover);
 	}
 	&.success {
-		.btn-link-extend(@color-success);
+		.btn-link-extend(@color-success, @color-success-hover, @color-success-border, @color-success-border-hover);
 	}
 	&.warning {
-		.btn-link-extend(@color-warning);
+		.btn-link-extend(@color-warning, @color-warning-hover, @color-warning-border, @color-warning-border-hover);
 	}
 	&.error {
-		.btn-link-extend(@color-error);
+		.btn-link-extend(@color-error, @color-error-hover, @color-error-border, @color-error-border-hover);
 	}
 }
 
 @btn-link-ruleset: {
-	.btn-link-extend(@color) {
+	.btn-link-extend(@color, @color-hover, @color-b, @color-b-hover) {
 		color: @color;
 	}
 };
@@ -145,41 +146,41 @@
 // Outline button
 .btn-outline {
 	&:extend(.btn-base all);
-	
+
 	@btn-outline-ruleset();
-	.btn-outline-extend(@color-text);
-	
+	.btn-outline-extend(@color-text, @btn-bg, @btn-bg, @btn-bg);
+
 	&[disabled], &.disabled {
 		background: none !important;
 	}
-	
+
 	&.primary {
-		.btn-outline-extend(@color-primary);
+		.btn-outline-extend(@color-primary, @color-primary-hover, @color-primary-border, @color-primary-border-hover);
 	}
 	&.secondary {
-		.btn-outline-extend(@color-secondary);
+		.btn-outline-extend(@color-secondary, @color-secondary-hover, @color-secondary-border, @color-secondary-border-hover);
 	}
 	&.success {
-		.btn-outline-extend(@color-success);
+		.btn-outline-extend(@color-success, @color-success-hover, @color-success-border, @color-success-border-hover);
 	}
 	&.warning {
-		.btn-outline-extend(@color-warning);
+		.btn-outline-extend(@color-warning, @color-warning-hover, @color-warning-border, @color-warning-border-hover);
 	}
 	&.error {
-		.btn-outline-extend(@color-error);
+		.btn-outline-extend(@color-error, @color-error-hover, @color-error-border, @color-error-border-hover);
 	}
 }
 
 @btn-outline-ruleset: {
-	.btn-outline-extend(@color) {
+	.btn-outline-extend(@color, @color-hover, @color-b, @color-b-hover) {
 		@btn-base-ruleset();
-		.btn-base-extend(@color);
-		
+		.btn-base-extend(@color, @color-hover, @color-b, @color-b-hover);
+
 		color: @color;
 		border-color: @color;
-		
+
 		&:hover {
-			color: @btn-color;
+			color: @color-invert;
 			background: @color;
 		}
 	}
@@ -188,35 +189,35 @@
 // Clear button
 .btn-clear {
 	&:extend(.btn-base all);
-	
+
 	color: @color-invert;
 	border-color: @color-invert;
 	@btn-clear-ruleset();
-	.btn-clear-extend(@btn-bg);
-	
+	.btn-clear-extend(@btn-bg, @btn-bg, @btn-bg, @btn-bg);
+
 	&[disabled], &.disabled {
 		background: none !important;
 	}
-	
+
 	&.primary {
-		.btn-clear-extend(@color-primary);
+		.btn-clear-extend(@color-primary, @color-primary-hover, @color-primary-border, @color-primary-border-hover);
 	}
 	&.secondary {
-		.btn-clear-extend(@color-secondary);
+		.btn-clear-extend(@color-secondary, @color-secondary-hover, @color-secondary-border, @color-secondary-border-hover);
 	}
 	&.success {
-		.btn-clear-extend(@color-success);
+		.btn-clear-extend(@color-success, @color-success-hover, @color-success-border, @color-success-border-hover);
 	}
 	&.warning {
-		.btn-clear-extend(@color-warning);
+		.btn-clear-extend(@color-warning, @color-warning-hover, @color-warning-border, @color-warning-border-hover);
 	}
 	&.error {
-		.btn-clear-extend(@color-error);
+		.btn-clear-extend(@color-error, @color-error-hover, @color-error-border, @color-error-border-hover);
 	}
 }
 
 @btn-clear-ruleset: {
-	.btn-clear-extend(@color) {
+	.btn-clear-extend(@color, @color-hover, @color-b, @color-b-hover) {
 		&:hover {
 			background: @color;
 		}

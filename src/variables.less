@@ -53,17 +53,36 @@
 @color-border:				#bdbdbd;
 @color-light:				#f4f4f4;
 
-@color-primary:				#105c9a;
-@color-secondary:			#56b9d9;
-@color-success:				#5cb85c;
-@color-warning:				rgb(223, 117, 20);
-@color-error:				rgb(202, 60, 60);
+@color-primary:                 #105c9a;
+@color-primary-hover:           darken(@color-primary, @btn-hovering);
+@color-primary-border:          darken(@color-primary, @btn-border-darken);
+@color-primary-border-hover:    darken(darken(@color-primary, @btn-border-darken), @btn-hovering);
 
-@color-bg-primary:			lighten(@color-primary, 40%);
-@color-bg-secondary:		lighten(@color-secondary, 30%);
-@color-bg-success:			lighten(@color-success, 40%);
-@color-bg-warning:			lighten(@color-warning, 40%);
-@color-bg-error:			lighten(@color-error, 40%);
+@color-secondary:               #56b9d9;
+@color-secondary-hover:         darken(@color-secondary, @btn-hovering);
+@color-secondary-border:        darken(@color-secondary, @btn-border-darken);
+@color-secondary-border-hover:  darken(darken(@color-secondary, @btn-border-darken), @btn-hovering);
+
+@color-success:                 #5cb85c;
+@color-success-hover:           darken(@color-success, @btn-hovering);
+@color-success-border:          darken(@color-success, @btn-border-darken);
+@color-success-border-hover:    darken(darken(@color-success, @btn-border-darken), @btn-hovering);
+
+@color-warning:                 rgb(223, 117, 20);
+@color-warning-hover:           darken(@color-warning, @btn-hovering);
+@color-warning-border:          darken(@color-warning, @btn-border-darken);
+@color-warning-border-hover:    darken(darken(@color-warning, @btn-border-darken), @btn-hovering);
+
+@color-error:                   rgb(202, 60, 60);
+@color-error-hover:             darken(@color-error, @btn-hovering);
+@color-error-border:            darken(@color-error, @btn-border-darken);
+@color-error-border-hover:      darken(darken(@color-error, @btn-border-darken), @btn-hovering);
+
+@color-bg-primary:			    lighten(@color-primary, 40%);
+@color-bg-secondary:		    lighten(@color-secondary, 30%);
+@color-bg-success:			    lighten(@color-success, 40%);
+@color-bg-warning:			    lighten(@color-warning, 40%);
+@color-bg-error:			    lighten(@color-error, 40%);
 
 // Widths
 @device-phone:				320px; // min phone width
