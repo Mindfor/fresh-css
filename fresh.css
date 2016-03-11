@@ -2225,14 +2225,14 @@ select.control-clear.error:focus {
 .btn {
   color: white;
   background: #aaaaaa;
-  border-color: #9d9d9d;
+  border-color: #aaaaaa;
 }
 .btn:focus {
   box-shadow: 0px 0px 0 2px rgba(170, 170, 170, 0.5);
 }
 .btn:hover {
-  background: #848484;
-  border-color: #777777;
+  background: #aaaaaa;
+  border-color: #aaaaaa;
 }
 .btn.primary,
 [type="submit"].btn {
