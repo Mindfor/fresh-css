@@ -1,196 +1,195 @@
 // main
-@body-bg:					#fff;
-@transition-duration:		0.2s;
-@transition-default:		color @transition-duration, background @transition-duration, border-color @transition-duration, transform @transition-duration, box-shadow @transition-duration;
-@transition-webkit:			color @transition-duration, background @transition-duration, border-color @transition-duration, -webkit-transform @transition-duration, box-shadow @transition-duration;
+@body-bg:                        #fff;
+@transition-duration:            0.2s;
+@transition-default:             color @transition-duration, background @transition-duration, border-color @transition-duration, transform @transition-duration, box-shadow @transition-duration;
+@transition-webkit:              color @transition-duration, background @transition-duration, border-color @transition-duration, -webkit-transform @transition-duration, box-shadow @transition-duration;
 
 // typography
-@font-family-base:			"Helvetica Neue", Helvetica, Tahoma, sans-serif;
-@font-family-headings:		@font-family-base;
+@font-family-base:               "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+@font-family-headings:           @font-family-base;
 
-@font-size-base:			15px;
+@font-size-base:                 15px;
 
-@font-size-h1:				2em;
-@font-size-h2:				1.5em;
-@font-size-h3:				1.3125em;
-@font-size-h4:				1.125em;
-@font-size-h5:				1em;
-@font-size-h6:				.75em;
+@font-size-h1:                   2em;
+@font-size-h2:                   1.5em;
+@font-size-h3:                   1.3125em;
+@font-size-h4:                   1.125em;
+@font-size-h5:                   1em;
+@font-size-h6:                   .75em;
 
-@font-size-h1-phone:		1.6em;
-@font-size-h2-phone:		1.4em;
-@font-size-h3-phone:		1.3125em;
-@font-size-h4-phone:		1.125em;
-@font-size-h5-phone:		1em;
-@font-size-h6-phone:		.75em;
+@font-size-h1-phone:             1.6em;
+@font-size-h2-phone:             1.4em;
+@font-size-h3-phone:             1.3125em;
+@font-size-h4-phone:             1.125em;
+@font-size-h5-phone:             1em;
+@font-size-h6-phone:             .75em;
 
-@font-size-xl:				1.5rem;
-@font-size-lg:				1.2rem;
-@font-size-md:				1rem;
-@font-size-sm:				.85rem;
-@font-size-xs:				.75rem;
-@font-size-fa:				14px;
-@font-size-help:			.85em;
+@font-size-xl:                   1.5rem;
+@font-size-lg:                   1.2rem;
+@font-size-md:                   1rem;
+@font-size-sm:                   .85rem;
+@font-size-xs:                   .75rem;
+@font-size-fa:                   14px;
+@font-size-help:                 .85em;
 
-@line-height:				1.5;
-@line-height-help:			@line-height;
+@line-height:                    1.5;
+@line-height-help:               @line-height;
 
-@line-height-h1: 			1.1;
-@line-height-h2: 			1.1;
-@line-height-h3: 			1.3;
-@line-height-h4: 			1.3;
-@line-height-h5: 			@line-height;
-@line-height-h6: 			@line-height;
+@line-height-h1:                 1.1;
+@line-height-h2:                 1.1;
+@line-height-h3:                 1.3;
+@line-height-h4:                 1.3;
+@line-height-h5:                 @line-height;
+@line-height-h6:                 @line-height;
 
-@line-margin:				1em;
+@line-margin:                    1em;
 
 // colors
-@color-text:				#222;
-@color-text-help: 			#565d64;
-@color-headings:			black;
-@color-invert:				white;
-@color-border:				#bdbdbd;
-@color-disabled: 			#f4f4f4;
-@color-bg-gray: 			#f4f4f4;
+@color-text:                     #222;
+@color-text-help:                #565d64;
+@color-headings:                 black;
+@color-invert:                   white;
+@color-border:                   #bdbdbd;
+@color-disabled:                 #f4f4f4;
+@color-bg-gray:                  #f4f4f4;
 
-@color-primary:                 #105c9a;
-@color-primary-hover:           darken(@color-primary, @btn-hovering);
-@color-primary-border:          darken(@color-primary, @btn-border-darken);
-@color-primary-border-hover:    darken(darken(@color-primary, @btn-border-darken), @btn-hovering);
+@color-primary:                  #105c9a;
+@color-primary-hover:            darken(@color-primary, @btn-hovering);
+@color-primary-border:           darken(@color-primary, @btn-border-darken);
+@color-primary-border-hover:     darken(darken(@color-primary, @btn-border-darken), @btn-hovering);
+@color-primary-bg:               lighten(@color-primary, 40%);
 
-@color-secondary:               #56b9d9;
-@color-secondary-hover:         darken(@color-secondary, @btn-hovering);
-@color-secondary-border:        darken(@color-secondary, @btn-border-darken);
-@color-secondary-border-hover:  darken(darken(@color-secondary, @btn-border-darken), @btn-hovering);
+@color-secondary:                #56b9d9;
+@color-secondary-hover:          darken(@color-secondary, @btn-hovering);
+@color-secondary-border:         darken(@color-secondary, @btn-border-darken);
+@color-secondary-border-hover:   darken(darken(@color-secondary, @btn-border-darken), @btn-hovering);
+@color-secondary-bg:             lighten(@color-secondary, 30%);
 
-@color-success:                 #5cb85c;
-@color-success-hover:           darken(@color-success, @btn-hovering);
-@color-success-border:          darken(@color-success, @btn-border-darken);
-@color-success-border-hover:    darken(darken(@color-success, @btn-border-darken), @btn-hovering);
+@color-success:                  #5cb85c;
+@color-success-hover:            darken(@color-success, @btn-hovering);
+@color-success-border:           darken(@color-success, @btn-border-darken);
+@color-success-border-hover:     darken(darken(@color-success, @btn-border-darken), @btn-hovering);
+@color-success-bg:               lighten(@color-success, 40%);
 
-@color-warning:                 rgb(223, 117, 20);
-@color-warning-hover:           darken(@color-warning, @btn-hovering);
-@color-warning-border:          darken(@color-warning, @btn-border-darken);
-@color-warning-border-hover:    darken(darken(@color-warning, @btn-border-darken), @btn-hovering);
+@color-warning:                  rgb(223, 117, 20);
+@color-warning-hover:            darken(@color-warning, @btn-hovering);
+@color-warning-border:           darken(@color-warning, @btn-border-darken);
+@color-warning-border-hover:     darken(darken(@color-warning, @btn-border-darken), @btn-hovering);
+@color-warning-bg:               lighten(@color-warning, 40%);
 
-@color-error:                   rgb(202, 60, 60);
-@color-error-hover:             darken(@color-error, @btn-hovering);
-@color-error-border:            darken(@color-error, @btn-border-darken);
-@color-error-border-hover:      darken(darken(@color-error, @btn-border-darken), @btn-hovering);
-
-@color-bg-primary:			    lighten(@color-primary, 40%);
-@color-bg-secondary:		    lighten(@color-secondary, 30%);
-@color-bg-success:			    lighten(@color-success, 40%);
-@color-bg-warning:			    lighten(@color-warning, 40%);
-@color-bg-error:			    lighten(@color-error, 40%);
+@color-error:                    rgb(202, 60, 60);
+@color-error-hover:              darken(@color-error, @btn-hovering);
+@color-error-border:             darken(@color-error, @btn-border-darken);
+@color-error-border-hover:       darken(darken(@color-error, @btn-border-darken), @btn-hovering);
+@color-error-bg:                 lighten(@color-error, 40%);
 
 // widths
-@device-phone:				320px; // min phone width
-@device-tablet:				768px; // min tablet width
-@device-desktop:			1014px; // min desktop width
-@device-hd:					1440px; // min hd width
+@device-phone:                   320px; // min phone width
+@device-tablet:                  768px; // min tablet width
+@device-desktop:                 1014px; // min desktop width
+@device-hd:                      1440px; // min hd width
 
-@width-xs:					12rem;
-@width-sm:					24rem;
-@width-md:					36rem;
-@width-lg:					48rem;
-@width-xl:					64rem;
+@width-xs:                       12rem;
+@width-sm:                       24rem;
+@width-md:                       36rem;
+@width-lg:                       48rem;
+@width-xl:                       64rem;
 
 // Container paddings
-@padding-phone-h: 			.75rem;
-@padding-phone-v: 			.75rem;
-@padding-phone: 			@padding-phone-v @padding-phone-h;
+@padding-phone-h:                .75rem;
+@padding-phone-v:                .75rem;
+@padding-phone:                  @padding-phone-v @padding-phone-h;
 
-@padding-tablet-h: 			1rem;
-@padding-tablet-v: 			1rem;
-@padding-tablet: 			@padding-tablet-v @padding-tablet-h;
+@padding-tablet-h:               1rem;
+@padding-tablet-v:               1rem;
+@padding-tablet:                 @padding-tablet-v @padding-tablet-h;
 
-@padding-desktop-h: 		1.5rem;
-@padding-desktop-v: 		1.5rem;
-@padding-desktop: 			@padding-desktop-v @padding-desktop-h;
+@padding-desktop-h:              1.5rem;
+@padding-desktop-v:              1.5rem;
+@padding-desktop:                @padding-desktop-v @padding-desktop-h;
 
-@padding-hd-h: 				2rem;
-@padding-hd-v: 				2rem;
-@padding-hd: 				@padding-hd-v @padding-hd-h;
+@padding-hd-h:                   2rem;
+@padding-hd-v:                   2rem;
+@padding-hd:                     @padding-hd-v @padding-hd-h;
 
 // links
-@link-color:				@color-primary;
-@link-hover-color:			darken(@link-color, 15%);
-@link-transition:			@transition-default;
-@link-transition-webkit:	@transition-webkit;
+@link-color:                     @color-primary;
+@link-hover-color:               darken(@link-color, 15%);
+@link-transition:                @transition-default;
+@link-transition-webkit:         @transition-webkit;
 
 // code
-@code-font-family:			Menlo, Monaco, Consolas, "Courier New", monospace;
-@code-bg-color:      		@color-bg-gray;
-@code-border-color:			@color-border;
+@code-font-family:               Menlo, Monaco, Consolas, "Courier New", monospace;
+@code-bg-color:                  @color-bg-gray;
+@code-border-color:              @color-border;
 
 // grid
-@grid-columns:				12;
-@blocks-count:				10;
+@grid-columns:                   12;
+@blocks-count:                   10;
 
 // blocks
-@blocks-spacing-phone: 		@padding-phone-h;
-@blocks-spacing-tablet: 	@padding-tablet-h;
-@blocks-spacing-desktop: 	@padding-desktop-h;
-@blocks-spacing-hd: 		@padding-hd-h;
+@blocks-spacing-phone:           @padding-phone-h;
+@blocks-spacing-tablet:          @padding-tablet-h;
+@blocks-spacing-desktop:         @padding-desktop-h;
+@blocks-spacing-hd:              @padding-hd-h;
 
 // controls
-@control-font-family:			@font-family-base;
-@control-padding-v:				.6em;
-@control-padding-h:				.5em;
-@control-color:					black;
-@control-bg:					white;
-@control-border-width:			1px;
-@control-border:				@control-border-width solid @color-border;
-@control-border-radius:			2px;
-@control-disabled-color:		darken(@color-disabled, 25%);
-@control-disabled-bg:           @color-disabled;
-@control-disabled-cursor:		not-allowed;
-@control-active-color:			@color-primary;
-@control-focus-fade:			30%;
-@control-focus-blur:			0;
-@control-focus-spread:			2px;
-@control-transition:			@transition-default;
-@control-transition-webkit:		@transition-webkit;
-@control-multiline-height:		1.35;
+@control-font-family:            @font-family-base;
+@control-padding-v:              .6em;
+@control-padding-h:              .5em;
+@control-color:                  black;
+@control-bg:                     white;
+@control-border-width:           1px;
+@control-border:                 @control-border-width solid @color-border;
+@control-border-radius:          2px;
+@control-disabled-color:         darken(@color-disabled, 25%);
+@control-disabled-bg:            @color-disabled;
+@control-disabled-cursor:        not-allowed;
+@control-active-color:           @color-primary;
+@control-focus-fade:             30%;
+@control-focus-blur:             0;
+@control-focus-spread:           2px;
+@control-transition:             @transition-default;
+@control-transition-webkit:      @transition-webkit;
+@control-multiline-height:       1.35;
 
 // buttons
-@btn-color:					@color-invert;
-@btn-bg:					#aaa;
-@btn-font-weight:			normal;
-@btn-hovering:				15%;
-@btn-border-darken:			5%;
-@btn-border-width:			1px;
-@btn-border-radius:			4px;
-@btn-border-style:			solid;
-@btn-padding:				@control-padding-v 0.9em;
-@btn-focus-fade:			50%;
-@btn-focus-blur:			@control-focus-blur;
-@btn-focus-spread:			@control-focus-spread;
-@btn-active-shadow:			0 0px 7px rgba(0, 0, 0, .5) inset;
-@btn-transition:			@link-transition;
-@btn-transition-webkit:		@link-transition-webkit;
+@btn-color:                      @color-invert;
+@btn-bg:                         #aaa;
+@btn-font-weight:                normal;
+@btn-hovering:                   15%;
+@btn-border-darken:              5%;
+@btn-border-width:               1px;
+@btn-border-radius:              4px;
+@btn-border-style:               solid;
+@btn-padding:                    @control-padding-v 0.9em;
+@btn-focus-fade:                 50%;
+@btn-focus-blur:                 @control-focus-blur;
+@btn-focus-spread:               @control-focus-spread;
+@btn-active-shadow:              0 0px 7px rgba(0, 0, 0, .5) inset;
+@btn-transition:                 @link-transition;
+@btn-transition-webkit:          @link-transition-webkit;
 
 // table
-@table-border:				1px solid @color-border;
-@table-header-bg:			transparent;
-@table-row-bg:				transparent;
-@table-footer-bg:			transparent;
-@table-odd-bg:				@color-bg-gray;
-@table-hover-bg:			@color-secondary;
-@table-transition:			background @transition-duration;
+@table-border:                   1px solid @color-border;
+@table-header-bg:                transparent;
+@table-row-bg:                   transparent;
+@table-footer-bg:                transparent;
+@table-odd-bg:                   @color-bg-gray;
+@table-hover-bg:                 @color-secondary;
+@table-transition:               background @transition-duration;
 
 // navigation
-@nav-padding:				.4em 1em;
-@nav-heading-margin-top:	.5em;
-@nav-border-width:			1px;
-@nav-border-radius:			@control-border-radius;
-@nav-hover-bg:				@color-bg-gray;
-@nav-active-color:			@color-invert;
-@nav-active-bg:				@color-primary;
-@nav-spacing:				0;
+@nav-padding:                    .4em 1em;
+@nav-heading-margin-top:         .5em;
+@nav-border-width:               1px;
+@nav-border-radius:              @control-border-radius;
+@nav-hover-bg:                   @color-bg-gray;
+@nav-active-color:               @color-invert;
+@nav-active-bg:                  @color-primary;
+@nav-spacing:                    0;
 
 // form
-@form-aligned-left:			1;
-@form-aligned-right:		3;
-@form-aligned-columns:		@form-aligned-left + @form-aligned-right;
+@form-aligned-left:              1;
+@form-aligned-right:             3;
+@form-aligned-columns:           @form-aligned-left + @form-aligned-right;
