@@ -4,7 +4,7 @@
 @transition-default:		color @transition-duration, background @transition-duration, border-color @transition-duration, transform @transition-duration, box-shadow @transition-duration;
 @transition-webkit:			color @transition-duration, background @transition-duration, border-color @transition-duration, -webkit-transform @transition-duration, box-shadow @transition-duration;
 
-// Typography
+// typography
 @font-family-base:			"Helvetica Neue", Helvetica, Tahoma, sans-serif;
 @font-family-headings:		@font-family-base;
 
@@ -30,28 +30,28 @@
 @font-size-sm:				.85rem;
 @font-size-xs:				.75rem;
 @font-size-fa:				14px;
-@font-size-help:            .85em;
+@font-size-help:			.85em;
 
 @line-height:				1.5;
-@line-height-help:          @line-height;
+@line-height-help:			@line-height;
 
-@line-height-h1:			1.1;
-@line-height-h2:			1.1;
-@line-height-h3:			1.3;
-@line-height-h4:			1.3;
-@line-height-h5:			@line-height;
-@line-height-h6:			@line-height;
+@line-height-h1: 			1.1;
+@line-height-h2: 			1.1;
+@line-height-h3: 			1.3;
+@line-height-h4: 			1.3;
+@line-height-h5: 			@line-height;
+@line-height-h6: 			@line-height;
 
 @line-margin:				1em;
 
-// Colors
+// colors
 @color-text:				#222;
-@color-text-help:           #565d64;
+@color-text-help: 			#565d64;
 @color-headings:			black;
 @color-invert:				white;
-@color-gray:				#565d64;
 @color-border:				#bdbdbd;
-@color-light:				#f4f4f4;
+@color-disabled: 			#f4f4f4;
+@color-bg-gray: 			#f4f4f4;
 
 @color-primary:				#105c9a;
 @color-secondary:			#56b9d9;
@@ -65,7 +65,7 @@
 @color-bg-warning:			lighten(@color-warning, 40%);
 @color-bg-error:			lighten(@color-error, 40%);
 
-// Widths
+// widths
 @device-phone:				320px; // min phone width
 @device-tablet:				768px; // min tablet width
 @device-desktop:			1014px; // min desktop width
@@ -78,44 +78,44 @@
 @width-xl:					64rem;
 
 // Container paddings
-@padding-phone-h:           .75rem;
-@padding-phone-v:           .75rem;
+@padding-phone-h: 			.75rem;
+@padding-phone-v: 			.75rem;
 @padding-phone: 			@padding-phone-v @padding-phone-h;
 
 @padding-tablet-h: 			1rem;
 @padding-tablet-v: 			1rem;
-@padding-tablet:            @padding-tablet-v @padding-tablet-h;
+@padding-tablet: 			@padding-tablet-v @padding-tablet-h;
 
 @padding-desktop-h: 		1.5rem;
 @padding-desktop-v: 		1.5rem;
-@padding-desktop:           @padding-desktop-v @padding-desktop-h;
+@padding-desktop: 			@padding-desktop-v @padding-desktop-h;
 
 @padding-hd-h: 				2rem;
 @padding-hd-v: 				2rem;
-@padding-hd:                @padding-hd-v @padding-hd-h;
+@padding-hd: 				@padding-hd-v @padding-hd-h;
 
-// Links
+// links
 @link-color:				@color-primary;
 @link-hover-color:			darken(@link-color, 15%);
 @link-transition:			@transition-default;
 @link-transition-webkit:	@transition-webkit;
 
-// Code
+// code
 @code-font-family:			Menlo, Monaco, Consolas, "Courier New", monospace;
-@code-bg-color:      		@color-light;
+@code-bg-color:      		@color-bg-gray;
 @code-border-color:			@color-border;
 
-// Grid
+// grid
 @grid-columns:				12;
 @blocks-count:				10;
 
-//blocks
-@blocks-spacing-phone:      @padding-phone-h;
-@blocks-spacing-tablet:     @padding-tablet-h;
-@blocks-spacing-desktop:    @padding-desktop-h;
-@blocks-spacing-hd:         @padding-hd-h;
+// blocks
+@blocks-spacing-phone: 		@padding-phone-h;
+@blocks-spacing-tablet: 	@padding-tablet-h;
+@blocks-spacing-desktop: 	@padding-desktop-h;
+@blocks-spacing-hd: 		@padding-hd-h;
 
-// Controls
+// controls
 @control-font-family:			@font-family-base;
 @control-padding-v:				.6em;
 @control-padding-h:				.5em;
@@ -124,8 +124,8 @@
 @control-border-width:			1px;
 @control-border:				@control-border-width solid @color-border;
 @control-border-radius:			2px;
-@control-disabled-color:		darken(@color-light, 25%);
-@control-disabled-bg:           @color-light;
+@control-disabled-color:		darken(@color-disabled, 25%);
+@control-disabled-bg:           @color-disabled;
 @control-disabled-cursor:		not-allowed;
 @control-active-color:			@color-primary;
 @control-focus-fade:			30%;
@@ -135,7 +135,7 @@
 @control-transition-webkit:		@transition-webkit;
 @control-multiline-height:		1.35;
 
-// Buttons
+// buttons
 @btn-color:					@color-invert;
 @btn-bg:					#aaa;
 @btn-font-weight:			normal;
@@ -152,26 +152,26 @@
 @btn-transition:			@link-transition;
 @btn-transition-webkit:		@link-transition-webkit;
 
-// Table
+// table
 @table-border:				1px solid @color-border;
 @table-header-bg:			transparent;
 @table-row-bg:				transparent;
 @table-footer-bg:			transparent;
-@table-odd-bg:				@color-light;
+@table-odd-bg:				@color-bg-gray;
 @table-hover-bg:			@color-secondary;
 @table-transition:			background @transition-duration;
 
-// Navigation
+// navigation
 @nav-padding:				.4em 1em;
 @nav-heading-margin-top:	.5em;
 @nav-border-width:			1px;
 @nav-border-radius:			@control-border-radius;
-@nav-hover-bg:				@color-light;
+@nav-hover-bg:				@color-bg-gray;
 @nav-active-color:			@color-invert;
 @nav-active-bg:				@color-primary;
 @nav-spacing:				0;
 
-// Form
+// form
 @form-aligned-left:			1;
 @form-aligned-right:		3;
 @form-aligned-columns:		@form-aligned-left + @form-aligned-right;
